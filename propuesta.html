@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta Estratégica Ecosistema Digital | ImpoAquatic - SuperBrite Argentina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #070F1E;
+            --bg-card: rgba(15, 27, 49, 0.85);
+            --primary: #00B4D8;
+            --primary-dark: #0077B6;
+            --accent: #00E5FF;
+            --accent-gold: #FFD166;
+            --text-main: #F4F9FA;
+            --text-muted: #94A3B8;
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); background: var(--bg-dark); color: var(--text-main); line-height: 1.7; padding: 40px 20px; }
+        .doc-container { max-width: 1100px; margin: 0 auto; background: var(--bg-card); border: 1px solid rgba(0, 229, 255, 0.2); border-radius: 24px; padding: 60px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); backdrop-filter: blur(10px); }
+
+        header.doc-header { border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 30px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; }
+        .doc-brand { font-family: var(--font-heading); font-size: 28px; font-weight: 800; color: #fff; }
+        .doc-brand span { color: var(--primary); }
+        .doc-badge { background: var(--primary-dark); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; }
+
+        h1.doc-title { font-family: var(--font-heading); font-size: 38px; font-weight: 800; line-height: 1.2; margin-top: 10px; color: #fff; }
+        .doc-meta { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+        h2.section-h2 { font-family: var(--font-heading); font-size: 24px; font-weight: 700; color: var(--accent); margin: 40px 0 16px 0; border-left: 4px solid var(--accent); padding-left: 14px; }
+        h3.section-h3 { font-family: var(--font-heading); font-size: 18px; font-weight: 600; color: #fff; margin: 24px 0 10px 0; }
+
+        p, li { font-size: 15px; color: rgba(244, 249, 250, 0.9); margin-bottom: 12px; }
+        ul { margin-left: 20px; margin-bottom: 20px; }
+
+        .grid { display: grid; gap: 20px; margin: 20px 0; }
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        @media(max-width: 768px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } .doc-container { padding: 30px; } }
+
+        .card-box { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 24px; }
+        .card-box.highlight { border-color: var(--accent); background: rgba(0, 229, 255, 0.05); }
+
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; background: rgba(0,0,0,0.2); border-radius: 12px; overflow: hidden; }
+        th, td { padding: 14px 18px; text-align: left; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        th { background: rgba(0, 180, 216, 0.2); font-family: var(--font-heading); font-size: 14px; font-weight: 700; color: var(--accent); }
+
+        .action-banner { background: linear-gradient(135deg, var(--primary-dark), rgba(0, 229, 255, 0.2)); border: 1px solid var(--accent); border-radius: 16px; padding: 30px; margin-top: 40px; text-align: center; }
+        .btn-demo { display: inline-block; background: var(--accent); color: var(--bg-dark); font-family: var(--font-heading); font-weight: 800; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-size: 16px; margin-top: 16px; }
+
+        .footer-note { text-align: center; margin-top: 40px; font-size: 13px; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+
+<div class="doc-container">
+    <header class="doc-header">
+        <div>
+            <div class="doc-brand">IMPO<span>AQUATIC</span></div>
+            <h1 class="doc-title">Propuesta Integral de Ecosistema Digital</h1>
+            <p class="doc-meta">Distribuidor Oficial Exclusivo de <strong>SuperBrite®</strong> en Argentina · Documento Estratégico 2026</p>
+        </div>
+        <span class="doc-badge">DOCUMENTO DE PRESENTACIÓN</span>
+    </header>
+
+    <!-- Resumen Ejecutivo -->
+    <section>
+        <h2 class="section-h2">1. Resumen Ejecutivo & Visión del Proyecto</h2>
+        <p><strong>ImpoAquatic</strong> asume la representación y distribución oficial exclusiva de <strong>SuperBrite®</strong> en la República Argentina, introduciendo la línea de revestimientos cuarcíticos y soluciones integrales para arquitectura acuática de mayor prestigio en la región.</p>
+        <p>El objetivo principal del proyecto digital es diseñar y desplegar una **plataforma web de última generación** (superior estéticamente a la versión actual de Chile), articulada con una estrategia integral de captación B2B/B2C en redes sociales (Instagram & LinkedIn), campañas de Meta Ads, módulo de capacitación a aplicadores y automatización CRM.</p>
+    </section>
+
+    <!-- Pilares del Ecosistema -->
+    <section>
+        <h2 class="section-h2">2. Pilares Fundamentales del Ecosistema Digital</h2>
+        <div class="grid grid-2">
+            <div class="card-box highlight">
+                <h3 class="section-h3">🌐 Plataforma Web & Herramientas (Prioridad 1)</h3>
+                <ul>
+                    <li>Diseño <em>Luxury Aquatic</em> con animación fluida y carga ultrarrápida.</li>
+                    <li><strong>Calculadora Interactiva de m² y Bolsas:</strong> Cálculo en vivo de insumos para constructoras y particulares.</li>
+                    <li><strong>Catálogo Dinámico de Productos:</strong> Fichas técnicas descargables para arquitectos.</li>
+                    <li><strong>Módulo de Capacitación:</strong> Programa de acreditación oficial para cuadrillas.</li>
+                    <li><strong>Derivación a Cuadrillas Certificadas:</strong> Conexión del cliente B2C con aplicadores autorizados.</li>
+                </ul>
+            </div>
+            <div class="card-box">
+                <h3 class="section-h3">📣 Marketing Digital, Redes & CRM</h3>
+                <ul>
+                    <li><strong>Instagram:</strong> Mix de contenido autorizado de Chile (60%) + UGC con creadores locales como Maxi (30%) + Capacitación (10%).</li>
+                    <li><strong>LinkedIn B2B:</strong> Orientado a Empresas Constructoras (ej. H2Obras), Arquitectos y Licitaciones Municipales.</li>
+                    <li><strong>Meta Ads:</strong> 3 embudos de conversión (B2B Lead Gen, Captación Aplicadores, Preventa B2C).</li>
+                    <li><strong>SEO Asistido por IA:</strong> Marcado semántico Schema.org y artículos técnicos geolocalizados en Argentina.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section>
+        <h2 class="section-h2">3. Estructura del Catálogo Digital de Productos</h2>
+        <p>La web destacará todas las líneas técnicas que ofrece ImpoAquatic para posicionar a la marca como proveedor integral:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Línea de Producto</th>
+                    <th>Producto / Especificación</th>
+                    <th>Presentación & Rendimiento</th>
+                    <th>Público Clave</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Revestimiento Principal</strong></td>
+                    <td><strong>SuperBrite® Quartz Finish</strong> (Estrella)<br><em>Tonos: Blanco, Azul Caribe, Cielo, Arena, Gris</em></td>
+                    <td>Bolsa 22.7 kg<br>Rendimiento: 2.5 m² / bolsa</td>
+                    <td>Constructoras, Arquitectos, Particulares</td>
+                </tr>
+                <tr>
+                    <td><strong>Revestimiento Mármol</strong></td>
+                    <td><strong>SuperBrite® Marcite Classic</strong><br><em>Acabado tradicional blanco fortificado</em></td>
+                    <td>Bolsa 22.7 kg<br>Rendimiento: 2.8 m² / bolsa</td>
+                    <td>Obras Estándar / Reformas</td>
+                </tr>
+                <tr>
+                    <td><strong>Aditivos & Polímeros</strong></td>
+                    <td><strong>AquaBond® Polymer Latex</strong><br><em>Emulsión promotora de adherencia</em></td>
+                    <td>Bidón 5L / 20L<br>1-2L por bolsa de cuarzo</td>
+                    <td>Aplicadores / Cuadrillas</td>
+                </tr>
+                <tr>
+                    <td><strong>Impermeabilizantes</strong></td>
+                    <td><strong>HydroShield® Water Sealer</strong><br><em>Sellador hidrófugo antidesgaste</em></td>
+                    <td>Bidón 10L<br>8-10 m² por Litro</td>
+                    <td>Arquitectos / Obra Nueva</td>
+                </tr>
+                <tr>
+                    <td><strong>Curado & Lavado</strong></td>
+                    <td><strong>SuperBrite® Acid Wash & Neutralizer</strong><br><em>Fórmula técnica para revelado de cuarzo</em></td>
+                    <td>Bidón 5L<br>30 m² por unidad diluida</td>
+                    <td>Cuadrillas Certificadas</td>
+                </tr>
+                <tr>
+                    <td><strong>Herramientas Especiales</strong></td>
+                    <td><strong>Llanas Profesionales Fresno/Inox Pro-Float</strong><br><em>Bordes redondeados para llaneado de cuarzo</em></td>
+                    <td>Unidad Individual<br>Uso Intensivo en Obra</td>
+                    <td>Aplicadores Homologados</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Estrategia de Publicidad Digital -->
+    <section>
+        <h2 class="section-h2">4. Plan de Campañas Publicitarias (Meta Ads)</h2>
+        <div class="grid grid-3">
+            <div class="card-box">
+                <h3 class="section-h3">Campaña 1: Lead Gen B2B</h3>
+                <p><strong>Público:</strong> Constructoras, Arquitectos, Ingenieros Civiles.</p>
+                <p><strong>Objetivo:</strong> Descarga de catálogo técnico + Cotización de preventa por volumen.</p>
+            </div>
+            <div class="card-box">
+                <h3 class="section-h3">Campaña 2: Aplicadores</h3>
+                <p><strong>Público:</strong> Albañiles, Contratistas, Pintores de piletas.</p>
+                <p><strong>Objetivo:</strong> Inscripción al programa de Capacitación y Certificación Oficial.</p>
+            </div>
+            <div class="card-box">
+                <h3 class="section-h3">Campaña 3: Preventa B2C</h3>
+                <p><strong>Público:</strong> Propietarios de viviendas, Countries, Casas Quintas.</p>
+                <p><strong>Objetivo:</strong> Uso de Calculadora m² + Reserva de stock + Derivación a Cuadrilla.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Acceso a Demo -->
+    <div class="action-banner">
+        <h3>Demostración Web Interactiva Desarrollada</h3>
+        <p>Se ha desarrollado un prototipo funcional de la plataforma con la Calculadora de m² en vivo, Catálogo dinámico y Sistema de Derivación a Cuadrillas.</p>
+        <a href="index.html" class="btn-demo">Acceder a la Demo Web Interactiva</a>
+    </div>
+
+    <div class="footer-note">
+        <p>&copy; 2026 ImpoAquatic Argentina. Documento preparado por el Equipo de Estrategia & Desarrollo Digital.</p>
+    </div>
+</div>
+
+</body>
+</html>
