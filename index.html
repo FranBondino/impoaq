@@ -234,10 +234,48 @@
             color: var(--text-muted);
         }
 
+        .letterhead-box {
+            background: #F0F9FF;
+            border-left: 4px solid var(--primary);
+            padding: 10px 16px;
+            margin-top: 12px;
+            border-radius: 0 8px 8px 0;
+            font-size: 13px;
+            color: var(--primary-dark);
+        }
+
+        .signature-block {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 2px dashed #E2E8F0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+        }
+
+        .sig-name {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--primary-dark);
+        }
+
+        .sig-title {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .sig-sub {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
         @media print {
             body { background: #FFFFFF; padding: 0; }
             .pdf-page { border: none; box-shadow: none; padding: 0; max-width: 100%; }
-            .table-wrapper, .price-section, .infra-section { break-inside: avoid; }
+            .table-wrapper, .price-section, .infra-section, .signature-block { break-inside: avoid; }
         }
     </style>
 </head>
@@ -249,6 +287,9 @@
             <div class="brand-logo">IMPO<span>AQUATIC</span></div>
             <h1 class="doc-title">Propuesta Estratégica & Presupuesto Integral</h1>
             <p class="doc-meta">Distribución Oficial Exclusiva de <strong>SuperBrite®</strong> en Argentina · Rosario, Santa Fe</p>
+            <div class="letterhead-box">
+                Elaborado y presentado por: <strong>Ing. Francisco Bondino</strong> · <em>Ingeniero en Sistemas Informáticos</em>
+            </div>
         </div>
         <span class="doc-badge">DOCUMENTO COMERCIAL 2026</span>
     </header>
@@ -416,8 +457,14 @@
         </div>
     </section>
 
+    <div class="signature-block">
+        <div class="sig-name">Ing. Francisco Bondino</div>
+        <div class="sig-title">Ingeniero en Sistemas Informáticos</div>
+        <div class="sig-sub">Consultoría & Desarrollo de Ecosistemas Digitales · Rosario, Santa Fe</div>
+    </div>
+
     <div class="footer-note">
-        <p>&copy; 2026 ImpoAquatic Argentina. Propuesta Comercial preparada en Rosario, Santa Fe.</p>
+        <p>&copy; 2026 ImpoAquatic Argentina. Propuesta Comercial preparada en Rosario, Santa Fe por Ing. Francisco Bondino.</p>
     </div>
 </div>
 
