@@ -3,377 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImpoAquatic | Revestimientos Acuáticos Premium SuperBrite Argentina</title>
-    <meta name="description" content="Distribuidor Oficial Exclusivo de SuperBrite en Argentina. Catálogo completo de revestimientos de cuarzo, aditivos y herramientas para piscinas y arquitectura acuática.">
+    <title>Propuesta Estratégica Ecosistema Digital | ImpoAquatic - SuperBrite Argentina</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --bg-dark: #070F1E;
+            --bg-card: rgba(15, 27, 49, 0.85);
+            --primary: #00B4D8;
+            --primary-dark: #0077B6;
+            --accent: #00E5FF;
+            --accent-gold: #FFD166;
+            --text-main: #F4F9FA;
+            --text-muted: #94A3B8;
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); background: var(--bg-dark); color: var(--text-main); line-height: 1.7; padding: 40px 20px; }
+        .doc-container { max-width: 1100px; margin: 0 auto; background: var(--bg-card); border: 1px solid rgba(0, 229, 255, 0.2); border-radius: 24px; padding: 60px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); backdrop-filter: blur(10px); }
+
+        header.doc-header { border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 30px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; }
+        .doc-brand { font-family: var(--font-heading); font-size: 28px; font-weight: 800; color: #fff; }
+        .doc-brand span { color: var(--primary); }
+        .doc-badge { background: var(--primary-dark); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; }
+
+        h1.doc-title { font-family: var(--font-heading); font-size: 38px; font-weight: 800; line-height: 1.2; margin-top: 10px; color: #fff; }
+        .doc-meta { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+
+        h2.section-h2 { font-family: var(--font-heading); font-size: 24px; font-weight: 700; color: var(--accent); margin: 40px 0 16px 0; border-left: 4px solid var(--accent); padding-left: 14px; }
+        h3.section-h3 { font-family: var(--font-heading); font-size: 18px; font-weight: 600; color: #fff; margin: 24px 0 10px 0; }
+
+        p, li { font-size: 15px; color: rgba(244, 249, 250, 0.9); margin-bottom: 12px; }
+        ul { margin-left: 20px; margin-bottom: 20px; }
+
+        .grid { display: grid; gap: 20px; margin: 20px 0; }
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        @media(max-width: 768px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } .doc-container { padding: 30px; } }
+
+        .card-box { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 24px; }
+        .card-box.highlight { border-color: var(--accent); background: rgba(0, 229, 255, 0.05); }
+
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; background: rgba(0,0,0,0.2); border-radius: 12px; overflow: hidden; }
+        th, td { padding: 14px 18px; text-align: left; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        th { background: rgba(0, 180, 216, 0.2); font-family: var(--font-heading); font-size: 14px; font-weight: 700; color: var(--accent); }
+
+        .price-badge { display: inline-block; background: linear-gradient(135deg, var(--primary-dark), var(--primary)); color: #fff; font-family: var(--font-heading); font-size: 22px; font-weight: 800; padding: 8px 16px; border-radius: 10px; margin-top: 10px; }
+        .price-note { font-size: 12px; color: var(--text-muted); margin-top: 4px; display: block; }
+
+        .footer-note { text-align: center; margin-top: 40px; font-size: 13px; color: var(--text-muted); }
+    </style>
 </head>
 <body>
 
-    <!-- Header & Navigation -->
-    <header class="header">
-        <div class="container header-container">
-            <a href="#" class="brand-logo">
-                <span class="brand-badge">OFICIAL</span>
-                <div class="logo-text">
-                    <span class="logo-main">IMPO<span class="highlight">AQUATIC</span></span>
-                    <span class="logo-sub">DISTRIBUIDOR SUPERBRITE® ARGENTINA</span>
-                </div>
-            </a>
-            <nav class="nav-menu">
-                <a href="#catalogo" class="nav-link">Catálogo de Productos</a>
-                <a href="#calculadora" class="nav-link highlight-pill">Calculadora m²</a>
-                <a href="#capacitaciones" class="nav-link">Capacitaciones</a>
-                <a href="#cuadrillas" class="nav-link">Cuadrillas Certificadas</a>
-                <a href="#preventa" class="btn btn-nav">Preventa Stock</a>
-            </nav>
+<div class="doc-container">
+    <header class="doc-header">
+        <div>
+            <div class="doc-brand">IMPO<span>AQUATIC</span></div>
+            <h1 class="doc-title">Propuesta Estratégica & Presupuesto Comercial</h1>
+            <p class="doc-meta">Distribuidor Oficial Exclusivo de <strong>SuperBrite®</strong> en Argentina · Rosario, Santa Fe</p>
         </div>
+        <span class="doc-badge">PRESUPUESTO 2026</span>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <div class="hero-tag">
-                <span class="pulse-dot"></span> Exclusivo para Argentina · Primer Embarque en Camino
-            </div>
-            <h1 class="hero-title">El revestimiento acuático de <span class="gradient-text">alta gama</span> para las mejores piscinas</h1>
-            <p class="hero-subtitle">Distribución oficial de <strong>SuperBrite®</strong>. Revestimientos cuarcíticos de máxima resistencia, elegancia natural y catálogo completo de productos técnicos para piscinas.</p>
-            
-            <div class="hero-cta-group">
-                <a href="#catalogo" class="btn btn-primary btn-lg">
-                    Ver Catálogo de Productos
-                </a>
-                <a href="#calculadora" class="btn btn-glass btn-lg">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"></path></svg>
-                    Calcular Materiales & m²
-                </a>
-            </div>
+    <!-- Resumen Ejecutivo -->
+    <section>
+        <h2 class="section-h2">1. Resumen del Proyecto</h2>
+        <p><strong>ImpoAquatic</strong> introduce en Argentina la representación exclusiva de <strong>SuperBrite®</strong>, el revestimiento cuarcítico para piscinas y arquitectura acuática de referencia en la región.</p>
+        <p>Esta propuesta articula el desarrollo prioritario de la <strong>plataforma web comercial interactiva</strong> con opciones escalables para setup de redes sociales, Meta Ads y posicionamiento SEO con IA.</p>
+    </section>
 
-            <div class="hero-metrics">
-                <div class="metric-item">
-                    <span class="metric-num">100%</span>
-                    <span class="metric-label">Resistencia a Químicos & UV</span>
-                </div>
-                <div class="metric-divider"></div>
-                <div class="metric-item">
-                    <span class="metric-num">+20 Años</span>
-                    <span class="metric-label">Vida Útil Garantizada</span>
-                </div>
-                <div class="metric-divider"></div>
-                <div class="metric-item">
-                    <span class="metric-num">B2B & B2C</span>
-                    <span class="metric-label">Red de Aplicadores Certificados</span>
-                </div>
+    <!-- Opciones de Presupuesto Comercial -->
+    <section>
+        <h2 class="section-h2">2. Cuadro de Presupuesto & Modalidades de Pago</h2>
+        <div class="grid grid-3">
+            <div class="card-box highlight">
+                <h3 class="section-h3">OPCIÓN 1: Plataforma Web (Prioridad 1)</h3>
+                <p>Desarrollo web completo, Calculadora m² en vivo, Catálogo interactivo de productos, Módulo de capacitaciones y Formulario CRM de preventa.</p>
+                <div class="price-badge">$1.150.000 ARS</div>
+                <span class="price-note">Pago Único. 50% inicio / 50% entrega o 3 cuotas fijas de $385.000 ARS.</span>
+            </div>
+            <div class="card-box">
+                <h3 class="section-h3">OPCIÓN 2: Combo Web + Setup Redes & Ads</h3>
+                <p>Todo lo de la Opción 1 + Setup estético de Instagram/LinkedIn + Configuración de Pixel y Campaña inicial de Meta Ads para la Preventa.</p>
+                <div class="price-badge">$1.380.000 ARS</div>
+                <span class="price-note">Pago Único. Ahorro combo. 3 cuotas fijas de $460.000 ARS.</span>
+            </div>
+            <div class="card-box">
+                <h3 class="section-h3">OPCIÓN 3: Gestión Mensual Redes + Ads</h3>
+                <p>Manejo mensual de Instagram, LinkedIn (8-12 contenidos/reels), UGC con creadores locales y optimización semanal de Meta Ads.</p>
+                <div class="price-badge">$350.000 ARS / mes</div>
+                <span class="price-note">Fee Recurrente Mensual post-lanzamiento.</span>
             </div>
         </div>
     </section>
 
-    <!-- Complete Interactive Product Catalog Section -->
-    <section id="catalogo" class="section catalog-section">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-badge">GAMA COMPLETA SUPERBRITE®</span>
-                <h2 class="section-title">Catálogo Oficial de Productos</h2>
-                <p class="section-desc">Explorá nuestras líneas de revestimientos cuarcíticos, aditivos poliméricos, impermeabilizantes y herramientas especializadas de aplicación.</p>
-            </div>
-
-            <!-- Category Filter Tabs -->
-            <div class="catalog-tabs">
-                <button class="cat-tab active" data-cat="todos">Todos los Productos</button>
-                <button class="cat-tab" data-cat="revestimientos">Revestimientos Principal</button>
-                <button class="cat-tab" data-cat="aditivos">Aditivos & Impermeabilización</button>
-                <button class="cat-tab" data-cat="mantenimiento">Mantenimiento & Curado</button>
-                <button class="cat-tab" data-cat="herramientas">Herramientas de Aplicación</button>
-            </div>
-
-            <!-- Product Grid (Populated via JS) -->
-            <div class="grid grid-3 catalog-grid" id="catalog-products-grid">
-                <!-- Dynamically rendered by app.js -->
-            </div>
-        </div>
+    <!-- Catálogo de Productos -->
+    <section>
+        <h2 class="section-h2">3. Estructura del Catálogo Digital de Productos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Línea de Producto</th>
+                    <th>Producto / Especificación</th>
+                    <th>Presentación & Rendimiento</th>
+                    <th>Público Clave</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Revestimiento Principal</strong></td>
+                    <td><strong>SuperBrite® Quartz Finish</strong> (Estrella)<br><em>Tonos: Blanco, Azul Caribe, Cielo, Arena, Gris</em></td>
+                    <td>Bolsa 22.7 kg<br>Rendimiento: 2.5 m² / bolsa</td>
+                    <td>Constructoras, Arquitectos, Particulares</td>
+                </tr>
+                <tr>
+                    <td><strong>Revestimiento Mármol</strong></td>
+                    <td><strong>SuperBrite® Marcite Classic</strong><br><em>Acabado tradicional blanco fortificado</em></td>
+                    <td>Bolsa 22.7 kg<br>Rendimiento: 2.8 m² / bolsa</td>
+                    <td>Obras Estándar / Reformas</td>
+                </tr>
+                <tr>
+                    <td><strong>Aditivos & Polímeros</strong></td>
+                    <td><strong>AquaBond® Polymer Latex</strong><br><em>Emulsión promotora de adherencia</em></td>
+                    <td>Bidón 5L / 20L<br>1-2L por bolsa de cuarzo</td>
+                    <td>Aplicadores / Cuadrillas</td>
+                </tr>
+                <tr>
+                    <td><strong>Impermeabilizantes</strong></td>
+                    <td><strong>HydroShield® Water Sealer</strong><br><em>Sellador hidrófugo antidesgaste</em></td>
+                    <td>Bidón 10L<br>8-10 m² por Litro</td>
+                    <td>Arquitectos / Obra Nueva</td>
+                </tr>
+                <tr>
+                    <td><strong>Curado & Lavado</strong></td>
+                    <td><strong>SuperBrite® Acid Wash & Neutralizer</strong><br><em>Fórmula técnica para revelado de cuarzo</em></td>
+                    <td>Bidón 5L<br>30 m² por unidad diluida</td>
+                    <td>Cuadrillas Certificadas</td>
+                </tr>
+                <tr>
+                    <td><strong>Herramientas Especiales</strong></td>
+                    <td><strong>Llanas Profesionales Fresno/Inox Pro-Float</strong><br><em>Bordes redondeados para llaneado de cuarzo</em></td>
+                    <td>Unidad Individual<br>Uso Intensivo en Obra</td>
+                    <td>Aplicadores Homologados</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
-    <!-- Interactive m² & Material Calculator -->
-    <section id="calculadora" class="section calc-section">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-badge">HERRAMIENTA PROFESIONAL</span>
-                <h2 class="section-title">Calculadora de Superficie & Materiales</h2>
-                <p class="section-desc">Diseñada para arquitectos, empresas constructoras y propietarios. Calculá al instante las bolsas necesarias para tu obra.</p>
-            </div>
+    <div class="footer-note">
+        <p>&copy; 2026 ImpoAquatic Argentina. Propuesta Comercial preparada en Rosario, Santa Fe.</p>
+    </div>
+</div>
 
-            <div class="calc-card grid grid-2">
-                <!-- Inputs Side -->
-                <div class="calc-inputs">
-                    <h3 class="calc-subtitle">1. Dimensiones de la Piscina</h3>
-                    
-                    <div class="input-mode-tabs">
-                        <button class="tab-btn active" id="tab-dims">Por Medidas (Largo x Ancho)</button>
-                        <button class="tab-btn" id="tab-direct">Por m² Totales</button>
-                    </div>
-
-                    <div id="panel-dims" class="calc-form">
-                        <div class="form-group">
-                            <label for="calc-length">Largo (metros)</label>
-                            <input type="number" id="calc-length" value="8" step="0.5" min="1">
-                        </div>
-                        <div class="form-group">
-                            <label for="calc-width">Ancho (metros)</label>
-                            <input type="number" id="calc-width" value="4" step="0.5" min="1">
-                        </div>
-                        <div class="form-group">
-                            <label for="calc-depth">Profundidad Promedio (metros)</label>
-                            <input type="number" id="calc-depth" value="1.5" step="0.1" min="0.5">
-                        </div>
-                    </div>
-
-                    <div id="panel-direct" class="calc-form hidden">
-                        <div class="form-group">
-                            <label for="calc-total-m2">Superficie Total a Revestir (m²)</label>
-                            <input type="number" id="calc-total-m2" value="68" step="1" min="1">
-                        </div>
-                    </div>
-
-                    <h3 class="calc-subtitle">2. Tono de Revestimiento SuperBrite®</h3>
-                    <div class="color-selector grid grid-4">
-                        <button class="color-chip active" data-color="Blanco Cuarzo" data-hex="#EBF4F6">
-                            <span class="chip-circle" style="background:#f4f9fa; border: 1px solid #ccc;"></span>
-                            <span class="chip-name">Blanco Cuarzo</span>
-                        </button>
-                        <button class="color-chip" data-color="Azul Caribe" data-hex="#00B4D8">
-                            <span class="chip-circle" style="background:#00B4D8;"></span>
-                            <span class="chip-name">Azul Caribe</span>
-                        </button>
-                        <button class="color-chip" data-color="Cielo Cristal" data-hex="#90E0EF">
-                            <span class="chip-circle" style="background:#90E0EF;"></span>
-                            <span class="chip-name">Cielo Cristal</span>
-                        </button>
-                        <button class="color-chip" data-color="Arena Mármol" data-hex="#E2D4B9">
-                            <span class="chip-circle" style="background:#E2D4B9;"></span>
-                            <span class="chip-name">Arena Mármol</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Results Output Side -->
-                <div class="calc-output">
-                    <div class="output-header">
-                        <span>Resumen Estimado de Materiales</span>
-                        <span class="badge-live">CÁLCULO EN VIVO</span>
-                    </div>
-
-                    <div class="results-grid">
-                        <div class="result-box">
-                            <span class="res-label">Superficie Total Revestimiento</span>
-                            <span class="res-value" id="res-m2">68 m²</span>
-                        </div>
-                        <div class="result-box highlight">
-                            <span class="res-label">Bolsas SuperBrite® (22.7 kg)</span>
-                            <span class="res-value" id="res-bags">27 Bolsas</span>
-                            <span class="res-note">Rendimiento estándar: 2.5 m² / bolsa (Espesor 8-10 mm)</span>
-                        </div>
-                        <div class="result-box">
-                            <span class="res-label">Tono Seleccionado</span>
-                            <span class="res-value" id="res-color">Blanco Cuarzo</span>
-                        </div>
-                    </div>
-
-                    <div class="calc-action-box">
-                        <p class="action-text">¿Sos constructora, arquitecto o aplicador? Reservá tu volumen en preventa con prioridad de despacho.</p>
-                        <button class="btn btn-primary btn-block" id="btn-quote-calc">
-                            Solicitar Cotización de este Cálculo
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Training & Certification Section -->
-    <section id="capacitaciones" class="section training-section">
-        <div class="container">
-            <div class="training-banner grid grid-2">
-                <div class="training-info">
-                    <span class="section-badge badge-gold">PROGRAMA PROFESIONAL</span>
-                    <h2 class="section-title text-white">Capacitación & Certificación Oficial ImpoAquatic</h2>
-                    <p class="text-lead text-white-80">El éxito de una piscina extraordinaria está en la técnica de aplicación. ImpoAquatic imparte cursos técnicos certificados para cuadrillas, constructores y aplicadores independientes.</p>
-                    
-                    <ul class="training-benefits">
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <strong>Acreditación Oficial:</strong> Certificado de Aplicador Homologado SuperBrite®.
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <strong>Derivación de Clientes:</strong> Formá parte del mapa oficial de aplicadores en Argentina.
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <strong>Soporte Técnico en Obra:</strong> Acompañamiento en tus primeras obras de envergadura.
-                        </li>
-                    </ul>
-
-                    <a href="#preventa" class="btn btn-accent btn-lg">Inscribir mi Cuadrilla al Próximo Curso</a>
-                </div>
-
-                <div class="training-card-visual">
-                    <div class="cert-preview-card">
-                        <div class="cert-stamp">CERTIFICADO</div>
-                        <h3>Curso Teórico - Práctico</h3>
-                        <p class="cert-detail">Técnicas avanzadas de preparación de superficie, llaneado, lavado al ácido y curado.</p>
-                        <div class="cert-meta">
-                            <span>Próxima Cohorte: <strong>Agosto 2026</strong></span>
-                            <span>Modalidad: <strong>Presencial / Obra</strong></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Derivation & Certified Applicator Directory (B2C) -->
-    <section id="cuadrillas" class="section directory-section">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-badge">RED DE CONFIANZA</span>
-                <h2 class="section-title">¿Sos propietario? Encontrá tu Cuadrilla Certificada</h2>
-                <p class="section-desc">Garantizamos la aplicación perfecta conectándote con aplicadores entrenados por ImpoAquatic.</p>
-            </div>
-
-            <div class="directory-filter">
-                <label for="zone-select">Seleccioná tu Zona o Provincia:</label>
-                <select id="zone-select" class="form-select">
-                    <option value="todos">Todas las zonas</option>
-                    <option value="buenos-aires">Buenos Aires (CABA / GBA / Costa)</option>
-                    <option value="cordoba">Córdoba (Capital / Punilla / Calamuchita)</option>
-                    <option value="santa-fe">Santa Fe (Rosario / Capital)</option>
-                    <option value="mendoza">Mendoza</option>
-                </select>
-            </div>
-
-            <div class="grid grid-3 applicator-cards" id="applicators-grid">
-                <!-- Dynamically Rendered Cards via JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Pre-sale & Lead Capture (CRM Integration Form) -->
-    <section id="preventa" class="section lead-section">
-        <div class="container">
-            <div class="grid grid-2 lead-layout">
-                <div class="lead-text-side">
-                    <span class="section-badge">PREVENTA EMBARQUE #1</span>
-                    <h2 class="section-title">Asegurá tu stock o sumate a la red de distribución</h2>
-                    <p class="lead-p">El primer embarque oficial de SuperBrite® está asignado prioritariamente para reservas registradas. Déjanos tus datos y un asesor técnico-comercial te contactará de inmediato.</p>
-                    
-                    <div class="contact-bullets">
-                        <div class="bullet-item">
-                            <div class="bullet-icon">🏢</div>
-                            <div>
-                                <h4>Atención Especializada B2B</h4>
-                                <p>Precios por volumen para constructoras, municipios y desarrolladores.</p>
-                            </div>
-                        </div>
-                        <div class="bullet-item">
-                            <div class="bullet-icon">📐</div>
-                            <div>
-                                <h4>Asesoramiento en Proyecto</h4>
-                                <p>Cálculos de cómputo y presupuesto sin costo para arquitectos.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lead-form-side">
-                    <form id="crm-lead-form" class="card form-card">
-                        <h3 class="form-title">Formulario de Contacto & Preventa</h3>
-                        
-                        <div class="form-group">
-                            <label for="lead-name">Nombre y Apellido / Empresa *</label>
-                            <input type="text" id="lead-name" placeholder="Ej: Arq. Marcelo Silva / H2Obras" required>
-                        </div>
-
-                        <div class="form-row grid grid-2">
-                            <div class="form-group">
-                                <label for="lead-email">Email *</label>
-                                <input type="email" id="lead-email" placeholder="contacto@empresa.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="lead-phone">Teléfono / WhatsApp *</label>
-                                <input type="tel" id="lead-phone" placeholder="+54 9 11 ..." required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="lead-profile">Perfil de Interés *</label>
-                            <select id="lead-profile" class="form-select" required>
-                                <option value="" disabled selected>Seleccioná tu perfil...</option>
-                                <option value="constructora">Empresa Constructora / Desarrollador</option>
-                                <option value="arquitecto">Arquitecto / Paisajista</option>
-                                <option value="aplicador">Aplicador / Cuadrilla (Deseo Capacitación)</option>
-                                <option value="municipio">Municipio / Ente Público</option>
-                                <option value="particular">Particular (Dueño de casa)</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="lead-m2">Superficie Estimada (m² aproximados)</label>
-                            <input type="text" id="lead-m2" placeholder="Ej: 50 m² o Múltiples Obras">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="lead-message">Mensaje / Consulta Adicional</label>
-                            <textarea id="lead-message" rows="3" placeholder="Contanos sobre tu proyecto u obra..."></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-block btn-lg">
-                            Enviar Solicitud a ImpoAquatic
-                        </button>
-                        <p class="form-disclaimer">🔒 Tus datos son confidenciales y serán ingresados directamente en nuestro CRM para atención prioritaria.</p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-content grid grid-4">
-            <div class="footer-col">
-                <span class="logo-main">IMPO<span class="highlight">AQUATIC</span></span>
-                <p class="footer-desc">Distribuidor oficial exclusivo de SuperBrite® en la República Argentina. Revestimientos de cuarzo y soluciones integrales para arquitectura acuática.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Navegación</h4>
-                <ul>
-                    <li><a href="#catalogo">Catálogo de Productos</a></li>
-                    <li><a href="#calculadora">Calculadora m²</a></li>
-                    <li><a href="#capacitaciones">Cursos & Certificación</a></li>
-                    <li><a href="#cuadrillas">Red de Aplicadores</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contacto</h4>
-                <p>📍 Argentina (Depósito & Oficinas Centrales)</p>
-                <p>📧 ventas@impoaquatic.com.ar</p>
-                <p>💬 WhatsApp Ventas B2B / B2C</p>
-            </div>
-            <div class="footer-col">
-                <h4>Redes Sociales</h4>
-                <div class="social-links">
-                    <a href="https://instagram.com" target="_blank" class="social-btn">Instagram</a>
-                    <a href="https://linkedin.com" target="_blank" class="social-btn">LinkedIn</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom center">
-            <p>&copy; 2026 ImpoAquatic. Todos los derechos reservados. Distribuidor Autorizado SuperBrite® Chile.</p>
-        </div>
-    </footer>
-
-    <script src="app.js"></script>
 </body>
 </html>
