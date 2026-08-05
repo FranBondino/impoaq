@@ -54,8 +54,8 @@
         .price-badge { display: inline-block; background: linear-gradient(135deg, var(--primary-dark), var(--primary)); color: #fff; font-family: var(--font-heading); font-size: 22px; font-weight: 800; padding: 8px 16px; border-radius: 10px; margin-top: 10px; }
         .price-note { font-size: 12px; color: var(--text-muted); margin-top: 4px; display: block; }
 
-        .action-banner { background: linear-gradient(135deg, var(--primary-dark), rgba(0, 229, 255, 0.2)); border: 1px solid var(--accent); border-radius: 16px; padding: 30px; margin-top: 40px; text-align: center; }
-        .btn-demo { display: inline-block; background: var(--accent); color: var(--bg-dark); font-family: var(--font-heading); font-weight: 800; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-size: 16px; margin-top: 16px; }
+        .client-cost-box { background: rgba(255, 209, 102, 0.08); border: 1px solid var(--accent-gold); border-radius: 14px; padding: 24px; margin-top: 24px; }
+        .client-cost-box h3 { color: var(--accent-gold); font-family: var(--font-heading); font-size: 18px; margin-bottom: 10px; }
 
         .footer-note { text-align: center; margin-top: 40px; font-size: 13px; color: var(--text-muted); }
     </style>
@@ -81,8 +81,8 @@
 
     <!-- Opciones de Presupuesto Comercial -->
     <section>
-        <h2 class="section-h2">2. Cuadro de Presupuesto & Modalidades de Pago</h2>
-        <div class="grid grid-3">
+        <h2 class="section-h2">2. Cuadro de Presupuesto & Servicios de Desarrollo</h2>
+        <div class="grid grid-2">
             <div class="card-box highlight">
                 <h3 class="section-h3">OPCIÓN 1: Plataforma Web (Prioridad 1)</h3>
                 <p>Desarrollo web completo, Calculadora m² en vivo, Catálogo interactivo de productos, Módulo de capacitaciones y Formulario CRM de preventa.</p>
@@ -95,12 +95,34 @@
                 <div class="price-badge">$1.380.000 ARS</div>
                 <span class="price-note">Pago Único. Ahorro combo. 3 cuotas fijas de $460.000 ARS.</span>
             </div>
+        </div>
+
+        <h3 class="section-h3">Planes de Mantenimiento Mensual (Post-Lanzamiento)</h3>
+        <div class="grid grid-2">
             <div class="card-box">
-                <h3 class="section-h3">OPCIÓN 3: Gestión Mensual Redes + Ads</h3>
-                <p>Manejo mensual de Instagram, LinkedIn (8-12 contenidos/reels), UGC con creadores locales y optimización semanal de Meta Ads.</p>
+                <h3 class="section-h3">Plan Mantenimiento Estándar</h3>
+                <p>Manejo de Instagram, LinkedIn (8 contenidos/mes), curaduría del catálogo de Chile + placas de capacitaciones + gestión semanal de anuncios Meta Ads.</p>
                 <div class="price-badge">$350.000 ARS / mes</div>
-                <span class="price-note">Fee Recurrente Mensual post-lanzamiento.</span>
+                <span class="price-note">Fee Recurrente Mensual.</span>
             </div>
+            <div class="card-box highlight">
+                <h3 class="section-h3">Plan Mantenimiento PRO / Audiovisual</h3>
+                <p>Todo el plan estándar + <strong>producción dedicada de video (Reels/Shorts), edición técnica, jornadas de grabación presencial en obra y contenido con creadores (UGC / Maxi)</strong>.</p>
+                <div class="price-badge">$580.000 ARS / mes</div>
+                <span class="price-note">Fee Recurrente Mensual para alta producción de video.</span>
+            </div>
+        </div>
+
+        <!-- Costos a Cargo Directo del Cliente -->
+        <div class="client-cost-box">
+            <h3>📌 Costos de Infraestructura & Servicios de Terceros (A Cargo del Cliente)</h3>
+            <p>Los siguientes servicios son gastos operativos necesarios abonados directamente por la empresa a los proveedores correspondientes:</p>
+            <ul>
+                <li><strong>Registro de Dominio (.com.ar / .ar):</strong> ~$15.000 a $25.000 ARS / año (Abonado directo a NIC Argentina).</li>
+                <li><strong>Servidor Web SSD & Certificado SSL:</strong> ~$15.000 a $25.000 ARS / mes (o ~$150.000 ARS / año en proveedor seleccionado).</li>
+                <li><strong>Presupuesto de Publicidad Meta Ads:</strong> Definido libremente por el cliente (Sugerido inicial: desde $150.000 ARS / mes pagados con tarjeta a Meta).</li>
+                <li><strong>Licencias CRM / Email Marketing (Opcional):</strong> Plan gratuito de HubSpot/Zoho o plan pago si requieren funciones avanzadas.</li>
+            </ul>
         </div>
     </section>
 
