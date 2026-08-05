@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propuesta Comercial & Presupuesto | ImpoAquatic - SuperBrite Argentina</title>
+    <title>Propuesta Comercial & Estrategia Digital | ImpoAquatic - SuperBrite Argentina</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
@@ -28,25 +28,25 @@
             font-family: var(--font-body);
             background-color: var(--bg-page);
             color: var(--text-main);
-            line-height: 1.6;
-            padding: clamp(12px, 3vw, 40px) clamp(10px, 2vw, 20px);
+            line-height: 1.7;
+            padding: clamp(16px, 4vw, 40px) clamp(12px, 2vw, 20px);
             -webkit-font-smoothing: antialiased;
         }
 
         .pdf-page {
-            max-width: 920px;
+            max-width: 900px;
             margin: 0 auto;
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: clamp(12px, 2vw, 20px);
-            padding: clamp(24px, 5vw, 60px);
+            border-radius: clamp(12px, 2vw, 16px);
+            padding: clamp(24px, 6vw, 60px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
         }
 
         header.doc-header {
             border-bottom: 2px solid #F1F5F9;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            padding-bottom: 24px;
+            margin-bottom: 36px;
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
@@ -56,7 +56,7 @@
 
         .brand-logo {
             font-family: var(--font-heading);
-            font-size: clamp(24px, 4vw, 30px);
+            font-size: clamp(26px, 4vw, 32px);
             font-weight: 800;
             color: var(--primary-dark);
             letter-spacing: -0.5px;
@@ -72,7 +72,7 @@
             border: 1px solid #BAE6FD;
             font-size: 11px;
             font-weight: 700;
-            padding: 5px 12px;
+            padding: 6px 14px;
             border-radius: 20px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -80,7 +80,7 @@
 
         h1.doc-title {
             font-family: var(--font-heading);
-            font-size: clamp(22px, 4vw, 32px);
+            font-size: clamp(24px, 4vw, 34px);
             font-weight: 800;
             color: var(--primary-dark);
             margin-top: 6px;
@@ -88,108 +88,52 @@
         }
 
         .doc-meta {
-            font-size: 13px;
+            font-size: 13.5px;
             color: var(--text-muted);
             margin-top: 4px;
         }
 
         h2.section-h2 {
             font-family: var(--font-heading);
-            font-size: clamp(18px, 3vw, 22px);
+            font-size: clamp(19px, 3vw, 23px);
             font-weight: 700;
             color: var(--primary-dark);
-            margin: 32px 0 16px 0;
+            margin: 40px 0 18px 0;
             padding-bottom: 8px;
             border-bottom: 2px solid #E0F2FE;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
         h3.section-h3 {
             font-family: var(--font-heading);
-            font-size: clamp(15px, 2.5vw, 17px);
+            font-size: clamp(16px, 2.5vw, 18px);
             font-weight: 700;
             color: var(--primary-dark);
-            margin: 20px 0 8px 0;
+            margin: 26px 0 10px 0;
         }
 
-        p, li {
+        p {
+            font-size: 15px;
+            color: #334155;
+            margin-bottom: 14px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 22px;
+            margin-bottom: 18px;
+        }
+
+        li {
             font-size: 14.5px;
             color: #334155;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
-        ul {
-            margin-left: 20px;
-            margin-bottom: 16px;
-        }
-
-        .grid {
-            display: grid;
-            gap: 16px;
-            margin: 20px 0;
-        }
-
-        .grid-2 {
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        }
-
-        .card-box {
-            background: #F8FAFC;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: clamp(16px, 3vw, 24px);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card-box.highlight {
-            background: #F0F9FF;
-            border-color: #93C5FD;
-        }
-
-        .price-badge {
-            font-family: var(--font-heading);
-            font-size: clamp(20px, 3.5vw, 26px);
-            font-weight: 800;
-            color: var(--primary-dark);
-            margin-top: 12px;
-        }
-
-        .price-note {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-top: 2px;
-            display: block;
-        }
-
-        .client-cost-box {
-            background: #FFFBEB;
-            border: 1px solid #FDE68A;
-            border-radius: 12px;
-            padding: clamp(16px, 3vw, 24px);
-            margin-top: 24px;
-        }
-
-        .client-cost-box h3 {
-            color: #92400E;
-            font-family: var(--font-heading);
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        .client-cost-box ul li {
-            color: #78350F;
-        }
-
-        /* Mobile Scrollable Table Wrapper */
         .table-wrapper {
             width: 100%;
             overflow-x: auto;
-            margin: 20px 0;
-            border-radius: 10px;
+            margin: 24px 0;
+            border-radius: 8px;
             border: 1px solid var(--border-color);
             -webkit-overflow-scrolling: touch;
         }
@@ -197,14 +141,15 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 13.5px;
-            min-width: 580px;
+            font-size: 14px;
+            min-width: 600px;
         }
 
         th, td {
-            padding: 12px 14px;
+            padding: 14px 16px;
             text-align: left;
             border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
         }
 
         th {
@@ -212,7 +157,7 @@
             font-family: var(--font-heading);
             font-weight: 700;
             color: var(--primary-dark);
-            font-size: 12px;
+            font-size: 12.5px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
@@ -221,33 +166,78 @@
             background: #FAFAFA;
         }
 
+        .price-section {
+            background: #F8FAFC;
+            border: 1px solid #CBD5E1;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .price-item {
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .price-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .price-title {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .price-amount {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 6px 0;
+        }
+
+        .price-detail {
+            font-size: 14px;
+            color: #475569;
+        }
+
+        .infra-section {
+            background: #FFFBEB;
+            border: 1px solid #FDE68A;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 24px;
+        }
+
+        .infra-section h4 {
+            font-family: var(--font-heading);
+            color: #92400E;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .infra-section ul li {
+            color: #78350F;
+        }
+
         .footer-note {
-            margin-top: 40px;
+            margin-top: 50px;
             padding-top: 20px;
             border-top: 1px solid var(--border-color);
             text-align: center;
-            font-size: 12px;
+            font-size: 12.5px;
             color: var(--text-muted);
         }
 
-        /* Print Optimization for PDF Export */
         @media print {
-            body {
-                background: #FFFFFF;
-                padding: 0;
-            }
-            .pdf-page {
-                border: none;
-                box-shadow: none;
-                padding: 0;
-                max-width: 100%;
-            }
-            .card-box, .client-cost-box, .table-wrapper {
-                break-inside: avoid;
-            }
-            table {
-                min-width: 100%;
-            }
+            body { background: #FFFFFF; padding: 0; }
+            .pdf-page { border: none; box-shadow: none; padding: 0; max-width: 100%; }
+            .table-wrapper, .price-section, .infra-section { break-inside: avoid; }
         }
     </style>
 </head>
@@ -257,87 +247,63 @@
     <header class="doc-header">
         <div>
             <div class="brand-logo">IMPO<span>AQUATIC</span></div>
-            <h1 class="doc-title">Propuesta Comercial & Presupuesto Digital</h1>
-            <p class="doc-meta">Distribución Oficial Exclusiva <strong>SuperBrite®</strong> Argentina · Rosario, Santa Fe</p>
+            <h1 class="doc-title">Propuesta Estratégica & Presupuesto Integral</h1>
+            <p class="doc-meta">Distribución Oficial Exclusiva de <strong>SuperBrite®</strong> en Argentina · Rosario, Santa Fe</p>
         </div>
-        <span class="doc-badge">DOCUMENTO OFICIAL 2026</span>
+        <span class="doc-badge">DOCUMENTO COMERCIAL 2026</span>
     </header>
 
-    <!-- Resumen Ejecutivo -->
+    <!-- 1. Introducción y Contexto -->
     <section>
-        <h2 class="section-h2">1. Resumen del Proyecto</h2>
-        <p><strong>ImpoAquatic</strong> introduce en Argentina la representación comercial exclusiva de <strong>SuperBrite®</strong>, revestimiento cuarcítico de alta gama para piscinas y obras de arquitectura acuática.</p>
-        <p>La presente propuesta establece el esquema de inversión para el desarrollo prioritario de la <strong>Plataforma Web Comercial Interactiva</strong>, complementada con opciones para el setup de redes sociales, Meta Ads y mantenimiento mensual por etapas.</p>
+        <h2 class="section-h2">1. Introducción & Objetivos Comerciales</h2>
+        <p><strong>ImpoAquatic</strong> desembarca en el mercado argentino como distribuidor oficial y exclusivo de <strong>SuperBrite®</strong>, marca líder en Chile y la región en revestimientos de cuarzo refinado y soluciones integrales para arquitectura acuática y piscinas.</p>
+        <p>El propósito de esta propuesta es estructurar de forma clara y detallada la estrategia digital de la empresa en Argentina. Dado que la prioridad absoluta declarada es el desarrollo e implementación de la plataforma web comercial para disponer de una herramienta visible e interactiva frente a clientes e inversores, este proyecto se organiza en fases progresivas para optimizar la inversión y maximizar el retorno comercial.</p>
     </section>
 
-    <!-- Opciones de Presupuesto Comercial -->
+    <!-- 2. Estrategia del Ecosistema Digital -->
     <section>
-        <h2 class="section-h2">2. Presupuesto Comercial & Modalidades de Pago</h2>
+        <h2 class="section-h2">2. Estrategia del Ecosistema Digital & Canales</h2>
+        <p>Para construir una presencia sólida y captar clientes en todo el país, el ecosistema digital se divide en dos grandes embudos de atención (B2B y B2C):</p>
+
+        <h3 class="section-h3">A. Canal B2B (Empresas Constructoras, Arquitectos, Aplicadores y Municipios)</h3>
+        <p>Dirigido a empresas del sector de la construcción (como H2Obras), estudios de arquitectura, desarrolladores inmobiliarios y organismos públicos. El objetivo es brindar especificación técnica, asesoramiento en cómputo de materiales y venta mayorista por volumen.</p>
+
+        <h3 class="section-h3">B. Canal B2C (Consumidores Finales & Propietarios)</h3>
+        <p>Enfocado en dueños de propiedades y viviendas que buscan renovar o construir su piscina. La estrategia permite asesorar al cliente final a través de herramientas web interactivas y derivar la ejecución a una cuadrilla de aplicadores certificados de confianza en su zona geográfica.</p>
+
+        <h3 class="section-h3">C. Componentes de la Plataforma Web (Prioridad 1)</h3>
+        <ul>
+            <li><strong>Diseño Web de Alta Gama:</strong> Interfaz moderna, limpia e intuitiva inspirada en estándares internacionales de arquitectura, superando ampliamente la web actual del fabricante en Chile.</li>
+            <li><strong>Calculadora Interactiva de Superficie (m²) y Materiales:</strong> Permite ingresar las medidas de la piscina (largo, ancho y profundidad) o la superficie total, calculando automáticamente las bolsas de SuperBrite® requeridas (2.5 m² por bolsa de 22.7 kg) y el presupuesto estimado.</li>
+            <li><strong>Catálogo Completo de Productos:</strong> Presentación detallada de todas las líneas comerciales con opción de descarga de Fichas Técnicas en formato PDF.</li>
+            <li><strong>Programa de Capacitación & Certificación:</strong> Sección dedicada a destacar los cursos de aplicación como un beneficio exclusivo para profesionalizar cuadrillas y aplicadores independientes.</li>
+            <li><strong>Directorio de Aplicadores Certificados:</strong> Mapeo interactivo por zonas (Buenos Aires, Córdoba, Santa Fe, Mendoza) para canalizar las solicitudes de propietarios finales.</li>
+            <li><strong>Formulario CRM & Preventa:</strong> Captación de leads segmentados por perfil para la reserva del primer embarque en el depósito local.</li>
+        </ul>
+    </section>
+
+    <!-- 3. Redes Sociales, Meta Ads & SEO IA -->
+    <section>
+        <h2 class="section-h2">3. Redes Sociales, Publicidad Digital & SEO</h2>
         
-        <h3 class="section-h3">Desarrollo e Implementación Inicial (Pago Único)</h3>
-        <div class="grid grid-2">
-            <div class="card-box highlight">
-                <div>
-                    <h3 class="section-h3" style="color: var(--primary);">OPCIÓN 1: Plataforma Web (Prioridad 1)</h3>
-                    <p>Desarrollo web comercial completo, Calculadora de m² y bolsas en tiempo real, Catálogo dinámico de productos, Módulo de capacitaciones y Formulario CRM de preventa.</p>
-                </div>
-                <div>
-                    <div class="price-badge">$1.150.000 ARS</div>
-                    <span class="price-note">Pago Único. 50% inicio / 50% entrega o 3 cuotas fijas de $385.000 ARS.</span>
-                </div>
-            </div>
-            <div class="card-box">
-                <div>
-                    <h3 class="section-h3">OPCIÓN 2: Combo Web + Setup Redes & Ads</h3>
-                    <p>Todo lo de la Opción 1 + Setup visual de Instagram/LinkedIn + Configuración de Pixel y Campaña inicial de Meta Ads para la Preventa.</p>
-                </div>
-                <div>
-                    <div class="price-badge">$1.380.000 ARS</div>
-                    <span class="price-note">Pago Único. Ahorro combo. 3 cuotas fijas de $460.000 ARS.</span>
-                </div>
-            </div>
-        </div>
+        <h3 class="section-h3">A. Instagram & Producción de Contenidos</h3>
+        <p>La estrategia visual combina el catálogo multimedia autorizado de SuperBrite Chile (60% del contenido) con producción propia local en Argentina (30% de contenidos dinámicos/UGC con creadores como Maxi y cobertura en obras reales) y placas educativas sobre capacitaciones técnicas (10%).</p>
 
-        <h3 class="section-h3" style="margin-top: 28px;">Gestión & Mantenimiento Mensual (Post-Lanzamiento)</h3>
-        <div class="grid grid-2">
-            <div class="card-box">
-                <div>
-                    <h3 class="section-h3">Plan Mantenimiento Estándar</h3>
-                    <p>Manejo de Instagram, LinkedIn (8 contenidos/mes), curaduría del catálogo de Chile + placas de capacitaciones + gestión semanal de anuncios Meta Ads.</p>
-                </div>
-                <div>
-                    <div class="price-badge">$350.000 ARS / mes</div>
-                    <span class="price-note">Fee Recurrente Mensual post-lanzamiento.</span>
-                </div>
-            </div>
-            <div class="card-box highlight">
-                <div>
-                    <h3 class="section-h3" style="color: var(--primary);">Plan Mantenimiento PRO / Audiovisual</h3>
-                    <p>Todo el plan estándar + <strong>producción dedicada de video (Reels/Shorts), edición técnica, jornadas de grabación presencial en obra y contenido con creadores (UGC / Maxi)</strong>.</p>
-                </div>
-                <div>
-                    <div class="price-badge">$580.000 ARS / mes</div>
-                    <span class="price-note">Fee Recurrente Mensual para alta producción audiovisual.</span>
-                </div>
-            </div>
-        </div>
+        <h3 class="section-h3">B. LinkedIn B2B</h3>
+        <p>Orientado a la prospección corporativa y al posicionamiento institucional frente a arquitectos, ingenieros civiles, desarrolladores y licitaciones de obras públicas.</p>
 
-        <!-- Costos a Cargo Directo del Cliente -->
-        <div class="client-cost-box">
-            <h3>📌 Costos de Infraestructura & Servicios de Terceros (A Cargo del Cliente)</h3>
-            <p>Los siguientes rubros son gastos operativos necesarios de la empresa, abonados directamente a los proveedores oficiales correspondientes:</p>
-            <ul>
-                <li><strong>Registro de Dominio (.com.ar / .ar):</strong> ~$15.000 a $25.000 ARS / año (Abonado directo a NIC Argentina).</li>
-                <li><strong>Servidor Web SSD & Certificado SSL:</strong> ~$15.000 a $25.000 ARS / mes (o ~$150.000 ARS / año en proveedor seleccionado).</li>
-                <li><strong>Presupuesto Publicitario Meta Ads:</strong> Definido libremente por el cliente (Sugerido inicial: desde $150.000 ARS / mes pagados directo a Meta con tarjeta).</li>
-                <li><strong>Licencias CRM / Email Marketing (Opcional):</strong> Plan gratuito de HubSpot/Zoho o plan pago si requieren funciones avanzadas.</li>
-            </ul>
-        </div>
+        <h3 class="section-h3">C. Publicidad Digital en Meta Ads</h3>
+        <p>Campañas publicitarias segmentadas en tres objetivos: generación de clientes potenciales B2B para constructoras, captación de aplicadores para capacitaciones presenciales y atracción de propietarios particulares para la calculadora web y preventa.</p>
+
+        <h3 class="section-h3">D. Posicionamiento SEO asistido por IA</h3>
+        <p>Optimización técnica on-page y marcado semántico Schema.org orientado a búsquedas estratégicas en Argentina (ej. <em>"revestimiento cuarzo piscinas argentina"</em>, <em>"alternativa a venecitas"</em>).</p>
     </section>
 
-    <!-- Catálogo de Productos -->
+    <!-- 4. Estructura del Catálogo de Productos -->
     <section>
-        <h2 class="section-h2">3. Estructura del Catálogo Digital de Productos</h2>
+        <h2 class="section-h2">4. Estructura del Catálogo Digital de Productos</h2>
+        <p>Para posicionar a ImpoAquatic como un proveedor integral de soluciones acuáticas, la web exhibirá todas las líneas comerciales del fabricante:</p>
+        
         <div class="table-wrapper">
             <table>
                 <thead>
@@ -387,6 +353,60 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+    </section>
+
+    <!-- 5. Presupuesto Comercial y Desglose Económico -->
+    <section>
+        <h2 class="section-h2">5. Presupuesto Comercial & Desglose Económico</h2>
+        <p>A continuación se detallan los costos de desarrollo, configuración y servicios de mantenimiento mensual. Se presentan valores desglosados para permitir la contratación escalonada del proyecto según la prioridad del cliente:</p>
+
+        <div class="price-section">
+            <div class="price-item">
+                <div class="price-title">Item 1: Desarrollo e Implementación de la Plataforma Web Comercial (Prioridad 1)</div>
+                <div class="price-amount">$1.150.000 ARS (Pago Único)</div>
+                <div class="price-detail">
+                    <p><strong>Incluye:</strong> Diseño web profesional responsive, Calculadora de m² e insumos en tiempo real, Catálogo interactivo de productos con descarga de fichas técnicas PDF, Módulo de capacitaciones para aplicadores, Directorio de cuadrillas certificadas por zona y Formulario CRM de preventa.</p>
+                    <p><strong>Modalidades de Pago:</strong></p>
+                    <ul>
+                        <li><strong>Contado / 2 Pagos:</strong> 50% al iniciar ($575.000 ARS) y 50% contra entrega final ($575.000 ARS).</li>
+                        <li><strong>Financiación en 3 Cuotas Fijas:</strong> 3 cuotas mensuales de <strong>$385.000 ARS</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="price-item">
+                <div class="price-title">Item 2: Setup e Identidad Inicial de Redes Sociales & Meta Ads</div>
+                <div class="price-amount">$230.000 ARS (Pago Único) — [ Combo Web + Setup: $1.380.000 ARS ]</div>
+                <div class="price-detail">
+                    <p><strong>Incluye:</strong> Configuración estética de perfiles en Instagram y LinkedIn, diseño de plantillas gráficas de marca, portadas, 5 historias destacadas, instalación del Píxel de Meta/API de conversiones y armado de la 1ª campaña publicitaria de preventa.</p>
+                </div>
+            </div>
+
+            <div class="price-item">
+                <div class="price-title">Item 3: Servicio de Mantenimiento & Gestión Mensual (Post-Lanzamiento)</div>
+                <div class="price-detail">
+                    <p>El servicio de mantenimiento mensual se ofrece en dos planes según el nivel de producción audiovisual requerido:</p>
+                    
+                    <p><strong>• Plan Mantenimiento Estándar: $350.000 ARS / mes</strong><br>
+                    Incluye 8 a 10 publicaciones mensuales basadas en la adaptación y curaduría del catálogo multimedia de Chile + placas gráficas de capacitaciones + gestión y optimización semanal de campañas en Meta Ads + moderación básica de consultas.</p>
+
+                    <p><strong>• Plan Mantenimiento PRO / Audiovisual: $580.000 ARS / mes</strong><br>
+                    Diseñado para cuando se requiere producción de contenido propio en Argentina. Incluye todo el Plan Estándar más <strong>jornadas de grabación presencial en obra (Rosario y alrededores), edición dedicada de video corto (Reels/Shorts), guionado técnico y co-creación de contenido con creadores (UGC / Maxi)</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Costos a Cargo del Cliente -->
+        <div class="infra-section">
+            <h4>📌 Gastos Operativos & Servicios de Terceros (A Cargo Directo del Cliente)</h4>
+            <p>Los siguientes servicios corresponden a la infraestructura operativa de la empresa y son abonados directamente por el cliente a los proveedores oficiales correspondoientes:</p>
+            <ul>
+                <li><strong>Registro de Dominio (.com.ar / .ar):</strong> ~$15.000 a $25.000 ARS / año (Abonado directo a NIC Argentina).</li>
+                <li><strong>Servidor Web SSD & Certificado SSL:</strong> ~$15.000 a $25.000 ARS / mes (o ~$150.000 ARS / año según proveedor seleccionado).</li>
+                <li><strong>Presupuesto Publicitario de Meta Ads:</strong> Definido libremente por el cliente (Sugerido inicial: desde $150.000 ARS / mes abonados directo a Meta con tarjeta de crédito/débito).</li>
+                <li><strong>Licencias CRM / Email Marketing (Opcional):</strong> Plan gratuito de HubSpot/Zoho o plan pago según volumen de gestión.</li>
+            </ul>
         </div>
     </section>
 
