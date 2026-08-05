@@ -3,124 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propuesta Estratégica Ecosistema Digital | ImpoAquatic - SuperBrite Argentina</title>
+    <title>Propuesta Comercial & Presupuesto | ImpoAquatic - SuperBrite Argentina</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #070F1E;
-            --bg-card: rgba(15, 27, 49, 0.85);
-            --primary: #00B4D8;
-            --primary-dark: #0077B6;
-            --accent: #00E5FF;
-            --accent-gold: #FFD166;
-            --text-main: #F4F9FA;
-            --text-muted: #94A3B8;
+            --primary: #0284C7;
+            --primary-dark: #0F172A;
+            --secondary: #0369A1;
+            --accent: #0EA5E9;
+            --bg-page: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --border-color: #E2E8F0;
             --font-heading: 'Outfit', sans-serif;
-            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --font-body: 'Inter', sans-serif;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-body); background: var(--bg-dark); color: var(--text-main); line-height: 1.7; padding: 40px 20px; }
-        .doc-container { max-width: 1100px; margin: 0 auto; background: var(--bg-card); border: 1px solid rgba(0, 229, 255, 0.2); border-radius: 24px; padding: 60px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); backdrop-filter: blur(10px); }
+        
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
 
-        header.doc-header { border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 30px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; }
-        .doc-brand { font-family: var(--font-heading); font-size: 28px; font-weight: 800; color: #fff; }
-        .doc-brand span { color: var(--primary); }
-        .doc-badge { background: var(--primary-dark); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; }
+        .pdf-page {
+            max-width: 920px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 60px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
 
-        h1.doc-title { font-family: var(--font-heading); font-size: 38px; font-weight: 800; line-height: 1.2; margin-top: 10px; color: #fff; }
-        .doc-meta { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+        header.doc-header {
+            border-bottom: 2px solid #F1F5F9;
+            padding-bottom: 24px;
+            margin-bottom: 36px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
 
-        h2.section-h2 { font-family: var(--font-heading); font-size: 24px; font-weight: 700; color: var(--accent); margin: 40px 0 16px 0; border-left: 4px solid var(--accent); padding-left: 14px; }
-        h3.section-h3 { font-family: var(--font-heading); font-size: 18px; font-weight: 600; color: #fff; margin: 24px 0 10px 0; }
+        .brand-logo {
+            font-family: var(--font-heading);
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--primary-dark);
+            letter-spacing: -0.5px;
+        }
 
-        p, li { font-size: 15px; color: rgba(244, 249, 250, 0.9); margin-bottom: 12px; }
-        ul { margin-left: 20px; margin-bottom: 20px; }
+        .brand-logo span {
+            color: var(--primary);
+        }
 
-        .grid { display: grid; gap: 20px; margin: 20px 0; }
+        .doc-badge {
+            background: #F0F9FF;
+            color: var(--secondary);
+            border: 1px solid #BAE6FD;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h1.doc-title {
+            font-family: var(--font-heading);
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-top: 8px;
+            line-height: 1.25;
+        }
+
+        .doc-meta {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+
+        h2.section-h2 {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin: 36px 0 16px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #E0F2FE;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3.section-h3 {
+            font-family: var(--font-heading);
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin: 20px 0 8px 0;
+        }
+
+        p, li {
+            font-size: 14.5px;
+            color: #334155;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
         .grid-2 { grid-template-columns: repeat(2, 1fr); }
         .grid-3 { grid-template-columns: repeat(3, 1fr); }
-        @media(max-width: 768px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } .doc-container { padding: 30px; } }
+        
+        @media(max-width: 768px) {
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+            .pdf-page { padding: 30px; }
+        }
 
-        .card-box { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 24px; }
-        .card-box.highlight { border-color: var(--accent); background: rgba(0, 229, 255, 0.05); }
+        .card-box {
+            background: #F8FAFC;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-        table { width: 100%; border-collapse: collapse; margin: 24px 0; background: rgba(0,0,0,0.2); border-radius: 12px; overflow: hidden; }
-        th, td { padding: 14px 18px; text-align: left; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.08); }
-        th { background: rgba(0, 180, 216, 0.2); font-family: var(--font-heading); font-size: 14px; font-weight: 700; color: var(--accent); }
+        .card-box.highlight {
+            background: #F0F9FF;
+            border-color: #93C5FD;
+        }
 
-        .price-badge { display: inline-block; background: linear-gradient(135deg, var(--primary-dark), var(--primary)); color: #fff; font-family: var(--font-heading); font-size: 22px; font-weight: 800; padding: 8px 16px; border-radius: 10px; margin-top: 10px; }
-        .price-note { font-size: 12px; color: var(--text-muted); margin-top: 4px; display: block; }
+        .price-badge {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-top: 12px;
+        }
 
-        .client-cost-box { background: rgba(255, 209, 102, 0.08); border: 1px solid var(--accent-gold); border-radius: 14px; padding: 24px; margin-top: 24px; }
-        .client-cost-box h3 { color: var(--accent-gold); font-family: var(--font-heading); font-size: 18px; margin-bottom: 10px; }
+        .price-note {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+            display: block;
+        }
 
-        .footer-note { text-align: center; margin-top: 40px; font-size: 13px; color: var(--text-muted); }
+        .client-cost-box {
+            background: #FFFBEB;
+            border: 1px solid #FDE68A;
+            border-radius: 10px;
+            padding: 24px;
+            margin-top: 24px;
+        }
+
+        .client-cost-box h3 {
+            color: #92400E;
+            font-family: var(--font-heading);
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .client-cost-box ul li {
+            color: #78350F;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background: #F1F5F9;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--primary-dark);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tr:nth-child(even) {
+            background: #FAFAFA;
+        }
+
+        .footer-note {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Print Optimization for PDF Export */
+        @media print {
+            body {
+                background: #FFFFFF;
+                padding: 0;
+            }
+            .pdf-page {
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            .card-box, .client-cost-box, table {
+                break-inside: avoid;
+            }
+        }
     </style>
 </head>
 <body>
 
-<div class="doc-container">
+<div class="pdf-page">
     <header class="doc-header">
         <div>
-            <div class="doc-brand">IMPO<span>AQUATIC</span></div>
-            <h1 class="doc-title">Propuesta Estratégica & Presupuesto Comercial</h1>
-            <p class="doc-meta">Distribuidor Oficial Exclusivo de <strong>SuperBrite®</strong> en Argentina · Rosario, Santa Fe</p>
+            <div class="brand-logo">IMPO<span>AQUATIC</span></div>
+            <h1 class="doc-title">Propuesta Comercial & Presupuesto Digital</h1>
+            <p class="doc-meta">Distribución Oficial Exclusiva <strong>SuperBrite®</strong> Argentina · Rosario, Santa Fe</p>
         </div>
-        <span class="doc-badge">PRESUPUESTO 2026</span>
+        <span class="doc-badge">DOCUMENTO OFICIAL 2026</span>
     </header>
 
     <!-- Resumen Ejecutivo -->
     <section>
         <h2 class="section-h2">1. Resumen del Proyecto</h2>
-        <p><strong>ImpoAquatic</strong> introduce en Argentina la representación exclusiva de <strong>SuperBrite®</strong>, el revestimiento cuarcítico para piscinas y arquitectura acuática de referencia en la región.</p>
-        <p>Esta propuesta articula el desarrollo prioritario de la <strong>plataforma web comercial interactiva</strong> con opciones escalables para setup de redes sociales, Meta Ads y posicionamiento SEO con IA.</p>
+        <p><strong>ImpoAquatic</strong> introduce en Argentina la representación comercial exclusiva de <strong>SuperBrite®</strong>, revestimiento cuarcítico de alta gama para piscinas y obras de arquitectura acuática.</p>
+        <p>La presente propuesta establece el esquema de inversión para el desarrollo prioritario de la <strong>Plataforma Web Comercial Interactiva</strong>, complementada con opciones para el setup de redes sociales, Meta Ads y mantenimiento mensual por etapas.</p>
     </section>
 
     <!-- Opciones de Presupuesto Comercial -->
     <section>
-        <h2 class="section-h2">2. Cuadro de Presupuesto & Servicios de Desarrollo</h2>
+        <h2 class="section-h2">2. Presupuesto Comercial & Modalidades de Pago</h2>
+        
+        <h3 class="section-h3">Desarrollo e Implementación Inicial (Pago Único)</h3>
         <div class="grid grid-2">
             <div class="card-box highlight">
-                <h3 class="section-h3">OPCIÓN 1: Plataforma Web (Prioridad 1)</h3>
-                <p>Desarrollo web completo, Calculadora m² en vivo, Catálogo interactivo de productos, Módulo de capacitaciones y Formulario CRM de preventa.</p>
-                <div class="price-badge">$1.150.000 ARS</div>
-                <span class="price-note">Pago Único. 50% inicio / 50% entrega o 3 cuotas fijas de $385.000 ARS.</span>
+                <div>
+                    <h3 class="section-h3" style="color: var(--primary);">OPCIÓN 1: Plataforma Web (Prioridad 1)</h3>
+                    <p>Desarrollo web comercial completo, Calculadora de m² y bolsas en tiempo real, Catálogo dinámico de productos, Módulo de capacitaciones y Formulario CRM de preventa.</p>
+                </div>
+                <div>
+                    <div class="price-badge">$1.150.000 ARS</div>
+                    <span class="price-note">Pago Único. 50% inicio / 50% entrega o 3 cuotas fijas de $385.000 ARS.</span>
+                </div>
             </div>
             <div class="card-box">
-                <h3 class="section-h3">OPCIÓN 2: Combo Web + Setup Redes & Ads</h3>
-                <p>Todo lo de la Opción 1 + Setup estético de Instagram/LinkedIn + Configuración de Pixel y Campaña inicial de Meta Ads para la Preventa.</p>
-                <div class="price-badge">$1.380.000 ARS</div>
-                <span class="price-note">Pago Único. Ahorro combo. 3 cuotas fijas de $460.000 ARS.</span>
+                <div>
+                    <h3 class="section-h3">OPCIÓN 2: Combo Web + Setup Redes & Ads</h3>
+                    <p>Todo lo de la Opción 1 + Setup visual de Instagram/LinkedIn + Configuración de Pixel y Campaña inicial de Meta Ads para la Preventa.</p>
+                </div>
+                <div>
+                    <div class="price-badge">$1.380.000 ARS</div>
+                    <span class="price-note">Pago Único. Ahorro combo. 3 cuotas fijas de $460.000 ARS.</span>
+                </div>
             </div>
         </div>
 
-        <h3 class="section-h3">Planes de Mantenimiento Mensual (Post-Lanzamiento)</h3>
+        <h3 class="section-h3" style="margin-top: 28px;">Gestión & Mantenimiento Mensual (Post-Lanzamiento)</h3>
         <div class="grid grid-2">
             <div class="card-box">
-                <h3 class="section-h3">Plan Mantenimiento Estándar</h3>
-                <p>Manejo de Instagram, LinkedIn (8 contenidos/mes), curaduría del catálogo de Chile + placas de capacitaciones + gestión semanal de anuncios Meta Ads.</p>
-                <div class="price-badge">$350.000 ARS / mes</div>
-                <span class="price-note">Fee Recurrente Mensual.</span>
+                <div>
+                    <h3 class="section-h3">Plan Mantenimiento Estándar</h3>
+                    <p>Manejo de Instagram, LinkedIn (8 contenidos/mes), curaduría del catálogo de Chile + placas de capacitaciones + gestión semanal de anuncios Meta Ads.</p>
+                </div>
+                <div>
+                    <div class="price-badge">$350.000 ARS / mes</div>
+                    <span class="price-note">Fee Recurrente Mensual post-lanzamiento.</span>
+                </div>
             </div>
             <div class="card-box highlight">
-                <h3 class="section-h3">Plan Mantenimiento PRO / Audiovisual</h3>
-                <p>Todo el plan estándar + <strong>producción dedicada de video (Reels/Shorts), edición técnica, jornadas de grabación presencial en obra y contenido con creadores (UGC / Maxi)</strong>.</p>
-                <div class="price-badge">$580.000 ARS / mes</div>
-                <span class="price-note">Fee Recurrente Mensual para alta producción de video.</span>
+                <div>
+                    <h3 class="section-h3" style="color: var(--primary);">Plan Mantenimiento PRO / Audiovisual</h3>
+                    <p>Todo el plan estándar + <strong>producción dedicada de video (Reels/Shorts), edición técnica, jornadas de grabación presencial en obra y contenido con creadores (UGC / Maxi)</strong>.</p>
+                </div>
+                <div>
+                    <div class="price-badge">$580.000 ARS / mes</div>
+                    <span class="price-note">Fee Recurrente Mensual para alta producción audiovisual.</span>
+                </div>
             </div>
         </div>
 
         <!-- Costos a Cargo Directo del Cliente -->
         <div class="client-cost-box">
             <h3>📌 Costos de Infraestructura & Servicios de Terceros (A Cargo del Cliente)</h3>
-            <p>Los siguientes servicios son gastos operativos necesarios abonados directamente por la empresa a los proveedores correspondientes:</p>
+            <p>Los siguientes rubros son gastos operativos necesarios de la empresa, abonados directamente a los proveedores oficiales correspondientes:</p>
             <ul>
                 <li><strong>Registro de Dominio (.com.ar / .ar):</strong> ~$15.000 a $25.000 ARS / año (Abonado directo a NIC Argentina).</li>
                 <li><strong>Servidor Web SSD & Certificado SSL:</strong> ~$15.000 a $25.000 ARS / mes (o ~$150.000 ARS / año en proveedor seleccionado).</li>
-                <li><strong>Presupuesto de Publicidad Meta Ads:</strong> Definido libremente por el cliente (Sugerido inicial: desde $150.000 ARS / mes pagados con tarjeta a Meta).</li>
+                <li><strong>Presupuesto Publicitario Meta Ads:</strong> Definido libremente por el cliente (Sugerido inicial: desde $150.000 ARS / mes pagados directo a Meta con tarjeta).</li>
                 <li><strong>Licencias CRM / Email Marketing (Opcional):</strong> Plan gratuito de HubSpot/Zoho o plan pago si requieren funciones avanzadas.</li>
             </ul>
         </div>
