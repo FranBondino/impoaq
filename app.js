@@ -708,8 +708,8 @@ window.closeVideoModal = closeVideoModal;
 // 8. OTRAS FUNCIONALIDADES DE INTERACCIÓN (Filtro de Catálogo, Formulario, Nav)
 // ==========================================================================
 function filterCategory(category, btnElement) {
-    const products = document.querySelectorAll('#catalog-grid .catalog-card, .catalog-card');
-    const filterBtns = document.querySelectorAll('.filter-pills .pill-btn');
+    const products = document.querySelectorAll('.product-card-horizontal');
+    const filterBtns = document.querySelectorAll('.filter-pill');
 
     // Actualizar clase active en los botones de filtro
     if (filterBtns.length > 0 && btnElement) {
@@ -720,8 +720,8 @@ function filterCategory(category, btnElement) {
     products.forEach(card => {
         const cardCat = card.dataset.cat;
         if (category === 'todos' || cardCat === category) {
-            card.style.display = 'flex';
-            card.style.animation = 'fadeIn 0.4s ease';
+            card.style.display = 'grid';
+            card.style.opacity = '1';
         } else {
             card.style.display = 'none';
         }

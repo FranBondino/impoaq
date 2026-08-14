@@ -81,10 +81,20 @@
                     <a href="#calculadora" class="btn-primary">Calcular Insumos de Obra</a>
                     <a href="#productos" class="btn-secondary">Explorar Catálogo</a>
                 </div>
+
+                <div class="hero-trust-bar">
+                    <div class="trust-item"><i class="fa-solid fa-shield-halved text-blue"></i> 10+ Años Durabilidad</div>
+                    <div class="trust-item"><i class="fa-solid fa-gem text-blue"></i> 100% Cuarzo Natural</div>
+                    <div class="trust-item"><i class="fa-solid fa-sun text-blue"></i> Atérmico & Antideslizante</div>
+                </div>
             </div>
 
             <div class="hero-image-box">
-                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1200" alt="Piscina revestida con cuarzo continuo">
+                <img src="assets/img/real_photos/superbrite_real_1.jpg" alt="Piscina revestida con cuarzo continuo Súper Brite">
+                <div class="hero-badge-float">
+                    <span class="badge-dot"></span>
+                    <span>Súper Brite® Quartz Finish Oficial</span>
+                </div>
             </div>
         </div>
     </section>
@@ -93,8 +103,19 @@
     <section class="section-products" id="productos">
         <div class="container">
             <div class="section-head text-center">
+                <span class="hero-label">Gama Profesional de Insumos</span>
                 <h2 class="head-title">Catálogo Oficial de Productos</h2>
                 <p class="head-desc">Líneas de revestimiento y preparación técnica formuladas para exigencia profesional en vaso de hormigón y superficies exteriores.</p>
+                
+                <!-- FILTER PILLS -->
+                <div class="catalog-filters">
+                    <button class="filter-pill active" onclick="filterCategory('todos', this)">Todos (5)</button>
+                    <button class="filter-pill" onclick="filterCategory('piscinas', this)">Piscinas (Cuarzo)</button>
+                    <button class="filter-pill" onclick="filterCategory('adherencia', this)">Puentes de Unión</button>
+                    <button class="filter-pill" onclick="filterCategory('bordes', this)">Bordes Atérmicos</button>
+                    <button class="filter-pill" onclick="filterCategory('resina', this)">Resinas Texturadas</button>
+                    <button class="filter-pill" onclick="filterCategory('microcemento', this)">Microcemento</button>
+                </div>
             </div>
 
             <div class="product-grid" id="catalog-grid">
@@ -421,22 +442,48 @@
                 <p class="head-desc">Proyectos terminados en piscinas, bordes atérmicos y terrazas con insumos oficiales Súper Brite® e Ingeprex.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-                <div class="gal-card" onclick="openLightbox('assets/img/real_photos/superbrite_real_6.jpeg', 'Piscina terminada con Súper Brite® Quartz Finish')">
-                    <img src="assets/img/real_photos/superbrite_real_6.jpeg" alt="Piscina revestida con Súper Brite®">
-                    <div class="gal-caption">Piscina Súper Brite® Quartz Finish</div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+                <div class="gal-card" onclick="openLightbox('assets/img/real_photos/superbrite_real_1.jpg', 'Piscina Residencial Súper Brite® Quartz Finish (Agua Turquesa)')">
+                    <img src="assets/img/real_photos/superbrite_real_1.jpg" alt="Piscina revestida con Súper Brite® Quartz">
+                    <div class="gal-caption">
+                        <span class="gal-tag">Súper Brite®</span>
+                        <div>Piscina Residencial Quartz Finish</div>
+                    </div>
                 </div>
-                <div class="gal-card" onclick="openLightbox('assets/img/real_photos/superbrite_real_9.jpeg', 'Aplicación de Súper Brite® en Vaso de Hormigón')">
-                    <img src="assets/img/real_photos/superbrite_real_9.jpeg" alt="Trabajo en vaso de piscina con Súper Brite®">
-                    <div class="gal-caption">Aplicación y Llaneado Súper Brite®</div>
+                <div class="gal-card" onclick="openLightbox('https://images.unsplash.com/photo-1572331165267-854da2b10ccc?q=80&w=1200', 'Solárium y Bordes Atérmicos Súper Fullget®')">
+                    <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?q=80&w=800" alt="Bordes Atérmicos Súper Fullget®">
+                    <div class="gal-caption">
+                        <span class="gal-tag" style="background: #D97706;">Súper Fullget®</span>
+                        <div>Solárium & Bordes Atérmicos</div>
+                    </div>
                 </div>
-                <div class="gal-card" onclick="openLightbox('assets/img/real_photos/superbrite_real_14.png', 'Red Nacional de Distribuidores Oficiales ImpoAcuatiq')">
-                    <img src="assets/img/real_photos/superbrite_real_14.png" alt="Distribución e Insumos Oficiales">
-                    <div class="gal-caption">Distribución e Insumos Oficiales</div>
+                <div class="gal-card" onclick="openLightbox('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200', 'Cochera y Acceso Vehicular con Spray Deck')">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800" alt="Superficie Proyectada Spray Deck">
+                    <div class="gal-caption">
+                        <span class="gal-tag" style="background: #CA8A04;">Spray Deck</span>
+                        <div>Accesos & Cocheras Proyectadas</div>
+                    </div>
                 </div>
-                <div class="gal-card" onclick="openLightbox('assets/img/real_photos/superbrite_real_15.jpeg', 'Carta Oficial de Colores Súper Brite® Quartz')">
-                    <img src="assets/img/real_photos/superbrite_real_15.jpeg" alt="Catálogo de Tonos de Cuarzo">
-                    <div class="gal-caption">Carta de Tonos y Cristales</div>
+                <div class="gal-card" onclick="openLightbox('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200', 'Microcemento Continuo Súper Seal® en Terrazas y Exteriores')">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800" alt="Microcemento Súper Seal®">
+                    <div class="gal-caption">
+                        <span class="gal-tag" style="background: #EA580C;">Súper Seal®</span>
+                        <div>Microcemento Continuo Impermeable</div>
+                    </div>
+                </div>
+                <div class="gal-card" onclick="openLightbox('assets/img/real_photos/superbrite_real_9.jpeg', 'Aplicación y llaneado artesanal de cuarzo en vaso de hormigón')">
+                    <img src="assets/img/real_photos/superbrite_real_9.jpeg" alt="Llaneado de cuarzo en piscina">
+                    <div class="gal-caption">
+                        <span class="gal-tag">Técnica de Obra</span>
+                        <div>Aplicación & Llaneado Manual</div>
+                    </div>
+                </div>
+                <div class="gal-card" onclick="openLightbox('assets/img/real_photos/superbrite_real_6.jpeg', 'Piscina terminada con reflejo cristalino')">
+                    <img src="assets/img/real_photos/superbrite_real_6.jpeg" alt="Reflejo cristalino piscina cuarzo">
+                    <div class="gal-caption">
+                        <span class="gal-tag">Acabado Final</span>
+                        <div>Reflejo Cristalino de Agua</div>
+                    </div>
                 </div>
             </div>
         </div>
