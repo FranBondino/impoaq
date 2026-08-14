@@ -411,8 +411,16 @@ window.sendCalcToWhatsApp = sendCalcToWhatsApp;
 
 
 // ==========================================================================
-// 6. MODAL INTERACTIVO DE FICHAS TÉCNICAS DE LOS 5 PRODUCTOS
+// 6. MODAL INTERACTIVO DE FICHAS TÉCNICAS (DOCUMENTO TÉCNICO OFICIAL)
 // ==========================================================================
+const PRODUCT_PACKAGING_IMAGES = {
+    sb: 'assets/img/sb-bag.jpg',
+    sk: 'assets/img/sk-primer.jpeg',
+    sf: 'assets/img/sf-bag.jpg',
+    sd: 'assets/img/sd-bucket.png',
+    ss: 'assets/img/ss-bucket.png'
+};
+
 function openProductModal(prodCode) {
     const product = OFFICIAL_PRODUCTS[prodCode];
     if (!product) return;
@@ -422,71 +430,65 @@ function openProductModal(prodCode) {
 
     if (!modalContent || !modal) return;
 
+    const packImg = PRODUCT_PACKAGING_IMAGES[prodCode] || 'assets/img/sb-bag.jpg';
+
     modalContent.innerHTML = `
-        <div class="modal-product-header">
-            <span class="product-badge ${product.badgeClass}">${product.badge}</span>
-            <h2 class="modal-product-title">${product.name} <span class="sub-title">(${product.subName})</span></h2>
-            <p class="modal-product-tagline">${product.headline}</p>
+        <div class="modal-doc-header">
+            <img src="assets/img/logo-horizontal.jpg" alt="ImpoAcuatiq Logo" class="modal-doc-logo">
+            <span class="modal-doc-badge">Ficha Técnica Oficial</span>
         </div>
 
-        <div class="modal-product-body">
-            <div class="modal-section">
-                <h3><i class="fa-solid fa-circle-info text-cyan"></i> Descripción Técnica</h3>
-                <p>${product.description}</p>
-            </div>
+        <h2 class="modal-doc-title">${product.name}</h2>
+        <p class="modal-doc-sub">${product.subName} — ${product.headline}</p>
 
-            <div class="modal-section">
-                <h3><i class="fa-solid fa-list-check text-cyan"></i> Especificaciones de Ficha Técnica</h3>
-                <div class="specs-table-grid">
-                    <div class="spec-row">
-                        <span class="spec-key"><i class="fa-solid fa-box"></i> Presentación:</span>
-                        <span class="spec-val">${product.specs.presentacion}</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-key"><i class="fa-solid fa-chart-area"></i> Rendimiento:</span>
-                        <span class="spec-val"><strong>${product.specs.rendimiento}</strong></span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-key"><i class="fa-solid fa-ruler-vertical"></i> Espesor:</span>
-                        <span class="spec-val">${product.specs.espesor}</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-key"><i class="fa-solid fa-shield-halved"></i> Durabilidad:</span>
-                        <span class="spec-val">${product.specs.durabilidad}</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-key"><i class="fa-solid fa-palette"></i> Colores Disponibles:</span>
-                        <span class="spec-val">${product.specs.colores}</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-key"><i class="fa-solid fa-temperature-arrow-up"></i> Resistencia:</span>
-                        <span class="spec-val">${product.specs.resistencia}</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal-section">
-                <h3><i class="fa-solid fa-star text-yellow"></i> Ventajas Destacadas</h3>
-                <ul class="modal-features-list">
-                    ${product.features.map(f => `<li><i class="fa-solid fa-circle-check text-green"></i> ${f}</li>`).join('')}
-                </ul>
-            </div>
-
-            <div class="modal-section">
-                <h3><i class="fa-solid fa-helmet-safety text-orange"></i> Método de Aplicación</h3>
-                <p class="application-box">${product.application}</p>
-            </div>
+        <div class="modal-doc-grid">
+            <img src="${packImg}" alt="${product.name} Packaging" class="modal-doc-img">
+            
+            <table class="modal-doc-specs">
+                <tr>
+                    <td class="key">Presentación</td>
+                    <td class="val">${product.specs.presentacion}</td>
+                </tr>
+                <tr>
+                    <td class="key">Rendimiento</td>
+                    <td class="val">${product.specs.rendimiento}</td>
+                </tr>
+                <tr>
+                    <td class="key">Espesor de Aplicación</td>
+                    <td class="val">${product.specs.espesor}</td>
+                </tr>
+                <tr>
+                    <td class="key">Durabilidad Estimada</td>
+                    <td class="val">${product.specs.durabilidad}</td>
+                </tr>
+                <tr>
+                    <td class="key">Propiedades</td>
+                    <td class="val">${product.specs.resistencia}</td>
+                </tr>
+            </table>
         </div>
 
-        <div class="modal-product-actions">
-            <button class="btn btn-primary" onclick="scrollToCalculator('${product.code}'); closeProductModal();">
+        <div class="modal-doc-section-title">
+            <i class="fa-solid fa-layer-group text-blue"></i> Descripción General del Sistema
+        </div>
+        <p style="font-size: 13.5px; color: #334155; line-height: 1.6; margin-bottom: 16px;">${product.description}</p>
+
+        <div class="modal-doc-section-title">
+            <i class="fa-solid fa-circle-check text-blue"></i> Ventajas y Especificaciones de Obra
+        </div>
+        <ul class="modal-doc-features">
+            ${product.features.map(f => `<li><i class="fa-solid fa-check text-blue"></i> ${f}</li>`).join('')}
+        </ul>
+
+        <div class="modal-doc-actions">
+            <button class="btn-sm-primary" onclick="scrollToCalculator('${product.code}'); closeProductModal();">
                 <i class="fa-solid fa-calculator"></i> Calcular m² para este Producto
             </button>
-            <button class="btn btn-glass" onclick="downloadSpecSheet('${product.name}', '${product.datasheetPdf}')">
-                <i class="fa-solid fa-file-pdf text-red"></i> Descargar PDF Oficial
+            <button class="btn-doc-pdf" onclick="downloadSpecSheet('${product.name}', '${product.datasheetPdf}')">
+                <i class="fa-solid fa-file-pdf"></i> Imprimir / Guardar Ficha PDF
             </button>
-            <a href="https://wa.me/5493416825470?text=Hola%20Lorna,%20quisiera%20recibir%20la%20Ficha%20T%C3%A9cnica%20en%20PDF%20de%20${encodeURIComponent(product.name)}." target="_blank" class="btn btn-whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> Consultar a Lorna
+            <a href="https://wa.me/5493416825470?text=Hola%20Lorna,%20quisiera%20recibir%20la%20Ficha%20T%C3%A9cnica%20en%20PDF%20de%20${encodeURIComponent(product.name)}." target="_blank" class="btn-doc-wa">
+                <i class="fa-brands fa-whatsapp"></i> Solicitar por WhatsApp
             </a>
         </div>
     `;
@@ -504,7 +506,80 @@ function closeProductModal() {
 }
 
 function downloadSpecSheet(productName, fileName) {
-    alert(`📄 DESCARGA TÉCNICA:\nLa Ficha Técnica oficial de "${productName}" (${fileName}) ha sido generada correctamente para tu proyecto.`);
+    const printWindow = window.open('', '_blank');
+    if (!printWindow) {
+        alert(`📄 Ficha Técnica de "${productName}": Por favor permití las ventanas emergentes para abrir e imprimir el documento PDF oficial.`);
+        return;
+    }
+
+    const prodKey = Object.keys(OFFICIAL_PRODUCTS).find(k => OFFICIAL_PRODUCTS[k].name === productName) || 'sb';
+    const prod = OFFICIAL_PRODUCTS[prodKey];
+    const packImg = PRODUCT_PACKAGING_IMAGES[prodKey] || 'assets/img/sb-bag.jpg';
+
+    printWindow.document.write(`
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <title>Ficha Técnica Oficial - ${prod.name} | ImpoAcuatiq</title>
+            <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+            <style>
+                body { font-family: 'Plus Jakarta Sans', sans-serif; padding: 40px; color: #0F172A; max-width: 800px; margin: 0 auto; line-height: 1.5; }
+                .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #0284C7; padding-bottom: 20px; margin-bottom: 30px; }
+                .logo { height: 50px; }
+                .badge { background: #0284C7; color: #fff; padding: 6px 14px; border-radius: 4px; font-weight: 700; font-size: 12px; text-transform: uppercase; }
+                h1 { font-size: 28px; margin-bottom: 6px; }
+                .sub { color: #64748B; font-size: 15px; margin-bottom: 24px; }
+                .grid { display: grid; grid-template-columns: 200px 1fr; gap: 24px; margin-bottom: 30px; background: #F8FAFC; padding: 20px; border-radius: 8px; border: 1px solid #E2E8F0; }
+                .grid img { width: 100%; max-height: 200px; object-fit: contain; }
+                table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+                td { padding: 8px 10px; border-bottom: 1px solid #E2E8F0; }
+                td.key { font-weight: 600; color: #64748B; width: 40%; }
+                td.val { font-weight: 700; }
+                h3 { font-size: 16px; color: #0F172A; margin-top: 24px; margin-bottom: 10px; border-bottom: 1px solid #E2E8F0; padding-bottom: 6px; }
+                ul { padding-left: 20px; }
+                li { margin-bottom: 6px; font-size: 13.5px; }
+                .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #E2E8F0; font-size: 12px; color: #64748B; text-align: center; }
+                @media print { .no-print { display: none; } }
+            </style>
+        </head>
+        <body>
+            <div class="no-print" style="margin-bottom: 20px; text-align: right;">
+                <button onclick="window.print()" style="background: #0284C7; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 700; cursor: pointer;">🖨️ Imprimir / Guardar como PDF</button>
+            </div>
+            <div class="header">
+                <div>
+                    <h2>ImpoAcuatiq Argentina</h2>
+                    <p style="font-size: 12px; color: #64748B;">Importadora & Distribuidora de Soluciones Cementicias</p>
+                </div>
+                <span class="badge">Ficha Técnica Oficial</span>
+            </div>
+            <h1>${prod.name}</h1>
+            <p class="sub">${prod.subName} — ${prod.headline}</p>
+            <div class="grid">
+                <img src="${packImg}" alt="${prod.name}">
+                <table>
+                    <tr><td class="key">Presentación</td><td class="val">${prod.specs.presentacion}</td></tr>
+                    <tr><td class="key">Rendimiento</td><td class="val">${prod.specs.rendimiento}</td></tr>
+                    <tr><td class="key">Espesor</td><td class="val">${prod.specs.espesor}</td></tr>
+                    <tr><td class="key">Durabilidad</td><td class="val">${prod.specs.durabilidad}</td></tr>
+                    <tr><td class="key">Resistencia</td><td class="val">${prod.specs.resistencia}</td></tr>
+                </table>
+            </div>
+            <h3>Descripción Técnica</h3>
+            <p style="font-size: 13.5px; color: #334155;">${prod.description}</p>
+            <h3>Ventajas y Propiedades de Obra</h3>
+            <ul>${prod.features.map(f => `<li>${f}</li>`).join('')}</ul>
+            <h3>Instrucciones de Aplicación</h3>
+            <p style="font-size: 13.5px; color: #334155;">${prod.application}</p>
+            <div class="footer">
+                <p>ImpoAcuatiq | Representante Comercial Técnico: Lorna Pizarro Vera | Tel: +54 9 341-6825470</p>
+                <p>© 2026 ImpoAcuatiq Argentina. Documento técnico de especificación de obra.</p>
+            </div>
+        </body>
+        </html>
+    `);
+    printWindow.document.close();
 }
 
 function initModalListeners() {
