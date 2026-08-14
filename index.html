@@ -3,467 +3,471 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propuesta Comercial & Estrategia Digital | ImpoAquatic - SuperBrite Argentina</title>
+    <title>ImpoAcuatiq | Importadora y Comercializadora de Soluciones Cementicias</title>
+    <meta name="description" content="Distribución oficial exclusiva de revestimientos cementicios de cuarzo para piscinas, bordes y terrazas en Argentina. Súper Brite, Súper Kote, Súper Fullget, Spray Deck y Súper Seal.">
+    
+    <!-- Google Fonts (Plus Jakarta Sans & Playfair Display) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #0284C7;
-            --primary-dark: #0F172A;
-            --secondary: #0369A1;
-            --accent: #0EA5E9;
-            --bg-page: #F8FAFC;
-            --bg-card: #FFFFFF;
-            --text-main: #1E293B;
-            --text-muted: #64748B;
-            --border-color: #E2E8F0;
-            --font-heading: 'Outfit', sans-serif;
-            --font-body: 'Inter', sans-serif;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: var(--font-body);
-            background-color: var(--bg-page);
-            color: var(--text-main);
-            line-height: 1.7;
-            padding: clamp(16px, 4vw, 40px) clamp(12px, 2vw, 20px);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .pdf-page {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: clamp(12px, 2vw, 16px);
-            padding: clamp(24px, 6vw, 60px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-        }
-
-        header.doc-header {
-            border-bottom: 2px solid #F1F5F9;
-            padding-bottom: 24px;
-            margin-bottom: 36px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        .brand-logo {
-            font-family: var(--font-heading);
-            font-size: clamp(26px, 4vw, 32px);
-            font-weight: 800;
-            color: var(--primary-dark);
-            letter-spacing: -0.5px;
-        }
-
-        .brand-logo span {
-            color: var(--primary);
-        }
-
-        .doc-badge {
-            background: #F0F9FF;
-            color: var(--secondary);
-            border: 1px solid #BAE6FD;
-            font-size: 11px;
-            font-weight: 700;
-            padding: 6px 14px;
-            border-radius: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        h1.doc-title {
-            font-family: var(--font-heading);
-            font-size: clamp(24px, 4vw, 34px);
-            font-weight: 800;
-            color: var(--primary-dark);
-            margin-top: 6px;
-            line-height: 1.25;
-        }
-
-        .doc-meta {
-            font-size: 13.5px;
-            color: var(--text-muted);
-            margin-top: 4px;
-        }
-
-        h2.section-h2 {
-            font-family: var(--font-heading);
-            font-size: clamp(19px, 3vw, 23px);
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin: 40px 0 18px 0;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #E0F2FE;
-        }
-
-        h3.section-h3 {
-            font-family: var(--font-heading);
-            font-size: clamp(16px, 2.5vw, 18px);
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin: 26px 0 10px 0;
-        }
-
-        p {
-            font-size: 15px;
-            color: #334155;
-            margin-bottom: 14px;
-            text-align: justify;
-        }
-
-        ul, ol {
-            margin-left: 22px;
-            margin-bottom: 18px;
-        }
-
-        li {
-            font-size: 14.5px;
-            color: #334155;
-            margin-bottom: 8px;
-        }
-
-        .table-wrapper {
-            width: 100%;
-            overflow-x: auto;
-            margin: 24px 0;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            -webkit-overflow-scrolling: touch;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 14px;
-            min-width: 600px;
-        }
-
-        th, td {
-            padding: 14px 16px;
-            text-align: left;
-            border-bottom: 1px solid var(--border-color);
-            vertical-align: top;
-        }
-
-        th {
-            background: #F1F5F9;
-            font-family: var(--font-heading);
-            font-weight: 700;
-            color: var(--primary-dark);
-            font-size: 12.5px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        tr:nth-child(even) {
-            background: #FAFAFA;
-        }
-
-        .price-section {
-            background: #F8FAFC;
-            border: 1px solid #CBD5E1;
-            border-radius: 12px;
-            padding: 30px;
-            margin-top: 30px;
-        }
-
-        .price-item {
-            margin-bottom: 24px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #E2E8F0;
-        }
-
-        .price-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .price-title {
-            font-family: var(--font-heading);
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--primary-dark);
-        }
-
-        .price-amount {
-            font-family: var(--font-heading);
-            font-size: 22px;
-            font-weight: 800;
-            color: var(--primary);
-            margin: 6px 0;
-        }
-
-        .price-detail {
-            font-size: 14px;
-            color: #475569;
-        }
-
-        .infra-section {
-            background: #FFFBEB;
-            border: 1px solid #FDE68A;
-            border-radius: 12px;
-            padding: 24px;
-            margin-top: 24px;
-        }
-
-        .infra-section h4 {
-            font-family: var(--font-heading);
-            color: #92400E;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        .infra-section ul li {
-            color: #78350F;
-        }
-
-        .footer-note {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            font-size: 12.5px;
-            color: var(--text-muted);
-        }
-
-        .letterhead-box {
-            background: #F0F9FF;
-            border-left: 4px solid var(--primary);
-            padding: 10px 16px;
-            margin-top: 12px;
-            border-radius: 0 8px 8px 0;
-            font-size: 13px;
-            color: var(--primary-dark);
-        }
-
-        .signature-block {
-            margin-top: 40px;
-            padding-top: 24px;
-            border-top: 2px dashed #E2E8F0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            text-align: right;
-        }
-
-        .sig-name {
-            font-family: var(--font-heading);
-            font-size: 18px;
-            font-weight: 800;
-            color: var(--primary-dark);
-        }
-
-        .sig-title {
-            font-size: 13.5px;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .sig-sub {
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-
-        @media print {
-            body { background: #FFFFFF; padding: 0; }
-            .pdf-page { border: none; box-shadow: none; padding: 0; max-width: 100%; }
-            .table-wrapper, .price-section, .infra-section, .signature-block { break-inside: avoid; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css?v=3.0">
 </head>
 <body>
 
-<div class="pdf-page">
-    <header class="doc-header">
-        <div>
-            <div class="brand-logo">IMPO<span>AQUATIC</span></div>
-            <h1 class="doc-title">Propuesta Estratégica & Presupuesto Integral</h1>
-            <p class="doc-meta">Distribución Oficial Exclusiva de <strong>SuperBrite®</strong> en Argentina · Rosario, Santa Fe</p>
-            <div class="letterhead-box">
-                Elaborado y presentado por: <strong>Ing. Francisco Bondino</strong> · <em>Ingeniero en Sistemas Informáticos</em>
+    <!-- TOPBAR INSTITUCIONAL -->
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <div>
+                <span>Importadora & Distribuidora Exclusiva en Argentina</span>
+            </div>
+            <div class="topbar-right">
+                <a href="tel:+5493416825470"><i class="fa-solid fa-phone"></i> 🇦🇷 +54 9 341-6825470</a>
+                <a href="tel:+56991359879"><i class="fa-solid fa-phone"></i> 🇨🇱 +56 9 91359879</a>
+                <span class="rep-tag">Rep: Lorna Pizarro Vera</span>
             </div>
         </div>
-        <span class="doc-badge">DOCUMENTO COMERCIAL 2026</span>
+    </div>
+
+    <!-- HEADER & NAVBAR INSTITUCIONAL -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="site-logo">
+                <img src="assets/img/logo-horizontal.jpg" alt="ImpoAcuatiq Importadora y Comercializadora" class="img-logo-main">
+            </a>
+
+            <nav class="site-nav">
+                <a href="#inicio" class="nav-item active">Inicio</a>
+                <div class="nav-item-dropdown">
+                    <a href="#productos" class="nav-item">Productos <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+                    <div class="dropdown-panel">
+                        <a href="#productos" onclick="filterCategory('todos')">Todo el Catálogo</a>
+                        <a href="#productos" onclick="filterCategory('piscinas')">Piscinas (Súper Brite®)</a>
+                        <a href="#productos" onclick="filterCategory('adherencia')">Adherencia (Súper Kote®)</a>
+                        <a href="#productos" onclick="filterCategory('bordes')">Bordes & Terrazas (Súper Fullget®)</a>
+                        <a href="#productos" onclick="filterCategory('resina')">Resina Texturada (Spray Deck)</a>
+                        <a href="#productos" onclick="filterCategory('microcemento')">Microcemento (Súper Seal®)</a>
+                    </div>
+                </div>
+                <a href="#calculadora" class="nav-item">Calculadora m²</a>
+                <a href="#b2b" class="nav-item">Distribución B2B</a>
+                <a href="#galeria" class="nav-item">Obras</a>
+                <a href="#contacto" class="nav-item">Contacto</a>
+            </nav>
+
+            <a href="https://wa.me/5493416825470?text=Hola%20Lorna,%20quisiera%20solicitar%20el%20Cat%C3%A1logo%20Mayorista%20de%20ImpoAcuatiq." target="_blank" class="btn-header">
+                Acceso Distribuidores
+            </a>
+        </div>
     </header>
 
-    <!-- 1. Introducción y Contexto -->
-    <section>
-        <h2 class="section-h2">1. Introducción & Objetivos Comerciales</h2>
-        <p><strong>ImpoAquatic</strong> desembarca en el mercado argentino como distribuidor oficial y exclusivo de <strong>SuperBrite®</strong>, marca líder en Chile y la región en revestimientos de cuarzo refinado y soluciones integrales para arquitectura acuática y piscinas.</p>
-        <p>El propósito de esta propuesta es estructurar de forma clara y detallada la estrategia digital de la empresa en Argentina. Dado que la prioridad absoluta declarada es el desarrollo e implementación de la plataforma web comercial para disponer de una herramienta visible e interactiva frente a clientes e inversores, este proyecto se organiza en fases progresivas para optimizar la inversión y maximizar el retorno comercial.</p>
-        
-        <h3 class="section-h3">Fundamentación Estratégica: ¿Por qué la Plataforma Web es la Prioridad Fundamental Fase 1?</h3>
-        <p>En el proceso de despliegue de una marca importada de alta gama, iniciar por la **plataforma web comercial** responde a los siguientes pilares de negocio fundamentales:</p>
-        <ul>
-            <li><strong>Activo Digital Propio y Centro de Conversión:</strong> A diferencia de las redes sociales (que son canales de terceros con visibilidad variable), la página web es el único activo digital propio de la empresa donde converge todo el tráfico institucional, publicitario y comercial.</li>
-            <li><strong>Herramienta Comercial Inmediata para Reuniones:</strong> ImpoAquatic necesita disponer de una plataforma visible y profesional para presentar de forma inmediata ante empresas constructoras, desarrolladores inmobiliarios, estudios de arquitectura y municipios durante las reuniones de prospección.</li>
-            <li><strong>Respaldo e Identidad como Distribuidor Oficial:</strong> Al ingresar al país, un sitio web moderno y profesional otorga legitimidad, seriedad institucional y confianza técnica tanto al comprador profesional como al consumidor final.</li>
-            <li><strong>Calculadora m² & Captación de Preventa:</strong> Permite cerrar reservas de stock de manera anticipada (con cómputo exacto de bolsas de 22.7 kg requeridas) mientras el primer embarque está en tránsito hacia el depósito local.</li>
-            <li><strong>Eficiencia del Presupuesto Publicitario:</strong> Iniciar campañas de publicidad (Meta Ads o Google Ads) sin contar con la web publicada significa desperdiciar presupuesto, ya que el lead calificado siempre busca validar la empresa y calcular sus insumos en una web oficial.</li>
-        </ul>
-    </section>
-
-    <!-- 2. Estrategia del Ecosistema Digital -->
-    <section>
-        <h2 class="section-h2">2. Estrategia del Ecosistema Digital & Canales</h2>
-        <p>Para construir una presencia sólida y captar clientes en todo el país, el ecosistema digital se divide en dos grandes embudos de atención (B2B y B2C):</p>
-
-        <h3 class="section-h3">A. Canal B2B (Empresas Constructoras, Arquitectos, Aplicadores y Municipios)</h3>
-        <p>Dirigido a empresas del sector de la construcción, estudios de arquitectura, desarrolladores inmobiliarios y organismos públicos. El objetivo es brindar especificación técnica, asesoramiento en cómputo de materiales y venta mayorista por volumen.</p>
-
-        <h3 class="section-h3">B. Canal B2C (Consumidores Finales & Propietarios)</h3>
-        <p>Enfocado en dueños de propiedades y viviendas que buscan renovar o construir su piscina. La estrategia permite asesorar al cliente final a través de herramientas web interactivas y derivar la ejecución a una cuadrilla de aplicadores certificados de confianza en su zona geográfica.</p>
-
-        <h3 class="section-h3">C. Componentes de la Plataforma Web (Prioridad 1)</h3>
-        <ul>
-            <li><strong>Diseño Web de Alta Gama:</strong> Interfaz moderna, limpia e intuitiva inspirada en estándares internacionales de arquitectura, superando ampliamente la web actual del fabricante en Chile.</li>
-            <li><strong>Calculadora Interactiva de Superficie (m²) y Materiales:</strong> Permite ingresar las medidas de la piscina (largo, ancho y profundidad) o la superficie total, calculando automáticamente las bolsas de SuperBrite® requeridas (2.5 m² por bolsa de 22.7 kg) y el presupuesto estimado.</li>
-            <li><strong>Catálogo Completo de Productos:</strong> Presentación detallada de todas las líneas comerciales con opción de descarga de Fichas Técnicas en formato PDF.</li>
-            <li><strong>Programa de Capacitación & Certificación:</strong> Sección dedicada a destacar los cursos de aplicación como un beneficio exclusivo para profesionalizar cuadrillas y aplicadores independientes.</li>
-            <li><strong>Directorio de Aplicadores Certificados:</strong> Mapeo interactivo por zonas (Buenos Aires, Córdoba, Santa Fe, Mendoza) para canalizar las solicitudes de propietarios finales.</li>
-            <li><strong>Formulario Comercial de Recepción de Leads & Preventa:</strong> Sistema ágil de contacto y reserva directa que notifica instantáneamente a la empresa por WhatsApp y Email, organizando las consultas y pedidos de preventa en una planilla simple de gestión (sin requerir configuraciones de software complejas).</li>
-        </ul>
-    </section>
-
-    <!-- 3. Redes Sociales, Meta Ads & SEO IA -->
-    <section>
-        <h2 class="section-h2">3. Redes Sociales, Publicidad Digital & SEO</h2>
-        
-        <h3 class="section-h3">A. Instagram & Producción de Contenidos</h3>
-        <p>La estrategia visual combina el catálogo multimedia autorizado de SuperBrite Chile (60% del contenido) con producción propia local en Argentina (30% de contenidos dinámicos y cobertura en obras reales) y placas educativas sobre capacitaciones técnicas (10%).</p>
-
-        <h3 class="section-h3">B. LinkedIn B2B</h3>
-        <p>Orientado a la prospección corporativa y al posicionamiento institucional frente a arquitectos, ingenieros civiles, desarrolladores y licitaciones de obras públicas.</p>
-
-        <h3 class="section-h3">C. Publicidad Digital en Meta Ads</h3>
-        <p>Campañas publicitarias segmentadas en tres objetivos: generación de clientes potenciales B2B para constructoras, captación de aplicadores para capacitaciones presenciales y atracción de propietarios particulares para la calculadora web y preventa.</p>
-
-        <h3 class="section-h3">D. Posicionamiento en Buscadores e Inteligencia Artificial (SEO & GEO)</h3>
-        <p><strong>¿Qué significa esto en la práctica?</strong> Cuando un propietario, arquitecto o empresa constructora busque en Google o le consulte a motores de Inteligencia Artificial (como ChatGPT, Google Gemini o Perplexity) preguntas clave como <em>"cuál es el mejor revestimiento para piletas en Argentina"</em>, <em>"qué poner en vez de venecitas"</em> o <em>"cuánto rinde el revestimiento de cuarzo"</em>, la plataforma web de ImpoAquatic estará preparada para aparecer en los primeros lugares como la fuente oficial de referencia.</p>
-        <p><strong>Un Diferencial Clave en la Actualidad:</strong> El comportamiento del usuario cambió radicalmente. Hoy los clientes de alto poder adquisitivo y los profesionales de la construcción le hacen consultas complejas a asistentes virtuales con IA antes de tomar decisiones de inversión. La página se construirá con un código técnico semántico de vanguardia (etiquetado <em>Schema.org</em>) para que tanto Google como las inteligencias artificiales entiendan exactamente qué vende ImpoAquatic y la recomienden como el distribuidor oficial de SuperBrite® en Argentina.</p>
-        <p><strong>Impacto en el Negocio:</strong> A diferencia de los anuncios pagos que dejan de funcionar al pausar la inversión, esta optimización genera un canal permanente de atracción de clientes calificados sin costo por clic, otorgándole a ImpoAquatic una ventaja competitiva duradera frente a productos tradicionales (como pintura o revestimientos de mosaico veneciano).</p>
-    </section>
-
-    <!-- 4. Estructura del Catálogo de Productos -->
-    <section>
-        <h2 class="section-h2">4. Estructura del Catálogo Digital de Productos</h2>
-        <p><em>Nota: El siguiente cuadro se presenta <strong>a modo ilustrativo y como ejemplo de referencia</strong> de la estructura del catálogo digital que exhibirá la plataforma web:</em></p>
-        
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Línea de Producto</th>
-                        <th>Producto / Especificación</th>
-                        <th>Presentación & Rendimiento</th>
-                        <th>Público Clave</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Revestimiento Principal</strong></td>
-                        <td><strong>SuperBrite® Quartz Finish</strong> (Estrella)<br><em>Tonos: Blanco, Azul Caribe, Cielo, Arena, Gris</em></td>
-                        <td>Bolsa 22.7 kg<br>Rendimiento: 2.5 m² / bolsa</td>
-                        <td>Constructoras, Arquitectos, Particulares</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Revestimiento Mármol</strong></td>
-                        <td><strong>SuperBrite® Marcite Classic</strong><br><em>Acabado tradicional blanco fortificado</em></td>
-                        <td>Bolsa 22.7 kg<br>Rendimiento: 2.8 m² / bolsa</td>
-                        <td>Obras Estándar / Reformas</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Aditivos & Polímeros</strong></td>
-                        <td><strong>AquaBond® Polymer Latex</strong><br><em>Emulsión promotora de adherencia</em></td>
-                        <td>Bidón 5L / 20L<br>1-2L por bolsa de cuarzo</td>
-                        <td>Aplicadores / Cuadrillas</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Impermeabilizantes</strong></td>
-                        <td><strong>HydroShield® Water Sealer</strong><br><em>Sellador hidrófugo antidesgaste</em></td>
-                        <td>Bidón 10L<br>8-10 m² por Litro</td>
-                        <td>Arquitectos / Obra Nueva</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Curado & Lavado</strong></td>
-                        <td><strong>SuperBrite® Acid Wash & Neutralizer</strong><br><em>Fórmula técnica para revelado de cuarzo</em></td>
-                        <td>Bidón 5L<br>30 m² por unidad diluida</td>
-                        <td>Cuadrillas Certificadas</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Herramientas Especiales</strong></td>
-                        <td><strong>Llanas Profesionales Fresno/Inox Pro-Float</strong><br><em>Bordes redondeados para llaneado de cuarzo</em></td>
-                        <td>Unidad Individual<br>Uso Intensivo en Obra</td>
-                        <td>Aplicadores Homologados</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- 5. Presupuesto Comercial y Desglose Económico -->
-    <section>
-        <h2 class="section-h2">5. Presupuesto Comercial & Desglose Económico</h2>
-        <p>A continuación se detallan los costos de desarrollo, configuración y servicios de mantenimiento mensual. Se presentan valores desglosados para permitir la contratación escalonada del proyecto según la prioridad del cliente:</p>
-
-        <div class="price-section">
-            <div class="price-item">
-                <div class="price-title">Item 1: Desarrollo e Implementación de la Plataforma Web Comercial (Prioridad 1)</div>
-                <div class="price-amount">$1.150.000 ARS (Pago Único)</div>
-                <div class="price-detail">
-                    <p><strong>Incluye:</strong> Diseño web profesional responsive, Calculadora de m² e insumos en tiempo real, Catálogo interactivo de productos con descarga de fichas técnicas PDF, Módulo de capacitaciones para aplicadores, Directorio de cuadrillas certificadas por zona y Formulario de captación directa de consultas y preventa por WhatsApp/Email.</p>
-                    <p><strong>Modalidad de Pago:</strong> 50% de anticipo al iniciar ($575.000 ARS) y 50% restante contra entrega final ($575.000 ARS).</p>
+    <!-- HERO SECTION ARQUITECTÓNICO EDITORIAL -->
+    <section class="hero-section" id="inicio">
+        <div class="container hero-split">
+            <div class="hero-text-col">
+                <span class="hero-label">Revestimientos Continuos de Alta Gama</span>
+                <h1 class="hero-title">Soluciones Cementicias para Piscinas y Terrazas</h1>
+                <p class="hero-subtitle">Importación y distribución mayorista de revestimientos de cuarzo refinado, puentes de adherencia estructural y recubrimientos atérmicos. Reemplazan la pintura tradicional con más de 10 años de durabilidad garantizada.</p>
+                
+                <div class="hero-actions">
+                    <a href="#calculadora" class="btn-primary">Calcular Insumos de Obra</a>
+                    <a href="#productos" class="btn-secondary">Explorar Catálogo</a>
                 </div>
             </div>
 
-            <div class="price-item">
-                <div class="price-title">Item 2: Setup e Identidad Inicial de Redes Sociales & Meta Ads</div>
-                <div class="price-amount">$230.000 ARS (Pago Único) — [ Combo Web + Setup: $1.380.000 ARS ]</div>
-                <div class="price-detail">
-                    <p><strong>Incluye:</strong> Configuración estética de perfiles en Instagram y LinkedIn, diseño de plantillas gráficas de marca, portadas, 5 historias destacadas, instalación del Píxel de Meta/API de conversiones y armado de la 1ª campaña publicitaria de preventa.</p>
-                </div>
+            <div class="hero-image-box">
+                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1200" alt="Piscina revestida con cuarzo continuo">
             </div>
-
-            <div class="price-item">
-                <div class="price-title">Item 3: Servicio de Mantenimiento & Gestión Mensual (Post-Lanzamiento)</div>
-                <div class="price-amount">$400.000 ARS / mes (Fee Recurrente Mensual)</div>
-                <div class="price-detail">
-                    <p><strong>Incluye:</strong> Gestión integral de contenidos para redes sociales (Instagram y LinkedIn), adaptación y curaduría del catálogo multimedia oficial de Chile, diseño de piezas gráficas informativas y de capacitaciones, y administración y optimización semanal de campañas publicitarias en Meta Ads.</p>
-                    <p><em>Nota de alcance: Este plan mensual <strong>no incluye grabaciones complejas presenciales en obra que impliquen traslados ni rodajes audiovisuales en locación</strong>. En caso de requerir cobertura en video o producción presencial en obra a futuro, la misma se presupuestará de forma independiente según los requerimientos del proyecto.</em></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Costos a Cargo del Cliente -->
-        <div class="infra-section">
-            <h4>📌 Gastos Operativos & Servicios de Terceros (A Cargo Directo del Cliente)</h4>
-            <p>Los siguientes servicios corresponden a la infraestructura operativa de la empresa y son abonados directamente por el cliente a los proveedores oficiales correspondoientes:</p>
-            <ul>
-                <li><strong>Registro de Dominio (.com.ar / .ar):</strong> ~$15.000 a $25.000 ARS / año (Abonado directo a NIC Argentina).</li>
-                <li><strong>Servidor Web SSD & Certificado SSL:</strong> ~$15.000 a $25.000 ARS / mes (o ~$150.000 ARS / año según proveedor seleccionado).</li>
-                <li><strong>Presupuesto Publicitario de Meta Ads:</strong> Definido libremente por el cliente (Sugerido inicial: desde $150.000 ARS / mes abonados directo a Meta con tarjeta de crédito/débito).</li>
-                <li><strong>Plataformas de Mensajería / Emailing (Opcional):</strong> Solo si a futuro el cliente requiere herramientas avanzadas adicionales.</li>
-            </ul>
         </div>
     </section>
 
-    <div class="signature-block">
-        <div class="sig-name">Ing. Francisco Bondino</div>
-        <div class="sig-title">Ingeniero en Sistemas Informáticos</div>
+    <!-- CATÁLOGO TÉCNICO DE PRODUCTOS (LAYOUT MINIMALISTA HORIZONTAL) -->
+    <section class="section-products" id="productos">
+        <div class="container">
+            <div class="section-head text-center">
+                <h2 class="head-title">Catálogo Oficial de Productos</h2>
+                <p class="head-desc">Líneas de revestimiento y preparación técnica formuladas para exigencia profesional en vaso de hormigón y superficies exteriores.</p>
+            </div>
+
+            <div class="product-grid" id="catalog-grid">
+                
+                <!-- PRODUCTO 1: SÚPER BRITE -->
+                <div class="product-card-horizontal" data-cat="piscinas">
+                    <div class="prod-photo-col">
+                        <img src="assets/img/sb-bag.jpg" alt="Envase Oficial Súper Brite® 25kg">
+                    </div>
+                    <div class="prod-info-col">
+                        <div>
+                            <div class="prod-brand-header">
+                                <img src="assets/img/logo-superbrite.jpg" alt="Súper Brite Logo" class="brand-img-contain">
+                                <span class="prod-type-tag">Revestimiento Piscinas</span>
+                            </div>
+                            <p class="prod-headline">Revestimiento continuo a base de cristales de cuarzo refinados y polímeros. Sella el vaso de hormigón eliminando filtraciones y la necesidad de repintado anual.</p>
+                            
+                            <table class="specs-table">
+                                <tr>
+                                    <td class="spec-title">Presentación</td>
+                                    <td class="spec-val">Bolsa de 22.7 kg / 25 kg uso profesional</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Rendimiento</td>
+                                    <td class="spec-val">2.5 m² por bolsa (espesor 8 - 10 mm)</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Durabilidad Estimada</td>
+                                    <td class="spec-val">Superior a 10 - 15 años sin decolorar</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Propiedades</td>
+                                    <td class="spec-val">Antideslizante, suave al tacto, inmune a cloro y sal</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="prod-actions">
+                            <button class="btn-sm-primary" onclick="openProductModal('sb')">Ver Ficha Técnica (PDF)</button>
+                            <button class="btn-sm-secondary" onclick="scrollToCalculator('sb')">Calcular Insumos (m²)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 2: SÚPER KOTE -->
+                <div class="product-card-horizontal" data-cat="adherencia">
+                    <div class="prod-photo-col">
+                        <img src="assets/img/sk-primer.jpeg" alt="Súper Kote® Promotor de Adherencia Bicomponente">
+                    </div>
+                    <div class="prod-info-col">
+                        <div>
+                            <div class="prod-brand-header">
+                                <img src="assets/img/logo-superkote.jpg" alt="Súper Kote Logo" class="brand-img-contain">
+                                <span class="prod-type-tag">Puente de Unión</span>
+                            </div>
+                            <p class="prod-headline">Imprimación bicomponente de alta rugosidad para generar anclaje estructural sobre hormigón liso o revestimientos previos sin necesidad de picar.</p>
+                            
+                            <table class="specs-table">
+                                <tr>
+                                    <td class="spec-title">Rendimiento</td>
+                                    <td class="spec-val">15 m² por kit completo bicomponente</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Presentación</td>
+                                    <td class="spec-val">Bidón 5L Polímero + 10kg Polvo Fortificado</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Propiedades</td>
+                                    <td class="spec-val">Impermeable a humedad negativa, adherencia inquebrantable</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="prod-actions">
+                            <button class="btn-sm-primary" onclick="openProductModal('sk')">Ver Ficha Técnica (PDF)</button>
+                            <button class="btn-sm-secondary" onclick="scrollToCalculator('sk')">Calcular Insumos (m²)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 3: SÚPER FULLGET -->
+                <div class="product-card-horizontal" data-cat="bordes">
+                    <div class="prod-photo-col">
+                        <img src="assets/img/sf-bag.jpg" alt="Bolsa Oficial Súper Fullget® 25kg">
+                    </div>
+                    <div class="prod-info-col">
+                        <div>
+                            <div class="prod-brand-header">
+                                <span class="brand-text-name" style="color: #B45309;">SÚPER FULLGET®</span>
+                                <span class="prod-type-tag">Bordes & Terrazas</span>
+                            </div>
+                            <p class="prod-headline">Recubrimiento granítico natural atérmico y antideslizante para solárium, bordes de piscina, terrazas y jardineras. No acumula calor bajo sol directo.</p>
+                            
+                            <table class="specs-table">
+                                <tr>
+                                    <td class="spec-title">Rendimiento</td>
+                                    <td class="spec-val">3.0 m² por bolsa de 25 kg</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Espesor</td>
+                                    <td class="spec-val">10 mm a 12 mm continuo</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Propiedades</td>
+                                    <td class="spec-val">100% Atérmico, antideslizante seco y mojado</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="prod-actions">
+                            <button class="btn-sm-primary" onclick="openProductModal('sf')">Ver Ficha Técnica (PDF)</button>
+                            <button class="btn-sm-secondary" onclick="scrollToCalculator('sf')">Calcular Insumos (m²)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 4: SPRAY DECK -->
+                <div class="product-card-horizontal" data-cat="resina">
+                    <div class="prod-photo-col">
+                        <img src="assets/img/sd-bucket.png" alt="Balde Oficial Spray Deck® 25kg">
+                    </div>
+                    <div class="prod-info-col">
+                        <div>
+                            <div class="prod-brand-header">
+                                <img src="assets/img/logo-spraydeck.jpg" alt="Spray Deck Logo" class="brand-img-contain">
+                                <span class="prod-type-tag">Resina Texturada</span>
+                            </div>
+                            <p class="prod-headline">Revestimiento proyectado neumáticamente para cocheras, accesos vehiculares, decks y zonas de alto tránsito peatonal y vehicular.</p>
+                            
+                            <table class="specs-table">
+                                <tr>
+                                    <td class="spec-title">Presentación</td>
+                                    <td class="spec-val">Balde 25 kg de resina polimérica texturada</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Resistencia</td>
+                                    <td class="spec-val">Apto tránsito peatonal y vehicular pesado</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Aplicación</td>
+                                    <td class="spec-val">Proyección neumática con pistola tolva</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="prod-actions">
+                            <button class="btn-sm-primary" onclick="openProductModal('sd')">Ver Ficha Técnica (PDF)</button>
+                            <button class="btn-sm-secondary" onclick="scrollToCalculator('sd')">Calcular Insumos (m²)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 5: SÚPER SEAL -->
+                <div class="product-card-horizontal" data-cat="microcemento">
+                    <div class="prod-photo-col">
+                        <img src="assets/img/ss-bucket.png" alt="Balde Oficial Súper Seal® 20kg">
+                    </div>
+                    <div class="prod-info-col">
+                        <div>
+                            <div class="prod-brand-header">
+                                <img src="assets/img/logo-superseal.jpg" alt="Súper Seal Logo" class="brand-img-contain">
+                                <span class="prod-type-tag">Microcemento Impermeable</span>
+                            </div>
+                            <p class="prod-headline">Revestimiento continuo e impermeabilizante decorativo para pisos, muros interiores, exteriores y bordes sin juntas de dilatación.</p>
+                            
+                            <table class="specs-table">
+                                <tr>
+                                    <td class="spec-title">Presentación</td>
+                                    <td class="spec-val">Balde de 20 kg (Incluye 1L Resina)</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Rendimiento</td>
+                                    <td class="spec-val">5.0 m² por kit completo (2 manos)</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Propiedades</td>
+                                    <td class="spec-val">Superficie continua, 100% impermeable</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="prod-actions">
+                            <button class="btn-sm-primary" onclick="openProductModal('ss')">Ver Ficha Técnica (PDF)</button>
+                            <button class="btn-sm-secondary" onclick="scrollToCalculator('ss')">Calcular Insumos (m²)</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MOSTRARIO OFICIAL DE COLORES SÚPER BRITE -->
+    <section class="section-products" style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 60px 0;">
+        <div class="container">
+            <div class="section-head text-center">
+                <span class="hero-label">Gama Cromática Exclusiva</span>
+                <h2 class="head-title">Catálogo de Tonos y Pigmentaciones de Cuarzo</h2>
+                <p class="head-desc">Súper Brite® ofrece mezclas de cristales de cuarzo natural seleccionados que reaccionan con la luz solar generando el reflejo de agua cristalina deseado.</p>
+            </div>
+
+            <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 30px; text-align: center;">
+                <img src="assets/img/sb-colors.jpeg" alt="Catálogo de colores oficiales Súper Brite Quartz Finish" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-sm);">
+                <p style="margin-top: 16px; font-size: 13.5px; color: #64748B; font-weight: 500;">
+                    <i class="fa-solid fa-circle-info text-cyan"></i> <strong>Nota Técnica:</strong> El tono final del agua varía según la profundidad de la piscina, la hora del día y la incidencia de luz solar.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULADORA INTERACTIVA DE M² -->
+    <section class="section-calc" id="calculadora">
+        <div class="container">
+            <div class="calc-container">
+                <div class="calc-inputs-side">
+                    <h2 class="calc-title">Calculadora de m² e Insumos</h2>
+                    <p class="calc-desc">Ingresá las dimensiones de tu piscina o superficie plana para calcular la cantidad exacta de material e imprimación.</p>
+
+                    <div class="mode-selectors">
+                        <button class="mode-tab active" onclick="setCalcType('piscina')" id="tab-piscina">Piscina (Vasos de Hormigón)</button>
+                        <button class="mode-tab" onclick="setCalcType('superficie')" id="tab-superficie">Superficie Plana (Terrazas)</button>
+                    </div>
+
+                    <div id="mode-piscina">
+                        <div class="input-field">
+                            <label for="piscina-largo">Largo de la Piscina (m):</label>
+                            <input type="number" id="piscina-largo" step="0.1" value="8.0" oninput="calculateMaterials()">
+                        </div>
+                        <div class="input-field">
+                            <label for="piscina-ancho">Ancho de la Piscina (m):</label>
+                            <input type="number" id="piscina-ancho" step="0.1" value="4.0" oninput="calculateMaterials()">
+                        </div>
+                        <div class="input-field">
+                            <label for="piscina-profundidad">Profundidad Media (m):</label>
+                            <input type="number" id="piscina-profundidad" step="0.1" value="1.5" oninput="calculateMaterials()">
+                        </div>
+                    </div>
+
+                    <div id="mode-superficie" style="display: none;">
+                        <div class="input-field">
+                            <label for="superficie-m2">Superficie Total Directa (m²):</label>
+                            <input type="number" id="superficie-m2" step="0.5" value="50.0" oninput="calculateMaterials()">
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="producto-select">Producto Comercial a Aplicar:</label>
+                        <select id="producto-select" onchange="calculateMaterials()">
+                            <option value="sb" selected>SÚPER BRITE® (Piscinas - 2.5 m²/bolsa 22.7kg)</option>
+                            <option value="sk">SÚPER KOTE® (Puente de Adherencia Bicomponente)</option>
+                            <option value="sf">SÚPER FULLGET® (Bordes & Terrazas)</option>
+                            <option value="sd">SPRAY DECK (Resina Texturada)</option>
+                            <option value="ss">SÚPER SEAL® (Microcemento Impermeable)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="calc-output-box">
+                    <div>
+                        <h3>Resumen del Cómputo</h3>
+                        <p style="font-size: 13px; color: #94A3B8; margin-top: 4px;">Superficie Total Calculada:</p>
+                        <div class="output-m2-total" id="res-m2">68.0 m²</div>
+
+                        <div style="margin-top: 24px;">
+                            <div class="output-row">
+                                <span>Bolsas Súper Brite® (22.7 kg):</span>
+                                <strong id="res-bolsas">28 Bolsas</strong>
+                            </div>
+                            <div class="output-row">
+                                <span>Kits Súper Kote® Imprimación:</span>
+                                <strong id="res-kote">5 Kits</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-wa-quote" onclick="sendCalcToWhatsApp()"><i class="fa-brands fa-whatsapp"></i> Solicitar Cotización por WhatsApp a Lorna</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTOR PROFESIONAL B2B -->
+    <section class="section-b2b" id="b2b">
+        <div class="container">
+            <div class="section-head text-center">
+                <h2 class="head-title">Canales de Distribución B2B</h2>
+                <p class="head-desc">Atención preferencial y asesoramiento técnico directo para profesionales y comercios del rubro.</p>
+            </div>
+
+            <div class="b2b-grid">
+                <div class="b2b-card">
+                    <div>
+                        <h3>Constructoras & Arquitectos</h3>
+                        <p>Especificación de insumos en pliegos de obra y soporte técnico en sitio para desarrollos de alta gama.</p>
+                    </div>
+                    <a href="https://wa.me/5493416825470?text=Hola%20Lorna,%20soy%20constructor/arquitecto%20y%20quiero%20cotizar." target="_blank" class="btn-secondary">Contacto Constructoras</a>
+                </div>
+
+                <div class="b2b-card" style="border-color: var(--color-brand);">
+                    <div>
+                        <h3>Corralones & Distribución Mayorista</h3>
+                        <p>Incorporá la línea oficial ImpoAcuatiq a tu comercio con abastecimiento directo y excelentes márgenes.</p>
+                    </div>
+                    <a href="https://wa.me/5493416825470?text=Hola%20Lorna,%20tengo%20un%20corralon/ferreteria%20y%20quiero%20revender." target="_blank" class="btn-primary">Ser Distribuidor Oficial</a>
+                </div>
+
+                <div class="b2b-card">
+                    <div>
+                        <h3>Aplicadores & Mantenimiento</h3>
+                        <p>Capacitación en técnicas de llaneado y derivación directa de clientes finales para renovación de estructuras.</p>
+                    </div>
+                    <a href="https://wa.me/5493416825470?text=Hola%20Lorna,%20soy%20aplicador/mantenedor%20de%20piscinas." target="_blank" class="btn-secondary">Red de Aplicadores</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OBRAS REALES -->
+    <section class="section-products" id="galeria" style="background: #FFFFFF;">
+        <div class="container">
+            <div class="section-head text-center">
+                <span class="hero-label">Obras Ejecutadas</span>
+                <h2 class="head-title">Galería de Proyectos Reales</h2>
+                <p class="head-desc">Proyectos terminados en piscinas, bordes atérmicos y terrazas con insumos oficiales Súper Brite® e Ingeprex.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                <div class="gal-card" onclick="openLightbox('assets/img/real_photos/superbrite_real_6.jpeg', 'Piscina terminada con Súper Brite® Quartz Finish')">
+                    <img src="assets/img/real_photos/superbrite_real_6.jpeg" alt="Piscina revestida con Súper Brite®">
+                    <div class="gal-caption">Piscina Súper Brite® Quartz Finish</div>
+                </div>
+                <div class="gal-card" onclick="openLightbox('assets/img/real_photos/superbrite_real_9.jpeg', 'Aplicación de Súper Brite® en Vaso de Hormigón')">
+                    <img src="assets/img/real_photos/superbrite_real_9.jpeg" alt="Trabajo en vaso de piscina con Súper Brite®">
+                    <div class="gal-caption">Aplicación y Llaneado Súper Brite®</div>
+                </div>
+                <div class="gal-card" onclick="openLightbox('assets/img/real_photos/superbrite_real_14.png', 'Red Nacional de Distribuidores Oficiales ImpoAcuatiq')">
+                    <img src="assets/img/real_photos/superbrite_real_14.png" alt="Distribución e Insumos Oficiales">
+                    <div class="gal-caption">Distribución e Insumos Oficiales</div>
+                </div>
+                <div class="gal-card" onclick="openLightbox('assets/img/real_photos/superbrite_real_15.jpeg', 'Carta Oficial de Colores Súper Brite® Quartz')">
+                    <img src="assets/img/real_photos/superbrite_real_15.jpeg" alt="Catálogo de Tonos de Cuarzo">
+                    <div class="gal-caption">Carta de Tonos y Cristales</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO & FOOTER INSTITUCIONAL -->
+    <footer class="site-footer" id="contacto">
+        <div class="container footer-inner">
+            <img src="assets/img/logo-horizontal.jpg" alt="ImpoAcuatiq" class="f-logo">
+            <p>Importadora y comercializadora de soluciones cementicias de alto desempeño para piscinas, terrazas y superficies exteriores.</p>
+            <p style="color: #F8FAFC; margin-top: 10px;"><strong>Representante Comercial:</strong> Lorna Pizarro Vera | 🇦🇷 +54 9 341-6825470 | 🇨🇱 +56 9 91359879</p>
+            <p style="margin-top: 20px; font-size: 12.5px;">&copy; 2026 ImpoAcuatiq Argentina. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL FICHA TÉCNICA -->
+    <div class="modal-backdrop" id="product-modal">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeProductModal()">&times;</button>
+            <div class="modal-body" id="modal-content"></div>
+        </div>
     </div>
 
-    <div class="footer-note">
-        <p>&copy; 2026 ImpoAquatic Argentina. Propuesta Comercial preparada en Rosario, Santa Fe por Ing. Francisco Bondino.</p>
+    <!-- LIGHTBOX FOTOS -->
+    <div class="modal-backdrop" id="lightbox-modal" onclick="closeLightbox()">
+        <div class="lightbox-content">
+            <img src="" id="lightbox-img" alt="Ampliación de Obra">
+        </div>
     </div>
-</div>
 
+    <!-- BOTÓN WHATSAPP -->
+    <a href="https://wa.me/5493416825470?text=Hola%20Lorna,%20quisiera%20hacer%20una%20consulta%20comercial%20sobre%20ImpoAcuatiq." target="_blank" class="whatsapp-float" title="WhatsApp Lorna Pizarro">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="app.js"></script>
 </body>
 </html>
