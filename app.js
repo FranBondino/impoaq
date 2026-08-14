@@ -756,14 +756,39 @@ function initMobileMenu() {
     const navMenu = document.getElementById('nav-menu');
 
     if (toggleBtn && navMenu) {
-        toggleBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('open');
+        toggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = navMenu.classList.toggle('open');
+            const icon = toggleBtn.querySelector('i');
+            if (icon) {
+                icon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+            }
         });
 
-        // Cerrar menú al hacer clic en un enlace
-        navMenu.querySelectorAll('a').forEach(link => {
+        // Mobile dropdown click toggle for "Productos"
+        const dropdownItem = navMenu.querySelector('.nav-item-dropdown');
+        if (dropdownItem) {
+            dropdownItem.addEventListener('click', (e) => {
+                if (window.innerWidth <= 900) {
+                    dropdownItem.classList.toggle('active');
+                }
+            });
+        }
+
+        // Close menu when clicking outside or on a navigation link
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+                navMenu.classList.remove('open');
+                const icon = toggleBtn.querySelector('i');
+                if (icon) icon.className = 'fa-solid fa-bars';
+            }
+        });
+
+        navMenu.querySelectorAll('a:not(.nav-item-dropdown > a)').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('open');
+                const icon = toggleBtn.querySelector('i');
+                if (icon) icon.className = 'fa-solid fa-bars';
             });
         });
     }
