@@ -292,26 +292,54 @@ function calculateMaterials() {
 
     // Actualizar elementos DOM en pantalla
     const resM2El = document.getElementById('res-m2');
+    const labelPrincipalEl = document.getElementById('label-prod-principal');
+    const labelSecundarioEl = document.getElementById('label-prod-secundario');
     const resBolsasEl = document.getElementById('res-bolsas');
     const resKoteEl = document.getElementById('res-kote');
+    const resRendimientoEl = document.getElementById('res-rendimiento');
 
     if (resM2El) resM2El.textContent = `${totalM2.toFixed(1)} m²`;
 
     if (prodSelect === 'sb') {
-        if (resBolsasEl) resBolsasEl.innerHTML = `<strong>${bolsasSB} Bolsas</strong> <small>(22.7 kg)</small>`;
-        if (resKoteEl) resKoteEl.innerHTML = `<strong>${unidadesSK} Unidades</strong> <small>(Súper Kote®)</small>`;
+        if (labelPrincipalEl) labelPrincipalEl.textContent = "Súper Brite® (Cuarzo Piscinas):";
+        if (resBolsasEl) resBolsasEl.innerHTML = `${bolsasSB} Bolsas <small style="color: #94A3B8; font-weight: normal;">(22.7 kg c/u)</small>`;
+        
+        if (labelSecundarioEl) labelSecundarioEl.textContent = "Súper Kote® (Puente Adherencia):";
+        if (resKoteEl) resKoteEl.innerHTML = `${unidadesSK} Kits <small style="color: #94A3B8; font-weight: normal;">(Bicomponente)</small>`;
+        
+        if (resRendimientoEl) resRendimientoEl.textContent = "1 bolsa (22.7 kg) rinde 2.5 m²";
     } else if (prodSelect === 'sk') {
-        if (resBolsasEl) resBolsasEl.innerHTML = `<strong>${unidadesSK} Kits</strong> <small>(Súper Kote® Bicomponente)</small>`;
-        if (resKoteEl) resKoteEl.innerHTML = `<strong>100% Adherencia</strong> <small>(Sin picar pared)</small>`;
+        if (labelPrincipalEl) labelPrincipalEl.textContent = "Súper Kote® Bicomponente:";
+        if (resBolsasEl) resBolsasEl.innerHTML = `${unidadesSK} Kits <small style="color: #94A3B8; font-weight: normal;">(Polvo + Resina)</small>`;
+        
+        if (labelSecundarioEl) labelSecundarioEl.textContent = "Puente Adherencia Estructural:";
+        if (resKoteEl) resKoteEl.innerHTML = `100% Adherencia <small style="color: #94A3B8; font-weight: normal;">(Sin picar pared)</small>`;
+        
+        if (resRendimientoEl) resRendimientoEl.textContent = "1 kit bicomponente rinde 15 m²";
     } else if (prodSelect === 'sf') {
-        if (resBolsasEl) resBolsasEl.innerHTML = `<strong>${bolsasSF} Bolsas</strong> <small>(Súper Fullget® 25kg)</small>`;
-        if (resKoteEl) resKoteEl.innerHTML = `<strong>${unidadesSK} Unidades</strong> <small>(Puente Adherencia)</small>`;
+        if (labelPrincipalEl) labelPrincipalEl.textContent = "Súper Fullget® (Bordes & Solárium):";
+        if (resBolsasEl) resBolsasEl.innerHTML = `${bolsasSF} Bolsas <small style="color: #94A3B8; font-weight: normal;">(25 kg c/u)</small>`;
+        
+        if (labelSecundarioEl) labelSecundarioEl.textContent = "Súper Kote® (Imprimación Previa):";
+        if (resKoteEl) resKoteEl.innerHTML = `${unidadesSK} Kits <small style="color: #94A3B8; font-weight: normal;">(Recomendado)</small>`;
+        
+        if (resRendimientoEl) resRendimientoEl.textContent = "1 bolsa (25 kg) rinde 3.0 m² (Atérmico)";
     } else if (prodSelect === 'sd') {
-        if (resBolsasEl) resBolsasEl.innerHTML = `<strong>${kitsSD} Kits</strong> <small>(Spray Deck Resina)</small>`;
-        if (resKoteEl) resKoteEl.innerHTML = `<strong>${Math.ceil(totalM2 / 12)} Lts</strong> <small>(Sellador Acrílico)</small>`;
+        if (labelPrincipalEl) labelPrincipalEl.textContent = "Spray Deck (Resina Texturada):";
+        if (resBolsasEl) resBolsasEl.innerHTML = `${kitsSD} Kits <small style="color: #94A3B8; font-weight: normal;">(Base + Resina)</small>`;
+        
+        if (labelSecundarioEl) labelSecundarioEl.textContent = "Sellador Acrílico de Protección:";
+        if (resKoteEl) resKoteEl.innerHTML = `${Math.ceil(totalM2 / 12)} Litros <small style="color: #94A3B8; font-weight: normal;">(Terminación)</small>`;
+        
+        if (resRendimientoEl) resRendimientoEl.textContent = "1 kit rinde 4.0 m² proyectado";
     } else if (prodSelect === 'ss') {
-        if (resBolsasEl) resBolsasEl.innerHTML = `<strong>${kitsSS} Kits</strong> <small>(Súper Seal® Microcemento)</small>`;
-        if (resKoteEl) resKoteEl.innerHTML = `<strong>${unidadesSK} Lts</strong> <small>(Sellador Poliuretánico)</small>`;
+        if (labelPrincipalEl) labelPrincipalEl.textContent = "Súper Seal® (Microcemento):";
+        if (resBolsasEl) resBolsasEl.innerHTML = `${kitsSS} Kits <small style="color: #94A3B8; font-weight: normal;">(Impermeable)</small>`;
+        
+        if (labelSecundarioEl) labelSecundarioEl.textContent = "Sellador Poliuretánico / Topcoat:";
+        if (resKoteEl) resKoteEl.innerHTML = `${Math.ceil(totalM2 / 10)} Litros <small style="color: #94A3B8; font-weight: normal;">(2 Manos)</small>`;
+        
+        if (resRendimientoEl) resRendimientoEl.textContent = "1 kit bicomponente rinde 5.0 m²";
     }
 
     return {
@@ -349,11 +377,11 @@ window.scrollToCalculator = scrollToCalculator;
 
 
 // ==========================================================================
-// 5. GENERADOR DE MENSAJES PRE-CARGADOS A WHATSAPP (Lorna Pizarro Vera)
+// 5. GENERADOR DE MENSAJES PRE-CARGADOS A WHATSAPP (ImpoAcuatiq)
 // ==========================================================================
 function sendCalcToWhatsApp() {
     const calcData = calculateMaterials();
-    const phone = "5493416825470"; // Teléfono oficial de Lorna Pizarro Vera (Argentina)
+    const phone = "5493416825470"; // Teléfono oficial de ImpoAcuatiq (Argentina)
     
     let modoTexto = "";
     let medidasTexto = "";
@@ -374,38 +402,40 @@ function sendCalcToWhatsApp() {
 
     let desgloseMateriales = "";
     if (calcData.prodSelect === 'sb') {
-        desgloseMateriales = `• Bolsas Súper Brite® (22.7 kg): *${calcData.bolsasSB} Bolsas*\n• Puente de Unión Súper Kote®: *${calcData.unidadesSK} Unidades*`;
+        desgloseMateriales = `• Súper Brite® (Cuarzo Piscinas): *${calcData.bolsasSB} Bolsas (22.7 kg)*\n• Puente de Unión Súper Kote®: *${calcData.unidadesSK} Kits Bicomponente*`;
     } else if (calcData.prodSelect === 'sk') {
-        desgloseMateriales = `• Súper Kote® Bicomponente: *${calcData.unidadesSK} Kits completas*`;
+        desgloseMateriales = `• Súper Kote® Bicomponente: *${calcData.unidadesSK} Kits (Polvo + Resina)*\n• Rendimiento: *Puente de adherencia sin picar hormigón*`;
     } else if (calcData.prodSelect === 'sf') {
-        desgloseMateriales = `• Bolsas Súper Fullget® (25 kg): *${calcData.bolsasSF} Bolsas*\n• Imprimación Previa: *${calcData.unidadesSK} Unidades*`;
+        desgloseMateriales = `• Súper Fullget® Atérmico: *${calcData.bolsasSF} Bolsas (25 kg)*\n• Imprimación Previa Súper Kote®: *${calcData.unidadesSK} Kits*`;
     } else if (calcData.prodSelect === 'sd') {
-        desgloseMateriales = `• Kits Spray Deck Resina: *${calcData.kitsSD} Kits*\n• Sellador de Acabado: *${Math.ceil(calcData.totalM2 / 12)} Lts*`;
+        desgloseMateriales = `• Spray Deck Resina Texturada: *${calcData.kitsSD} Kits*\n• Sellador Acrílico de Acabado: *${Math.ceil(calcData.totalM2 / 12)} Litros*`;
     } else if (calcData.prodSelect === 'ss') {
-        desgloseMateriales = `• Kits Súper Seal® Microcemento: *${calcData.kitsSS} Kits*\n• Sellador Poliuretánico: *${calcData.unidadesSK} Lts*`;
+        desgloseMateriales = `• Súper Seal® Microcemento: *${calcData.kitsSS} Kits*\n• Sellador Poliuretánico: *${Math.ceil(calcData.totalM2 / 10)} Litros*`;
     }
 
     const message = 
-`🌊 *COTIZACIÓN DE MATERIALES - IMPOAQUATIQ* 🌊
-*Canal Oficial:* ImpoAcuatiq Argentina (+54 9 341-6825470)
+`🌊 *COTIZACIÓN DE INSUMOS - IMPOAQUATIQ* 🌊
+*Importador Exclusivo Argentina:* ImpoAcuatiq (+54 9 341-6825470)
 
-📋 *DESGLOSE DEL PROYECTO:*
+📋 *DETALLE DEL PROYECTO:*
 • *Tipo de Obra:* ${modoTexto}
 • *Dimensiones:* ${medidasTexto}
 • *Superficie Total:* ${calcData.totalM2} m²
-• *Producto Cotizado:* ${productObj.name} (${productObj.subName})
+• *Producto Seleccionado:* ${productObj.name} (${productObj.subName})
 
-📦 *CÓMPUTO ESTIMADO DE INSUMOS:*
+📦 *CÓMPUTO ESTIMADO DE MATERIALES:*
 ${desgloseMateriales}
-• *Rendimiento Estándar:* ${productObj.specs.rendimiento}
+• *Rendimiento Técnico:* ${productObj.specs.rendimiento}
 
-Hola ImpoAcuatiq, me gustaría verificar disponibilidad de stock en depósito, confirmar la cotización formal y consultar opciones de despacho a mi localidad. Muchas gracias!`;
+Hola ImpoAcuatiq, me gustaría verificar disponibilidad de stock en depósito central, confirmar presupuesto mayorista/obra y consultar opciones de despacho. Muchas gracias!`;
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
 
     window.open(whatsappUrl, '_blank');
 }
+
+window.sendCalcToWhatsApp = sendCalcToWhatsApp;
 
 window.sendCalcToWhatsApp = sendCalcToWhatsApp;
 
