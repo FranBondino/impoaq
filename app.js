@@ -386,8 +386,8 @@ function sendCalcToWhatsApp() {
     }
 
     const message = 
-`🌊 *COTIZACIÓN DE MATERIALES - IMPOACUATIQ* 🌊
-*Atención Comercial:* Lorna Pizarro Vera (+54 9 341-6825470)
+`🌊 *COTIZACIÓN DE MATERIALES - IMPOAQUATIQ* 🌊
+*Canal Oficial:* ImpoAcuatiq Argentina (+54 9 341-6825470)
 
 📋 *DESGLOSE DEL PROYECTO:*
 • *Tipo de Obra:* ${modoTexto}
@@ -399,7 +399,7 @@ function sendCalcToWhatsApp() {
 ${desgloseMateriales}
 • *Rendimiento Estándar:* ${productObj.specs.rendimiento}
 
-Hola Lorna, me gustaría verificar disponibilidad de stock en depósito, confirmar la cotización formal y consultar opciones de envío a mi localidad. Muchas gracias!`;
+Hola ImpoAcuatiq, me gustaría verificar disponibilidad de stock en depósito, confirmar la cotización formal y consultar opciones de despacho a mi localidad. Muchas gracias!`;
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
@@ -487,7 +487,7 @@ function openProductModal(prodCode) {
             <button class="btn-doc-pdf" onclick="downloadSpecSheet('${product.name}', '${product.datasheetPdf}')">
                 <i class="fa-solid fa-file-pdf"></i> Imprimir / Guardar Ficha PDF
             </button>
-            <a href="https://wa.me/5493416825470?text=Hola%20Lorna,%20quisiera%20recibir%20la%20Ficha%20T%C3%A9cnica%20en%20PDF%20de%20${encodeURIComponent(product.name)}." target="_blank" class="btn-doc-wa">
+            <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20quisiera%20recibir%20la%20Ficha%20T%C3%A9cnica%20en%20PDF%20de%20${encodeURIComponent(product.name)}." target="_blank" class="btn-doc-wa">
                 <i class="fa-brands fa-whatsapp"></i> Solicitar por WhatsApp
             </a>
         </div>
@@ -573,7 +573,7 @@ function downloadSpecSheet(productName, fileName) {
             <h3>Instrucciones de Aplicación</h3>
             <p style="font-size: 13.5px; color: #334155;">${prod.application}</p>
             <div class="footer">
-                <p>ImpoAcuatiq | Representante Comercial Técnico: Lorna Pizarro Vera | Tel: +54 9 341-6825470</p>
+                <p>ImpoAcuatiq Argentina | Departamento Técnico & Comercial | Tel: +54 9 341-6825470 / +56 9 91359879</p>
                 <p>© 2026 ImpoAcuatiq Argentina. Documento técnico de especificación de obra.</p>
             </div>
         </body>
@@ -665,8 +665,8 @@ function openVideoModal(videoUrl = 'https://www.w3schools.com/html/mov_bbb.mp4',
             </div>
             <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
                 <p style="font-size: 13px; color: var(--text-muted);">🎥 Obra real supervisada por el departamento técnico de ImpoAcuatiq.</p>
-                <a href="https://wa.me/5493416825470?text=Hola%20Lorna,%20quisiera%20solicitar%20el%20video%20demostrativo%20completo%20de%20aplicaci%C3%B3n." target="_blank" class="btn btn-whatsapp btn-sm">
-                    <i class="fa-brands fa-whatsapp"></i> Solicitar más videos a Lorna
+                <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20quisiera%20solicitar%20el%20video%20demostrativo%20completo%20de%20aplicaci%C3%B3n." target="_blank" class="btn btn-whatsapp btn-sm">
+                    <i class="fa-brands fa-whatsapp"></i> Solicitar más videos demostrativos
                 </a>
             </div>
         </div>
@@ -802,7 +802,6 @@ function submitContactForm() {
 
     const textWhatsApp = 
 `📩 *NUEVA CONSULTA DESDE LA WEB IMPOACUATIQ*
-*Representante:* Lorna Pizarro Vera
 
 👤 *Nombre / Empresa:* ${nombre}
 📞 *Teléfono:* ${telefono}
@@ -812,7 +811,7 @@ function submitContactForm() {
 
     const url = `https://wa.me/5493416825470?text=${encodeURIComponent(textWhatsApp)}`;
     
-    alert(`¡Gracias ${nombre}! Tu consulta ha sido enviada. Te derivaremos a WhatsApp con Lorna Pizarro Vera para atención personalizada.`);
+    alert(`¡Gracias ${nombre}! Tu consulta ha sido enviada. Te derivaremos a WhatsApp con el canal de atención oficial de ImpoAcuatiq.`);
     window.open(url, '_blank');
 
     const form = document.getElementById('contact-form');
