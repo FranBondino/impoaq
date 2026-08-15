@@ -753,20 +753,12 @@ a {
     align-items: flex-start;
 }
 
-.footer-logo-card {
-    background: #FFFFFF;
-    padding: 10px 16px;
-    border-radius: 10px;
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 16px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
-}
-
-.f-logo-img {
-    height: 44px;
+.footer-brand-logo {
+    height: 52px;
     width: auto;
     object-fit: contain;
+    margin-bottom: 18px;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
 }
 
 .footer-brand-desc {
