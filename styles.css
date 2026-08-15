@@ -1499,5 +1499,166 @@ a {
     animation: wa-pulse 2.5s infinite;
 }
 
+/* ==========================================================================
+   8. DYNAMIC SCROLL REVEAL & MICRO-ANIMATIONS SYSTEM
+   ========================================================================== */
+
+/* Base Reveal States */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-32px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(32px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.94);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+/* Active / Revealed State */
+.reveal.revealed,
+.reveal-left.revealed,
+.reveal-right.revealed,
+.reveal-scale.revealed {
+    opacity: 1 !important;
+    transform: translate(0, 0) scale(1) !important;
+}
+
+/* Stagger Delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-150 { transition-delay: 150ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-250 { transition-delay: 250ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Sticky Header Scrolled Glassmorphism Effect */
+.site-header {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+}
+
+.site-header.scrolled {
+    background: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
+    height: 74px;
+}
+
+.site-header.scrolled .img-logo-main {
+    height: 48px;
+}
+
+/* Active Nav Indicator Underline Animation */
+.site-nav .nav-item {
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+.site-nav .nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 20px;
+    height: 2px;
+    background: #0284C7;
+    border-radius: 2px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.site-nav .nav-item.active::after,
+.site-nav .nav-item:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Floating Badge Gentle Bobbing */
+@keyframes soft-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.hero-badge-float {
+    animation: soft-float 4s ease-in-out infinite;
+}
+
+/* Subtle Shimmer Light Sweep on Primary Buttons & CTA */
+.btn-primary, .btn-cta-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::after, .btn-cta-primary::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 40%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.25) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(25deg);
+    transition: all 0.75s ease;
+}
+
+.btn-primary:hover::after, .btn-cta-primary:hover::after {
+    left: 140%;
+}
+
+/* Card Hover Elevation & Border Physics */
+.product-card-horizontal, .b2b-card, .gal-card {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.product-card-horizontal:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px -8px rgba(15, 23, 42, 0.12);
+}
+
+.b2b-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 36px -10px rgba(15, 23, 42, 0.14);
+}
+
+.gal-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.25);
+}
+
+.gal-card img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gal-card:hover img {
+    transform: scale(1.06);
+}
+
 
 

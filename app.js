@@ -160,6 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initThemeSwitcher();
     initCalculator();
     initNavbarScroll();
+    initScrollReveal();
+    initScrollSpy();
     initMobileMenu();
     initCatalogFilter();
     initModalListeners();
@@ -768,17 +770,69 @@ function initCatalogFilter() {
     });
 }
 
+function initScrollReveal() {
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    if (!revealElements.length) return;
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.08,
+            rootMargin: '0px 0px -20px 0px'
+        });
+
+        revealElements.forEach(el => observer.observe(el));
+    } else {
+        revealElements.forEach(el => el.classList.add('revealed'));
+    }
+}
+
 function initNavbarScroll() {
-    const navbar = document.getElementById('main-navbar');
-    if (!navbar) return;
+    const header = document.querySelector('.site-header');
+    if (!header) return;
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-            navbar.classList.add('scrolled');
+        if (window.scrollY > 30) {
+            header.classList.add('scrolled');
         } else {
-            navbar.classList.remove('scrolled');
+            header.classList.remove('scrolled');
         }
-    });
+    }, { passive: true });
+}
+
+function initScrollSpy() {
+    const sections = document.querySelectorAll('section[id], footer[id]');
+    const navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
+
+    if (!sections.length || !navLinks.length) return;
+
+    window.addEventListener('scroll', () => {
+        let currentSectionId = '';
+        const scrollPosition = window.scrollY + 120;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                currentSectionId = section.getAttribute('id');
+            }
+        });
+
+        if (currentSectionId) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSectionId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    }, { passive: true });
 }
 
 function initMobileMenu() {

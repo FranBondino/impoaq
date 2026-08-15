@@ -58,7 +58,7 @@
     <!-- HERO SECTION ARQUITECTÓNICO EDITORIAL -->
     <section class="hero-section" id="inicio">
         <div class="container hero-split">
-            <div class="hero-text-col">
+            <div class="hero-text-col reveal-left">
                 <span class="hero-label">Importador & Distribuidor Exclusivo Argentina</span>
                 <h1 class="hero-title">Soluciones Cementicias para Piscinas y Terrazas</h1>
                 <p class="hero-subtitle">Importación directa y abastecimiento mayorista de revestimientos de cuarzo refinado, puentes de adherencia estructural y recubrimientos atérmicos Ingeprex (Chile). Reemplazan la pintura tradicional con más de 10 años de durabilidad garantizada.</p>
@@ -75,7 +75,7 @@
                 </div>
             </div>
 
-            <div class="hero-image-box">
+            <div class="hero-image-box reveal-right">
                 <img src="assets/img/real_photos/superbrite_real_1.jpg" alt="Piscina revestida con cuarzo continuo Súper Brite">
                 <div class="hero-badge-float">
                     <span class="badge-dot"></span>
@@ -88,13 +88,13 @@
     <!-- CATÁLOGO TÉCNICO DE PRODUCTOS (LAYOUT MINIMALISTA HORIZONTAL) -->
     <section class="section-products" id="productos">
         <div class="container">
-            <div class="section-head text-center">
+            <div class="section-head text-center reveal">
                 <span class="hero-label">Gama Profesional de Insumos</span>
                 <h2 class="head-title">Catálogo Oficial de Productos</h2>
                 <p class="head-desc">Líneas de revestimiento y preparación técnica formuladas para exigencia profesional en vaso de hormigón y superficies exteriores.</p>
                 
                 <!-- FILTER PILLS -->
-                <div class="catalog-filters">
+                <div class="catalog-filters reveal delay-100">
                     <button class="filter-pill active" onclick="filterCategory('todos', this)">Todos (5)</button>
                     <button class="filter-pill" onclick="filterCategory('piscinas', this)">Piscinas (Cuarzo)</button>
                     <button class="filter-pill" onclick="filterCategory('adherencia', this)">Puentes de Unión</button>
@@ -107,7 +107,7 @@
             <div class="product-grid" id="catalog-grid">
                 
                 <!-- PRODUCTO 1: SÚPER BRITE -->
-                <div class="product-card-horizontal" data-cat="piscinas">
+                <div class="product-card-horizontal reveal delay-100" data-cat="piscinas">
                     <div class="prod-photo-col">
                         <img src="assets/img/sb-bag.jpg" alt="Envase Oficial Súper Brite® 25kg">
                     </div>
@@ -147,30 +147,34 @@
                 </div>
 
                 <!-- PRODUCTO 2: SÚPER KOTE -->
-                <div class="product-card-horizontal" data-cat="adherencia">
+                <div class="product-card-horizontal reveal delay-150" data-cat="adherencia">
                     <div class="prod-photo-col">
-                        <img src="assets/img/sk-primer.jpeg" alt="Súper Kote® Promotor de Adherencia Bicomponente">
+                        <img src="assets/img/sk-primer.jpeg" alt="Envase Oficial Súper Kote®">
                     </div>
                     <div class="prod-info-col">
                         <div>
                             <div class="prod-brand-header">
                                 <img src="assets/img/logo-superkote.jpg" alt="Súper Kote Logo" class="brand-img-contain">
-                                <span class="prod-type-tag">Puente de Unión</span>
+                                <span class="prod-type-tag">Puente de Unión Estructural</span>
                             </div>
-                            <p class="prod-headline">Imprimación bicomponente de alta rugosidad para generar anclaje estructural sobre hormigón liso o revestimientos previos sin necesidad de picar.</p>
+                            <p class="prod-headline">Puente de adherencia bicomponente (polvo + resina) de anclaje químico superior. Permite revestir sobre hormigón existente, cerámicas o pintura firme sin picar la pared.</p>
                             
                             <table class="specs-table">
                                 <tr>
-                                    <td class="spec-title">Rendimiento</td>
-                                    <td class="spec-val">15 m² por kit completo bicomponente</td>
-                                </tr>
-                                <tr>
                                     <td class="spec-title">Presentación</td>
-                                    <td class="spec-val">Bidón 5L Polímero + 10kg Polvo Fortificado</td>
+                                    <td class="spec-val">Kit Bicomponente (Bolsa de Polvo + Bidón Resina)</td>
                                 </tr>
                                 <tr>
-                                    <td class="spec-title">Propiedades</td>
-                                    <td class="spec-val">Impermeable a humedad negativa, adherencia inquebrantable</td>
+                                    <td class="spec-title">Rendimiento</td>
+                                    <td class="spec-val">15 m² a 20 m² por kit completo</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Adherencia</td>
+                                    <td class="spec-val">Tracción directa &gt; 1.5 MPa sobre hormigón</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Tiempo de Trabajo</td>
+                                    <td class="spec-val">Secado rápido (recubrible en 4 - 6 horas)</td>
                                 </tr>
                             </table>
                         </div>
@@ -183,26 +187,26 @@
                 </div>
 
                 <!-- PRODUCTO 3: SÚPER FULLGET -->
-                <div class="product-card-horizontal" data-cat="bordes">
+                <div class="product-card-horizontal reveal delay-200" data-cat="bordes">
                     <div class="prod-photo-col">
-                        <img src="assets/img/sf-bag.jpg" alt="Bolsa Oficial Súper Fullget® 25kg">
+                        <img src="assets/img/sf-bag.jpg" alt="Envase Oficial Súper Fullget® 25kg">
                     </div>
                     <div class="prod-info-col">
                         <div>
                             <div class="prod-brand-header">
-                                <span class="brand-text-name" style="color: #B45309;">SÚPER FULLGET®</span>
-                                <span class="prod-type-tag">Bordes & Terrazas</span>
+                                <img src="assets/img/logo-superfullget.jpg" alt="Súper Fullget Logo" class="brand-img-contain">
+                                <span class="prod-type-tag">Bordes &amp; Terrazas Atérmicas</span>
                             </div>
-                            <p class="prod-headline">Recubrimiento granítico natural atérmico y antideslizante para solárium, bordes de piscina, terrazas y jardineras. No acumula calor bajo sol directo.</p>
+                            <p class="prod-headline">Revestimiento continuo de grano seleccionado para soláriums, bordes de piscinas y terrazas. 100% atérmico (no quema al sol) y antideslizante.</p>
                             
                             <table class="specs-table">
                                 <tr>
-                                    <td class="spec-title">Rendimiento</td>
-                                    <td class="spec-val">3.0 m² por bolsa de 25 kg</td>
+                                    <td class="spec-title">Presentación</td>
+                                    <td class="spec-val">Bolsa 25 kg granulometría calibrada</td>
                                 </tr>
                                 <tr>
-                                    <td class="spec-title">Espesor</td>
-                                    <td class="spec-val">10 mm a 12 mm continuo</td>
+                                    <td class="spec-title">Rendimiento</td>
+                                    <td class="spec-val">3.0 m² por bolsa de 25 kg</td>
                                 </tr>
                                 <tr>
                                     <td class="spec-title">Propiedades</td>
@@ -219,7 +223,7 @@
                 </div>
 
                 <!-- PRODUCTO 4: SPRAY DECK -->
-                <div class="product-card-horizontal" data-cat="resina">
+                <div class="product-card-horizontal reveal delay-250" data-cat="resina">
                     <div class="prod-photo-col">
                         <img src="assets/img/sd-bucket.png" alt="Balde Oficial Spray Deck® 25kg">
                     </div>
@@ -255,7 +259,7 @@
                 </div>
 
                 <!-- PRODUCTO 5: SÚPER SEAL -->
-                <div class="product-card-horizontal" data-cat="microcemento">
+                <div class="product-card-horizontal reveal delay-300" data-cat="microcemento">
                     <div class="prod-photo-col">
                         <img src="assets/img/ss-bucket.png" alt="Balde Oficial Súper Seal® 20kg">
                     </div>
@@ -297,13 +301,13 @@
     <!-- MOSTRARIO OFICIAL DE COLORES SÚPER BRITE -->
     <section class="section-products" style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 60px 0;">
         <div class="container">
-            <div class="section-head text-center">
+            <div class="section-head text-center reveal">
                 <span class="hero-label">Gama Cromática Exclusiva</span>
                 <h2 class="head-title">Catálogo de Tonos y Pigmentaciones de Cuarzo</h2>
                 <p class="head-desc">Súper Brite® ofrece mezclas de cristales de cuarzo natural seleccionados que reaccionan con la luz solar generando el reflejo de agua cristalina deseado.</p>
             </div>
 
-            <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 30px; text-align: center;">
+            <div class="reveal-scale" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 30px; text-align: center;">
                 <img src="assets/img/sb-colors.jpeg" alt="Catálogo de colores oficiales Súper Brite Quartz Finish" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-sm);">
                 <p style="margin-top: 16px; font-size: 13.5px; color: #64748B; font-weight: 500;">
                     <i class="fa-solid fa-circle-info text-cyan"></i> <strong>Nota Técnica:</strong> El tono final del agua varía según la profundidad de la piscina, la hora del día y la incidencia de luz solar.
@@ -316,7 +320,7 @@
     <section class="section-calc" id="calculadora">
         <div class="container">
             <div class="calc-container">
-                <div class="calc-inputs-side">
+                <div class="calc-inputs-side reveal-left">
                     <h2 class="calc-title">Calculadora de m² e Insumos</h2>
                     <p class="calc-desc">Ingresá las dimensiones de tu piscina o superficie plana para calcular la cantidad exacta de material e imprimación.</p>
 
@@ -359,7 +363,7 @@
                     </div>
                 </div>
 
-                <div class="calc-output-box">
+                <div class="calc-output-box reveal-right">
                     <div>
                         <h3>Resumen del Cómputo</h3>
                         <p style="font-size: 13px; color: #94A3B8; margin-top: 4px;">Superficie Total Calculada:</p>
@@ -390,14 +394,14 @@
     <!-- CANALES DE DISTRIBUCIÓN B2B -->
     <section class="section-b2b" id="b2b">
         <div class="container">
-            <div class="section-head text-center">
+            <div class="section-head text-center reveal">
                 <span class="hero-label">Atención Profesional & Mayorista</span>
                 <h2 class="head-title">Abastecimiento Directo y Canales B2B</h2>
                 <p class="head-desc">Atención preferencial de importador para constructoras, comercios del rubro y cuadrillas de aplicación en todo el país.</p>
             </div>
 
             <div class="b2b-grid">
-                <div class="b2b-card">
+                <div class="b2b-card reveal delay-100">
                     <div>
                         <h3>Constructoras & Arquitectos</h3>
                         <p>Especificación de insumos en pliegos de obra, compras directas por volumen/pallet y soporte técnico en sitio para desarrollos de alta gama.</p>
@@ -405,7 +409,7 @@
                     <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20soy%20constructor/arquitecto%20y%20quiero%20cotizar%20insumos%20para%20un%20proyecto." target="_blank" class="btn-secondary">Cotizar para Obras</a>
                 </div>
 
-                <div class="b2b-card" style="border-color: var(--color-brand);">
+                <div class="b2b-card reveal delay-200" style="border-color: var(--color-brand);">
                     <div>
                         <h3>Puntos de Venta & Corralones</h3>
                         <p>Sumá las líneas oficiales Súper Brite® e Ingeprex a tu comercio con abastecimiento directo de importador y márgenes preferenciales.</p>
@@ -413,7 +417,7 @@
                     <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20tengo%20un%20comercio/corralon%20y%20quiero%20incorporar%20la%20linea%20oficial." target="_blank" class="btn-primary">Abastecimiento Mayorista</a>
                 </div>
 
-                <div class="b2b-card">
+                <div class="b2b-card reveal delay-300">
                     <div>
                         <h3>Aplicadores & Cuadrillas</h3>
                         <p>Capacitación en técnicas de llaneado y proyección continua, homologación oficial y derivación de obras en tu zona de cobertura.</p>
@@ -427,49 +431,49 @@
     <!-- OBRAS REALES -->
     <section class="section-products" id="galeria" style="background: #FFFFFF;">
         <div class="container">
-            <div class="section-head text-center">
+            <div class="section-head text-center reveal">
                 <span class="hero-label">Obras Ejecutadas</span>
                 <h2 class="head-title">Galería de Proyectos Reales</h2>
                 <p class="head-desc">Proyectos terminados en piscinas, bordes atérmicos y terrazas con insumos oficiales Súper Brite® e Ingeprex.</p>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
-                <div class="gal-card" onclick="openLightbox('assets/img/real_photos/superbrite_real_1.jpg', 'Piscina Residencial Súper Brite® Quartz Finish (Agua Turquesa)')">
+                <div class="gal-card reveal delay-100" onclick="openLightbox('assets/img/real_photos/superbrite_real_1.jpg', 'Piscina Residencial Súper Brite® Quartz Finish (Agua Turquesa)')">
                     <img src="assets/img/real_photos/superbrite_real_1.jpg" alt="Piscina revestida con Súper Brite® Quartz">
                     <div class="gal-caption">
                         <span class="gal-tag">Súper Brite®</span>
                         <div>Piscina Residencial Quartz Finish</div>
                     </div>
                 </div>
-                <div class="gal-card" onclick="openLightbox('https://images.unsplash.com/photo-1572331165267-854da2b10ccc?q=80&w=1200', 'Solárium y Bordes Atérmicos Súper Fullget®')">
+                <div class="gal-card reveal delay-200" onclick="openLightbox('https://images.unsplash.com/photo-1572331165267-854da2b10ccc?q=80&w=1200', 'Solárium y Bordes Atérmicos Súper Fullget®')">
                     <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?q=80&w=800" alt="Bordes Atérmicos Súper Fullget®">
                     <div class="gal-caption">
                         <span class="gal-tag" style="background: #D97706;">Súper Fullget®</span>
                         <div>Solárium & Bordes Atérmicos</div>
                     </div>
                 </div>
-                <div class="gal-card" onclick="openLightbox('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200', 'Cochera y Acceso Vehicular con Spray Deck')">
+                <div class="gal-card reveal delay-300" onclick="openLightbox('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200', 'Cochera y Acceso Vehicular con Spray Deck')">
                     <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800" alt="Superficie Proyectada Spray Deck">
                     <div class="gal-caption">
                         <span class="gal-tag" style="background: #CA8A04;">Spray Deck</span>
                         <div>Accesos & Cocheras Proyectadas</div>
                     </div>
                 </div>
-                <div class="gal-card" onclick="openLightbox('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200', 'Microcemento Continuo Súper Seal® en Terrazas y Exteriores')">
+                <div class="gal-card reveal delay-150" onclick="openLightbox('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200', 'Microcemento Continuo Súper Seal® en Terrazas y Exteriores')">
                     <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800" alt="Microcemento Súper Seal®">
                     <div class="gal-caption">
                         <span class="gal-tag" style="background: #EA580C;">Súper Seal®</span>
                         <div>Microcemento Continuo Impermeable</div>
                     </div>
                 </div>
-                <div class="gal-card" onclick="openLightbox('assets/img/real_photos/superbrite_real_9.jpeg', 'Aplicación y llaneado artesanal de cuarzo en vaso de hormigón')">
+                <div class="gal-card reveal delay-250" onclick="openLightbox('assets/img/real_photos/superbrite_real_9.jpeg', 'Aplicación y llaneado artesanal de cuarzo en vaso de hormigón')">
                     <img src="assets/img/real_photos/superbrite_real_9.jpeg" alt="Llaneado de cuarzo en piscina">
                     <div class="gal-caption">
                         <span class="gal-tag">Técnica de Obra</span>
                         <div>Aplicación & Llaneado Manual</div>
                     </div>
                 </div>
-                <div class="gal-card" onclick="openLightbox('assets/img/real_photos/superbrite_real_6.jpeg', 'Piscina terminada con reflejo cristalino')">
+                <div class="gal-card reveal delay-350" onclick="openLightbox('assets/img/real_photos/superbrite_real_6.jpeg', 'Piscina terminada con reflejo cristalino')">
                     <img src="assets/img/real_photos/superbrite_real_6.jpeg" alt="Reflejo cristalino piscina cuarzo">
                     <div class="gal-caption">
                         <span class="gal-tag">Acabado Final</span>
@@ -483,7 +487,7 @@
     <!-- PRE-FOOTER CTA BANNER -->
     <section class="pre-footer-cta">
         <div class="container">
-            <div class="cta-banner-box">
+            <div class="cta-banner-box reveal-scale">
                 <div class="cta-banner-text">
                     <span class="cta-badge"><i class="fa-solid fa-truck-ramp-box"></i> Importación Directa & Logística Federal</span>
                     <h2 class="cta-title">¿Tenés una obra o querés abastecer tu comercio?</h2>
@@ -507,7 +511,7 @@
             <div class="footer-grid">
                 
                 <!-- COLUMNA 1: MARCA & IDENTIDAD -->
-                <div class="footer-col footer-col-brand">
+                <div class="footer-col footer-col-brand reveal delay-100">
                     <img src="assets/img/logo-white-transparent.png" alt="ImpoAcuatiq Importadora y Comercializadora" class="footer-brand-logo">
                     <p class="footer-brand-desc">Importador y distribuidor exclusivo en Argentina de revestimientos de cuarzo refinado, puentes de adherencia estructural y recubrimientos atérmicos Ingeprex (Chile).</p>
                     <div class="footer-cert-badge">
@@ -517,7 +521,7 @@
                 </div>
 
                 <!-- COLUMNA 2: LÍNEAS DE PRODUCTOS -->
-                <div class="footer-col">
+                <div class="footer-col reveal delay-200">
                     <h4 class="footer-heading">Líneas Oficiales</h4>
                     <ul class="footer-links">
                         <li><a href="#productos" onclick="filterCategory('piscinas')"><i class="fa-solid fa-angle-right"></i> Súper Brite® (Piscinas)</a></li>
@@ -525,24 +529,24 @@
                         <li><a href="#productos" onclick="filterCategory('bordes')"><i class="fa-solid fa-angle-right"></i> Súper Fullget® (Atérmico)</a></li>
                         <li><a href="#productos" onclick="filterCategory('resina')"><i class="fa-solid fa-angle-right"></i> Spray Deck (Resina)</a></li>
                         <li><a href="#productos" onclick="filterCategory('microcemento')"><i class="fa-solid fa-angle-right"></i> Súper Seal® (Microcemento)</a></li>
-                        <li><a href="#colores"><i class="fa-solid fa-angle-right"></i> Carta Cromática Oficial</a></li>
+                        <li><a href="#carta-colores"><i class="fa-solid fa-palette"></i> Carta Cromática Oficial</a></li>
                     </ul>
                 </div>
 
                 <!-- COLUMNA 3: SECTOR PROFESIONAL B2B -->
-                <div class="footer-col">
+                <div class="footer-col reveal delay-300">
                     <h4 class="footer-heading">Canales B2B</h4>
                     <ul class="footer-links">
-                        <li><a href="#calculadora"><i class="fa-solid fa-angle-right"></i> Calculadora de m² e Insumos</a></li>
-                        <li><a href="#b2b"><i class="fa-solid fa-angle-right"></i> Constructoras & Arquitectos</a></li>
-                        <li><a href="#b2b"><i class="fa-solid fa-angle-right"></i> Corralones & Mayoristas</a></li>
-                        <li><a href="#b2b"><i class="fa-solid fa-angle-right"></i> Red de Aplicadores Oficiales</a></li>
-                        <li><a href="#galeria"><i class="fa-solid fa-angle-right"></i> Galería de Obras Realizadas</a></li>
+                        <li><a href="#calculadora"><i class="fa-solid fa-calculator"></i> Calculadora de m² e Insumos</a></li>
+                        <li><a href="#b2b"><i class="fa-solid fa-hard-hat"></i> Constructoras & Arquitectos</a></li>
+                        <li><a href="#b2b"><i class="fa-solid fa-store"></i> Corralones & Mayoristas</a></li>
+                        <li><a href="#b2b"><i class="fa-solid fa-certificate"></i> Red de Aplicadores Oficiales</a></li>
+                        <li><a href="#galeria"><i class="fa-solid fa-images"></i> Galería de Obras Realizadas</a></li>
                     </ul>
                 </div>
 
                 <!-- COLUMNA 4: ATENCIÓN & LOGÍSTICA -->
-                <div class="footer-col">
+                <div class="footer-col reveal delay-400">
                     <h4 class="footer-heading">Atención & Contacto</h4>
                     <ul class="footer-contact-list">
                         <li>
