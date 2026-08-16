@@ -368,9 +368,12 @@ a {
 }
 
 .brand-img-contain {
-    max-height: 36px;
-    max-width: 150px;
+    height: 42px;
+    max-height: 48px;
+    max-width: 180px;
+    width: auto;
     object-fit: contain;
+    display: block;
 }
 
 .brand-text-name {
