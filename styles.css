@@ -47,6 +47,10 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
+[id] {
+    scroll-margin-top: 90px;
+}
+
 body {
     background-color: var(--color-light-bg);
     color: var(--color-dark);

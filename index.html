@@ -299,7 +299,7 @@
     </section>
 
     <!-- MOSTRARIO OFICIAL DE COLORES SÚPER BRITE -->
-    <section class="section-products" style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 60px 0;">
+    <section class="section-products" id="carta-colores" style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 60px 0;">
         <div class="container">
             <div class="section-head text-center reveal">
                 <span class="hero-label">Gama Cromática Exclusiva</span>
@@ -401,7 +401,7 @@
             </div>
 
             <div class="b2b-grid">
-                <div class="b2b-card reveal delay-100">
+                <div class="b2b-card reveal delay-100" id="b2b-constructoras">
                     <div>
                         <h3>Constructoras & Arquitectos</h3>
                         <p>Especificación de insumos en pliegos de obra, compras directas por volumen/pallet y soporte técnico en sitio para desarrollos de alta gama.</p>
@@ -409,7 +409,7 @@
                     <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20soy%20constructor/arquitecto%20y%20quiero%20cotizar%20insumos%20para%20un%20proyecto." target="_blank" class="btn-secondary">Cotizar para Obras</a>
                 </div>
 
-                <div class="b2b-card reveal delay-200" style="border-color: var(--color-brand);">
+                <div class="b2b-card reveal delay-200" id="b2b-corralones" style="border-color: var(--color-brand);">
                     <div>
                         <h3>Puntos de Venta & Corralones</h3>
                         <p>Sumá las líneas oficiales Súper Brite® e Ingeprex a tu comercio con abastecimiento directo de importador y márgenes preferenciales.</p>
@@ -417,7 +417,7 @@
                     <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20tengo%20un%20comercio/corralon%20y%20quiero%20incorporar%20la%20linea%20oficial." target="_blank" class="btn-primary">Abastecimiento Mayorista</a>
                 </div>
 
-                <div class="b2b-card reveal delay-300">
+                <div class="b2b-card reveal delay-300" id="b2b-aplicadores">
                     <div>
                         <h3>Aplicadores & Cuadrillas</h3>
                         <p>Capacitación en técnicas de llaneado y proyección continua, homologación oficial y derivación de obras en tu zona de cobertura.</p>
@@ -524,12 +524,12 @@
                 <div class="footer-col reveal delay-200">
                     <h4 class="footer-heading">Líneas Oficiales</h4>
                     <ul class="footer-links">
-                        <li><a href="#productos" onclick="filterCategory('piscinas')"><i class="fa-solid fa-angle-right"></i> Súper Brite® (Piscinas)</a></li>
-                        <li><a href="#productos" onclick="filterCategory('adherencia')"><i class="fa-solid fa-angle-right"></i> Súper Kote® (Adherencia)</a></li>
-                        <li><a href="#productos" onclick="filterCategory('bordes')"><i class="fa-solid fa-angle-right"></i> Súper Fullget® (Atérmico)</a></li>
-                        <li><a href="#productos" onclick="filterCategory('resina')"><i class="fa-solid fa-angle-right"></i> Spray Deck (Resina)</a></li>
-                        <li><a href="#productos" onclick="filterCategory('microcemento')"><i class="fa-solid fa-angle-right"></i> Súper Seal® (Microcemento)</a></li>
-                        <li><a href="#carta-colores"><i class="fa-solid fa-palette"></i> Carta Cromática Oficial</a></li>
+                        <li><a href="javascript:void(0)" onclick="openProductModal('sb')"><i class="fa-solid fa-file-lines text-blue"></i> Súper Brite® (Piscinas)</a></li>
+                        <li><a href="javascript:void(0)" onclick="openProductModal('sk')"><i class="fa-solid fa-file-lines text-blue"></i> Súper Kote® (Adherencia)</a></li>
+                        <li><a href="javascript:void(0)" onclick="openProductModal('sf')"><i class="fa-solid fa-file-lines text-blue"></i> Súper Fullget® (Atérmico)</a></li>
+                        <li><a href="javascript:void(0)" onclick="openProductModal('sd')"><i class="fa-solid fa-file-lines text-blue"></i> Spray Deck (Resina)</a></li>
+                        <li><a href="javascript:void(0)" onclick="openProductModal('ss')"><i class="fa-solid fa-file-lines text-blue"></i> Súper Seal® (Microcemento)</a></li>
+                        <li><a href="#carta-colores"><i class="fa-solid fa-palette text-blue"></i> Carta Cromática Oficial</a></li>
                     </ul>
                 </div>
 
@@ -537,11 +537,11 @@
                 <div class="footer-col reveal delay-300">
                     <h4 class="footer-heading">Canales B2B</h4>
                     <ul class="footer-links">
-                        <li><a href="#calculadora"><i class="fa-solid fa-calculator"></i> Calculadora de m² e Insumos</a></li>
-                        <li><a href="#b2b"><i class="fa-solid fa-hard-hat"></i> Constructoras & Arquitectos</a></li>
-                        <li><a href="#b2b"><i class="fa-solid fa-store"></i> Corralones & Mayoristas</a></li>
-                        <li><a href="#b2b"><i class="fa-solid fa-certificate"></i> Red de Aplicadores Oficiales</a></li>
-                        <li><a href="#galeria"><i class="fa-solid fa-images"></i> Galería de Obras Realizadas</a></li>
+                        <li><a href="#calculadora"><i class="fa-solid fa-calculator text-blue"></i> Calculadora de m² e Insumos</a></li>
+                        <li><a href="#b2b-constructoras"><i class="fa-solid fa-hard-hat text-blue"></i> Constructoras & Arquitectos</a></li>
+                        <li><a href="#b2b-corralones"><i class="fa-solid fa-store text-blue"></i> Puntos de Venta & Corralones</a></li>
+                        <li><a href="#b2b-aplicadores"><i class="fa-solid fa-certificate text-blue"></i> Red de Aplicadores Oficiales</a></li>
+                        <li><a href="#galeria"><i class="fa-solid fa-images text-blue"></i> Galería de Obras Realizadas</a></li>
                     </ul>
                 </div>
 
@@ -550,28 +550,31 @@
                     <h4 class="footer-heading">Atención & Contacto</h4>
                     <ul class="footer-contact-list">
                         <li>
-                            <i class="fa-solid fa-phone text-blue"></i>
+                            <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 16px; margin-top: 3px;"></i>
                             <div>
-                                <strong>Argentina:</strong> <a href="tel:+5493416825470">+54 9 341-6825470</a>
+                                <strong>Argentina (WhatsApp & Llamadas):</strong><br>
+                                <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20quisiera%20realizar%20una%20consulta%20comercial." target="_blank">+54 9 341-6825470</a>
                             </div>
                         </li>
                         <li>
-                            <i class="fa-solid fa-phone text-blue"></i>
+                            <i class="fa-solid fa-phone text-blue" style="font-size: 14px; margin-top: 3px;"></i>
                             <div>
-                                <strong>Chile:</strong> <a href="tel:+56991359879">+56 9 91359879</a>
+                                <strong>Chile (Planta Ingeprex):</strong><br>
+                                <a href="https://wa.me/56991359879?text=Hola%20Ingeprex,%20quisiera%20realizar%20una%20consulta." target="_blank">+56 9 91359879</a>
                             </div>
                         </li>
                         <li>
-                            <i class="fa-solid fa-location-dot text-blue"></i>
+                            <i class="fa-solid fa-location-dot text-blue" style="font-size: 15px; margin-top: 3px;"></i>
                             <div>
                                 <strong>Centro de Distribución:</strong><br>
-                                Rosario, Santa Fe, Argentina
+                                <a href="https://maps.google.com/?q=Rosario,+Santa+Fe,+Argentina" target="_blank" style="color: #CBD5E1; text-decoration: underline; text-underline-offset: 3px;">Rosario, Santa Fe, Argentina <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 10px;"></i></a>
                             </div>
                         </li>
                         <li>
-                            <i class="fa-solid fa-truck-fast text-blue"></i>
+                            <i class="fa-solid fa-truck-fast text-blue" style="font-size: 14px; margin-top: 3px;"></i>
                             <div>
-                                <strong>Logística Nacional:</strong> Despachos a todo el país
+                                <strong>Logística Federal:</strong><br>
+                                <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20quisiera%20consultar%20costos%20y%20tiempos%20de%20despacho%20a%20mi%20localidad." target="_blank" style="color: #CBD5E1; text-decoration: underline; text-underline-offset: 3px;">Despachos a todo el país <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 10px;"></i></a>
                             </div>
                         </li>
                     </ul>
