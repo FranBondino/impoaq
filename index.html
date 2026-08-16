@@ -23,7 +23,7 @@
     <header class="site-header">
         <div class="container header-inner">
             <a href="#" class="site-logo">
-                <img src="assets/img/logo-horizontal.jpg" alt="ImpoAcuatiq Importadora y Comercializadora" class="img-logo-main">
+                <img src="assets/img/logo-horizontal-transparent.png" alt="ImpoAcuatiq Importadora y Comercializadora" class="img-logo-main">
             </a>
 
             <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú de navegación">
@@ -428,58 +428,37 @@
         </div>
     </section>
 
-    <!-- OBRAS REALES -->
+    <!-- OBRAS REALES Y MULTIMEDIA -->
     <section class="section-products" id="galeria" style="background: #FFFFFF;">
         <div class="container">
             <div class="section-head text-center reveal">
-                <span class="hero-label">Obras Ejecutadas</span>
-                <h2 class="head-title">Galería de Proyectos Reales</h2>
-                <p class="head-desc">Proyectos terminados en piscinas, bordes atérmicos y terrazas con insumos oficiales Súper Brite® e Ingeprex.</p>
+                <span class="hero-label">Obras Ejecutadas & Catálogo Multimedia</span>
+                <h2 class="head-title">Galería de Proyectos Reales y Renders 3D</h2>
+                <p class="head-desc">Explorá 14 presentaciones oficiales en video 3D y obras terminadas en piscinas, bordes atérmicos y terrazas con insumos oficiales Súper Brite® e Ingeprex.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
-                <div class="gal-card reveal delay-100" onclick="openLightbox('assets/img/real_photos/superbrite_real_1.jpg', 'Piscina Residencial Súper Brite® Quartz Finish (Agua Turquesa)')">
-                    <img src="assets/img/real_photos/superbrite_real_1.jpg" alt="Piscina revestida con Súper Brite® Quartz">
-                    <div class="gal-caption">
-                        <span class="gal-tag">Súper Brite®</span>
-                        <div>Piscina Residencial Quartz Finish</div>
-                    </div>
-                </div>
-                <div class="gal-card reveal delay-200" onclick="openLightbox('https://images.unsplash.com/photo-1572331165267-854da2b10ccc?q=80&w=1200', 'Solárium y Bordes Atérmicos Súper Fullget®')">
-                    <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?q=80&w=800" alt="Bordes Atérmicos Súper Fullget®">
-                    <div class="gal-caption">
-                        <span class="gal-tag" style="background: #D97706;">Súper Fullget®</span>
-                        <div>Solárium & Bordes Atérmicos</div>
-                    </div>
-                </div>
-                <div class="gal-card reveal delay-300" onclick="openLightbox('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200', 'Cochera y Acceso Vehicular con Spray Deck')">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800" alt="Superficie Proyectada Spray Deck">
-                    <div class="gal-caption">
-                        <span class="gal-tag" style="background: #CA8A04;">Spray Deck</span>
-                        <div>Accesos & Cocheras Proyectadas</div>
-                    </div>
-                </div>
-                <div class="gal-card reveal delay-150" onclick="openLightbox('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200', 'Microcemento Continuo Súper Seal® en Terrazas y Exteriores')">
-                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800" alt="Microcemento Súper Seal®">
-                    <div class="gal-caption">
-                        <span class="gal-tag" style="background: #EA580C;">Súper Seal®</span>
-                        <div>Microcemento Continuo Impermeable</div>
-                    </div>
-                </div>
-                <div class="gal-card reveal delay-250" onclick="openLightbox('assets/img/real_photos/superbrite_real_9.jpeg', 'Aplicación y llaneado artesanal de cuarzo en vaso de hormigón')">
-                    <img src="assets/img/real_photos/superbrite_real_9.jpeg" alt="Llaneado de cuarzo en piscina">
-                    <div class="gal-caption">
-                        <span class="gal-tag">Técnica de Obra</span>
-                        <div>Aplicación & Llaneado Manual</div>
-                    </div>
-                </div>
-                <div class="gal-card reveal delay-350" onclick="openLightbox('assets/img/real_photos/superbrite_real_6.jpeg', 'Piscina terminada con reflejo cristalino')">
-                    <img src="assets/img/real_photos/superbrite_real_6.jpeg" alt="Reflejo cristalino piscina cuarzo">
-                    <div class="gal-caption">
-                        <span class="gal-tag">Acabado Final</span>
-                        <div>Reflejo Cristalino de Agua</div>
-                    </div>
-                </div>
+            <!-- Filtro dinámico de categorías -->
+            <div class="gal-filter-bar reveal">
+                <button class="gal-filter-btn active" data-filter="all" onclick="filterGallery('all')">
+                    <i class="fa-solid fa-layer-group"></i> Todos <span class="gal-filter-count" id="count-all">24</span>
+                </button>
+                <button class="gal-filter-btn" data-filter="videos" onclick="filterGallery('videos')">
+                    <i class="fa-solid fa-circle-play text-blue"></i> Videos 3D Oficiales <span class="gal-filter-count" id="count-videos">14</span>
+                </button>
+                <button class="gal-filter-btn" data-filter="piscinas" onclick="filterGallery('piscinas')">
+                    <i class="fa-solid fa-water-ladder text-blue"></i> Piscinas Reales <span class="gal-filter-count" id="count-piscinas">4</span>
+                </button>
+                <button class="gal-filter-btn" data-filter="muestras" onclick="filterGallery('muestras')">
+                    <i class="fa-solid fa-gem text-blue"></i> Muestrarios Cuarzo <span class="gal-filter-count" id="count-muestras">5</span>
+                </button>
+                <button class="gal-filter-btn" data-filter="bordes" onclick="filterGallery('bordes')">
+                    <i class="fa-solid fa-sun text-blue"></i> Bordes & Soláriums <span class="gal-filter-count" id="count-bordes">1</span>
+                </button>
+            </div>
+
+            <!-- Contenedor dinámico de tarjetas -->
+            <div class="gal-grid" id="gal-grid-container">
+                <!-- Se llena dinámicamente con JavaScript desde app.js -->
             </div>
         </div>
     </section>

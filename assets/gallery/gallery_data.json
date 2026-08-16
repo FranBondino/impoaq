@@ -1,0 +1,270 @@
+{
+  "videos": [
+    {
+      "id": "v_sb_bag",
+      "srcFile": "WhatsApp Video 2026-08-13 at 18.46.39.mp4",
+      "name": "Súper Brite® Quartz Finish (3D Showcase)",
+      "category": "videos",
+      "tag": "Súper Brite®",
+      "tagColor": "#0284C7",
+      "desc": "Render y presentación 3D oficial del envase de cuarzo refinado para piscinas (22.7 kg).",
+      "videoUrl": "assets/gallery/videos/v_sb_bag.mp4",
+      "thumbUrl": "assets/gallery/thumbs/v_sb_bag.jpg"
+    },
+    {
+      "id": "v_sk_bag",
+      "srcFile": "WhatsApp Video 2026-08-13 at 18.46.39 (2).mp4",
+      "name": "Súper Kote® Puente de Adherencia (3D)",
+      "category": "videos",
+      "tag": "Súper Kote®",
+      "tagColor": "#16A34A",
+      "desc": "Presentación 3D del promotor de anclaje químico bicomponente.",
+      "videoUrl": "assets/gallery/videos/v_sk_bag.mp4",
+      "thumbUrl": "assets/gallery/thumbs/v_sk_bag.jpg"
+    },
+    {
+      "id": "v_sf_bag",
+      "srcFile": "WhatsApp Video 2026-08-13 at 18.46.39 (3).mp4",
+      "name": "Súper Fullget® Bordes & Terrazas (3D)",
+      "category": "videos",
+      "tag": "Súper Fullget®",
+      "tagColor": "#D97706",
+      "desc": "Presentación 3D del revestimiento de grano fino atérmico para soláriums.",
+      "videoUrl": "assets/gallery/videos/v_sf_bag.mp4",
+      "thumbUrl": "assets/gallery/thumbs/v_sf_bag.jpg"
+    },
+    {
+      "id": "v_sd_bag",
+      "srcFile": "WhatsApp Video 2026-08-13 at 18.46.39 (1).mp4",
+      "name": "Spray Deck Resina Texturada (3D)",
+      "category": "videos",
+      "tag": "Spray Deck",
+      "tagColor": "#EAB308",
+      "desc": "Presentación 3D del sistema de resina proyectada para pisos y soláriums.",
+      "videoUrl": "assets/gallery/videos/v_sd_bag.mp4",
+      "thumbUrl": "assets/gallery/thumbs/v_sd_bag.jpg"
+    },
+    {
+      "id": "v_ss_bag",
+      "srcFile": "WhatsApp Video 2026-08-13 at 18.46.39 (4).mp4",
+      "name": "Súper Seal® Microcemento (3D)",
+      "category": "videos",
+      "tag": "Súper Seal®",
+      "tagColor": "#EA580C",
+      "desc": "Presentación 3D del microcemento impermeabilizante continuo.",
+      "videoUrl": "assets/gallery/videos/v_ss_bag.mp4",
+      "thumbUrl": "assets/gallery/thumbs/v_ss_bag.jpg"
+    },
+    {
+      "id": "v_lineup",
+      "srcFile": "WhatsApp Video 2026-08-13 at 18.46.40 (5).mp4",
+      "name": "Línea Completa de 5 Productos Ingeprex (3D)",
+      "category": "videos",
+      "tag": "Gama Oficial",
+      "tagColor": "#0F172A",
+      "desc": "Render completo con la línea de envases oficiales para arquitectura acuática.",
+      "videoUrl": "assets/gallery/videos/v_lineup.mp4",
+      "thumbUrl": "assets/gallery/thumbs/v_lineup.jpg"
+    },
+    {
+      "id": "v_latex",
+      "srcFile": "WhatsApp Video 2026-08-13 at 18.46.39 (5).mp4",
+      "name": "Súper Látex Aditivo Líquido (3D)",
+      "category": "videos",
+      "tag": "Aditivos",
+      "tagColor": "#4F46E5",
+      "desc": "Presentación del promotor líquido de adherencia y elasticidad.",
+      "videoUrl": "assets/gallery/videos/v_latex.mp4",
+      "thumbUrl": "assets/gallery/thumbs/v_latex.jpg"
+    },
+    {
+      "id": "v_resingranite",
+      "srcFile": "WhatsApp Video 2026-08-13 at 18.46.39 (6).mp4",
+      "name": "Super Resin Granite Aislante UV (3D)",
+      "category": "videos",
+      "tag": "Resinas",
+      "tagColor": "#DC2626",
+      "desc": "Resina elástica resistente a rayos solares y agentes químicos.",
+      "videoUrl": "assets/gallery/videos/v_resingranite.mp4",
+      "thumbUrl": "assets/gallery/thumbs/v_resingranite.jpg"
+    },
+    {
+      "id": "v_swatch_sand",
+      "srcFile": "WhatsApp Video 2026-08-13 at 18.46.40 (1).mp4",
+      "name": "Muestrario de Cuarzo: Arena Dorada (3D)",
+      "category": "videos",
+      "tag": "Carta Cuarzo",
+      "tagColor": "#D97706",
+      "desc": "Render 3D de probeta con textura real de cuarzo tono arena.",
+      "videoUrl": "assets/gallery/videos/v_swatch_sand.mp4",
+      "thumbUrl": "assets/gallery/thumbs/v_swatch_sand.jpg"
+    },
+    {
+      "id": "v_swatch_black",
+      "srcFile": "WhatsApp Video 2026-08-13 at 18.46.40 (2).mp4",
+      "name": "Muestrario de Cuarzo: Onyx Black (3D)",
+      "category": "videos",
+      "tag": "Carta Cuarzo",
+      "tagColor": "#1E293B",
+      "desc": "Render 3D con reflejo de cuarzo negro profundo para aguas espejadas.",
+      "videoUrl": "assets/gallery/videos/v_swatch_black.mp4",
+      "thumbUrl": "assets/gallery/thumbs/v_swatch_black.jpg"
+    },
+    {
+      "id": "v_swatch_blue",
+      "srcFile": "WhatsApp Video 2026-08-13 at 18.46.40 (3).mp4",
+      "name": "Muestrario de Cuarzo: Tahoe Blue (3D)",
+      "category": "videos",
+      "tag": "Carta Cuarzo",
+      "tagColor": "#0284C7",
+      "desc": "Render 3D de probeta de cuarzo azul turquesa caribeño.",
+      "videoUrl": "assets/gallery/videos/v_swatch_blue.mp4",
+      "thumbUrl": "assets/gallery/thumbs/v_swatch_blue.jpg"
+    },
+    {
+      "id": "v_swatch_grey",
+      "srcFile": "WhatsApp Video 2026-08-13 at 18.46.40 (4).mp4",
+      "name": "Muestrario de Cuarzo: Gris Plata (3D)",
+      "category": "videos",
+      "tag": "Carta Cuarzo",
+      "tagColor": "#64748B",
+      "desc": "Render 3D de probeta de cuarzo gris nórdico.",
+      "videoUrl": "assets/gallery/videos/v_swatch_grey.mp4",
+      "thumbUrl": "assets/gallery/thumbs/v_swatch_grey.jpg"
+    },
+    {
+      "id": "v_buckets_duo",
+      "srcFile": "WhatsApp Video 2026-08-13 at 18.46.40 (6).mp4",
+      "name": "Baldes de Resina & Látex Ingeprex (3D)",
+      "category": "videos",
+      "tag": "Insumos",
+      "tagColor": "#334155",
+      "desc": "Render en alta definición de envases complementarios de obra.",
+      "videoUrl": "assets/gallery/videos/v_buckets_duo.mp4",
+      "thumbUrl": "assets/gallery/thumbs/v_buckets_duo.jpg"
+    },
+    {
+      "id": "v_swatch_white",
+      "srcFile": "WhatsApp Video 2026-08-13 at 18.46.40.mp4",
+      "name": "Muestrario de Cuarzo: White Quartz (3D)",
+      "category": "videos",
+      "tag": "Carta Cuarzo",
+      "tagColor": "#0EA5E9",
+      "desc": "Render 3D de cristales de cuarzo blanco reflectivo con destellos celeste.",
+      "videoUrl": "assets/gallery/videos/v_swatch_white.mp4",
+      "thumbUrl": "assets/gallery/thumbs/v_swatch_white.jpg"
+    }
+  ],
+  "photos": [
+    {
+      "id": "p_tahoe_blue",
+      "srcFile": "WhatsApp Image 2026-08-13 at 18.46.41.jpeg",
+      "name": "Piscina Súper Brite® — Tono Tahoe Blue",
+      "category": "piscinas",
+      "tag": "Súper Brite®",
+      "tagColor": "#0284C7",
+      "desc": "Piscina residencial con escalones sumergidos y agua color turquesa brillante bajo sol directo.",
+      "photoUrl": "assets/gallery/photos/p_tahoe_blue.jpg",
+      "thumbUrl": "assets/gallery/photos/p_tahoe_blue.jpg"
+    },
+    {
+      "id": "p_onyx_blue",
+      "srcFile": "WhatsApp Image 2026-08-13 at 18.46.40 (2).jpeg",
+      "name": "Piscina Súper Brite® — Tono Onyx Blue",
+      "category": "piscinas",
+      "tag": "Súper Brite®",
+      "tagColor": "#1E293B",
+      "desc": "Efecto espejo profundo de agua azul noche con iluminación subacuática perimetral.",
+      "photoUrl": "assets/gallery/photos/p_onyx_blue.jpg",
+      "thumbUrl": "assets/gallery/photos/p_onyx_blue.jpg"
+    },
+    {
+      "id": "p_cool_blue",
+      "srcFile": "WhatsApp Image 2026-08-13 at 18.46.41 (1).jpeg",
+      "name": "Piscina Súper Brite® — Tono Cool Blue",
+      "category": "piscinas",
+      "tag": "Súper Brite®",
+      "tagColor": "#0284C7",
+      "desc": "Piscina angular con solárium atérmico, cascata de piedra natural y luces nocturnas.",
+      "photoUrl": "assets/gallery/photos/p_cool_blue.jpg",
+      "thumbUrl": "assets/gallery/photos/p_cool_blue.jpg"
+    },
+    {
+      "id": "p_marlyn_blue",
+      "srcFile": "WhatsApp Image 2026-08-13 at 18.46.41 (3).jpeg",
+      "name": "Detalle de Escalones — Tono Marlyn Blue",
+      "category": "piscinas",
+      "tag": "Súper Brite®",
+      "tagColor": "#0EA5E9",
+      "desc": "Acabado suave y antideslizante con guardas vítreas en escaleras de acceso sumergidas.",
+      "photoUrl": "assets/gallery/photos/p_marlyn_blue.jpg",
+      "thumbUrl": "assets/gallery/photos/p_marlyn_blue.jpg"
+    },
+    {
+      "id": "p_solarium_fullget",
+      "srcFile": "WhatsApp Image 2026-08-13 at 18.46.41 (2).jpeg",
+      "name": "Bordes & Solárium Atérmico — Súper Fullget®",
+      "category": "bordes",
+      "tag": "Súper Fullget®",
+      "tagColor": "#D97706",
+      "desc": "Textura de piedra natural calibrada atérmica (no retiene temperatura bajo calor extremo).",
+      "photoUrl": "assets/gallery/photos/p_solarium_fullget.jpg",
+      "thumbUrl": "assets/gallery/photos/p_solarium_fullget.jpg"
+    },
+    {
+      "id": "p_cuarzo_tahoe_swatch",
+      "srcFile": "WhatsApp Image 2026-08-13 at 18.46.39 (6).jpeg",
+      "name": "Muestrario de Cristales: Tahoe Blue",
+      "category": "muestras",
+      "tag": "Cuarzo Real",
+      "tagColor": "#0284C7",
+      "desc": "Cristales de cuarzo puro seleccionados pigmentados con polímeros marinos.",
+      "photoUrl": "assets/gallery/photos/p_cuarzo_tahoe_swatch.jpg",
+      "thumbUrl": "assets/gallery/photos/p_cuarzo_tahoe_swatch.jpg"
+    },
+    {
+      "id": "p_cuarzo_cool_swatch",
+      "srcFile": "WhatsApp Image 2026-08-13 at 18.46.39 (10).jpeg",
+      "name": "Muestrario de Cristales: Cool Blue",
+      "category": "muestras",
+      "tag": "Cuarzo Real",
+      "tagColor": "#38BDF8",
+      "desc": "Mezcla balanceada de cuarzo blanco reflectivo con micro-partículas celestes.",
+      "photoUrl": "assets/gallery/photos/p_cuarzo_cool_swatch.jpg",
+      "thumbUrl": "assets/gallery/photos/p_cuarzo_cool_swatch.jpg"
+    },
+    {
+      "id": "p_cuarzo_marlyn_swatch",
+      "srcFile": "WhatsApp Image 2026-08-13 at 18.46.40.jpeg",
+      "name": "Muestrario de Cristales: Marlyn Blue",
+      "category": "muestras",
+      "tag": "Cuarzo Real",
+      "tagColor": "#0EA5E9",
+      "desc": "Tono intermedio de gran luminosidad para aguas turquesas cristalinas.",
+      "photoUrl": "assets/gallery/photos/p_cuarzo_marlyn_swatch.jpg",
+      "thumbUrl": "assets/gallery/photos/p_cuarzo_marlyn_swatch.jpg"
+    },
+    {
+      "id": "p_cuarzo_grey_swatch",
+      "srcFile": "WhatsApp Image 2026-08-13 at 18.46.39 (11).jpeg",
+      "name": "Muestrario de Cristales: Gris Piedra",
+      "category": "muestras",
+      "tag": "Cuarzo Real",
+      "tagColor": "#64748B",
+      "desc": "Granulometría seleccionada en tonos grises para arquitectura minimalista contemporánea.",
+      "photoUrl": "assets/gallery/photos/p_cuarzo_grey_swatch.jpg",
+      "thumbUrl": "assets/gallery/photos/p_cuarzo_grey_swatch.jpg"
+    },
+    {
+      "id": "p_cuarzo_black_swatch",
+      "srcFile": "WhatsApp Image 2026-08-13 at 18.46.40 (1).jpeg",
+      "name": "Muestrario de Cristales: Black Onyx",
+      "category": "muestras",
+      "tag": "Cuarzo Real",
+      "tagColor": "#1E293B",
+      "desc": "Granos de cuarzo negro volcánico para generar efecto de reflejo espejo natural.",
+      "photoUrl": "assets/gallery/photos/p_cuarzo_black_swatch.jpg",
+      "thumbUrl": "assets/gallery/photos/p_cuarzo_black_swatch.jpg"
+    }
+  ]
+}

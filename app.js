@@ -648,8 +648,379 @@ window.downloadSpecSheet = downloadSpecSheet;
 
 
 // ==========================================================================
-// 7. REPRODUCTOR Y VISOR MODAL DE LA GALERÍA DE OBRAS REALES
+// 7. GALERÍA DE OBRAS REALES Y REPRODUCTOR MULTIMEDIA 3D
 // ==========================================================================
+const GALLERY_ITEMS = [
+    // --- 14 VIDEOS 3D MP4 ---
+    {
+        type: 'video',
+        id: 'v_sb_bag',
+        title: 'Súper Brite® Quartz Finish (3D)',
+        category: 'videos',
+        tag: 'Súper Brite®',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-play"></i> 3D HD',
+        desc: 'Presentación 3D oficial del revestimiento de cuarzo refinado para piscinas (22.7 kg).',
+        thumb: 'assets/gallery/thumbs/v_sb_bag.jpg',
+        video: 'assets/gallery/videos/v_sb_bag.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_sk_bag',
+        title: 'Súper Kote® Puente de Adherencia (3D)',
+        category: 'videos',
+        tag: 'Súper Kote®',
+        tagBg: '#16A34A',
+        badge: '<i class="fa-solid fa-play"></i> 3D HD',
+        desc: 'Presentación 3D del promotor de anclaje químico estructural bicomponente.',
+        thumb: 'assets/gallery/thumbs/v_sk_bag.jpg',
+        video: 'assets/gallery/videos/v_sk_bag.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_sf_bag',
+        title: 'Súper Fullget® Bordes & Terrazas (3D)',
+        category: 'videos',
+        tag: 'Súper Fullget®',
+        tagBg: '#D97706',
+        badge: '<i class="fa-solid fa-play"></i> 3D HD',
+        desc: 'Presentación 3D del revestimiento de grano fino atérmico para soláriums.',
+        thumb: 'assets/gallery/thumbs/v_sf_bag.jpg',
+        video: 'assets/gallery/videos/v_sf_bag.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_sd_bag',
+        title: 'Spray Deck Resina Texturada (3D)',
+        category: 'videos',
+        tag: 'Spray Deck',
+        tagBg: '#CA8A04',
+        badge: '<i class="fa-solid fa-play"></i> 3D HD',
+        desc: 'Presentación 3D del sistema de resina proyectada para pisos y soláriums.',
+        thumb: 'assets/gallery/thumbs/v_sd_bag.jpg',
+        video: 'assets/gallery/videos/v_sd_bag.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_ss_bag',
+        title: 'Súper Seal® Microcemento Continuo (3D)',
+        category: 'videos',
+        tag: 'Súper Seal®',
+        tagBg: '#EA580C',
+        badge: '<i class="fa-solid fa-play"></i> 3D HD',
+        desc: 'Presentación 3D del microcemento impermeabilizante continuo.',
+        thumb: 'assets/gallery/thumbs/v_ss_bag.jpg',
+        video: 'assets/gallery/videos/v_ss_bag.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_lineup',
+        title: 'Línea Oficial 5 Productos Ingeprex (3D)',
+        category: 'videos',
+        tag: 'Gama Oficial',
+        tagBg: '#0F172A',
+        badge: '<i class="fa-solid fa-play"></i> 3D HD',
+        desc: 'Render completo con la línea de envases oficiales para piscinas y soláriums.',
+        thumb: 'assets/gallery/thumbs/v_lineup.jpg',
+        video: 'assets/gallery/videos/v_lineup.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_latex',
+        title: 'Súper Látex Aditivo Líquido (3D)',
+        category: 'videos',
+        tag: 'Aditivos',
+        tagBg: '#4F46E5',
+        badge: '<i class="fa-solid fa-play"></i> 3D HD',
+        desc: 'Presentación del promotor líquido de adherencia y elasticidad para morteros.',
+        thumb: 'assets/gallery/thumbs/v_latex.jpg',
+        video: 'assets/gallery/videos/v_latex.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_resingranite',
+        title: 'Super Resin Granite Aislante UV (3D)',
+        category: 'videos',
+        tag: 'Resinas',
+        tagBg: '#DC2626',
+        badge: '<i class="fa-solid fa-play"></i> 3D HD',
+        desc: 'Resina elástica resistente a la intemperie, rayos solares y agentes químicos.',
+        thumb: 'assets/gallery/thumbs/v_resingranite.jpg',
+        video: 'assets/gallery/videos/v_resingranite.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_swatch_blue',
+        title: 'Muestrario 3D: Tahoe Blue',
+        category: 'videos',
+        tag: 'Carta Cuarzo',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-play"></i> 3D HD',
+        desc: 'Render 3D de probeta con cuarzo azul turquesa reflectivo.',
+        thumb: 'assets/gallery/thumbs/v_swatch_blue.jpg',
+        video: 'assets/gallery/videos/v_swatch_blue.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_swatch_black',
+        title: 'Muestrario 3D: Onyx Black',
+        category: 'videos',
+        tag: 'Carta Cuarzo',
+        tagBg: '#1E293B',
+        badge: '<i class="fa-solid fa-play"></i> 3D HD',
+        desc: 'Render 3D con reflejo de cuarzo negro profundo para efecto espejo.',
+        thumb: 'assets/gallery/thumbs/v_swatch_black.jpg',
+        video: 'assets/gallery/videos/v_swatch_black.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_swatch_sand',
+        title: 'Muestrario 3D: Arena Dorada',
+        category: 'videos',
+        tag: 'Carta Cuarzo',
+        tagBg: '#D97706',
+        badge: '<i class="fa-solid fa-play"></i> 3D HD',
+        desc: 'Render 3D de probeta con textura real de cuarzo tono arena caribeño.',
+        thumb: 'assets/gallery/thumbs/v_swatch_sand.jpg',
+        video: 'assets/gallery/videos/v_swatch_sand.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_swatch_grey',
+        title: 'Muestrario 3D: Gris Nórdico',
+        category: 'videos',
+        tag: 'Carta Cuarzo',
+        tagBg: '#64748B',
+        badge: '<i class="fa-solid fa-play"></i> 3D HD',
+        desc: 'Render 3D de probeta de cuarzo gris arquitectónico contemporáneo.',
+        thumb: 'assets/gallery/thumbs/v_swatch_grey.jpg',
+        video: 'assets/gallery/videos/v_swatch_grey.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_swatch_white',
+        title: 'Muestrario 3D: White Quartz',
+        category: 'videos',
+        tag: 'Carta Cuarzo',
+        tagBg: '#0EA5E9',
+        badge: '<i class="fa-solid fa-play"></i> 3D HD',
+        desc: 'Render 3D de cristales de cuarzo blanco reflectivo con destellos celestes.',
+        thumb: 'assets/gallery/thumbs/v_swatch_white.jpg',
+        video: 'assets/gallery/videos/v_swatch_white.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_buckets_duo',
+        title: 'Baldes de Resina & Látex Ingeprex (3D)',
+        category: 'videos',
+        tag: 'Insumos',
+        tagBg: '#334155',
+        badge: '<i class="fa-solid fa-play"></i> 3D HD',
+        desc: 'Render 3D en alta resolución de envases complementarios de obra.',
+        thumb: 'assets/gallery/thumbs/v_buckets_duo.jpg',
+        video: 'assets/gallery/videos/v_buckets_duo.mp4'
+    },
+
+    // --- FOTOS REALES DE PISCINAS ---
+    {
+        type: 'photo',
+        id: 'p_tahoe_blue',
+        title: 'Piscina Súper Brite® — Tono Tahoe Blue',
+        category: 'piscinas',
+        tag: 'Súper Brite®',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-camera"></i> FOTO REAL',
+        desc: 'Piscina residencial con escalones sumergidos y agua turquesa brillante bajo sol directo.',
+        thumb: 'assets/gallery/photos/p_tahoe_blue.jpg',
+        src: 'assets/gallery/photos/p_tahoe_blue.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_onyx_blue',
+        title: 'Piscina Súper Brite® — Tono Onyx Blue',
+        category: 'piscinas',
+        tag: 'Súper Brite®',
+        tagBg: '#1E293B',
+        badge: '<i class="fa-solid fa-camera"></i> FOTO REAL',
+        desc: 'Efecto espejo profundo de agua azul noche con iluminación subacuática.',
+        thumb: 'assets/gallery/photos/p_onyx_blue.jpg',
+        src: 'assets/gallery/photos/p_onyx_blue.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_cool_blue',
+        title: 'Piscina Súper Brite® — Tono Cool Blue',
+        category: 'piscinas',
+        tag: 'Súper Brite®',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-camera"></i> FOTO REAL',
+        desc: 'Piscina angular con solárium atérmico, cascada de piedra natural y luces nocturnas.',
+        thumb: 'assets/gallery/photos/p_cool_blue.jpg',
+        src: 'assets/gallery/photos/p_cool_blue.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_marlyn_blue',
+        title: 'Detalle de Escalones — Marlyn Blue',
+        category: 'piscinas',
+        tag: 'Súper Brite®',
+        tagBg: '#0EA5E9',
+        badge: '<i class="fa-solid fa-camera"></i> FOTO REAL',
+        desc: 'Acabado suave y antideslizante con guardas vítreas en escaleras de acceso.',
+        thumb: 'assets/gallery/photos/p_marlyn_blue.jpg',
+        src: 'assets/gallery/photos/p_marlyn_blue.jpg'
+    },
+
+    // --- MUESTRARIOS REALES DE CUARZO ---
+    {
+        type: 'photo',
+        id: 'p_cuarzo_tahoe_swatch',
+        title: 'Cristales de Cuarzo: Tahoe Blue',
+        category: 'muestras',
+        tag: 'Cuarzo Real',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-gem"></i> MUESTRARIO',
+        desc: 'Cristales de cuarzo puro seleccionados pigmentados con polímeros marinos.',
+        thumb: 'assets/gallery/photos/p_cuarzo_tahoe_swatch.jpg',
+        src: 'assets/gallery/photos/p_cuarzo_tahoe_swatch.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_cuarzo_cool_swatch',
+        title: 'Cristales de Cuarzo: Cool Blue',
+        category: 'muestras',
+        tag: 'Cuarzo Real',
+        tagBg: '#38BDF8',
+        badge: '<i class="fa-solid fa-gem"></i> MUESTRARIO',
+        desc: 'Mezcla balanceada de cuarzo blanco reflectivo con micro-partículas celestes.',
+        thumb: 'assets/gallery/photos/p_cuarzo_cool_swatch.jpg',
+        src: 'assets/gallery/photos/p_cuarzo_cool_swatch.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_cuarzo_marlyn_swatch',
+        title: 'Cristales de Cuarzo: Marlyn Blue',
+        category: 'muestras',
+        tag: 'Cuarzo Real',
+        tagBg: '#0EA5E9',
+        badge: '<i class="fa-solid fa-gem"></i> MUESTRARIO',
+        desc: 'Tono intermedio de gran luminosidad para aguas turquesas cristalinas.',
+        thumb: 'assets/gallery/photos/p_cuarzo_marlyn_swatch.jpg',
+        src: 'assets/gallery/photos/p_cuarzo_marlyn_swatch.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_cuarzo_grey_swatch',
+        title: 'Cristales de Cuarzo: Gris Piedra',
+        category: 'muestras',
+        tag: 'Cuarzo Real',
+        tagBg: '#64748B',
+        badge: '<i class="fa-solid fa-gem"></i> MUESTRARIO',
+        desc: 'Granulometría seleccionada en tonos grises para arquitectura contemporánea.',
+        thumb: 'assets/gallery/photos/p_cuarzo_grey_swatch.jpg',
+        src: 'assets/gallery/photos/p_cuarzo_grey_swatch.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_cuarzo_black_swatch',
+        title: 'Cristales de Cuarzo: Black Onyx',
+        category: 'muestras',
+        tag: 'Cuarzo Real',
+        tagBg: '#1E293B',
+        badge: '<i class="fa-solid fa-gem"></i> MUESTRARIO',
+        desc: 'Granos de cuarzo negro volcánico para generar efecto de reflejo espejo natural.',
+        thumb: 'assets/gallery/photos/p_cuarzo_black_swatch.jpg',
+        src: 'assets/gallery/photos/p_cuarzo_black_swatch.jpg'
+    },
+
+    // --- BORDES Y SOLÁRIUM ---
+    {
+        type: 'photo',
+        id: 'p_solarium_fullget',
+        title: 'Bordes & Solárium Atérmico — Súper Fullget®',
+        category: 'bordes',
+        tag: 'Súper Fullget®',
+        tagBg: '#D97706',
+        badge: '<i class="fa-solid fa-sun"></i> FOTO REAL',
+        desc: 'Textura de piedra natural calibrada atérmica que no absorbe temperatura solar.',
+        thumb: 'assets/gallery/photos/p_solarium_fullget.jpg',
+        src: 'assets/gallery/photos/p_solarium_fullget.jpg'
+    }
+];
+
+function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+function renderGallery(filter = 'all') {
+    const container = document.getElementById('gal-grid-container');
+    if (!container) return;
+
+    const filtered = (filter === 'all')
+        ? GALLERY_ITEMS
+        : GALLERY_ITEMS.filter(item => item.category === filter);
+
+    container.innerHTML = filtered.map((item, index) => {
+        const isVideo = item.type === 'video';
+        const clickAction = isVideo
+            ? `openVideoModal('${item.video}', '${escapeHtml(item.title)}', '${escapeHtml(item.desc)}', '${item.tag}')`
+            : `openLightbox('${item.src}', '${escapeHtml(item.title)}')`;
+
+        return `
+            <div class="gal-card" onclick="${clickAction}">
+                <div class="gal-card-media">
+                    <img src="${item.thumb}" alt="${escapeHtml(item.title)}" loading="lazy">
+                    <div class="gal-media-badge">
+                        ${item.badge}
+                    </div>
+                    ${isVideo ? `
+                        <div class="gal-play-overlay">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    ` : ''}
+                </div>
+                <div class="gal-caption">
+                    <span class="gal-tag" style="background: ${item.tagBg};">${item.tag}</span>
+                    <div class="gal-title">${escapeHtml(item.title)}</div>
+                    <div class="gal-sub">${escapeHtml(item.desc)}</div>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    // Update counts in buttons if they exist
+    const countAll = document.getElementById('count-all');
+    const countVideos = document.getElementById('count-videos');
+    const countPiscinas = document.getElementById('count-piscinas');
+    const countMuestras = document.getElementById('count-muestras');
+    const countBordes = document.getElementById('count-bordes');
+
+    if (countAll) countAll.textContent = GALLERY_ITEMS.length;
+    if (countVideos) countVideos.textContent = GALLERY_ITEMS.filter(i => i.category === 'videos').length;
+    if (countPiscinas) countPiscinas.textContent = GALLERY_ITEMS.filter(i => i.category === 'piscinas').length;
+    if (countMuestras) countMuestras.textContent = GALLERY_ITEMS.filter(i => i.category === 'muestras').length;
+    if (countBordes) countBordes.textContent = GALLERY_ITEMS.filter(i => i.category === 'bordes').length;
+}
+
+function filterGallery(filter) {
+    const buttons = document.querySelectorAll('.gal-filter-btn');
+    buttons.forEach(btn => {
+        if (btn.dataset.filter === filter) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    renderGallery(filter);
+}
+
 function openLightbox(imgSrc, caption = "Obra Real Ejecutada con ImpoAcuatiq") {
     const lightboxModal = document.getElementById('lightbox-modal');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -673,7 +1044,7 @@ function closeLightbox() {
     }
 }
 
-function openVideoModal(videoUrl = 'https://www.w3schools.com/html/mov_bbb.mp4', videoTitle = 'Demostración de Mezcla y Llaneado Súper Brite®') {
+function openVideoModal(videoUrl, videoTitle = 'Video Demostrativo 3D Oficial', videoDesc = 'Presentación técnica supervisada por ImpoAcuatiq.', tag = 'Gama Oficial') {
     let videoModal = document.getElementById('video-modal');
 
     if (!videoModal) {
@@ -684,21 +1055,24 @@ function openVideoModal(videoUrl = 'https://www.w3schools.com/html/mov_bbb.mp4',
     }
 
     videoModal.innerHTML = `
-        <div class="modal-card video-modal-card" style="max-width: 800px; padding: 24px;">
+        <div class="video-modal-card">
             <button class="modal-close" onclick="closeVideoModal()">&times;</button>
-            <h3 style="margin-bottom: 16px; color: var(--text-main); font-family: var(--font-heading); display: flex; align-items: center; gap: 10px;">
-                <i class="fa-solid fa-circle-play text-cyan"></i> ${videoTitle}
-            </h3>
-            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000;">
-                <video controls autoplay style="position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover;">
+            <div class="video-meta-info" style="margin-bottom: 14px;">
+                <span class="gal-tag" style="background: #0284C7; margin-bottom: 6px;">${tag}</span>
+                <h3 style="color: #FFFFFF; font-size: 18px; margin: 4px 0;">
+                    <i class="fa-solid fa-circle-play text-cyan"></i> ${videoTitle}
+                </h3>
+            </div>
+            <div class="video-player-box">
+                <video controls autoplay loop playsinline>
                     <source src="${videoUrl}" type="video/mp4">
-                    Tu navegador no soporta el reproductor de video HTML5.
+                    Tu navegador no soporta reproducción de video HTML5.
                 </video>
             </div>
-            <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-                <p style="font-size: 13px; color: var(--text-muted);">🎥 Obra real supervisada por el departamento técnico de ImpoAcuatiq.</p>
-                <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20quisiera%20solicitar%20el%20video%20demostrativo%20completo%20de%20aplicaci%C3%B3n." target="_blank" class="btn btn-whatsapp btn-sm">
-                    <i class="fa-brands fa-whatsapp"></i> Solicitar más videos demostrativos
+            <div class="video-meta-bar">
+                <p style="font-size: 13px; color: #94A3B8; max-width: 520px; line-height: 1.4;">${videoDesc}</p>
+                <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20quisiera%20consultar%20por%20el%20producto:%20${encodeURIComponent(videoTitle)}" target="_blank" class="btn btn-whatsapp btn-sm">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar por este insumo
                 </a>
             </div>
         </div>
@@ -711,6 +1085,9 @@ function openVideoModal(videoUrl = 'https://www.w3schools.com/html/mov_bbb.mp4',
 function closeVideoModal() {
     const videoModal = document.getElementById('video-modal');
     if (videoModal) {
+        // Stop video playback
+        const vid = videoModal.querySelector('video');
+        if (vid) vid.pause();
         videoModal.classList.remove('active', 'open');
         videoModal.style.display = 'none';
         videoModal.innerHTML = '';
@@ -718,22 +1095,15 @@ function closeVideoModal() {
 }
 
 function initGalleryHandlers() {
-    // Vincular clic en la tarjeta de video demostrativo si existe
-    const videoCard = document.querySelector('.video-showcase');
-    if (videoCard) {
-        videoCard.style.cursor = 'pointer';
-        videoCard.addEventListener('click', (e) => {
-            if (e.target.tagName !== 'A' && e.target.tagName !== 'BUTTON') {
-                openVideoModal('https://www.w3schools.com/html/mov_bbb.mp4', 'Demostración Técnica: Aplicación de Súper Brite® y Spray Deck');
-            }
-        });
-    }
+    renderGallery('all');
 }
 
 window.openLightbox = openLightbox;
 window.closeLightbox = closeLightbox;
 window.openVideoModal = openVideoModal;
 window.closeVideoModal = closeVideoModal;
+window.filterGallery = filterGallery;
+window.renderGallery = renderGallery;
 
 
 // ==========================================================================
