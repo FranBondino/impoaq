@@ -1929,3 +1929,190 @@ a {
     font-size: 13px;
     margin: 0;
 }
+
+/* ==========================================================================
+   PRODUCTO ESTRELLA & SHOWCASE CROMÁTICO
+   ========================================================================== */
+.product-card-star {
+    position: relative;
+    border: 2px solid #38BDF8 !important;
+    background: linear-gradient(180deg, #F0F9FF 0%, #FFFFFF 100%) !important;
+    box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.12), 0 8px 10px -6px rgba(2, 132, 199, 0.08) !important;
+}
+
+.prod-star-badge-corner {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    padding: 5px 12px;
+    border-radius: 9999px;
+    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 5;
+}
+
+.prod-brand-text {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0F172A;
+    letter-spacing: -0.3px;
+}
+
+.text-gold {
+    color: #F59E0B !important;
+}
+
+/* Sección Destacada Producto Estrella */
+.section-star-showcase {
+    background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+    border-top: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 80px 0;
+}
+
+.star-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #FEF3C7;
+    border: 1px solid #FDE68A;
+    color: #92400E;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 6px rgba(245, 158, 11, 0.15);
+}
+
+.sb-star-pillars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.sb-pillar-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.sb-pillar-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -3px rgba(15, 23, 42, 0.08);
+    border-color: #38BDF8;
+}
+
+.pillar-icon {
+    width: 48px;
+    height: 48px;
+    background: #F0F9FF;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+    font-size: 20px;
+}
+
+.pillar-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 8px;
+}
+
+.pillar-desc {
+    font-size: 13px;
+    color: #64748B;
+    line-height: 1.5;
+}
+
+.color-chart-box {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06);
+}
+
+.color-chart-inner {
+    text-align: center;
+    background: #F8FAFC;
+    border-radius: 10px;
+    padding: 16px;
+    border: 1px solid #EDF2F7;
+}
+
+.color-chart-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.color-chart-footer {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 20px;
+    border-top: 1px solid #E2E8F0;
+}
+
+.color-note {
+    font-size: 13.5px;
+    color: #64748B;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 280px;
+}
+
+.color-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 992px) {
+    .sb-star-pillars {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .sb-star-pillars {
+        grid-template-columns: 1fr;
+    }
+    .color-chart-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .color-actions {
+        width: 100%;
+    }
+    .color-actions .btn-sm-primary,
+    .color-actions .btn-sm-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+}
+

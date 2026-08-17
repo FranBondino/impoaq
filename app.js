@@ -149,6 +149,33 @@ const OFFICIAL_PRODUCTS = {
         ],
         application: 'Aplicar capa base de regularización. Aplicar 2 capas finas de Súper Seal con llana de goma. Lijar suavemente y proteger con 2 manos de Sellador Poliuretánico.',
         datasheetPdf: 'Ficha_Tecnica_SuperSeal_Microcemento.pdf'
+    },
+    latex: {
+        id: 'latex',
+        code: 'latex',
+        name: 'SÚPER LÁTEX® & RESINAS',
+        subName: 'Aditivos e Insumos Complementarios',
+        category: 'aditivos',
+        badge: 'LÍNEA ADITIVOS & RESINAS',
+        badgeClass: 'badge-sk',
+        headline: 'Promotores líquidos de adherencia, elasticidad e impermeabilización para morteros.',
+        description: 'Súper Látex® y Resinas Granite Ingeprex son aditivos sintéticos concentrados de alto desempeño. Mejoran radicalmente la flexibilidad, resistencia a la tracción y adherencia química de estucos, morteros de pega y lechadas para piscinas y soláriums.',
+        specs: {
+            presentacion: 'Tineta de 5 Galones (19 L) / Balde 1 Galón (3.8 L)',
+            rendimiento: 'Dilución concentrada 1:1 a 1:3 en agua de amasado',
+            espesor: 'Aditivo para mezclas cementicias',
+            durabilidad: 'Indefinida (Mejora estructural permanente)',
+            colores: 'Líquido blanco lechoso (seca transparente)',
+            resistencia: 'Máxima elasticidad, previene fisuras y microgrietas'
+        },
+        features: [
+            'Aumenta la plasticidad y trabajabilidad de las mezclas en obra.',
+            'Incrementa la impermeabilidad y reduce la absorción capilar.',
+            'Refuerza la adherencia entre hormigón fresco y endurecido.',
+            'Protección UV y química contra la degradación a la intemperie.'
+        ],
+        application: 'Homogeneizar antes de usar. Diluir en el agua de amasado en proporción recomendada según el tipo de mortero. No aplicar puro sobre superficies sin mezclar con cemento o arena.',
+        datasheetPdf: 'Ficha_Tecnica_SuperLatex_Aditivos.pdf'
     }
 };
 
@@ -439,18 +466,13 @@ Hola ImpoAcuatiq, me gustaría verificar disponibilidad de stock en depósito ce
 
 window.sendCalcToWhatsApp = sendCalcToWhatsApp;
 
-window.sendCalcToWhatsApp = sendCalcToWhatsApp;
-
-
-// ==========================================================================
-// 6. MODAL INTERACTIVO DE FICHAS TÉCNICAS (DOCUMENTO TÉCNICO OFICIAL)
-// ==========================================================================
 const PRODUCT_PACKAGING_IMAGES = {
     sb: 'assets/img/sb-bag.jpg',
     sk: 'assets/img/sk-primer.jpeg',
     sf: 'assets/img/sf-bag.jpg',
     sd: 'assets/img/sd-bucket.png',
-    ss: 'assets/img/ss-bucket.png'
+    ss: 'assets/img/ss-bucket.png',
+    latex: 'assets/gallery/thumbs/v_latex.jpg'
 };
 
 function openProductModal(prodCode) {
@@ -466,7 +488,7 @@ function openProductModal(prodCode) {
 
     modalContent.innerHTML = `
         <div class="modal-doc-header">
-            <img src="assets/img/logo-horizontal.jpg" alt="ImpoAcuatiq Logo" class="modal-doc-logo">
+            <img src="assets/img/logo-horizontal-transparent.png" alt="ImpoAcuatiq Logo" class="modal-doc-logo">
             <span class="modal-doc-badge">Ficha Técnica Oficial</span>
         </div>
 
@@ -651,67 +673,7 @@ window.downloadSpecSheet = downloadSpecSheet;
 // 7. GALERÍA DE OBRAS REALES Y REPRODUCTOR MULTIMEDIA 3D
 // ==========================================================================
 const GALLERY_ITEMS = [
-    // --- 14 VIDEOS 3D MP4 ---
-    {
-        type: 'video',
-        id: 'v_sb_bag',
-        title: 'Súper Brite® Quartz Finish (3D)',
-        category: 'videos',
-        tag: 'Súper Brite®',
-        tagBg: '#0284C7',
-        badge: '<i class="fa-solid fa-play"></i> 3D HD',
-        desc: 'Presentación 3D oficial del revestimiento de cuarzo refinado para piscinas (22.7 kg).',
-        thumb: 'assets/gallery/thumbs/v_sb_bag.jpg',
-        video: 'assets/gallery/videos/v_sb_bag.mp4'
-    },
-    {
-        type: 'video',
-        id: 'v_sk_bag',
-        title: 'Súper Kote® Puente de Adherencia (3D)',
-        category: 'videos',
-        tag: 'Súper Kote®',
-        tagBg: '#16A34A',
-        badge: '<i class="fa-solid fa-play"></i> 3D HD',
-        desc: 'Presentación 3D del promotor de anclaje químico estructural bicomponente.',
-        thumb: 'assets/gallery/thumbs/v_sk_bag.jpg',
-        video: 'assets/gallery/videos/v_sk_bag.mp4'
-    },
-    {
-        type: 'video',
-        id: 'v_sf_bag',
-        title: 'Súper Fullget® Bordes & Terrazas (3D)',
-        category: 'videos',
-        tag: 'Súper Fullget®',
-        tagBg: '#D97706',
-        badge: '<i class="fa-solid fa-play"></i> 3D HD',
-        desc: 'Presentación 3D del revestimiento de grano fino atérmico para soláriums.',
-        thumb: 'assets/gallery/thumbs/v_sf_bag.jpg',
-        video: 'assets/gallery/videos/v_sf_bag.mp4'
-    },
-    {
-        type: 'video',
-        id: 'v_sd_bag',
-        title: 'Spray Deck Resina Texturada (3D)',
-        category: 'videos',
-        tag: 'Spray Deck',
-        tagBg: '#CA8A04',
-        badge: '<i class="fa-solid fa-play"></i> 3D HD',
-        desc: 'Presentación 3D del sistema de resina proyectada para pisos y soláriums.',
-        thumb: 'assets/gallery/thumbs/v_sd_bag.jpg',
-        video: 'assets/gallery/videos/v_sd_bag.mp4'
-    },
-    {
-        type: 'video',
-        id: 'v_ss_bag',
-        title: 'Súper Seal® Microcemento Continuo (3D)',
-        category: 'videos',
-        tag: 'Súper Seal®',
-        tagBg: '#EA580C',
-        badge: '<i class="fa-solid fa-play"></i> 3D HD',
-        desc: 'Presentación 3D del microcemento impermeabilizante continuo.',
-        thumb: 'assets/gallery/thumbs/v_ss_bag.jpg',
-        video: 'assets/gallery/videos/v_ss_bag.mp4'
-    },
+    // --- PRESENTACIONES 3D Y COMPORTAMIENTO CROMÁTICO ---
     {
         type: 'video',
         id: 'v_lineup',

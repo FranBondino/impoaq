@@ -107,19 +107,23 @@
                 
                 <!-- FILTER PILLS -->
                 <div class="catalog-filters reveal delay-100">
-                    <button class="filter-pill active" onclick="filterCategory('todos', this)">Todos (5)</button>
+                    <button class="filter-pill active" onclick="filterCategory('todos', this)">Todos (6)</button>
                     <button class="filter-pill" onclick="filterCategory('piscinas', this)">Piscinas (Cuarzo)</button>
                     <button class="filter-pill" onclick="filterCategory('adherencia', this)">Puentes de Unión</button>
                     <button class="filter-pill" onclick="filterCategory('bordes', this)">Bordes Atérmicos</button>
                     <button class="filter-pill" onclick="filterCategory('resina', this)">Resinas Texturadas</button>
                     <button class="filter-pill" onclick="filterCategory('microcemento', this)">Microcemento</button>
+                    <button class="filter-pill" onclick="filterCategory('aditivos', this)">Aditivos & Látex</button>
                 </div>
             </div>
 
             <div class="product-grid" id="catalog-grid">
                 
-                <!-- PRODUCTO 1: SÚPER BRITE -->
-                <div class="product-card-horizontal reveal delay-100" data-cat="piscinas">
+                <!-- PRODUCTO 1: SÚPER BRITE (PRODUCTO ESTRELLA) -->
+                <div class="product-card-horizontal product-card-star reveal delay-100" data-cat="piscinas">
+                    <div class="prod-star-badge-corner">
+                        <i class="fa-solid fa-star text-gold"></i> PRODUCTO ESTRELLA
+                    </div>
                     <div class="prod-photo-col">
                         <img src="assets/img/sb-bag.jpg" alt="Envase Oficial Súper Brite® 25kg">
                     </div>
@@ -127,9 +131,9 @@
                         <div>
                             <div class="prod-brand-header">
                                 <img src="assets/img/logo-superbrite.jpg" alt="Súper Brite Logo" class="brand-img-contain">
-                                <span class="prod-type-tag">Revestimiento Piscinas</span>
+                                <span class="prod-type-tag" style="background: #0284C7;">Revestimiento Piscinas</span>
                             </div>
-                            <p class="prod-headline">Revestimiento continuo a base de cristales de cuarzo refinados y polímeros. Sella el vaso de hormigón eliminando filtraciones y la necesidad de repintado anual.</p>
+                            <p class="prod-headline"><strong>Revestimiento continuo insignia</strong> a base de cristales de cuarzo refinados y polímeros elastoméricos. Sella el vaso de hormigón eliminando filtraciones y la necesidad de repintado anual con más de 10 a 15 años de durabilidad.</p>
                             
                             <table class="specs-table">
                                 <tr>
@@ -218,11 +222,15 @@
                                 </tr>
                                 <tr>
                                     <td class="spec-title">Rendimiento</td>
-                                    <td class="spec-val">3.0 m² por bolsa de 25 kg</td>
+                                    <td class="spec-val">3.0 m² por bolsa (espesor 10 - 12 mm)</td>
                                 </tr>
                                 <tr>
-                                    <td class="spec-title">Propiedades</td>
-                                    <td class="spec-val">100% Atérmico, antideslizante seco y mojado</td>
+                                    <td class="spec-title">Terminación</td>
+                                    <td class="spec-val">Grano visto lavado, atérmico certificado</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Uso Principal</td>
+                                    <td class="spec-val">Solárium, playa húmeda, veredas perimetrales</td>
                                 </tr>
                             </table>
                         </div>
@@ -237,7 +245,7 @@
                 <!-- PRODUCTO 4: SPRAY DECK -->
                 <div class="product-card-horizontal reveal delay-250" data-cat="resina">
                     <div class="prod-photo-col">
-                        <img src="assets/img/sd-bucket.png" alt="Balde Oficial Spray Deck® 25kg">
+                        <img src="assets/img/sd-bucket.png" alt="Balde Oficial Spray Deck 20kg">
                     </div>
                     <div class="prod-info-col">
                         <div>
@@ -245,20 +253,20 @@
                                 <img src="assets/img/logo-spraydeck.jpg" alt="Spray Deck Logo" class="brand-img-contain">
                                 <span class="prod-type-tag">Resina Texturada</span>
                             </div>
-                            <p class="prod-headline">Revestimiento proyectado neumáticamente para cocheras, accesos vehiculares, decks y zonas de alto tránsito peatonal y vehicular.</p>
+                            <p class="prod-headline">Revestimiento texturado de alta resistencia proyectado a pistola tolva. Ideal para soláriums, cocheras, senderos peatonales y renovación rápida sobre pisos existentes.</p>
                             
                             <table class="specs-table">
                                 <tr>
                                     <td class="spec-title">Presentación</td>
-                                    <td class="spec-val">Balde 25 kg de resina polimérica texturada</td>
+                                    <td class="spec-val">Kit Resina Concentrada + Áridos Sílices (20 kg)</td>
                                 </tr>
                                 <tr>
-                                    <td class="spec-title">Resistencia</td>
-                                    <td class="spec-val">Apto tránsito peatonal y vehicular pesado</td>
+                                    <td class="spec-title">Rendimiento</td>
+                                    <td class="spec-val">4.0 m² por kit completo</td>
                                 </tr>
                                 <tr>
-                                    <td class="spec-title">Aplicación</td>
-                                    <td class="spec-val">Proyección neumática con pistola tolva</td>
+                                    <td class="spec-title">Espesor</td>
+                                    <td class="spec-val">3 mm de capa proyectada antideslizante</td>
                                 </tr>
                             </table>
                         </div>
@@ -306,24 +314,101 @@
                     </div>
                 </div>
 
+                <!-- PRODUCTO 6: SÚPER LÁTEX & RESINAS INGEPREX (BALDES & ADITIVOS) -->
+                <div class="product-card-horizontal reveal delay-350" data-cat="aditivos">
+                    <div class="prod-photo-col">
+                        <img src="assets/gallery/thumbs/v_latex.jpg" alt="Baldes Oficiales Súper Látex® & Resinas Ingeprex">
+                    </div>
+                    <div class="prod-info-col">
+                        <div>
+                            <div class="prod-brand-header">
+                                <span class="prod-brand-text">SÚPER LÁTEX® &amp; RESINAS</span>
+                                <span class="prod-type-tag" style="background: #4F46E5;">Aditivos &amp; Elasticidad</span>
+                            </div>
+                            <p class="prod-headline">Promotores líquidos concentrados de adherencia, elasticidad e hidrofugado estructural. Aumentan la adherencia mecánica y previenen microfisuras en morteros y estucos de piscinas.</p>
+                            
+                            <table class="specs-table">
+                                <tr>
+                                    <td class="spec-title">Presentación</td>
+                                    <td class="spec-val">Tineta 5 Galones (19 L) / Balde 1 Galón (3.8 L)</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Rendimiento / Dilución</td>
+                                    <td class="spec-val">Concentrado 1:1 a 1:3 en agua de amasado</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Propiedades</td>
+                                    <td class="spec-val">Alta flexibilidad, máxima adherencia química, protección UV</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Usos Principales</td>
+                                    <td class="spec-val">Estucos para piscinas, puentes de adherencia, lechadas técnicas</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="prod-actions">
+                            <button class="btn-sm-primary" onclick="openProductModal('latex')">Ver Ficha Técnica (PDF)</button>
+                            <button class="btn-sm-secondary" onclick="scrollToCalculator('latex')">Calcular Insumos (m²)</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- MOSTRARIO OFICIAL DE COLORES SÚPER BRITE -->
-    <section class="section-products" id="carta-colores" style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 60px 0;">
+    <!-- MOSTRARIO OFICIAL DE COLORES SÚPER BRITE (SECCIÓN PRODUCTO ESTRELLA) -->
+    <section class="section-products section-star-showcase" id="carta-colores">
         <div class="container">
             <div class="section-head text-center reveal">
-                <span class="hero-label">Gama Cromática Exclusiva</span>
-                <h2 class="head-title">Catálogo de Tonos y Pigmentaciones de Cuarzo</h2>
-                <p class="head-desc">Súper Brite® ofrece mezclas de cristales de cuarzo natural seleccionados que reaccionan con la luz solar generando el reflejo de agua cristalina deseado.</p>
+                <div class="star-badge-pill">
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <span>PRODUCTO ESTRELLA • REVESTIMIENTO INSIGNIA</span>
+                </div>
+                <h2 class="head-title">Súper Brite® Quartz Finish: La Revolución del Cuarzo Continuo</h2>
+                <p class="head-desc">El revestimiento continuo para piscinas #1 en durabilidad y estética natural. Cristales de cuarzo puro seleccionados que interactúan con la luz solar generando el reflejo de agua cristalina deseado, con más de 10 a 15 años de vida útil sin necesidad de repintar.</p>
             </div>
 
-            <div class="reveal-scale" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 30px; text-align: center;">
-                <img src="assets/img/sb-colors.jpeg" alt="Catálogo de colores oficiales Súper Brite Quartz Finish" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-sm);">
-                <p style="margin-top: 16px; font-size: 13.5px; color: #64748B; font-weight: 500;">
-                    <i class="fa-solid fa-circle-info text-cyan"></i> <strong>Nota Técnica:</strong> El tono final del agua varía según la profundidad de la piscina, la hora del día y la incidencia de luz solar.
-                </p>
+            <!-- 4 PILARES DEL PRODUCTO ESTRELLA -->
+            <div class="sb-star-pillars reveal delay-100">
+                <div class="sb-pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-gem text-blue"></i></div>
+                    <div class="pillar-title">100% Cuarzo Continuo</div>
+                    <div class="pillar-desc">Capa monolítica sin juntas que sella el vaso de hormigón y elimina filtraciones.</div>
+                </div>
+                <div class="sb-pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-sun text-gold"></i></div>
+                    <div class="pillar-title">Efecto Refractivo Solar</div>
+                    <div class="pillar-desc">Los cristales refractan los rayos solares logrando tonos turquesa y esmeralda inigualables.</div>
+                </div>
+                <div class="sb-pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-shield-halved text-green"></i></div>
+                    <div class="pillar-title">10+ Años Sin Repintar</div>
+                    <div class="pillar-desc">Inmune al cloro, sal, alguicidas y rayos UV sin decolorarse ni ampollarse.</div>
+                </div>
+                <div class="sb-pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-water text-cyan"></i></div>
+                    <div class="pillar-title">Antideslizante &amp; Suave</div>
+                    <div class="pillar-desc">Textura sedosa para los pies descalzos y superficie anti-verdín de fácil limpieza.</div>
+                </div>
+            </div>
+
+            <!-- CARTA CROMÁTICA BOX CON CTAS -->
+            <div class="reveal-scale color-chart-box">
+                <div class="color-chart-inner">
+                    <img src="assets/img/sb-colors.jpeg" alt="Catálogo de colores oficiales Súper Brite Quartz Finish" class="color-chart-img">
+                </div>
+                <div class="color-chart-footer">
+                    <div class="color-note">
+                        <i class="fa-solid fa-circle-info text-cyan"></i>
+                        <span><strong>Nota Técnica:</strong> El tono final del agua varía según la profundidad del vaso, la incidencia de la luz solar y la hora del día.</span>
+                    </div>
+                    <div class="color-actions">
+                        <a href="#calculadora" class="btn-sm-primary" onclick="scrollToCalculator('sb')"><i class="fa-solid fa-calculator"></i> Calcular m² Súper Brite®</a>
+                        <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20quisiera%20solicitar%20el%20muestrario%20f%C3%ADsico%20de%20colores%20S%C3%BAper%20Brite" target="_blank" class="btn-sm-secondary"><i class="fa-brands fa-whatsapp text-green"></i> Solicitar Muestrario Físico</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -444,27 +529,27 @@
     <section class="section-products" id="galeria" style="background: #FFFFFF;">
         <div class="container">
             <div class="section-head text-center reveal">
-                <span class="hero-label">Obras Ejecutadas & Catálogo Multimedia</span>
-                <h2 class="head-title">Galería de Proyectos Reales y Renders 3D</h2>
-                <p class="head-desc">Explorá 14 presentaciones oficiales en video 3D y obras terminadas en piscinas, bordes atérmicos y terrazas con insumos oficiales Súper Brite® e Ingeprex.</p>
+                <span class="hero-label">Obras Ejecutadas &amp; Catálogo Multimedia</span>
+                <h2 class="head-title">Galería de Proyectos Reales y Muestrarios 3D</h2>
+                <p class="head-desc">Explorá videos 3D de probetas reflectivas de cuarzo bajo agua y obras reales de piscinas terminadas con insumos oficiales Súper Brite® e Ingeprex.</p>
             </div>
 
             <!-- Filtro dinámico de categorías -->
             <div class="gal-filter-bar reveal">
                 <button class="gal-filter-btn active" data-filter="all" onclick="filterGallery('all')">
-                    <i class="fa-solid fa-layer-group"></i> Todos <span class="gal-filter-count" id="count-all">24</span>
+                    <i class="fa-solid fa-layer-group"></i> Todos <span class="gal-filter-count" id="count-all">19</span>
                 </button>
                 <button class="gal-filter-btn" data-filter="videos" onclick="filterGallery('videos')">
-                    <i class="fa-solid fa-circle-play text-blue"></i> Videos 3D Oficiales <span class="gal-filter-count" id="count-videos">14</span>
+                    <i class="fa-solid fa-circle-play text-blue"></i> Videos 3D de Probetas <span class="gal-filter-count" id="count-videos">9</span>
                 </button>
                 <button class="gal-filter-btn" data-filter="piscinas" onclick="filterGallery('piscinas')">
                     <i class="fa-solid fa-water-ladder text-blue"></i> Piscinas Reales <span class="gal-filter-count" id="count-piscinas">4</span>
                 </button>
                 <button class="gal-filter-btn" data-filter="muestras" onclick="filterGallery('muestras')">
-                    <i class="fa-solid fa-gem text-blue"></i> Muestrarios Cuarzo <span class="gal-filter-count" id="count-muestras">5</span>
+                    <i class="fa-solid fa-gem text-blue"></i> Cristales de Cuarzo <span class="gal-filter-count" id="count-muestras">5</span>
                 </button>
                 <button class="gal-filter-btn" data-filter="bordes" onclick="filterGallery('bordes')">
-                    <i class="fa-solid fa-sun text-blue"></i> Bordes & Soláriums <span class="gal-filter-count" id="count-bordes">1</span>
+                    <i class="fa-solid fa-sun text-blue"></i> Bordes &amp; Soláriums <span class="gal-filter-count" id="count-bordes">1</span>
                 </button>
             </div>
 
