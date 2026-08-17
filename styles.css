@@ -1346,6 +1346,25 @@ a {
     height: 420px;
 }
 
+.hero-badge-top {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    color: #0F172A;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 11.5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 2;
+}
+
 .hero-badge-float {
     position: absolute;
     bottom: 16px;
@@ -1361,6 +1380,33 @@ a {
     align-items: center;
     gap: 8px;
     border: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 2;
+}
+
+.hero-gallery-badge {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background: rgba(2, 132, 199, 0.92);
+    backdrop-filter: blur(8px);
+    color: #FFFFFF !important;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.35);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 2;
+}
+
+.hero-gallery-badge:hover {
+    background: #0284C7;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(2, 132, 199, 0.5);
 }
 
 .badge-dot {
