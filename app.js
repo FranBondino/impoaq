@@ -1098,12 +1098,47 @@ function initGalleryHandlers() {
     renderGallery('all');
 }
 
+const HERO_POOLS = {
+    tahoe: {
+        src: 'assets/img/hero_real_tahoe.jpg',
+        title: 'Obra Real: Súper Brite® Tahoe Blue'
+    },
+    cool: {
+        src: 'assets/img/hero_real_cool.jpg',
+        title: 'Obra Real: Súper Brite® Cool Blue'
+    },
+    onyx: {
+        src: 'assets/img/hero_real_onyx.jpg',
+        title: 'Obra Real: Súper Brite® Onyx Blue'
+    }
+};
+
+function switchHeroPool(key) {
+    const data = HERO_POOLS[key];
+    if (!data) return;
+    const img = document.getElementById('hero-main-img');
+    const badge = document.getElementById('hero-badge-text');
+    if (img) {
+        img.style.opacity = '0.3';
+        setTimeout(() => {
+            img.src = data.src;
+            img.style.opacity = '1';
+        }, 160);
+    }
+    if (badge) badge.textContent = data.title;
+    
+    document.querySelectorAll('.hero-switch-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase().includes(key));
+    });
+}
+
 window.openLightbox = openLightbox;
 window.closeLightbox = closeLightbox;
 window.openVideoModal = openVideoModal;
 window.closeVideoModal = closeVideoModal;
 window.filterGallery = filterGallery;
 window.renderGallery = renderGallery;
+window.switchHeroPool = switchHeroPool;
 
 
 // ==========================================================================
