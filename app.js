@@ -19,7 +19,7 @@ const OFFICIAL_PRODUCTS = {
         id: 'sb',
         code: 'sb',
         name: 'SÚPER BRITE®',
-        subName: 'Quartz Finish',
+        subName: 'Revestimiento Continuo de Cuarzo',
         category: 'piscinas',
         badge: 'LÍNEA PISCINAS',
         badgeClass: 'badge-sb',
