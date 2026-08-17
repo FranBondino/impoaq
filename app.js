@@ -472,7 +472,7 @@ const PRODUCT_PACKAGING_IMAGES = {
     sf: 'assets/img/sf-bag.jpg',
     sd: 'assets/img/sd-bucket.png',
     ss: 'assets/img/ss-bucket.png',
-    latex: 'assets/gallery/thumbs/v_latex.jpg'
+    latex: 'assets/img/latex-bucket.png'
 };
 
 function openProductModal(prodCode) {
