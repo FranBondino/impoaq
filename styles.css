@@ -931,50 +931,60 @@ a {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(15, 23, 42, 0.75);
-    backdrop-filter: blur(4px);
-    z-index: 2000;
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 2500;
     align-items: center;
     justify-content: center;
     padding: 20px;
+    box-sizing: border-box;
 }
 
-.modal-backdrop.active, .modal-backdrop.open { display: flex; }
+.modal-backdrop.active,
+.modal-backdrop.open {
+    display: flex;
+}
 
 .modal-card {
     background: #FFFFFF !important;
     border-radius: 16px;
-    max-width: 720px;
+    max-width: 740px;
     width: 100%;
     max-height: 88vh;
     overflow-y: auto;
     padding: 32px;
     position: relative;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.35);
     border: 1px solid #E2E8F0;
+    animation: modal-pop 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    box-sizing: border-box;
 }
 
 .modal-close {
     position: absolute;
-    top: 18px;
-    right: 18px;
+    top: 16px;
+    right: 16px;
     background: #F1F5F9;
     border: 1px solid #CBD5E1;
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 22px;
+    line-height: 1;
     cursor: pointer;
     color: #475569;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: var(--transition);
+    transition: all 0.2s ease;
+    z-index: 15;
 }
 
 .modal-close:hover {
     background: #E2E8F0;
     color: #0F172A;
+    transform: scale(1.06);
 }
 
 .modal-doc-header {
@@ -983,6 +993,7 @@ a {
     justify-content: space-between;
     border-bottom: 2px solid #0284C7;
     padding-bottom: 16px;
+    padding-right: 48px;
     margin-bottom: 24px;
 }
 
@@ -1869,32 +1880,88 @@ a {
     transform: scale(1.06);
 }
 
-/* Video & Lightbox Modal Enhancements */
-.video-modal-card {
+/* ==========================================================================
+   LIGHTBOX & VIDEO MODAL SYSTEM (DESKTOP & MOBILE RESPONSIVE)
+   ========================================================================== */
+.lightbox-card {
     background: #0F172A;
     color: #FFFFFF;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
-    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
     width: 100%;
-    max-width: 860px;
-    padding: 24px;
+    max-width: 900px;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    padding: 22px 24px 20px 24px;
     position: relative;
-    animation: modal-pop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.video-player-box {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    background: #000000;
-    border-radius: 10px;
+    animation: modal-pop 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    box-sizing: border-box;
     overflow: hidden;
-    margin-bottom: 16px;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
-.video-player-box video {
+.lightbox-card .modal-close {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+}
+
+.lightbox-card .modal-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: #FFFFFF;
+}
+
+.lightbox-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding-right: 48px;
+    margin-bottom: 12px;
+}
+
+.lightbox-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+    letter-spacing: -0.2px;
+    line-height: 1.3;
+}
+
+.lightbox-media-container {
+    background: #020617;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-height: 60vh;
+    min-height: 200px;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 60vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+}
+
+.lightbox-card.video-lightbox-card .lightbox-media-container {
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    min-height: 0;
+    max-height: none;
+}
+
+.lightbox-card.video-lightbox-card video {
     position: absolute;
     top: 0;
     left: 0;
@@ -1902,33 +1969,62 @@ a {
     height: 100%;
     object-fit: contain;
     outline: none;
+    background: #000000;
 }
 
-.video-meta-bar {
+.lightbox-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 16px;
-    padding-top: 8px;
+    gap: 14px;
+    padding-top: 14px;
+    margin-top: 12px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.video-meta-info h3 {
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 4px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.lightbox-desc {
+    font-size: 13px;
+    color: #94A3B8;
+    margin: 0;
+    line-height: 1.4;
+    flex: 1;
+    min-width: 240px;
 }
 
-.video-meta-info p {
-    color: #94A3B8;
-    font-size: 13px;
-    margin: 0;
+@media (max-width: 640px) {
+    .lightbox-card {
+        padding: 16px 14px 14px 14px;
+        border-radius: 14px;
+        max-height: 94vh;
+    }
+    .lightbox-header {
+        padding-right: 42px;
+        margin-bottom: 8px;
+    }
+    .lightbox-title {
+        font-size: 15px;
+    }
+    .lightbox-media-container {
+        max-height: 50vh;
+        min-height: 180px;
+    }
+    .lightbox-img {
+        max-height: 50vh;
+    }
+    .lightbox-footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding-top: 10px;
+        margin-top: 8px;
+    }
+    .lightbox-footer .btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
+
 
 /* ==========================================================================
    MOSTRARIO DE COLORES & TARJETA CROMÁTICA

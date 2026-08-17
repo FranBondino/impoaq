@@ -547,6 +547,7 @@ function openProductModal(prodCode) {
         </div>
     `;
 
+    document.body.style.overflow = 'hidden';
     modal.classList.add('active', 'open');
     modal.style.display = 'flex';
 }
@@ -557,6 +558,7 @@ function closeProductModal() {
         modal.classList.remove('active', 'open');
         modal.style.display = 'none';
     }
+    checkModalsClosed();
 }
 
 function downloadSpecSheet(productName, fileName) {
@@ -931,11 +933,11 @@ function renderGallery(filter = 'all') {
     container.innerHTML = filtered.map((item, index) => {
         const isVideo = item.type === 'video';
         const clickAction = isVideo
-            ? `openVideoModal('${item.video}', '${escapeHtml(item.title)}', '${escapeHtml(item.desc)}', '${item.tag}')`
-            : `openLightbox('${item.src}', '${escapeHtml(item.title)}')`;
+            ? `openVideoModal('${item.video}', '${escapeHtml(item.title)}', '${escapeHtml(item.desc)}', '${item.tag}', '${item.tagBg}')`
+            : `openLightbox('${item.src}', '${escapeHtml(item.title)}', '${escapeHtml(item.desc)}', '${item.tag}', '${item.tagBg}')`;
 
         return `
-            <div class="gal-card" onclick="${clickAction}">
+            <div class="gal-card" onclick="${clickAction}" style="cursor: pointer;">
                 <div class="gal-card-media">
                     <img src="${item.thumb}" alt="${escapeHtml(item.title)}" loading="lazy">
                     <div class="gal-media-badge">
@@ -983,78 +985,122 @@ function filterGallery(filter) {
     renderGallery(filter);
 }
 
-function openLightbox(imgSrc, caption = "Obra Real Ejecutada con ImpoAcuatiq") {
-    const lightboxModal = document.getElementById('lightbox-modal');
-    const lightboxImg = document.getElementById('lightbox-img');
+function openLightbox(imgSrc, title = 'Obra Real ImpoAcuatiq', desc = 'Revestimiento continuo de cuarzo instalado por aplicadores profesionales.', tag = 'Obra Real', tagBg = '#0284C7') {
+    const modal = document.getElementById('lightbox-modal');
+    const imgEl = document.getElementById('lightbox-img');
+    const titleEl = document.getElementById('lightbox-title');
+    const descEl = document.getElementById('lightbox-desc');
+    const tagEl = document.getElementById('lightbox-tag');
+    const waBtn = document.getElementById('lightbox-wa-btn');
 
-    if (!lightboxModal) return;
+    if (!modal) return;
 
-    if (lightboxImg) {
-        lightboxImg.src = imgSrc;
-        lightboxImg.alt = caption;
+    if (imgEl) {
+        imgEl.src = imgSrc;
+        imgEl.alt = title;
+    }
+    if (titleEl) titleEl.textContent = title;
+    if (descEl) descEl.textContent = desc;
+    if (tagEl) {
+        tagEl.textContent = tag;
+        tagEl.style.background = tagBg || '#0284C7';
+    }
+    if (waBtn) {
+        waBtn.href = `https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20quisiera%20consultar%20por%20esta%20terminaci%C3%B3n:%20${encodeURIComponent(title)}`;
     }
 
-    lightboxModal.classList.add('active', 'open');
-    lightboxModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    modal.classList.add('active', 'open');
+    modal.style.display = 'flex';
 }
 
 function closeLightbox() {
-    const lightboxModal = document.getElementById('lightbox-modal');
-    if (lightboxModal) {
-        lightboxModal.classList.remove('active', 'open');
-        lightboxModal.style.display = 'none';
+    const modal = document.getElementById('lightbox-modal');
+    if (modal) {
+        modal.classList.remove('active', 'open');
+        modal.style.display = 'none';
+        const imgEl = document.getElementById('lightbox-img');
+        if (imgEl) imgEl.src = '';
     }
+    checkModalsClosed();
 }
 
-function openVideoModal(videoUrl, videoTitle = 'Video Demostrativo 3D Oficial', videoDesc = 'Presentación técnica supervisada por ImpoAcuatiq.', tag = 'Gama Oficial') {
-    let videoModal = document.getElementById('video-modal');
+function openVideoModal(videoUrl, title = 'Video Demostrativo 3D', desc = 'Presentación técnica supervisada por ImpoAcuatiq.', tag = 'Demostración 3D', tagBg = '#0284C7') {
+    const modal = document.getElementById('video-modal');
+    const videoEl = document.getElementById('video-player-el');
+    const titleEl = document.getElementById('video-modal-title');
+    const descEl = document.getElementById('video-modal-desc');
+    const tagEl = document.getElementById('video-modal-tag');
+    const waBtn = document.getElementById('video-modal-wa-btn');
 
-    if (!videoModal) {
-        videoModal = document.createElement('div');
-        videoModal.id = 'video-modal';
-        videoModal.className = 'modal-backdrop';
-        document.body.appendChild(videoModal);
+    if (!modal) return;
+
+    if (titleEl) titleEl.textContent = title;
+    if (descEl) descEl.textContent = desc;
+    if (tagEl) {
+        tagEl.textContent = tag;
+        tagEl.style.background = tagBg || '#0284C7';
+    }
+    if (waBtn) {
+        waBtn.href = `https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20quisiera%20consultar%20por%20este%20producto:%20${encodeURIComponent(title)}`;
     }
 
-    videoModal.innerHTML = `
-        <div class="video-modal-card">
-            <button class="modal-close" onclick="closeVideoModal()">&times;</button>
-            <div class="video-meta-info" style="margin-bottom: 14px;">
-                <span class="gal-tag" style="background: #0284C7; margin-bottom: 6px;">${tag}</span>
-                <h3 style="color: #FFFFFF; font-size: 18px; margin: 4px 0;">
-                    <i class="fa-solid fa-circle-play text-cyan"></i> ${videoTitle}
-                </h3>
-            </div>
-            <div class="video-player-box">
-                <video controls autoplay loop playsinline>
-                    <source src="${videoUrl}" type="video/mp4">
-                    Tu navegador no soporta reproducción de video HTML5.
-                </video>
-            </div>
-            <div class="video-meta-bar">
-                <p style="font-size: 13px; color: #94A3B8; max-width: 520px; line-height: 1.4;">${videoDesc}</p>
-                <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20quisiera%20consultar%20por%20el%20producto:%20${encodeURIComponent(videoTitle)}" target="_blank" class="btn btn-whatsapp btn-sm">
-                    <i class="fa-brands fa-whatsapp"></i> Consultar por este insumo
-                </a>
-            </div>
-        </div>
-    `;
+    if (videoEl) {
+        videoEl.src = videoUrl;
+        videoEl.play().catch(() => {});
+    }
 
-    videoModal.classList.add('active', 'open');
-    videoModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    modal.classList.add('active', 'open');
+    modal.style.display = 'flex';
 }
 
 function closeVideoModal() {
-    const videoModal = document.getElementById('video-modal');
-    if (videoModal) {
-        // Stop video playback
-        const vid = videoModal.querySelector('video');
-        if (vid) vid.pause();
-        videoModal.classList.remove('active', 'open');
-        videoModal.style.display = 'none';
-        videoModal.innerHTML = '';
+    const modal = document.getElementById('video-modal');
+    if (modal) {
+        modal.classList.remove('active', 'open');
+        modal.style.display = 'none';
+        const videoEl = document.getElementById('video-player-el');
+        if (videoEl) {
+            videoEl.pause();
+            videoEl.removeAttribute('src');
+            videoEl.load();
+        }
+    }
+    checkModalsClosed();
+}
+
+function checkModalsClosed() {
+    const openModals = document.querySelectorAll('.modal-backdrop.active, .modal-backdrop.open');
+    if (openModals.length === 0) {
+        document.body.style.overflow = '';
     }
 }
+
+function handleBackdropClick(event, modalId) {
+    if (event.target && event.target.id === modalId) {
+        if (modalId === 'lightbox-modal') closeLightbox();
+        else if (modalId === 'video-modal') closeVideoModal();
+        else if (modalId === 'product-modal') closeProductModal();
+    }
+}
+
+function openHeroLightbox() {
+    const heroImg = document.getElementById('hero-main-img');
+    const badgeText = document.getElementById('hero-badge-text');
+    const src = heroImg ? heroImg.src : 'assets/img/hero_real_tahoe.jpg';
+    const title = badgeText ? badgeText.textContent : 'Obra Real: Súper Brite® Tahoe Blue';
+    openLightbox(src, title, 'Piscina real revestida con cuarzo continuo Súper Brite®. Acabado continuo de alta gama sin repintar.', 'Obra Real Piscinas', '#0284C7');
+}
+
+// ESC Key closes any open modal
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox();
+        closeVideoModal();
+        closeProductModal();
+    }
+});
 
 function initGalleryHandlers() {
     renderGallery('all');

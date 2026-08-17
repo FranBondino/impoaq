@@ -76,9 +76,9 @@
             </div>
 
             <div class="hero-image-box reveal-right">
-                <img id="hero-main-img" src="assets/img/hero_real_tahoe.jpg" alt="Piscina Real Revestida con Cuarzo Súper Brite®">
+                <img id="hero-main-img" src="assets/img/hero_real_tahoe.jpg" alt="Piscina Real Revestida con Cuarzo Súper Brite®" onclick="openHeroLightbox()" style="cursor: zoom-in;" title="Click para ampliar obra real en alta resolución">
                 
-                <div class="hero-badge-top">
+                <div class="hero-badge-top" onclick="openHeroLightbox()" style="cursor: pointer;">
                     <i class="fa-solid fa-camera text-blue"></i>
                     <span id="hero-badge-text">Obra Real: Súper Brite® Tahoe Blue</span>
                 </div>
@@ -367,7 +367,7 @@
             <!-- CARTA CROMÁTICA BOX CON CTAS -->
             <div class="reveal-scale color-chart-box">
                 <div class="color-chart-inner">
-                    <img src="assets/img/sb-colors.jpeg" alt="Catálogo de colores oficiales Súper Brite" class="color-chart-img">
+                    <img src="assets/img/sb-colors.jpeg" alt="Catálogo de colores oficiales Súper Brite" class="color-chart-img" onclick="openLightbox('assets/img/sb-colors.jpeg', 'Catálogo Oficial de Tonos Súper Brite®', 'Muestrario de 11 mezclas de cuarzo natural y pigmentaciones para piscinas.', 'Gama Cromática', '#0284C7')" style="cursor: zoom-in;" title="Click para ampliar gama cromática en alta resolución">
                 </div>
                 <div class="color-chart-footer">
                     <div class="color-note">
@@ -637,17 +637,53 @@
     </footer>
 
     <!-- MODAL FICHA TÉCNICA -->
-    <div class="modal-backdrop" id="product-modal">
-        <div class="modal-card">
-            <button class="modal-close" onclick="closeProductModal()">&times;</button>
+    <div class="modal-backdrop" id="product-modal" onclick="handleBackdropClick(event, 'product-modal')">
+        <div class="modal-card" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeProductModal()" aria-label="Cerrar modal">&times;</button>
             <div class="modal-body" id="modal-content"></div>
         </div>
     </div>
 
-    <!-- LIGHTBOX FOTOS -->
-    <div class="modal-backdrop" id="lightbox-modal" onclick="closeLightbox()">
-        <div class="lightbox-content">
-            <img src="" id="lightbox-img" alt="Ampliación de Obra">
+    <!-- LIGHTBOX FOTOS Y MUESTRAS -->
+    <div class="modal-backdrop" id="lightbox-modal" onclick="handleBackdropClick(event, 'lightbox-modal')">
+        <div class="lightbox-card" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeLightbox()" aria-label="Cerrar modal">&times;</button>
+            <div class="lightbox-header">
+                <span class="gal-tag" id="lightbox-tag" style="background: #0284C7;">Obra Real</span>
+                <h3 class="lightbox-title" id="lightbox-title">Obra Real Piscinas</h3>
+            </div>
+            <div class="lightbox-media-container">
+                <img src="" id="lightbox-img" alt="Ampliación de Obra" class="lightbox-img">
+            </div>
+            <div class="lightbox-footer">
+                <p class="lightbox-desc" id="lightbox-desc">Revestimiento continuo de cuarzo instalado por aplicadores profesionales.</p>
+                <a href="#" id="lightbox-wa-btn" target="_blank" class="btn btn-whatsapp btn-sm">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar por esta terminación
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- REPRODUCTOR MODAL VIDEOS 3D -->
+    <div class="modal-backdrop" id="video-modal" onclick="handleBackdropClick(event, 'video-modal')">
+        <div class="lightbox-card video-lightbox-card" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeVideoModal()" aria-label="Cerrar modal">&times;</button>
+            <div class="lightbox-header">
+                <span class="gal-tag" id="video-modal-tag" style="background: #0284C7;">Demostración 3D</span>
+                <h3 class="lightbox-title" id="video-modal-title">Súper Brite® 3D Showcase</h3>
+            </div>
+            <div class="lightbox-media-container">
+                <video id="video-player-el" controls autoplay loop playsinline preload="auto">
+                    <source src="" type="video/mp4">
+                    Tu navegador no soporta reproducción de video HTML5.
+                </video>
+            </div>
+            <div class="lightbox-footer">
+                <p class="lightbox-desc" id="video-modal-desc">Presentación técnica supervisada por ImpoAcuatiq.</p>
+                <a href="#" id="video-modal-wa-btn" target="_blank" class="btn btn-whatsapp btn-sm">
+                    <i class="fa-brands fa-whatsapp"></i> Consultar por este insumo
+                </a>
+            </div>
         </div>
     </div>
 
