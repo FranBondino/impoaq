@@ -94,7 +94,7 @@ a {
     z-index: 1000;
     background: #FFFFFF !important;
     border-bottom: 1px solid #E2E8F0;
-    height: 74px;
+    height: 76px;
     display: flex;
     align-items: center;
     transition: height 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, box-shadow 0.25s ease;
@@ -104,8 +104,11 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 32px;
     width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 32px;
 }
 
 .site-logo {
@@ -130,22 +133,49 @@ a {
 .site-nav {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 28px;
     white-space: nowrap;
+}
+
+@media (max-width: 1240px) {
+    .site-nav {
+        gap: 18px;
+    }
+    .header-inner {
+        padding: 0 20px;
+        gap: 16px;
+    }
+    .btn-header {
+        padding: 9px 14px !important;
+        font-size: 12.5px !important;
+    }
 }
 
 .nav-item {
     font-family: var(--font-heading);
     font-size: 14px;
     font-weight: 600;
-    color: #334155 !important;
-    padding: 6px 2px;
+    color: #1E293B !important;
+    padding: 8px 2px;
     text-decoration: none;
     transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .nav-item:hover, .nav-item.active {
     color: #0284C7 !important;
+}
+
+.nav-arrow {
+    font-size: 11px;
+    transition: transform 0.2s ease;
+    opacity: 0.7;
+}
+
+.nav-item-dropdown:hover .nav-arrow {
+    transform: rotate(180deg);
 }
 
 .nav-item-dropdown {
@@ -157,46 +187,60 @@ a {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
-    width: 260px;
+    left: -10px;
+    width: 310px;
     background: #FFFFFF !important;
     border: 1px solid #E2E8F0;
-    border-radius: 8px;
-    padding: 8px;
-    box-shadow: var(--shadow-md);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
     z-index: 1100;
 }
 
 .nav-item-dropdown:hover .dropdown-panel {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 4px;
 }
 
 .dropdown-panel a {
     color: #334155 !important;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 500;
+    padding: 9px 14px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.15s ease;
 }
 
 .dropdown-panel a:hover {
-    background: #F1F5F9 !important;
+    background: #F0F9FF !important;
     color: #0284C7 !important;
+    transform: translateX(3px);
 }
 
 .btn-header {
     background: #0F172A !important;
     color: #FFFFFF !important;
-    padding: 10px 18px !important;
-    border-radius: 6px !important;
-    font-size: 13.5px !important;
-    font-weight: 600 !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.2px;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+    transition: all 0.2s ease !important;
 }
 
 .btn-header:hover {
     background: #0284C7 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
 }
 
 /* --------------------------------------------------------------------------
@@ -1641,7 +1685,7 @@ a {
     background: #E2E8F0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
     .site-header {
         height: 76px;
     }
@@ -1703,6 +1747,29 @@ a {
 
     .btn-header {
         display: none !important;
+    }
+
+    .nav-mobile-cta {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        background: #0F172A;
+        color: #FFFFFF !important;
+        font-family: var(--font-heading);
+        font-size: 14px;
+        font-weight: 700;
+        padding: 12px 18px;
+        border-radius: 8px;
+        margin-top: 10px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+        transition: background 0.2s ease;
+    }
+
+    .nav-mobile-cta:hover {
+        background: #0284C7;
     }
 
     .topbar-inner {
