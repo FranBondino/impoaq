@@ -29,23 +29,25 @@
             <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú de navegación">
                 <i class="fa-solid fa-bars"></i>
             </button>
-
             <nav class="site-nav" id="nav-menu">
-                <a href="#inicio" class="nav-item active">Inicio</a>
+                <a href="#inicio" class="nav-item">Inicio</a>
                 <div class="nav-item-dropdown">
-                    <a href="#productos" class="nav-item">Productos <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+                    <a href="#productos" class="nav-item">Catálogo <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
                     <div class="dropdown-panel">
-                        <a href="#productos" onclick="filterCategory('todos')">Todo el Catálogo</a>
-                        <a href="#productos" onclick="filterCategory('piscinas')">Piscinas (Súper Brite®)</a>
+                        <a href="#productos" onclick="filterCategory('todos')">Ver Todo el Catálogo (6)</a>
+                        <a href="#productos" onclick="filterCategory('piscinas')">Piscinas de Cuarzo (Súper Brite®)</a>
                         <a href="#productos" onclick="filterCategory('adherencia')">Adherencia (Súper Kote®)</a>
                         <a href="#productos" onclick="filterCategory('bordes')">Bordes & Terrazas (Súper Fullget®)</a>
                         <a href="#productos" onclick="filterCategory('resina')">Resina Texturada (Spray Deck)</a>
                         <a href="#productos" onclick="filterCategory('microcemento')">Microcemento (Súper Seal®)</a>
+                        <a href="#productos" onclick="filterCategory('latex')">Promotor Adherente (Súper Látex®)</a>
                     </div>
                 </div>
-                <a href="#calculadora" class="nav-item">Calculadora m²</a>
-                <a href="#b2b" class="nav-item">Canales B2B</a>
-                <a href="#galeria" class="nav-item">Obras</a>
+                <a href="#remodelacion" class="nav-item">Remodelación</a>
+                <a href="#carta-colores" class="nav-item">Colores</a>
+                <a href="#certificacion" class="nav-item">Capacitación</a>
+                <a href="#calculadora" class="nav-item">Calculadora</a>
+                <a href="#galeria" class="nav-item">Galería</a>
                 <a href="#contacto" class="nav-item">Contacto</a>
             </nav>
 
@@ -55,8 +57,10 @@
         </div>
     </header>
 
-    <!-- HERO SECTION ARQUITECTÓNICO EDITORIAL -->
+    <!-- HERO SECTION ARQUITECTÓNICO CON EFECTO ACUÁTICO DE BURBUJAS -->
     <section class="hero-section" id="inicio">
+        <!-- Canvas interactivo de burbujas acuáticas (Homenaje al hijo de Lorna) -->
+        <canvas id="hero-bubbles-canvas" class="hero-bubbles-canvas" aria-hidden="true"></canvas>
         <div class="container hero-split">
             <div class="hero-text-col reveal-left">
                 <span class="hero-label">Importador & Distribuidor Exclusivo Argentina</span>
@@ -355,6 +359,70 @@
         </div>
     </section>
 
+    <!-- SECCIÓN COMPARADOR INTERACTIVO ANTES VS DESPUÉS (REMODELACIÓN) -->
+    <section class="section-before-after" id="remodelacion">
+        <div class="container">
+            <div class="section-head text-center reveal">
+                <span class="hero-label">Transformación & Reconstrucción</span>
+                <h2 class="head-title">Antes vs. Después: De Pintura Tradicional a Súper Brite®</h2>
+                <p class="head-desc">Deslizá el control interactivo para ver la renovación estructural: eliminá para siempre el descascarado, las microfisuras y el repintado anual con nuestro revestimiento continuo de cuarzo.</p>
+            </div>
+
+            <!-- COMPARADOR SLIDER INTERACTIVO -->
+            <div class="ba-card reveal-scale">
+                <div class="ba-slider-container" id="ba-slider" aria-label="Comparador interactivo Antes y Después">
+                    <!-- Imagen DESPUÉS (Fondo completo) -->
+                    <img src="assets/img/remodelacion_despues.jpg" alt="Piscina renovada con revestimiento de cuarzo Súper Brite® Tahoe Blue" class="ba-img ba-img-after">
+                    <span class="ba-badge ba-badge-after"><i class="fa-solid fa-gem text-cyan"></i> DESPUÉS: Súper Brite® Tahoe Blue</span>
+
+                    <!-- Capa ANTES (Recortada por el divisor) -->
+                    <div class="ba-before-wrapper" id="ba-before-wrapper">
+                        <img src="assets/img/remodelacion_antes.jpg" alt="Piscina deteriorada con pintura envejecida y fisuras" class="ba-img ba-img-before" id="ba-img-before">
+                        <span class="ba-badge ba-badge-before"><i class="fa-solid fa-triangle-exclamation" style="color: #F59E0B;"></i> ANTES: Pintura envejecida & fisuras</span>
+                    </div>
+
+                    <!-- Divisor y manija de arrastre -->
+                    <div class="ba-divider" id="ba-divider">
+                        <div class="ba-handle" title="Arrastrá a izquierda o derecha para comparar">
+                            <i class="fa-solid fa-left-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Barra de Instrucción / Hint -->
+                <div class="ba-hint">
+                    <i class="fa-solid fa-hand-pointer text-cyan"></i>
+                    <span><strong>Interactivo:</strong> Arrastrá la barra central o tocá la pantalla para comparar la transformación.</span>
+                </div>
+
+                <!-- Métricas de Impacto de la Remodelación -->
+                <div class="ba-features-grid">
+                    <div class="ba-feature-card">
+                        <div class="ba-feat-icon"><i class="fa-solid fa-ban text-cyan"></i></div>
+                        <div class="ba-feat-text">
+                            <h4>0% Repintado Anual</h4>
+                            <p>Elimina el gasto y trabajo de vaciar y repintar la piscina cada primavera. Durabilidad superior a 10-15 años.</p>
+                        </div>
+                    </div>
+                    <div class="ba-feature-card">
+                        <div class="ba-feat-icon"><i class="fa-solid fa-shield-halved text-cyan"></i></div>
+                        <div class="ba-feat-text">
+                            <h4>Sellado Hidrófugo Total</h4>
+                            <p>Forma una capa monolítica de 8 a 10 mm que sella microfisuras del hormigón previniendo filtraciones de agua.</p>
+                        </div>
+                    </div>
+                    <div class="ba-feature-card">
+                        <div class="ba-feat-icon"><i class="fa-solid fa-sun text-cyan"></i></div>
+                        <div class="ba-feat-text">
+                            <h4>Textura Suave & Antideslizante</h4>
+                            <p>Cristales de cuarzo pulidos al tacto para pies descalzos que no acumulan verdín ni hongos por su nula porosidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- MOSTRARIO OFICIAL DE COLORES SÚPER BRITE -->
     <section class="section-products" id="carta-colores" style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 70px 0;">
         <div class="container">
@@ -377,6 +445,122 @@
                     <div class="color-actions">
                         <a href="#calculadora" class="btn-sm-primary" onclick="scrollToCalculator('sb')"><i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)</a>
                         <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20quisiera%20solicitar%20el%20muestrario%20f%C3%ADsico%20de%20colores%20S%C3%BAper%20Brite" target="_blank" class="btn-sm-secondary"><i class="fa-brands fa-whatsapp text-green"></i> Solicitar Muestrario Físico</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CAPACITACIÓN & CERTIFICACIÓN OFICIAL INGEPREX -->
+    <section class="section-certificacion" id="certificacion">
+        <div class="container">
+            <div class="section-head text-center reveal">
+                <span class="hero-label">Academia Oficial de Aplicadores</span>
+                <h2 class="head-title">Capacitación Técnica & Certificación Oficial Ingeprex</h2>
+                <p class="head-desc">Formamos y certificamos a constructores, aplicadores, contratistas y albañiles en las técnicas oficiales de preparación de sustrato, puente de unión, llaneado de cuarzo y sellado impermeable.</p>
+            </div>
+
+            <!-- GRID PRINCIPAL DE CERTIFICACIÓN -->
+            <div class="cert-grid">
+                <!-- COLUMNA IZQUIERDA: PROGRAMA Y MÓDULOS DEL TALLER -->
+                <div class="cert-info-col reveal-left">
+                    <div class="cert-program-card">
+                        <div class="cert-badge-header">
+                            <i class="fa-solid fa-award text-cyan"></i>
+                            <span>Taller Teórico-Práctico Homologado</span>
+                        </div>
+                        <h3 class="cert-program-title">Programa de Especialización Técnica</h3>
+                        <p class="cert-program-desc">El curso abarca el ciclo completo de aplicación en obra con prácticas reales sobre probetas y vasos de hormigón:</p>
+
+                        <div class="cert-modules-list">
+                            <div class="cert-mod-item">
+                                <div class="mod-num">01</div>
+                                <div class="mod-info">
+                                    <strong>Diagnóstico & Preparación Mecánica:</strong>
+                                    <span>Inspección de vasija, hidrolavado a presión, apertura de poro y tratamiento de fisuras activas.</span>
+                                </div>
+                            </div>
+                            <div class="cert-mod-item">
+                                <div class="mod-num">02</div>
+                                <div class="mod-info">
+                                    <strong>Puentes de Adherencia Súper Kote® & Látex:</strong>
+                                    <span>Dosificación y aplicación del puente de unión bicomponente para lograr adherencia química estructural.</span>
+                                </div>
+                            </div>
+                            <div class="cert-mod-item">
+                                <div class="mod-num">03</div>
+                                <div class="mod-info">
+                                    <strong>Técnica de Llaneado Súper Brite® & Fullget®:</strong>
+                                    <span>Capa continua de 8 a 10 mm, compactación manual de cristales y lavado superficial para brillo óptimo.</span>
+                                </div>
+                            </div>
+                            <div class="cert-mod-item">
+                                <div class="mod-num">04</div>
+                                <div class="mod-info">
+                                    <strong>Bordes Atérmicos Spray Deck & Súper Seal®:</strong>
+                                    <span>Terminaciones atérmicas en soláriums y microcemento sellador hidrófugo impermeable.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BENEFICIOS DEL INSTALADOR CERTIFICADO -->
+                        <div class="cert-benefits-box">
+                            <h4><i class="fa-solid fa-circle-check text-green"></i> Beneficios para el Profesional Certificado:</h4>
+                            <ul class="cert-benefits-list">
+                                <li><i class="fa-solid fa-check text-cyan"></i> <strong>Diploma Oficial:</strong> Certificado de Aplicador Homologado emitido por Ingeprex e ImpoAcuatiq.</li>
+                                <li><i class="fa-solid fa-check text-cyan"></i> <strong>Descuento Mayorista:</strong> Acceso a lista de precios preferencial directa de importador.</li>
+                                <li><i class="fa-solid fa-check text-cyan"></i> <strong>Derivación de Clientes:</strong> Recomendamos tu contacto a dueños de casas y obras en tu localidad.</li>
+                                <li><i class="fa-solid fa-check text-cyan"></i> <strong>Soporte Técnico en Obra:</strong> Asesoramiento telefónico directo en tus primeros proyectos.</li>
+                            </ul>
+                        </div>
+
+                        <!-- CTA WHATSAPP CERTIFICACIÓN -->
+                        <div class="cert-cta-row">
+                            <a href="https://wa.me/5493416825470?text=Hola%20Lorna,%20quisiera%20consultar%20por%20las%20pr%C3%B3ximas%20fechas%20y%20arancel%20del%20Taller%20de%20Capacitaci%C3%B3n%20y%20Certificaci%C3%B3n%20Oficial%20Ingeprex." target="_blank" class="btn-cert-primary">
+                                <i class="fa-brands fa-whatsapp text-green"></i> Consultar Próximas Fechas & Reservar Cupo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA: FOTOS REALES DE GRADUADOS Y TALLERES -->
+                <div class="cert-gallery-col reveal-right">
+                    <div class="cert-showcase-card">
+                        <div class="cert-showcase-head">
+                            <h4 class="showcase-title"><i class="fa-solid fa-users text-cyan"></i> Instaladores Certificados en Taller</h4>
+                            <span class="showcase-tag">Fotos Reales de Graduación</span>
+                        </div>
+                        
+                        <!-- Grid de 4 fotos de graduados con diplomas -->
+                        <div class="cert-photo-grid">
+                            <div class="cert-photo-card" onclick="openLightbox('assets/img/cert-graduacion-1.jpg', 'Graduación de Instaladores Certificados Ingeprex', 'Entrega de certificados y diplomas a la nueva camada de aplicadores profesionales homologados.', 'Capacitación Oficial', '#0284C7')">
+                                <img src="assets/img/cert-graduacion-1.jpg" alt="Graduación y entrega de diplomas a aplicadores certificados Ingeprex" loading="lazy">
+                                <div class="cert-photo-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            </div>
+                            <div class="cert-photo-card" onclick="openLightbox('assets/img/cert-graduacion-2.jpg', 'Entrega de Diplomas Oficiales Ingeprex', 'Taller presencial intensivo de capacitación en revestimientos para piscinas.', 'Capacitación Oficial', '#0284C7')">
+                                <img src="assets/img/cert-graduacion-2.jpg" alt="Entrega de diplomas en aula magna" loading="lazy">
+                                <div class="cert-photo-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            </div>
+                            <div class="cert-photo-card" onclick="openLightbox('assets/img/cert-graduacion-3.jpg', 'Red Profesional de Aplicadores Certificados', 'Instaladores homologados capacitados para obras residenciales y comerciales.', 'Capacitación Oficial', '#0284C7')">
+                                <img src="assets/img/cert-graduacion-3.jpg" alt="Instaladores con sus diplomas oficiales" loading="lazy">
+                                <div class="cert-photo-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            </div>
+                            <div class="cert-photo-card" onclick="openLightbox('assets/img/cert-graduacion-4.jpg', 'Cierre del Taller Teórico y Práctico Ingeprex', 'Capacitación en preparación de sustratos, Súper Brite, Spray Deck y selladores.', 'Capacitación Oficial', '#0284C7')">
+                                <img src="assets/img/cert-graduacion-4.jpg" alt="Foto grupal de aplicadores egresados" loading="lazy">
+                                <div class="cert-photo-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            </div>
+                        </div>
+
+                        <!-- Flyer oficial del taller -->
+                        <div class="cert-flyer-box" onclick="openLightbox('assets/img/cert-flyer-taller.jpg', 'Flyer Oficial del Taller de Instalador Certificado', 'Temario y detalles del curso técnico-práctico de revestimientos y morteros atérmicos.', 'Programa Oficial', '#0284C7')">
+                            <img src="assets/img/cert-flyer-taller.jpg" alt="Flyer del Taller Oficial de Instalador Certificado" class="cert-flyer-img" loading="lazy">
+                            <div class="cert-flyer-info">
+                                <span class="flyer-badge"><i class="fa-solid fa-certificate"></i> Temario Completo</span>
+                                <h5>Taller Técnico & Práctico Homologado</h5>
+                                <p>Preparación de sustrato, Spray Deck, Súper Brite, Súper Fullget, Súper Resina y Súper Seal.</p>
+                                <span class="flyer-zoom-cta"><i class="fa-solid fa-magnifying-glass-plus text-cyan"></i> Click para ver flyer en detalle</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -507,19 +691,22 @@
             <!-- Filtro dinámico de categorías -->
             <div class="gal-filter-bar reveal">
                 <button class="gal-filter-btn active" data-filter="all" onclick="filterGallery('all')">
-                    <i class="fa-solid fa-layer-group"></i> Todos <span class="gal-filter-count" id="count-all">19</span>
-                </button>
-                <button class="gal-filter-btn" data-filter="videos" onclick="filterGallery('videos')">
-                    <i class="fa-solid fa-circle-play text-blue"></i> Videos 3D de Probetas <span class="gal-filter-count" id="count-videos">9</span>
+                    <i class="fa-solid fa-layer-group"></i> Todos <span class="gal-filter-count" id="count-all">24</span>
                 </button>
                 <button class="gal-filter-btn" data-filter="piscinas" onclick="filterGallery('piscinas')">
-                    <i class="fa-solid fa-water-ladder text-blue"></i> Piscinas Reales <span class="gal-filter-count" id="count-piscinas">4</span>
+                    <i class="fa-solid fa-water-ladder text-blue"></i> Piscinas Terminadas <span class="gal-filter-count" id="count-piscinas">4</span>
+                </button>
+                <button class="gal-filter-btn" data-filter="obra" onclick="filterGallery('obra')">
+                    <i class="fa-solid fa-trowel-bricks text-blue"></i> Aplicación en Obra <span class="gal-filter-count" id="count-obra">3</span>
+                </button>
+                <button class="gal-filter-btn" data-filter="certificacion" onclick="filterGallery('certificacion')">
+                    <i class="fa-solid fa-graduation-cap text-blue"></i> Capacitación & Taller <span class="gal-filter-count" id="count-certificacion">5</span>
+                </button>
+                <button class="gal-filter-btn" data-filter="videos" onclick="filterGallery('videos')">
+                    <i class="fa-solid fa-circle-play text-blue"></i> Videos & Renders <span class="gal-filter-count" id="count-videos">11</span>
                 </button>
                 <button class="gal-filter-btn" data-filter="muestras" onclick="filterGallery('muestras')">
-                    <i class="fa-solid fa-gem text-blue"></i> Cristales de Cuarzo <span class="gal-filter-count" id="count-muestras">5</span>
-                </button>
-                <button class="gal-filter-btn" data-filter="bordes" onclick="filterGallery('bordes')">
-                    <i class="fa-solid fa-sun text-blue"></i> Bordes &amp; Soláriums <span class="gal-filter-count" id="count-bordes">1</span>
+                    <i class="fa-solid fa-gem text-blue"></i> Muestras Cuarzo <span class="gal-filter-count" id="count-muestras">5</span>
                 </button>
             </div>
 

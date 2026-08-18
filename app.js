@@ -185,6 +185,8 @@ const OFFICIAL_PRODUCTS = {
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
     initThemeSwitcher();
+    initHeroBubbles();
+    initBeforeAfterSlider();
     initCalculator();
     initNavbarScroll();
     initScrollReveal();
@@ -909,6 +911,94 @@ const GALLERY_ITEMS = [
         desc: 'Textura de piedra natural calibrada atérmica que no absorbe temperatura solar.',
         thumb: 'assets/gallery/photos/p_solarium_fullget.jpg',
         src: 'assets/gallery/photos/p_solarium_fullget.jpg'
+    },
+
+    // --- NUEVOS VIDEOS DE OBRA Y CAPACITACIÓN ---
+    {
+        type: 'video',
+        id: 'v_obra_llaneado',
+        title: 'Aplicación & Llaneado Manual de Cuarzo en Pared',
+        category: 'obra',
+        tag: 'Aplicación en Obra',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-video"></i> OBRA REAL',
+        desc: 'Técnica de llaneado simultáneo con llana metálica para lograr capa continua de 8 a 10 mm.',
+        thumb: 'assets/videos/thumbs/vid_obra_llaneado_pared.jpg',
+        video: 'assets/videos/vid_obra_llaneado_pared.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_taller_hidro',
+        title: 'Hidrolavado & Preparación Mecánica del Vaso',
+        category: 'certificacion',
+        tag: 'Taller Técnico',
+        tagBg: '#059669',
+        badge: '<i class="fa-solid fa-graduation-cap"></i> CAPACITACIÓN',
+        desc: 'Apertura de poro y limpieza profunda a presión en el curso oficial de aplicadores homologados.',
+        thumb: 'assets/videos/thumbs/vid_taller_hidrolavado.jpg',
+        video: 'assets/videos/vid_taller_hidrolavado.mp4'
+    },
+
+    // --- FOTOS DE GRADUACIÓN Y TALLERES ---
+    {
+        type: 'photo',
+        id: 'p_cert_graduacion_1',
+        title: 'Graduación Oficial de Instaladores Certificados',
+        category: 'certificacion',
+        tag: 'Capacitación Oficial',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-award"></i> DIPLOMAS',
+        desc: 'Entrega de certificados y acreditación a la nueva camada de aplicadores homologados Ingeprex.',
+        thumb: 'assets/img/cert-graduacion-1.jpg',
+        src: 'assets/img/cert-graduacion-1.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_cert_graduacion_2',
+        title: 'Entrega de Diplomas Técnicos Ingeprex',
+        category: 'certificacion',
+        tag: 'Capacitación Oficial',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-award"></i> DIPLOMAS',
+        desc: 'Jornada intensiva de formación en preparación de vasijas, puentes de adherencia y terminaciones.',
+        thumb: 'assets/img/cert-graduacion-2.jpg',
+        src: 'assets/img/cert-graduacion-2.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_obra_llaneado_1',
+        title: 'Detalle de Llaneado y Textura de Cuarzo',
+        category: 'obra',
+        tag: 'Aplicación en Obra',
+        tagBg: '#D97706',
+        badge: '<i class="fa-solid fa-trowel-bricks"></i> EN OBRA',
+        desc: 'Compactación manual uniforme para asegurar resistencia mecánica y nula porosidad superficial.',
+        thumb: 'assets/img/obra-llaneado-1.jpg',
+        src: 'assets/img/obra-llaneado-1.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_obra_llaneado_2',
+        title: 'Acabado Atérmico Manual en Solárium',
+        category: 'obra',
+        tag: 'Aplicación en Obra',
+        tagBg: '#D97706',
+        badge: '<i class="fa-solid fa-trowel-bricks"></i> EN OBRA',
+        desc: 'Terminación atérmica antideslizante ejecutada por aplicador certificado en borde de piscina.',
+        thumb: 'assets/img/obra-llaneado-2.jpg',
+        src: 'assets/img/obra-llaneado-2.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_arena_cuarzo_flyer',
+        title: 'Arena de Cuarzo Colorido & Resinas Ingeprex',
+        category: 'muestras',
+        tag: 'Insumos & Resinas',
+        tagBg: '#64748B',
+        badge: '<i class="fa-solid fa-gem"></i> INSUMO OFICIAL',
+        desc: 'Cuarzo de alta pureza disponible en granulometrías seleccionadas para revestimientos y decoración.',
+        thumb: 'assets/img/flyer-arena-cuarzo.jpg',
+        src: 'assets/img/flyer-arena-cuarzo.jpg'
     }
 ];
 
@@ -926,9 +1016,18 @@ function renderGallery(filter = 'all') {
     const container = document.getElementById('gal-grid-container');
     if (!container) return;
 
-    const filtered = (filter === 'all')
-        ? GALLERY_ITEMS
-        : GALLERY_ITEMS.filter(item => item.category === filter);
+    let filtered = GALLERY_ITEMS;
+    if (filter === 'piscinas') {
+        filtered = GALLERY_ITEMS.filter(item => item.category === 'piscinas');
+    } else if (filter === 'obra') {
+        filtered = GALLERY_ITEMS.filter(item => item.category === 'obra');
+    } else if (filter === 'certificacion') {
+        filtered = GALLERY_ITEMS.filter(item => item.category === 'certificacion');
+    } else if (filter === 'videos') {
+        filtered = GALLERY_ITEMS.filter(item => item.type === 'video');
+    } else if (filter === 'muestras') {
+        filtered = GALLERY_ITEMS.filter(item => item.category === 'muestras');
+    }
 
     container.innerHTML = filtered.map((item, index) => {
         const isVideo = item.type === 'video';
@@ -960,16 +1059,18 @@ function renderGallery(filter = 'all') {
 
     // Update counts in buttons if they exist
     const countAll = document.getElementById('count-all');
-    const countVideos = document.getElementById('count-videos');
     const countPiscinas = document.getElementById('count-piscinas');
+    const countObra = document.getElementById('count-obra');
+    const countCertificacion = document.getElementById('count-certificacion');
+    const countVideos = document.getElementById('count-videos');
     const countMuestras = document.getElementById('count-muestras');
-    const countBordes = document.getElementById('count-bordes');
 
     if (countAll) countAll.textContent = GALLERY_ITEMS.length;
-    if (countVideos) countVideos.textContent = GALLERY_ITEMS.filter(i => i.category === 'videos').length;
     if (countPiscinas) countPiscinas.textContent = GALLERY_ITEMS.filter(i => i.category === 'piscinas').length;
+    if (countObra) countObra.textContent = GALLERY_ITEMS.filter(i => i.category === 'obra').length;
+    if (countCertificacion) countCertificacion.textContent = GALLERY_ITEMS.filter(i => i.category === 'certificacion').length;
+    if (countVideos) countVideos.textContent = GALLERY_ITEMS.filter(i => i.type === 'video').length;
     if (countMuestras) countMuestras.textContent = GALLERY_ITEMS.filter(i => i.category === 'muestras').length;
-    if (countBordes) countBordes.textContent = GALLERY_ITEMS.filter(i => i.category === 'bordes').length;
 }
 
 function filterGallery(filter) {
@@ -1315,5 +1416,226 @@ function submitContactForm() {
     if (form) form.reset();
 }
 
+// ==========================================================================
+// 12. MOTOR DE BURBUJAS ACUÁTICAS INTERACTIVAS EN HERO (CANVAS 60FPS)
+// Homenaje al concepto visual realizado por el hijo de Lorna
+// ==========================================================================
+function initHeroBubbles() {
+    const canvas = document.getElementById('hero-bubbles-canvas');
+    const heroSection = document.getElementById('inicio');
+    if (!canvas || !heroSection) return;
+
+    const ctx = canvas.getContext('2d');
+    let animationId = null;
+    let isVisible = true;
+    let width = 0;
+    let height = 0;
+    let dpr = window.devicePixelRatio || 1;
+
+    let mouse = { x: -1000, y: -1000, radius: 120 };
+
+    function resize() {
+        const rect = heroSection.getBoundingClientRect();
+        width = rect.width;
+        height = rect.height;
+        dpr = window.devicePixelRatio || 1;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        ctx.scale(dpr, dpr);
+    }
+
+    class Bubble {
+        constructor(isInitial = false) {
+            this.reset(isInitial);
+        }
+
+        reset(isInitial = false) {
+            this.radius = Math.random() * 7 + 3; // 3px to 10px
+            this.x = Math.random() * (width || 800);
+            this.y = isInitial ? Math.random() * (height || 600) : (height || 600) + this.radius + Math.random() * 40;
+            this.speedY = Math.random() * 0.8 + 0.35;
+            this.oscSpeed = Math.random() * 0.02 + 0.01;
+            this.oscAmp = Math.random() * 1.4 + 0.4;
+            this.angle = Math.random() * Math.PI * 2;
+            this.opacity = Math.random() * 0.35 + 0.25;
+        }
+
+        update() {
+            this.y -= this.speedY;
+            this.angle += this.oscSpeed;
+            this.x += Math.sin(this.angle) * this.oscAmp;
+
+            // Mouse interaction
+            const dx = this.x - mouse.x;
+            const dy = this.y - mouse.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < mouse.radius && dist > 0) {
+                const force = (mouse.radius - dist) / mouse.radius;
+                this.x += (dx / dist) * force * 2.5;
+                this.y += (dy / dist) * force * 1.2;
+            }
+
+            if (this.y < -this.radius * 2) {
+                this.reset(false);
+            }
+        }
+
+        draw() {
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+
+            const grad = ctx.createRadialGradient(
+                this.x - this.radius * 0.3,
+                this.y - this.radius * 0.3,
+                this.radius * 0.1,
+                this.x,
+                this.y,
+                this.radius
+            );
+            grad.addColorStop(0, `rgba(255, 255, 255, ${this.opacity * 0.9})`);
+            grad.addColorStop(0.4, `rgba(56, 189, 248, ${this.opacity * 0.5})`);
+            grad.addColorStop(1, `rgba(2, 132, 199, ${this.opacity * 0.15})`);
+
+            ctx.fillStyle = grad;
+            ctx.fill();
+
+            ctx.strokeStyle = `rgba(255, 255, 255, ${this.opacity * 0.75})`;
+            ctx.lineWidth = 0.75;
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(
+                this.x - this.radius * 0.35,
+                this.y - this.radius * 0.35,
+                this.radius * 0.22,
+                0,
+                Math.PI * 2
+            );
+            ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity * 0.95})`;
+            ctx.fill();
+
+            ctx.restore();
+        }
+    }
+
+    resize();
+    const count = Math.min(42, Math.max(20, Math.floor(width / 30)));
+    const bubbles = Array.from({ length: count }, () => new Bubble(true));
+
+    function animate() {
+        if (!isVisible) return;
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < bubbles.length; i++) {
+            bubbles[i].update();
+            bubbles[i].draw();
+        }
+
+        animationId = requestAnimationFrame(animate);
+    }
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                isVisible = entry.isIntersecting;
+                if (isVisible) {
+                    cancelAnimationFrame(animationId);
+                    animationId = requestAnimationFrame(animate);
+                } else {
+                    cancelAnimationFrame(animationId);
+                }
+            });
+        }, { threshold: 0.05 });
+        observer.observe(heroSection);
+    } else {
+        animate();
+    }
+
+    window.addEventListener('resize', () => {
+        resize();
+    }, { passive: true });
+
+    heroSection.addEventListener('mousemove', (e) => {
+        const rect = heroSection.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+    }, { passive: true });
+
+    heroSection.addEventListener('mouseleave', () => {
+        mouse.x = -1000;
+        mouse.y = -1000;
+    }, { passive: true });
+}
+
+// ==========================================================================
+// 13. COMPARADOR INTERACTIVO ANTES VS DESPUÉS (REMODELACIÓN SLIDER)
+// ==========================================================================
+function initBeforeAfterSlider() {
+    const slider = document.getElementById('ba-slider');
+    const beforeWrapper = document.getElementById('ba-before-wrapper');
+    const beforeImg = document.getElementById('ba-img-before');
+    const divider = document.getElementById('ba-divider');
+    if (!slider || !beforeWrapper || !beforeImg || !divider) return;
+
+    let isDragging = false;
+
+    function updateSliderWidth() {
+        const rect = slider.getBoundingClientRect();
+        beforeImg.style.width = rect.width + 'px';
+    }
+
+    function setPosition(percent) {
+        const clamped = Math.max(0, Math.min(100, percent));
+        beforeWrapper.style.width = clamped + '%';
+        divider.style.left = clamped + '%';
+    }
+
+    function handleMove(clientX) {
+        const rect = slider.getBoundingClientRect();
+        const offsetX = clientX - rect.left;
+        const percent = (offsetX / rect.width) * 100;
+        setPosition(percent);
+    }
+
+    slider.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        handleMove(e.clientX);
+    });
+
+    window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        handleMove(e.clientX);
+    });
+
+    window.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+
+    slider.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        if (e.touches && e.touches[0]) {
+            handleMove(e.touches[0].clientX);
+        }
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        if (e.touches && e.touches[0]) {
+            handleMove(e.touches[0].clientX);
+        }
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+        isDragging = false;
+    });
+
+    window.addEventListener('resize', updateSliderWidth, { passive: true });
+    updateSliderWidth();
+    setPosition(50);
+}
+
 window.filterCategory = filterCategory;
 window.submitContactForm = submitContactForm;
+window.initHeroBubbles = initHeroBubbles;
+window.initBeforeAfterSlider = initBeforeAfterSlider;
