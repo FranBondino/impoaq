@@ -1418,8 +1418,8 @@ function submitContactForm() {
 
 // ==========================================================================
 // ==========================================================================
-// 12. MOTOR DE BURBUJAS ACUÁTICAS ULTRA-REALISTAS EN HERO (CANVAS 60FPS)
-// Homenaje fiel al concepto visual de Lorna y su hijo (Fondo de piscina con burbujas y rayos de sol)
+// 12. MOTOR DE BURBUJAS ACUÁTICAS CRISTALINAS (CANVAS 60FPS)
+// Efecto sutil de efervescencia y movimiento de agua cristalina
 // ==========================================================================
 function initHeroBubbles() {
     const canvas = document.getElementById('hero-bubbles-canvas');
@@ -1432,9 +1432,8 @@ function initHeroBubbles() {
     let width = 0;
     let height = 0;
     let dpr = window.devicePixelRatio || 1;
-    let time = 0;
 
-    let mouse = { x: -1000, y: -1000, radius: 140, vx: 0, vy: 0 };
+    let mouse = { x: -1000, y: -1000, radius: 120, vx: 0, vy: 0 };
     let prevMouse = { x: -1000, y: -1000 };
 
     function resize() {
@@ -1447,42 +1446,41 @@ function initHeroBubbles() {
         ctx.scale(dpr, dpr);
     }
 
-    // Diverse bubble types: micro, medium, large hero
-    class RealisticBubble {
+    class CrystalBubble {
         constructor(isInitial = false) {
             this.reset(isInitial);
         }
 
         reset(isInitial = false) {
-            // Determine tier: 55% micro, 30% medium, 15% large hero
-            const randTier = Math.random();
-            if (randTier < 0.55) {
+            const rand = Math.random();
+            if (rand < 0.6) {
+                // Micro bubble (2 - 5px)
                 this.tier = 'micro';
-                this.baseRadius = Math.random() * 3 + 1.5; // 1.5 - 4.5px
-                this.speedY = Math.random() * 0.9 + 0.6;
-                this.opacity = Math.random() * 0.4 + 0.35;
-            } else if (randTier < 0.85) {
+                this.baseRadius = Math.random() * 3 + 2;
+                this.speedY = Math.random() * 0.7 + 0.35;
+                this.opacity = Math.random() * 0.25 + 0.15;
+            } else if (rand < 0.9) {
+                // Medium bubble (6 - 12px)
                 this.tier = 'medium';
-                this.baseRadius = Math.random() * 7 + 6; // 6 - 13px
-                this.speedY = Math.random() * 0.75 + 0.4;
-                this.opacity = Math.random() * 0.35 + 0.45;
+                this.baseRadius = Math.random() * 6 + 6;
+                this.speedY = Math.random() * 0.5 + 0.3;
+                this.opacity = Math.random() * 0.22 + 0.18;
             } else {
+                // Large crystal bubble (14 - 22px)
                 this.tier = 'large';
-                this.baseRadius = Math.random() * 14 + 16; // 16 - 30px
-                this.speedY = Math.random() * 0.6 + 0.3;
-                this.opacity = Math.random() * 0.3 + 0.55;
+                this.baseRadius = Math.random() * 8 + 14;
+                this.speedY = Math.random() * 0.4 + 0.25;
+                this.opacity = Math.random() * 0.2 + 0.15;
             }
 
             this.x = Math.random() * (width || 800);
             this.y = isInitial 
                 ? Math.random() * (height || 600) 
-                : (height || 600) + this.baseRadius + Math.random() * 60;
+                : (height || 600) + this.baseRadius + Math.random() * 40;
 
-            this.oscSpeed = Math.random() * 0.025 + 0.012;
-            this.oscAmp = (this.tier === 'large' ? 1.8 : 1.2) * (Math.random() * 0.8 + 0.6);
+            this.oscSpeed = Math.random() * 0.02 + 0.01;
+            this.oscAmp = Math.random() * 1.2 + 0.4;
             this.angle = Math.random() * Math.PI * 2;
-            this.wobbleSpeed = Math.random() * 0.04 + 0.02;
-            this.wobbleAngle = Math.random() * Math.PI * 2;
             this.vx = 0;
             this.vy = 0;
         }
@@ -1490,182 +1488,67 @@ function initHeroBubbles() {
         update() {
             this.y -= (this.speedY + this.vy);
             this.angle += this.oscSpeed;
-            this.wobbleAngle += this.wobbleSpeed;
             this.x += Math.sin(this.angle) * this.oscAmp + this.vx;
 
-            // Dampen mouse impulse
-            this.vx *= 0.94;
-            this.vy *= 0.94;
+            this.vx *= 0.95;
+            this.vy *= 0.95;
 
-            // Mouse fluid interaction
             const dx = this.x - mouse.x;
             const dy = this.y - mouse.y;
             const dist = Math.sqrt(dx * dx + dy * dy);
             if (dist < mouse.radius && dist > 0) {
                 const force = (mouse.radius - dist) / mouse.radius;
-                const pushX = (dx / dist) * force * 3.5;
-                const pushY = (dy / dist) * force * 2.0;
-                this.vx += pushX * 0.3;
-                this.vy += pushY * 0.3;
+                this.vx += (dx / dist) * force * 1.8;
+                this.vy += (dy / dist) * force * 1.2;
             }
 
-            if (this.y < -this.baseRadius * 2.5) {
+            if (this.y < -this.baseRadius * 2) {
                 this.reset(false);
             }
         }
 
         draw() {
-            const rx = this.baseRadius * (1 + Math.sin(this.wobbleAngle) * 0.07);
-            const ry = this.baseRadius * (1 - Math.sin(this.wobbleAngle) * 0.07);
-
             ctx.save();
             ctx.translate(this.x, this.y);
 
-            if (this.tier === 'micro') {
-                // Sparkling micro-bubble
-                ctx.beginPath();
-                ctx.arc(0, 0, rx, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(224, 242, 254, ${this.opacity})`;
-                ctx.shadowColor = 'rgba(56, 189, 248, 0.8)';
-                ctx.shadowBlur = 4;
-                ctx.fill();
-            } else if (this.tier === 'medium') {
-                // Spherical shaded water bubble
-                ctx.beginPath();
-                ctx.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2);
+            ctx.beginPath();
+            ctx.arc(0, 0, this.baseRadius, 0, Math.PI * 2);
 
-                const grad = ctx.createRadialGradient(
-                    -rx * 0.3, -ry * 0.3, rx * 0.1,
-                    0, 0, rx
-                );
-                grad.addColorStop(0, `rgba(255, 255, 255, ${this.opacity * 0.85})`);
-                grad.addColorStop(0.35, `rgba(125, 211, 252, ${this.opacity * 0.45})`);
-                grad.addColorStop(0.8, `rgba(2, 132, 199, ${this.opacity * 0.25})`);
-                grad.addColorStop(1, `rgba(8, 47, 73, ${this.opacity * 0.6})`);
+            // Subtle aquatic radial gradient
+            const grad = ctx.createRadialGradient(
+                -this.baseRadius * 0.3, -this.baseRadius * 0.3, this.baseRadius * 0.1,
+                0, 0, this.baseRadius
+            );
+            grad.addColorStop(0, `rgba(255, 255, 255, ${this.opacity * 1.5})`);
+            grad.addColorStop(0.5, `rgba(56, 189, 248, ${this.opacity * 0.8})`);
+            grad.addColorStop(1, `rgba(2, 132, 199, ${this.opacity * 0.3})`);
 
-                ctx.fillStyle = grad;
-                ctx.fill();
+            ctx.fillStyle = grad;
+            ctx.fill();
 
-                // Luminous outer rim
-                ctx.strokeStyle = `rgba(186, 230, 253, ${this.opacity * 0.9})`;
-                ctx.lineWidth = 1.0;
-                ctx.stroke();
+            // Crystalline outer rim
+            ctx.strokeStyle = `rgba(2, 132, 199, ${this.opacity * 0.9})`;
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
 
-                // Glare highlight dot
-                ctx.beginPath();
-                ctx.arc(-rx * 0.38, -ry * 0.38, rx * 0.25, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity * 0.95})`;
-                ctx.fill();
-
-                // Bottom bounce glow
-                ctx.beginPath();
-                ctx.arc(rx * 0.3, ry * 0.35, rx * 0.18, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(186, 230, 253, ${this.opacity * 0.5})`;
-                ctx.fill();
-            } else {
-                // Large Hero 3D Refractive Bubble (High fidelity matching reference image)
-                // 1. Outer Darker Refractive Depth Shadow
-                ctx.beginPath();
-                ctx.ellipse(0, 0, rx + 1.5, ry + 1.5, 0, 0, Math.PI * 2);
-                ctx.strokeStyle = `rgba(7, 89, 133, ${this.opacity * 0.7})`;
-                ctx.lineWidth = 2.0;
-                ctx.stroke();
-
-                // 2. Translucent Core Sphere Gradient
-                ctx.beginPath();
-                ctx.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2);
-
-                const gradHero = ctx.createRadialGradient(
-                    -rx * 0.35, -ry * 0.35, rx * 0.05,
-                    0, 0, rx
-                );
-                gradHero.addColorStop(0, `rgba(255, 255, 255, ${this.opacity * 0.85})`);
-                gradHero.addColorStop(0.2, `rgba(186, 230, 253, ${this.opacity * 0.5})`);
-                gradHero.addColorStop(0.65, `rgba(14, 165, 233, ${this.opacity * 0.2})`);
-                gradHero.addColorStop(0.9, `rgba(2, 132, 199, ${this.opacity * 0.45})`);
-                gradHero.addColorStop(1, `rgba(3, 105, 161, ${this.opacity * 0.8})`);
-
-                ctx.fillStyle = gradHero;
-                ctx.fill();
-
-                // 3. Crisp Glassy Rim
-                ctx.strokeStyle = `rgba(255, 255, 255, ${this.opacity * 0.95})`;
-                ctx.lineWidth = 1.5;
-                ctx.stroke();
-
-                // 4. Primary Specular Sun Crescent Glare (Top Left)
-                ctx.beginPath();
-                ctx.ellipse(-rx * 0.4, -ry * 0.4, rx * 0.35, ry * 0.2, -Math.PI / 4, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity * 0.95})`;
-                ctx.shadowColor = 'rgba(255, 255, 255, 0.9)';
-                ctx.shadowBlur = 6;
-                ctx.fill();
-
-                // 5. Secondary Glare Point
-                ctx.beginPath();
-                ctx.arc(-rx * 0.15, -ry * 0.55, rx * 0.12, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity * 0.85})`;
-                ctx.fill();
-
-                // 6. Bottom Internal Light Reflection
-                ctx.beginPath();
-                ctx.ellipse(rx * 0.35, ry * 0.38, rx * 0.32, ry * 0.16, -Math.PI / 4, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(125, 211, 252, ${this.opacity * 0.65})`;
-                ctx.shadowBlur = 0;
-                ctx.fill();
-            }
+            // Tiny specular reflection dot
+            ctx.beginPath();
+            ctx.arc(-this.baseRadius * 0.35, -this.baseRadius * 0.35, this.baseRadius * 0.2, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity * 1.8})`;
+            ctx.fill();
 
             ctx.restore();
         }
     }
 
-    // Underwater Sunlight Ray Beams (Sunlight filtering through pool water)
-    function drawSunbeams() {
-        const sourceX = width * 0.5;
-        const sourceY = -20;
-        const raysCount = 5;
-
-        ctx.save();
-        for (let i = 0; i < raysCount; i++) {
-            const angleOffset = (i - (raysCount - 1) / 2) * 0.28 + Math.sin(time * 0.0008 + i) * 0.05;
-            const length = height * 1.3;
-            const spread = 70 + Math.sin(time * 0.0012 + i) * 20;
-
-            const targetX = sourceX + Math.sin(angleOffset) * length;
-            const targetY = sourceY + Math.cos(angleOffset) * length;
-
-            const rayGrad = ctx.createLinearGradient(sourceX, sourceY, targetX, targetY);
-            const rayAlpha = 0.07 + Math.sin(time * 0.001 + i * 1.2) * 0.03;
-            rayGrad.addColorStop(0, `rgba(255, 255, 255, ${rayAlpha * 1.8})`);
-            rayGrad.addColorStop(0.3, `rgba(125, 211, 252, ${rayAlpha})`);
-            rayGrad.addColorStop(1, 'rgba(2, 132, 199, 0)');
-
-            ctx.beginPath();
-            ctx.moveTo(sourceX - 25, sourceY);
-            ctx.lineTo(sourceX + 25, sourceY);
-            ctx.lineTo(targetX + spread, targetY);
-            ctx.lineTo(targetX - spread, targetY);
-            ctx.closePath();
-
-            ctx.fillStyle = rayGrad;
-            ctx.fill();
-        }
-        ctx.restore();
-    }
-
     resize();
-    const count = Math.min(65, Math.max(35, Math.floor(width / 22)));
-    const bubbles = Array.from({ length: count }, () => new RealisticBubble(true));
+    const count = Math.min(48, Math.max(24, Math.floor(width / 26)));
+    const bubbles = Array.from({ length: count }, () => new CrystalBubble(true));
 
     function animate() {
         if (!isVisible) return;
-        time++;
         ctx.clearRect(0, 0, width, height);
 
-        // 1. Draw shimmering sunbeams
-        drawSunbeams();
-
-        // 2. Draw all layers of bubbles
         for (let i = 0; i < bubbles.length; i++) {
             bubbles[i].update();
             bubbles[i].draw();
