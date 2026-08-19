@@ -502,7 +502,8 @@ const PRODUCT_PACKAGING_IMAGES = {
     sf: 'assets/img/sf-bag.jpg',
     sd: 'assets/img/sd-bucket.png',
     ss: 'assets/img/ss-bucket.png',
-    latex: 'assets/img/latex-bucket.png'
+    latex: 'assets/img/latex-bucket.png',
+    granite: 'assets/img/super-granite-bucket.jpg'
 };
 
 function openProductModal(prodCode) {
