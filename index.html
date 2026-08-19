@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=17.0">
+    <link rel="stylesheet" href="styles.css?v=18.0">
 </head>
 <body>
 
@@ -122,10 +122,10 @@
                 
                 <!-- FILTER PILLS -->
                 <div class="catalog-filters reveal delay-100">
-                    <button class="filter-pill active" onclick="filterCategory('todos', this)">Todos (6)</button>
+                    <button class="filter-pill active" onclick="filterCategory('todos', this)">Todos (7)</button>
                     <button class="filter-pill" onclick="filterCategory('piscinas', this)">Piscinas (Cuarzo)</button>
                     <button class="filter-pill" onclick="filterCategory('adherencia', this)">Puentes de Unión</button>
-                    <button class="filter-pill" onclick="filterCategory('bordes', this)">Bordes Atérmicos</button>
+                    <button class="filter-pill" onclick="filterCategory('bordes', this)">Bordes & Terrazas</button>
                     <button class="filter-pill" onclick="filterCategory('resina', this)">Resinas Texturadas</button>
                     <button class="filter-pill" onclick="filterCategory('microcemento', this)">Microcemento</button>
                     <button class="filter-pill" onclick="filterCategory('aditivos', this)">Aditivos & Látex</button>
@@ -362,6 +362,46 @@
                         <div class="prod-actions">
                             <button class="btn-sm-primary" onclick="openProductModal('latex')">Ver Ficha Técnica (PDF)</button>
                             <button class="btn-sm-secondary" onclick="scrollToCalculator('latex')">Calcular Insumos (m²)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 7: SÚPER GRANITE (NUEVO LANZAMIENTO) -->
+                <div class="product-card-horizontal reveal delay-400" data-cat="bordes">
+                    <div class="prod-photo-col">
+                        <img src="assets/img/super-granite-bucket.jpg" alt="Envase Oficial Súper Granite® / Super Resin Granite 2.34L">
+                    </div>
+                    <div class="prod-info-col">
+                        <div>
+                            <div class="prod-brand-header">
+                                <span class="prod-brand-text" style="color: #0369A1;">SÚPER GRANITE®</span>
+                                <span class="prod-type-tag" style="background: #FEF3C7; color: #B45309; border: 1px solid #FCD34D;">¡NUEVO LANZAMIENTO!</span>
+                            </div>
+                            <p class="prod-headline">Revestimiento continuo bicomponente de granito natural y resina elástica con filtro UV. Ideal para terrazas, soláriums y bordes exteriores de alta gama resistentes a la intemperie.</p>
+                            
+                            <table class="specs-table">
+                                <tr>
+                                    <td class="spec-title">Presentación</td>
+                                    <td class="spec-val">Kit Bicomponente (Parte A Resina Base 2.34 L + Parte B Agregados)</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Rendimiento</td>
+                                    <td class="spec-val">3.5 m² a 4.0 m² por kit completo</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Protección UV</td>
+                                    <td class="spec-val">100% Resistente a radiación solar directa sin decoloración ni amarilleo</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Terminación</td>
+                                    <td class="spec-val">Granito natural continuo, textura atérmica y antideslizante</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="prod-actions">
+                            <button class="btn-sm-primary" onclick="openProductModal('granite')">Ver Ficha Técnica (PDF)</button>
+                            <button class="btn-sm-secondary" onclick="scrollToCalculator('sf')">Calcular Insumos (m²)</button>
                         </div>
                     </div>
                 </div>
@@ -1197,6 +1237,6 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script src="app.js?v=17.0"></script>
+    <script src="app.js?v=18.0"></script>
 </body>
 </html>

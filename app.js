@@ -176,6 +176,33 @@ const OFFICIAL_PRODUCTS = {
         ],
         application: 'Homogeneizar antes de usar. Diluir en el agua de amasado en proporción recomendada según el tipo de mortero. No aplicar puro sobre superficies sin mezclar con cemento o arena.',
         datasheetPdf: 'Ficha_Tecnica_SuperLatex_Aditivos.pdf'
+    },
+    granite: {
+        id: 'granite',
+        code: 'granite',
+        name: 'SÚPER GRANITE®',
+        subName: 'Revestimiento Granítico & Resina UV',
+        category: 'bordes',
+        badge: '¡NUEVO LANZAMIENTO!',
+        badgeClass: 'badge-sf',
+        headline: 'Revestimiento continuo bicomponente de granito natural y resina elástica con máxima protección solar UV.',
+        description: 'Súper Granite® (Super Resin Granite) es la nueva innovación de Ingeprex para exteriores de alta gama. Combina áridos de granito seleccionados con una resina polimérica elástica resistente a la radiación ultravioleta, evitando amarilleos y desprendimientos en terrazas, bordes y soláriums.',
+        specs: {
+            presentacion: 'Kit Bicomponente (Parte A Resina Base 2.34 L + Parte B Agregados & Catalizador)',
+            rendimiento: '3.5 a 4.0 m² por kit completo',
+            espesor: '2 mm a 4 mm continuo',
+            durabilidad: 'Mayor a 15 años (Garantía Ingeprex)',
+            colores: 'Granito Gris Urbano, Arena Dorada, Blanco Marfil, Piedra Grafito',
+            resistencia: '100% Resistente a radiación UV, atérmico, antideslizante y flexible'
+        },
+        features: [
+            'Fórmula elastomérica modificada con bloqueador de rayos UV.',
+            'Textura continua de granito natural suave para caminar descalzo.',
+            'Ideal para soláriums, terrazas, veredas perimetrales y accesos exteriores.',
+            'Excelente anclaje sobre hormigón nuevo o pisos existentes preparados.'
+        ],
+        application: 'Limpiar el sustrato. Mezclar la Parte A Resina Base (2.34 L) con los agregados y catalizador hasta lograr una pasta fluida y homogénea. Aplicar con llana de acero inoxidable compactando uniformemente y dejar secar 24h.',
+        datasheetPdf: 'Ficha_Tecnica_SuperGranite_Resina_UV.pdf'
     }
 };
 
