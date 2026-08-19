@@ -2592,22 +2592,24 @@ a {
 }
 
 /* ==========================================================================
-   15. SECCIÓN CAPACITACIÓN & CERTIFICACIÓN OFICIAL INGEPREX
+/* ==========================================================================
+   15. SECCIÓN CAPACITACIÓN & CERTIFICACIÓN OFICIAL INGEPREX (CLEAN INSTITUTIONAL)
    ========================================================================== */
 .section-certificacion {
-    padding: 90px 0;
-    background: #0F172A;
-    color: #FFFFFF;
+    padding: 85px 0;
+    background: #F8FAFC !important;
+    color: #1E293B;
     position: relative;
-    border-top: 1px solid rgba(56, 189, 248, 0.15);
+    border-top: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
 }
 
 .section-certificacion .head-title {
-    color: #FFFFFF !important;
+    color: #0F172A !important;
 }
 
 .section-certificacion .head-desc {
-    color: #CBD5E1 !important;
+    color: #475569 !important;
 }
 
 .cert-grid {
@@ -2625,36 +2627,36 @@ a {
 }
 
 .cert-program-card {
-    background: #1E293B;
-    border: 1px solid #334155;
-    border-radius: 20px;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 16px;
     padding: 32px;
-    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.02);
 }
 
 .cert-badge-header {
     display: inline-flex;
     gap: 8px;
     align-items: center;
-    background: rgba(2, 132, 199, 0.2);
-    border: 1px solid rgba(56, 189, 248, 0.4);
-    color: #38BDF8;
+    background: #EFF6FF !important;
+    border: 1px solid #BFDBFE !important;
+    color: #0284C7 !important;
     padding: 6px 14px;
     border-radius: 30px;
-    font-size: 12.5px;
+    font-size: 12px;
     font-weight: 700;
     margin-bottom: 16px;
 }
 
 .cert-program-title {
-    font-size: 24px;
-    color: #FFFFFF;
+    font-size: 23px;
+    color: #0F172A !important;
     margin: 0 0 10px 0;
     font-weight: 800;
 }
 
 .cert-program-desc {
-    color: #94A3B8;
+    color: #64748B !important;
     font-size: 14.5px;
     line-height: 1.6;
     margin-bottom: 24px;
@@ -2671,83 +2673,40 @@ a {
     display: flex;
     gap: 16px;
     align-items: flex-start;
-    background: rgba(15, 23, 42, 0.65);
+    background: #F8FAFC !important;
     padding: 14px 18px;
-    border-radius: 12px;
-    border-left: 3px solid #0284C7;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border: 1px solid #E2E8F0 !important;
+    border-left: 4px solid #0284C7 !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cert-mod-item:hover {
+    background: #FFFFFF !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    transform: translateX(2px);
 }
 
 .mod-num {
-    font-size: 16px;
-    font-weight: 900;
-    color: #38BDF8;
-    font-family: monospace;
+    font-size: 15px;
+    font-weight: 800;
+    color: #0284C7 !important;
+    font-family: var(--font-heading);
     line-height: 1.4;
 }
 
 .mod-info strong {
     display: block;
-    color: #F8FAFC;
+    color: #0F172A !important;
     font-size: 14.5px;
     margin-bottom: 3px;
+    font-weight: 700;
 }
 
 .mod-info span {
-    color: #94A3B8;
+    color: #475569 !important;
     font-size: 13px;
     line-height: 1.45;
-}
-
-.cert-benefits-box {
-    background: rgba(2, 132, 199, 0.08);
-    border: 1px solid rgba(56, 189, 248, 0.25);
-    border-radius: 14px;
-    padding: 22px 24px;
-    margin-bottom: 24px;
-}
-
-.cert-benefits-box h4 {
-    color: #FFFFFF;
-    font-size: 15px;
-    font-weight: 700;
-    margin: 0 0 16px 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding-bottom: 10px;
-}
-
-.cert-benefits-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.benefit-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 13.5px;
-    line-height: 1.5;
-}
-
-.benefit-icon {
-    color: #38BDF8;
-    font-size: 14px;
-    margin-top: 3px;
-    flex-shrink: 0;
-}
-
-.benefit-content {
-    color: #CBD5E1;
-}
-
-.benefit-content strong {
-    color: #F8FAFC;
-    font-weight: 700;
-    margin-right: 6px;
 }
 
 .cert-cta-row {
@@ -2760,29 +2719,29 @@ a {
     justify-content: center;
     gap: 10px;
     width: 100%;
-    background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
-    color: #FFFFFF;
-    padding: 16px 24px;
-    border-radius: 12px;
+    background: #0F172A !important;
+    color: #FFFFFF !important;
+    padding: 15px 24px;
+    border-radius: 10px;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 14.5px;
     text-decoration: none;
-    box-shadow: 0 8px 24px rgba(2, 132, 199, 0.4);
-    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15);
+    transition: all 0.2s ease;
 }
 
 .btn-cert-primary:hover {
-    background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);
+    background: #0284C7 !important;
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(14, 165, 233, 0.5);
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.3);
 }
 
 .cert-showcase-card {
-    background: #1E293B;
-    border: 1px solid #334155;
-    border-radius: 20px;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 16px;
     padding: 24px;
-    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.02);
 }
 
 .cert-showcase-head {
@@ -2791,13 +2750,13 @@ a {
     align-items: center;
     margin-bottom: 16px;
     padding-bottom: 12px;
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid #F1F5F9;
 }
 
 .showcase-title {
-    font-size: 15.5px;
+    font-size: 15px;
     font-weight: 700;
-    color: #FFFFFF;
+    color: #0F172A !important;
     margin: 0;
     display: flex;
     align-items: center;
@@ -2806,24 +2765,25 @@ a {
 
 .showcase-tag {
     font-size: 11.5px;
-    color: #38BDF8;
-    background: rgba(56, 189, 248, 0.15);
-    padding: 4px 10px;
+    color: #0284C7 !important;
+    background: #EFF6FF !important;
+    border: 1px solid #BFDBFE;
+    padding: 3px 10px;
     border-radius: 20px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 /* Featured Single Photo Card & Thumbs Row */
 .cert-featured-photo {
     position: relative;
-    border-radius: 14px;
+    border-radius: 12px;
     overflow: hidden;
     height: 250px;
     cursor: pointer;
-    border: 1px solid #334155;
+    border: 1px solid #E2E8F0;
     background: #0F172A;
     margin-bottom: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
 }
 
 .cert-featured-photo img {
@@ -2835,7 +2795,7 @@ a {
 }
 
 .cert-featured-photo:hover img {
-    transform: scale(1.04);
+    transform: scale(1.03);
 }
 
 .cert-featured-badge {
@@ -2867,8 +2827,8 @@ a {
 }
 
 .cert-thumb-btn {
-    background: #0F172A;
-    border: 1.5px solid #334155;
+    background: #F8FAFC !important;
+    border: 1px solid #E2E8F0 !important;
     border-radius: 8px;
     padding: 6px 8px;
     display: flex;
@@ -2892,7 +2852,7 @@ a {
 .cert-thumb-btn span {
     font-size: 11px;
     font-weight: 600;
-    color: #94A3B8;
+    color: #475569 !important;
     line-height: 1.2;
     white-space: nowrap;
     overflow: hidden;
@@ -2901,24 +2861,24 @@ a {
 }
 
 .cert-thumb-btn:hover {
-    border-color: #38BDF8;
-    background: #1E293B;
+    border-color: #0284C7 !important;
+    background: #F1F5F9 !important;
 }
 
 .cert-thumb-btn.active {
-    border-color: #0284C7;
-    background: rgba(2, 132, 199, 0.25);
+    border-color: #0284C7 !important;
+    background: #EFF6FF !important;
 }
 
 .cert-thumb-btn.active span {
-    color: #38BDF8;
+    color: #0284C7 !important;
     font-weight: 700;
 }
 
 /* Future Training Banner (Ingeprex Argentina) */
 .cert-future-banner {
-    background: linear-gradient(135deg, rgba(2, 132, 199, 0.12) 0%, rgba(15, 23, 42, 0.85) 100%);
-    border: 1px solid rgba(56, 189, 248, 0.3);
+    background: #F0F9FF !important;
+    border: 1px solid #BAE6FD !important;
     border-radius: 12px;
     padding: 16px 18px;
     display: flex;
@@ -2928,22 +2888,22 @@ a {
 
 .future-icon {
     font-size: 22px;
-    color: #38BDF8;
+    color: #0284C7 !important;
     margin-top: 2px;
     flex-shrink: 0;
 }
 
 .future-text h5 {
-    color: #FFFFFF;
+    color: #0369A1 !important;
     font-size: 13.5px;
-    font-weight: 700;
+    font-weight: 800;
     margin: 0 0 5px 0;
 }
 
 .future-text p {
-    color: #CBD5E1;
-    font-size: 12px;
-    line-height: 1.45;
+    color: #334155 !important;
+    font-size: 12.5px;
+    line-height: 1.5;
     margin: 0 0 10px 0;
 }
 
@@ -2956,14 +2916,18 @@ a {
 .future-chips span {
     font-size: 11px;
     font-weight: 600;
-    color: #F8FAFC;
-    background: rgba(255, 255, 255, 0.08);
-    padding: 3px 9px;
+    color: #0369A1 !important;
+    background: #FFFFFF !important;
+    padding: 4px 10px;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid #BAE6FD !important;
     display: inline-flex;
     align-items: center;
     gap: 5px;
+}
+
+.future-chips span i {
+    color: #16A34A !important;
 }
 
 .flyer-zoom-cta {
