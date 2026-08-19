@@ -1279,6 +1279,10 @@ const HERO_POOLS = {
         src: 'assets/img/hero_real_cool.jpg',
         title: 'Obra Real: Súper Brite® Cool Blue'
     },
+    marlyn: {
+        src: 'assets/img/hero_real_marlyn.jpg',
+        title: 'Obra Real: Súper Brite® Marlyn Blue'
+    },
     onyx: {
         src: 'assets/img/hero_real_onyx.jpg',
         title: 'Obra Real: Súper Brite® Onyx Blue'

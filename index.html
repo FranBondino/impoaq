@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=20.0">
+    <link rel="stylesheet" href="styles.css?v=21.0">
 </head>
 <body>
 
@@ -98,14 +98,21 @@
                     <span id="hero-badge-text">Obra Real: Súper Brite® Tahoe Blue</span>
                 </div>
 
-                <a href="#galeria" class="hero-gallery-badge" title="Ir a Galería Multimedia Completa">
-                    <i class="fa-solid fa-images text-cyan"></i>
-                    <span class="gallery-badge-text">Ver Galería Multimedia</span>
-                </a>
+                <div class="hero-badges-corner-right">
+                    <button type="button" class="hero-video-badge" onclick="openVideoModal('assets/videos/video_new_launch_2.mp4', 'Piscina Monumental Tipo Resort con Solárium', 'Obra de gran envergadura revestida con cuarzo continuo Súper Brite® y solárium atérmico.', 'Video de Obra Real', '#0284C7')" title="Reproducir video de obra real en alta definición">
+                        <span class="hero-play-pulse"><i class="fa-solid fa-play"></i></span>
+                        <span class="video-badge-text">Ver Obra en Video</span>
+                    </button>
+                    <a href="#galeria" class="hero-gallery-badge" title="Ir a Galería Multimedia Completa">
+                        <i class="fa-solid fa-images text-cyan"></i>
+                        <span class="gallery-badge-text">Ver Galería Multimedia</span>
+                    </a>
+                </div>
 
                 <div class="hero-pool-switcher">
                     <button class="hero-switch-btn active" onclick="switchHeroPool('tahoe')">Tahoe Blue</button>
                     <button class="hero-switch-btn" onclick="switchHeroPool('cool')">Cool Blue</button>
+                    <button class="hero-switch-btn" onclick="switchHeroPool('marlyn')">Marlyn Blue</button>
                     <button class="hero-switch-btn" onclick="switchHeroPool('onyx')">Onyx Blue</button>
                 </div>
             </div>
@@ -1221,6 +1228,6 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script src="app.js?v=20.0"></script>
+    <script src="app.js?v=21.0"></script>
 </body>
 </html>
