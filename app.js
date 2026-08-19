@@ -180,29 +180,30 @@ const OFFICIAL_PRODUCTS = {
     granite: {
         id: 'granite',
         code: 'granite',
-        name: 'SÚPER GRANITE®',
-        subName: 'Revestimiento Granítico & Resina UV',
+        name: 'SÚPER GRANITE® SHINY',
+        subName: 'Revestimiento Granítico con Destellos Shiny & Resina UV',
         category: 'bordes',
-        badge: '¡NUEVO LANZAMIENTO!',
+        badge: 'LÍNEA EXTERIORES & BORDES',
         badgeClass: 'badge-sf',
-        headline: 'Revestimiento continuo bicomponente de granito natural y resina elástica con máxima protección solar UV.',
-        description: 'Súper Granite® (Super Resin Granite) es la nueva innovación de Ingeprex para exteriores de alta gama. Combina áridos de granito seleccionados con una resina polimérica elástica resistente a la radiación ultravioleta, evitando amarilleos y desprendimientos en terrazas, bordes y soláriums.',
+        headline: 'Revestimiento continuo bicomponente de granito natural con efecto Shiny (destellos minerales) y resina elástica con filtro UV.',
+        description: 'Súper Granite® Shiny (Super Resin Granite Shiny) es el nuevo lanzamiento exclusivo de Ingeprex para exteriores de alta gama. Combina áridos de granito seleccionados con partículas reflectivas minerales y una resina polimérica elástica 100% resistente a los rayos UV, logrando una terminación atérmica brillante, antideslizante y suave al tacto para terrazas y soláriums.',
         specs: {
-            presentacion: 'Kit Bicomponente (Parte A Resina Base 2.34 L + Parte B Agregados & Catalizador)',
+            presentacion: 'Kit Bicomponente (Parte A Resina Base 2.34 L + Parte B Agregados Shiny & Catalizador)',
             rendimiento: '3.5 a 4.0 m² por kit completo',
             espesor: '2 mm a 4 mm continuo',
             durabilidad: 'Mayor a 15 años (Garantía Ingeprex)',
-            colores: 'Granito Gris Urbano, Arena Dorada, Blanco Marfil, Piedra Grafito',
+            colores: 'Granito Shiny Gris Urbano, Arena Dorada, Blanco Marfil, Piedra Grafito',
             resistencia: '100% Resistente a radiación UV, atérmico, antideslizante y flexible'
         },
         features: [
+            'Efecto Shiny: partículas reflectivas minerales que resaltan con la luz natural.',
             'Fórmula elastomérica modificada con bloqueador de rayos UV.',
             'Textura continua de granito natural suave para caminar descalzo.',
             'Ideal para soláriums, terrazas, veredas perimetrales y accesos exteriores.',
             'Excelente anclaje sobre hormigón nuevo o pisos existentes preparados.'
         ],
-        application: 'Limpiar el sustrato. Mezclar la Parte A Resina Base (2.34 L) con los agregados y catalizador hasta lograr una pasta fluida y homogénea. Aplicar con llana de acero inoxidable compactando uniformemente y dejar secar 24h.',
-        datasheetPdf: 'Ficha_Tecnica_SuperGranite_Resina_UV.pdf'
+        application: 'Limpiar el sustrato. Mezclar la Parte A Resina Base (2.34 L) con los agregados Shiny y catalizador hasta lograr una pasta fluida y homogénea. Aplicar con llana de acero inoxidable compactando uniformemente y dejar secar 24h.',
+        datasheetPdf: 'Ficha_Tecnica_SuperGranite_Shiny_Resina_UV.pdf'
     }
 };
 
@@ -1042,12 +1043,12 @@ const GALLERY_ITEMS = [
     {
         type: 'video',
         id: 'v_resingranite',
-        title: 'Super Resin Granite Aislante UV (3D)',
+        title: 'Súper Granite® Shiny (Super Resin Granite 3D)',
         category: 'renders',
-        tag: 'Resinas 3D',
-        tagBg: '#DC2626',
+        tag: 'Granite Shiny',
+        tagBg: '#881337',
         badge: '<i class="fa-solid fa-cube"></i> RENDER 3D',
-        desc: 'Resina elástica resistente a la intemperie, rayos solares y agentes químicos.',
+        desc: 'Nuevo revestimiento granítico continuo con destellos Shiny y resina elástica con bloqueador solar UV.',
         thumb: 'assets/gallery/thumbs/v_resingranite.jpg',
         video: 'assets/gallery/videos/v_resingranite.mp4'
     },
