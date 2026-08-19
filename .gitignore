@@ -2,6 +2,7 @@ node_modules/
 *.png
 *.jpg
 !assets/**
+!screenshots/**
 extracted_downloads/
 *.ps1
 *.py

@@ -195,6 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCatalogFilter();
     initModalListeners();
     initGalleryHandlers();
+    initFaqAccordion();
 });
 
 
@@ -1353,7 +1354,7 @@ function initMobileMenu() {
         const dropdownItem = navMenu.querySelector('.nav-item-dropdown');
         if (dropdownItem) {
             dropdownItem.addEventListener('click', (e) => {
-                if (window.innerWidth <= 900) {
+                if (window.innerWidth <= 1080) {
                     dropdownItem.classList.toggle('active');
                 }
             });
@@ -1379,27 +1380,80 @@ function initMobileMenu() {
 }
 
 function submitContactForm() {
-    const nombre = document.getElementById('c-nombre')?.value || "";
-    const telefono = document.getElementById('c-telefono')?.value || "";
-    const tipo = document.getElementById('c-tipo')?.value || "Cliente Particular";
-    const mensaje = document.getElementById('c-mensaje')?.value || "";
+    const nombre = document.getElementById('c-nombre')?.value.trim() || "";
+    const tipo = document.getElementById('c-tipo')?.value || "Constructora / Arquitecto";
+    const telefono = document.getElementById('c-telefono')?.value.trim() || "";
+    const localidad = document.getElementById('c-localidad')?.value.trim() || "No especificada";
+    const mensaje = document.getElementById('c-mensaje')?.value.trim() || "";
+
+    if (!nombre || !telefono || !mensaje) {
+        alert("Por favor complete los campos obligatorios (*)");
+        return;
+    }
 
     const textWhatsApp = 
 `📩 *NUEVA CONSULTA DESDE LA WEB IMPOACUATIQ*
 
 👤 *Nombre / Empresa:* ${nombre}
-📞 *Teléfono:* ${telefono}
-🏢 *Tipo de Cliente:* ${tipo}
-📝 *Consulta / Proyecto:*
+🏢 *Perfil / Rubro:* ${tipo}
+📞 *Teléfono / WhatsApp:* ${telefono}
+📍 *Localidad:* ${localidad}
+📝 *Detalle del Proyecto / Insumos:*
 "${mensaje}"`;
 
     const url = `https://wa.me/5493416825470?text=${encodeURIComponent(textWhatsApp)}`;
     
-    alert(`¡Gracias ${nombre}! Tu consulta ha sido enviada. Te derivaremos a WhatsApp con el canal de atención oficial de ImpoAcuatiq.`);
     window.open(url, '_blank');
 
     const form = document.getElementById('contact-form');
     if (form) form.reset();
+}
+
+function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    if (!item) return;
+
+    const isOpen = item.classList.contains('active');
+    const allItems = document.querySelectorAll('.faq-item');
+
+    allItems.forEach(i => {
+        i.classList.remove('active');
+        const q = i.querySelector('.faq-question');
+        const a = i.querySelector('.faq-answer');
+        if (q) q.setAttribute('aria-expanded', 'false');
+        if (a) a.style.maxHeight = null;
+    });
+
+    if (!isOpen) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+        const answer = item.querySelector('.faq-answer');
+        if (answer) {
+            answer.style.maxHeight = answer.scrollHeight + 40 + 'px';
+        }
+    }
+}
+
+function initFaqAccordion() {
+    const activeItem = document.querySelector('.faq-item.active');
+    if (activeItem) {
+        const answer = activeItem.querySelector('.faq-answer');
+        if (answer) {
+            answer.style.maxHeight = answer.scrollHeight + 40 + 'px';
+        }
+    }
+}
+
+function selectColorAndCalc(colorName) {
+    if (typeof scrollToCalculator === 'function') {
+        scrollToCalculator('sb');
+    } else {
+        const select = document.getElementById('producto-select');
+        if (select) select.value = 'sb';
+        if (typeof setCalcType === 'function') setCalcType('piscina');
+        const calc = document.getElementById('calculadora');
+        if (calc) calc.scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
 // ==========================================================================
@@ -1716,3 +1770,6 @@ window.filterCategory = filterCategory;
 window.submitContactForm = submitContactForm;
 window.initHeroBubbles = initHeroBubbles;
 window.initBeforeAfterSlider = initBeforeAfterSlider;
+window.toggleFaq = toggleFaq;
+window.initFaqAccordion = initFaqAccordion;
+window.selectColorAndCalc = selectColorAndCalc;

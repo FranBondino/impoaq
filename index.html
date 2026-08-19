@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=12.0">
+    <link rel="stylesheet" href="styles.css?v=13.0">
 </head>
 <body>
 
@@ -428,11 +428,182 @@
         <div class="container">
             <div class="section-head text-center reveal">
                 <span class="section-tag">Gama Cromática Exclusiva</span>
-                <h2 class="head-title">Catálogo de Tonos y Pigmentaciones de Cuarzo</h2>
-                <p class="head-desc">Súper Brite® ofrece mezclas de cristales de cuarzo natural seleccionados que reaccionan con la luz solar generando el reflejo de agua cristalina deseado.</p>
+                <h2 class="head-title">Catálogo de Tonos y Cristales de Cuarzo</h2>
+                <p class="head-desc">Súper Brite® ofrece mezclas de cristales de cuarzo natural 99% puro seleccionados que reaccionan con la radiación solar generando el reflejo de agua cristalina deseado.</p>
             </div>
 
-            <!-- CARTA CROMÁTICA BOX CON CTAS -->
+            <!-- GRILLA DE 6 MUESTRAS DE CRISTALES DE CUARZO -->
+            <div class="color-swatches-grid reveal">
+                <!-- SWATCH 1: TAHOE BLUE -->
+                <div class="swatch-card">
+                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_tahoe_swatch.jpg', 'Cuarzo Súper Brite® Tahoe Blue', 'Muestra de cuarzo azul profundo con reflejos zafiro de alta luminosidad solar.', 'Gama Cromática', '#0284C7')">
+                        <img src="assets/gallery/photos/p_cuarzo_tahoe_swatch.jpg" alt="Muestra de cuarzo Tahoe Blue Súper Brite" loading="lazy">
+                        <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="swatch-body">
+                        <div class="swatch-header">
+                            <span class="swatch-purity-badge"><i class="fa-solid fa-gem text-cyan"></i> 99% Cuarzo Natural</span>
+                            <h3 class="swatch-title">Tahoe Blue (Azul Tahoe)</h3>
+                            <p class="swatch-desc">Tonalidad azul profundo con reflejos zafiro de alta intensidad bajo radiación solar directa.</p>
+                        </div>
+                        <div class="swatch-props">
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Reflejo del Agua:</span>
+                                <span class="swatch-prop-val">Azul Zafiro Intenso</span>
+                            </div>
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Terminación:</span>
+                                <span class="swatch-prop-val">Sedoso Antideslizante</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Tahoe Blue')">
+                            <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SWATCH 2: COOL BLUE -->
+                <div class="swatch-card">
+                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_cool_swatch.jpg', 'Cuarzo Súper Brite® Cool Blue', 'Muestra de cuarzo celeste cristalino que reproduce el tono turquesa caribeño.', 'Gama Cromática', '#0284C7')">
+                        <img src="assets/gallery/photos/p_cuarzo_cool_swatch.jpg" alt="Muestra de cuarzo Cool Blue Súper Brite" loading="lazy">
+                        <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="swatch-body">
+                        <div class="swatch-header">
+                            <span class="swatch-purity-badge"><i class="fa-solid fa-gem text-cyan"></i> 99% Cuarzo Natural</span>
+                            <h3 class="swatch-title">Cool Blue (Celeste Caribe)</h3>
+                            <p class="swatch-desc">Mezcla celeste cristalina que reproduce el tono turquesa caribeño en aguas poco profundas y soláriums.</p>
+                        </div>
+                        <div class="swatch-props">
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Reflejo del Agua:</span>
+                                <span class="swatch-prop-val">Celeste Turquesa Brillante</span>
+                            </div>
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Terminación:</span>
+                                <span class="swatch-prop-val">Sedoso Antideslizante</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Cool Blue')">
+                            <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SWATCH 3: MARLYN BLUE -->
+                <div class="swatch-card">
+                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_marlyn_swatch.jpg', 'Cuarzo Súper Brite® Marlyn Blue', 'Muestra de cuarzo azul índigo con gradación oceánica vibrante.', 'Gama Cromática', '#0284C7')">
+                        <img src="assets/gallery/photos/p_cuarzo_marlyn_swatch.jpg" alt="Muestra de cuarzo Marlyn Blue Súper Brite" loading="lazy">
+                        <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="swatch-body">
+                        <div class="swatch-header">
+                            <span class="swatch-purity-badge"><i class="fa-solid fa-gem text-cyan"></i> 99% Cuarzo Natural</span>
+                            <h3 class="swatch-title">Marlyn Blue (Azul Índigo)</h3>
+                            <p class="swatch-desc">Gradación oceánica vibrante ideal para piscinas de profundidad media y espejos de agua reflectivos.</p>
+                        </div>
+                        <div class="swatch-props">
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Reflejo del Agua:</span>
+                                <span class="swatch-prop-val">Azul Oceánico Vibrante</span>
+                            </div>
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Terminación:</span>
+                                <span class="swatch-prop-val">Sedoso Antideslizante</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Marlyn Blue')">
+                            <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SWATCH 4: GREY QUARTZ -->
+                <div class="swatch-card">
+                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_grey_swatch.jpg', 'Cuarzo Súper Brite® Grey Quartz', 'Muestra de cuarzo gris arquitectónico con matices verde esmeralda profundo.', 'Gama Cromática', '#0284C7')">
+                        <img src="assets/gallery/photos/p_cuarzo_grey_swatch.jpg" alt="Muestra de cuarzo Grey Quartz Súper Brite" loading="lazy">
+                        <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="swatch-body">
+                        <div class="swatch-header">
+                            <span class="swatch-purity-badge"><i class="fa-solid fa-gem text-cyan"></i> 99% Cuarzo Natural</span>
+                            <h3 class="swatch-title">Grey Quartz (Gris Esmeralda)</h3>
+                            <p class="swatch-desc">Fórmula arquitectónica contemporánea que genera matices verde esmeralda y máxima elegancia.</p>
+                        </div>
+                        <div class="swatch-props">
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Reflejo del Agua:</span>
+                                <span class="swatch-prop-val">Verde Esmeralda Profundo</span>
+                            </div>
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Terminación:</span>
+                                <span class="swatch-prop-val">Sedoso Antideslizante</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Grey Quartz')">
+                            <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SWATCH 5: BLACK QUARTZ -->
+                <div class="swatch-card">
+                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_black_swatch.jpg', 'Cuarzo Súper Brite® Black Quartz', 'Muestra de cuarzo negro noche para efecto espejo de agua profundo.', 'Gama Cromática', '#0284C7')">
+                        <img src="assets/gallery/photos/p_cuarzo_black_swatch.jpg" alt="Muestra de cuarzo Black Quartz Súper Brite" loading="lazy">
+                        <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="swatch-body">
+                        <div class="swatch-header">
+                            <span class="swatch-purity-badge"><i class="fa-solid fa-gem text-cyan"></i> 99% Cuarzo Natural</span>
+                            <h3 class="swatch-title">Black Quartz (Negro Océano)</h3>
+                            <p class="swatch-desc">Efecto espejo de agua profundo y sofisticado con absorción térmica natural para mayor confort.</p>
+                        </div>
+                        <div class="swatch-props">
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Reflejo del Agua:</span>
+                                <span class="swatch-prop-val">Azul Noche Reflectivo</span>
+                            </div>
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Terminación:</span>
+                                <span class="swatch-prop-val">Sedoso Antideslizante</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Black Quartz')">
+                            <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SWATCH 6: SAND QUARTZ -->
+                <div class="swatch-card">
+                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/thumbs/v_swatch_sand.jpg', 'Cuarzo Súper Brite® Sand Quartz', 'Muestra de cuarzo arena dorada que emula playas naturales tropicales.', 'Gama Cromática', '#0284C7')">
+                        <img src="assets/gallery/thumbs/v_swatch_sand.jpg" alt="Muestra de cuarzo Sand Quartz Súper Brite" loading="lazy">
+                        <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="swatch-body">
+                        <div class="swatch-header">
+                            <span class="swatch-purity-badge"><i class="fa-solid fa-gem text-cyan"></i> 99% Cuarzo Natural</span>
+                            <h3 class="swatch-title">Sand Quartz (Arena Dorada)</h3>
+                            <p class="swatch-desc">Cristales de cuarzo seleccionados tono arena que emulan playas naturales con reflejos verde caribe.</p>
+                        </div>
+                        <div class="swatch-props">
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Reflejo del Agua:</span>
+                                <span class="swatch-prop-val">Verde Caribe Cristalino</span>
+                            </div>
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Terminación:</span>
+                                <span class="swatch-prop-val">Sedoso Antideslizante</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Sand Quartz')">
+                            <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARTA CROMÁTICA OFICIAL BOX CON CTAS -->
             <div class="reveal-scale color-chart-box">
                 <div class="color-chart-inner">
                     <img src="assets/img/sb-colors.jpeg" alt="Catálogo de colores oficiales Súper Brite" class="color-chart-img" onclick="openLightbox('assets/img/sb-colors.jpeg', 'Catálogo Oficial de Tonos Súper Brite®', 'Muestrario de 11 mezclas de cuarzo natural y pigmentaciones para piscinas.', 'Gama Cromática', '#0284C7')" style="cursor: zoom-in;" title="Click para ampliar gama cromática en alta resolución">
@@ -770,8 +941,129 @@
         </div>
     </section>
 
+    <!-- SECCIÓN CONTACTO B2B & PREGUNTAS FRECUENTES (FAQ) -->
+    <section class="section-contact-faq" id="contacto">
+        <div class="container">
+            <div class="section-head text-center reveal">
+                <span class="section-tag">Atención Personalizada & Respuestas Técnicas</span>
+                <h2 class="head-title">Contacto Comercial & Preguntas Frecuentes</h2>
+                <p class="head-desc">Canal directo para cotizaciones de obra, incorporación de líneas a comercios, inscripciones a talleres y consultas técnicas oficiales.</p>
+            </div>
+
+            <div class="contact-faq-grid">
+                <!-- COLUMNA IZQUIERDA: FORMULARIO DE CAPTACIÓN DIRECTA -->
+                <div class="contact-form-card reveal-left">
+                    <div class="contact-form-head">
+                        <h3><i class="fa-solid fa-paper-plane text-blue"></i> Solicitud de Cotización & Asesoría</h3>
+                        <p>Completá el formulario para derivar tu consulta al canal oficial de WhatsApp con atención inmediata de nuestro equipo técnico-comercial.</p>
+                    </div>
+                    <form id="contact-form" class="contact-form-body" onsubmit="event.preventDefault(); submitContactForm();">
+                        <div class="form-group">
+                            <label for="c-nombre">Nombre y Apellido / Empresa *</label>
+                            <input type="text" id="c-nombre" class="form-control" placeholder="Ej: Arq. Marcelo Rossi / Constructora Sur" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-tipo">Perfil / Tipo de Consulta *</label>
+                            <select id="c-tipo" class="form-control" required>
+                                <option value="Constructora / Arquitecto">Constructora / Estudio de Arquitectura</option>
+                                <option value="Punto de Venta / Corralón">Punto de Venta / Corralón / Distribuidor</option>
+                                <option value="Aplicador Profesional">Aplicador / Cuadrilla de Terminaciones</option>
+                                <option value="Propietario de Piscina">Propietario Particular (Construcción o Remodelación)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-telefono">Teléfono / WhatsApp *</label>
+                            <input type="tel" id="c-telefono" class="form-control" placeholder="Ej: +54 9 11 2345-6789" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-localidad">Localidad y Provincia</label>
+                            <input type="text" id="c-localidad" class="form-control" placeholder="Ej: Rosario, Santa Fe">
+                        </div>
+                        <div class="form-group">
+                            <label for="c-mensaje">Detalle del Proyecto / Insumos Necesarios *</label>
+                            <textarea id="c-mensaje" class="form-control" placeholder="Describí m² aproximados, producto de interés (Súper Brite, Súper Kote, etc.) o consulta técnica..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-contact-submit">
+                            <i class="fa-brands fa-whatsapp text-green"></i> Enviar Consulta a WhatsApp Oficial
+                        </button>
+                        <div class="contact-rep-note">
+                            <i class="fa-solid fa-headset"></i>
+                            <span>Atención comercial directa a cargo de <strong>Lorna Pizarro Vera</strong> (Representante Técnico-Comercial Argentina).</span>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- COLUMNA DERECHA: FAQ ACCORDION -->
+                <div class="faq-col reveal-right">
+                    <div class="faq-head">
+                        <h3><i class="fa-solid fa-circle-question text-blue"></i> Preguntas Frecuentes</h3>
+                        <p>Resolución rápida a las dudas técnicas y comerciales más habituales sobre los revestimientos cementicios Ingeprex.</p>
+                    </div>
+                    <div class="faq-accordion" id="faqAccordion">
+                        
+                        <!-- FAQ 1 -->
+                        <div class="faq-item active">
+                            <button type="button" class="faq-question" aria-expanded="true" onclick="toggleFaq(this)">
+                                <span>¿Qué diferencia a Súper Brite® de la pintura o venecitas tradicionales?</span>
+                                <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                            </button>
+                            <div class="faq-answer" style="max-height: 300px;">
+                                <p>Súper Brite® es un revestimiento cementicio monolítico formulado con más del 99% de cuarzo natural seleccionado y polímeros hidrófugos. A diferencia de la pintura tradicional, no se ampolla, no se decolora con el cloro ni requiere repintado anual (vida útil superior a 10 años). Frente a las venecitas, elimina el desprendimiento de pastinas y piezas cortantes, logrando una superficie continua, atérmica y suave al tacto para pies descalzos.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="faq-item">
+                            <button type="button" class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+                                <span>¿Es necesario picar toda la pintura vieja para aplicar Súper Brite®?</span>
+                                <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>No es indispensable picar la totalidad del vaso si la estructura está firme. Se debe hidrolavar a alta presión para remover restos sueltos de pintura, desengrasar el sustrato y aplicar una capa de anclaje estructural con <strong>Súper Kote®</strong> (puente de unión bicomponente de alta adherencia). Sobre esa base rugosa se aplica directamente el revestimiento de cuarzo.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="faq-item">
+                            <button type="button" class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+                                <span>¿Qué mantenimiento químico requiere una piscina de cuarzo?</span>
+                                <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>El mantenimiento es idéntico al de cualquier piscina de alta gama: mantener el pH entre 7.2 y 7.6, y el cloro libre entre 1 y 3 ppm. La nula porosidad del cuarzo pulido dificulta enormemente la proliferación de algas y hongos, reduciendo el consumo de alguicidas y facilitando el cepillado periódico.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="faq-item">
+                            <button type="button" class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+                                <span>¿Cómo comprar directo de importador si soy constructora o comercio?</span>
+                                <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Ofrecemos esquemas de abastecimiento mayorista por pallet cerrado o volumen de obra con despacho directo desde nuestro centro logístico en Rosario a cualquier punto del país. Contactanos vía formulario o WhatsApp con los datos de tu empresa para recibir la lista de precios B2B y condiciones de distribución.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="faq-item">
+                            <button type="button" class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+                                <span>¿Cómo y cuándo puedo certificarme como aplicador oficial en Argentina?</span>
+                                <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>ImpoAcuatiq dicta talleres intensivos teórico-prácticos homologados por Ingeprex en distintas ciudades de Argentina. Al finalizar, los aplicadores reciben diploma oficial, carnet de instalador homologado, descuentos en insumos y derivación prioritaria de obras particulares en su zona geográfica.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER INSTITUCIONAL MULTI-COLUMNA -->
-    <footer class="site-footer" id="contacto">
+    <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
                 
@@ -810,22 +1102,29 @@
                     </ul>
                 </div>
 
-                <!-- COLUMNA 4: ATENCIÓN & LOGÍSTICA -->
+                <!-- COLUMNA 4: ATENCIÓN COMERCIAL & LOGÍSTICA -->
                 <div class="footer-col reveal delay-400">
                     <h4 class="footer-heading">Atención & Contacto</h4>
                     <ul class="footer-contact-list">
                         <li>
-                            <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 16px; margin-top: 3px;"></i>
+                            <i class="fa-solid fa-user-tie text-cyan" style="font-size: 15px; margin-top: 3px;"></i>
                             <div>
-                                <strong>Argentina (WhatsApp & Llamadas):</strong><br>
-                                <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20quisiera%20realizar%20una%20consulta%20comercial." target="_blank">+54 9 341-6825470</a>
+                                <strong>Lorna Pizarro Vera</strong><br>
+                                <span style="color: #94A3B8; font-size: 12px;">Representante Técnico-Comercial Argentina</span>
                             </div>
                         </li>
                         <li>
-                            <i class="fa-solid fa-phone text-blue" style="font-size: 14px; margin-top: 3px;"></i>
+                            <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 16px; margin-top: 3px;"></i>
                             <div>
-                                <strong>Chile (Planta Ingeprex):</strong><br>
-                                <a href="https://wa.me/56991359879?text=Hola%20Ingeprex,%20quisiera%20realizar%20una%20consulta." target="_blank">+56 9 91359879</a>
+                                <strong>WhatsApp & Ventas Directas:</strong><br>
+                                <a href="https://wa.me/5493416825470?text=Hola%20Lorna,%20quisiera%20realizar%20una%20consulta%20comercial%20con%20ImpoAcuatiq." target="_blank">+54 9 341-6825470</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-clock text-blue" style="font-size: 14px; margin-top: 3px;"></i>
+                            <div>
+                                <strong>Horario de Atención:</strong><br>
+                                <span style="color: #CBD5E1; font-size: 12px;">Lunes a Viernes 8:00 - 18:00 hs</span>
                             </div>
                         </li>
                         <li>
@@ -839,7 +1138,7 @@
                             <i class="fa-solid fa-truck-fast text-blue" style="font-size: 14px; margin-top: 3px;"></i>
                             <div>
                                 <strong>Logística Federal:</strong><br>
-                                <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20quisiera%20consultar%20costos%20y%20tiempos%20de%20despacho%20a%20mi%20localidad." target="_blank" style="color: #CBD5E1; text-decoration: underline; text-underline-offset: 3px;">Despachos a todo el país <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 10px;"></i></a>
+                                <span style="color: #CBD5E1; font-size: 12px;">Despachos directos a todo el país</span>
                             </div>
                         </li>
                     </ul>
@@ -911,6 +1210,6 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script src="app.js?v=12.0"></script>
+    <script src="app.js?v=13.0"></script>
 </body>
 </html>
