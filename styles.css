@@ -2601,38 +2601,54 @@ a {
 }
 
 .cert-benefits-box {
-    background: rgba(2, 132, 199, 0.1);
-    border: 1px dashed rgba(56, 189, 248, 0.35);
+    background: rgba(2, 132, 199, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.25);
     border-radius: 14px;
-    padding: 20px;
-    margin-bottom: 26px;
+    padding: 22px 24px;
+    margin-bottom: 24px;
 }
 
 .cert-benefits-box h4 {
     color: #FFFFFF;
     font-size: 15px;
-    margin: 0 0 12px 0;
+    font-weight: 700;
+    margin: 0 0 16px 0;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 10px;
 }
 
-.cert-benefits-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.cert-benefits-grid {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
-.cert-benefits-list li {
-    color: #CBD5E1;
-    font-size: 13.5px;
+.benefit-item {
     display: flex;
-    gap: 10px;
     align-items: flex-start;
-    line-height: 1.45;
+    gap: 12px;
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+
+.benefit-icon {
+    color: #38BDF8;
+    font-size: 14px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.benefit-content {
+    color: #CBD5E1;
+}
+
+.benefit-content strong {
+    color: #F8FAFC;
+    font-weight: 700;
+    margin-right: 6px;
 }
 
 .cert-cta-row {
@@ -2698,105 +2714,153 @@ a {
     font-weight: 600;
 }
 
-.cert-photo-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 18px;
-}
-
-.cert-photo-card {
+/* Featured Single Photo Card & Thumbs Row */
+.cert-featured-photo {
     position: relative;
-    border-radius: 10px;
+    border-radius: 14px;
     overflow: hidden;
-    height: 125px;
+    height: 250px;
     cursor: pointer;
     border: 1px solid #334155;
     background: #0F172A;
+    margin-bottom: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-.cert-photo-card img {
+.cert-featured-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
     display: block;
 }
 
-.cert-photo-card:hover img {
-    transform: scale(1.06);
+.cert-featured-photo:hover img {
+    transform: scale(1.04);
 }
 
-.cert-photo-overlay {
+.cert-featured-badge {
     position: absolute;
-    inset: 0;
-    background: rgba(2, 132, 199, 0.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     color: #FFFFFF;
-    font-size: 22px;
-    transition: opacity 0.2s ease;
-}
-
-.cert-photo-card:hover .cert-photo-overlay {
-    opacity: 1;
-}
-
-.cert-flyer-box {
-    background: rgba(15, 23, 42, 0.75);
-    border: 1px solid #334155;
-    border-radius: 12px;
-    padding: 14px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     display: flex;
-    gap: 14px;
     align-items: center;
+    gap: 8px;
+    z-index: 2;
+}
+
+.cert-thumbs-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.cert-thumb-btn {
+    background: #0F172A;
+    border: 1.5px solid #334155;
+    border-radius: 8px;
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     cursor: pointer;
-    transition: border-color 0.2s ease, background 0.2s ease;
+    transition: all 0.2s ease;
+    text-align: left;
 }
 
-.cert-flyer-box:hover {
-    border-color: #38BDF8;
-    background: rgba(15, 23, 42, 0.95);
-}
-
-.cert-flyer-img {
-    width: 70px;
-    height: 85px;
+.cert-thumb-btn img {
+    width: 36px;
+    height: 26px;
     object-fit: cover;
-    border-radius: 6px;
-    border: 1px solid #475569;
+    border-radius: 4px;
     flex-shrink: 0;
 }
 
-.cert-flyer-info {
-    flex: 1;
+.cert-thumb-btn span {
+    font-size: 11px;
+    font-weight: 600;
+    color: #94A3B8;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.cert-flyer-info h5 {
+.cert-thumb-btn:hover {
+    border-color: #38BDF8;
+    background: #1E293B;
+}
+
+.cert-thumb-btn.active {
+    border-color: #0284C7;
+    background: rgba(2, 132, 199, 0.25);
+}
+
+.cert-thumb-btn.active span {
+    color: #38BDF8;
+    font-weight: 700;
+}
+
+/* Future Training Banner (Ingeprex Argentina) */
+.cert-future-banner {
+    background: linear-gradient(135deg, rgba(2, 132, 199, 0.12) 0%, rgba(15, 23, 42, 0.85) 100%);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.future-icon {
+    font-size: 22px;
+    color: #38BDF8;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.future-text h5 {
     color: #FFFFFF;
-    margin: 4px 0 4px 0;
     font-size: 13.5px;
     font-weight: 700;
+    margin: 0 0 5px 0;
 }
 
-.cert-flyer-info p {
-    color: #94A3B8;
-    margin: 0 0 6px 0;
+.future-text p {
+    color: #CBD5E1;
     font-size: 12px;
-    line-height: 1.4;
+    line-height: 1.45;
+    margin: 0 0 10px 0;
 }
 
-.flyer-badge {
-    font-size: 10.5px;
-    color: #F59E0B;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.future-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.future-chips span {
+    font-size: 11px;
+    font-weight: 600;
+    color: #F8FAFC;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 3px 9px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
     display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: 5px;
 }
 
 .flyer-zoom-cta {

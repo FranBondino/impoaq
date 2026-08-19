@@ -739,66 +739,18 @@ const GALLERY_ITEMS = [
         src: 'assets/gallery/photos/p_solarium_fullget.jpg'
     },
 
-    // --- 2. CAPACITACIONES, GRADUACIONES Y DIPLOMAS OFICIALES ---
+    // --- 2. CAPACITACIONES & DIPLOMAS OFICIALES (FOTO REAL DE GRADUADOS) ---
     {
         type: 'photo',
-        id: 'p_cert_graduacion_4',
+        id: 'p_cert_graduacion',
         title: 'Graduación y Entrega de Diplomas Oficiales Ingeprex',
         category: 'certificacion',
         tag: 'Capacitación Oficial',
         tagBg: '#0284C7',
-        badge: '<i class="fa-solid fa-award"></i> DIPLOMAS',
-        desc: 'Entrega de certificados y acreditación técnica a la nueva camada de aplicadores homologados.',
+        badge: '<i class="fa-solid fa-award"></i> DIPLOMAS OFICIALES',
+        desc: 'Acreditación técnica a la nueva camada de aplicadores homologados. Próximas ediciones en Argentina.',
         thumb: 'assets/img/cert-graduacion-4.jpg',
         src: 'assets/img/cert-graduacion-4.jpg'
-    },
-    {
-        type: 'photo',
-        id: 'p_cert_graduacion_3',
-        title: 'Promoción Oficial de Aplicadores Certificados',
-        category: 'certificacion',
-        tag: 'Capacitación Oficial',
-        tagBg: '#0284C7',
-        badge: '<i class="fa-solid fa-users"></i> ALUMNOS',
-        desc: 'Jornada intensiva de formación en preparación de vasijas, puentes de adherencia y llaneado.',
-        thumb: 'assets/img/cert-graduacion-3.jpg',
-        src: 'assets/img/cert-graduacion-3.jpg'
-    },
-    {
-        type: 'photo',
-        id: 'p_cert_graduacion_1',
-        title: 'Nueva Camada de Instaladores Certificados',
-        category: 'certificacion',
-        tag: 'Acreditación Técnica',
-        tagBg: '#0284C7',
-        badge: '<i class="fa-solid fa-award"></i> DIPLOMAS',
-        desc: 'Acreditación técnica en sistemas Ingeprex con validez profesional para obras de alta exigencia.',
-        thumb: 'assets/img/cert-graduacion-1.jpg',
-        src: 'assets/img/cert-graduacion-1.jpg'
-    },
-    {
-        type: 'photo',
-        id: 'p_cert_graduacion_2',
-        title: 'Entrega de Certificaciones y Evaluaciones Prácticas',
-        category: 'certificacion',
-        tag: 'Acreditación Técnica',
-        tagBg: '#0284C7',
-        badge: '<i class="fa-solid fa-award"></i> DIPLOMAS',
-        desc: 'Formación presencial con evaluación de calidad en terminación de piscinas y soláriums.',
-        thumb: 'assets/img/cert-graduacion-2.jpg',
-        src: 'assets/img/cert-graduacion-2.jpg'
-    },
-    {
-        type: 'photo',
-        id: 'p_cert_flyer_taller',
-        title: 'Programa del Taller Teórico-Práctico en Obra',
-        category: 'certificacion',
-        tag: 'Taller en Obra',
-        tagBg: '#059669',
-        badge: '<i class="fa-solid fa-graduation-cap"></i> PROGRAMA',
-        desc: 'Contenidos del curso: estimación de m², puente de adherencia estructural y solución en obra.',
-        thumb: 'assets/img/cert-flyer-taller.jpg',
-        src: 'assets/img/cert-flyer-taller.jpg'
     },
 
     // --- 3. PISCINAS TERMINADAS (FOTOS REALES DE CLIENTES) ---
@@ -1745,6 +1697,21 @@ function initBeforeAfterSlider() {
     setPosition(50);
 }
 
+function switchCertPhoto(imgSrc, btn) {
+    const mainImg = document.getElementById('cert-main-img');
+    if (mainImg) {
+        mainImg.style.opacity = '0.4';
+        setTimeout(() => {
+            mainImg.src = imgSrc;
+            mainImg.style.opacity = '1';
+        }, 150);
+    }
+    const btns = document.querySelectorAll('.cert-thumb-btn');
+    btns.forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+}
+
+window.switchCertPhoto = switchCertPhoto;
 window.filterCategory = filterCategory;
 window.submitContactForm = submitContactForm;
 window.initHeroBubbles = initHeroBubbles;
