@@ -674,246 +674,10 @@ window.downloadSpecSheet = downloadSpecSheet;
 
 
 // ==========================================================================
-// 7. GALERÍA DE OBRAS REALES Y REPRODUCTOR MULTIMEDIA 3D
+// 7. GALERÍA DE OBRAS REALES, CAPACITACIONES Y MULTIMEDIA
 // ==========================================================================
 const GALLERY_ITEMS = [
-    // --- PRESENTACIONES 3D Y COMPORTAMIENTO CROMÁTICO ---
-    {
-        type: 'video',
-        id: 'v_lineup',
-        title: 'Línea Oficial 5 Productos Ingeprex (3D)',
-        category: 'videos',
-        tag: 'Gama Oficial',
-        tagBg: '#0F172A',
-        badge: '<i class="fa-solid fa-play"></i> 3D HD',
-        desc: 'Render completo con la línea de envases oficiales para piscinas y soláriums.',
-        thumb: 'assets/gallery/thumbs/v_lineup.jpg',
-        video: 'assets/gallery/videos/v_lineup.mp4'
-    },
-    {
-        type: 'video',
-        id: 'v_latex',
-        title: 'Súper Látex Aditivo Líquido (3D)',
-        category: 'videos',
-        tag: 'Aditivos',
-        tagBg: '#4F46E5',
-        badge: '<i class="fa-solid fa-play"></i> 3D HD',
-        desc: 'Presentación del promotor líquido de adherencia y elasticidad para morteros.',
-        thumb: 'assets/gallery/thumbs/v_latex.jpg',
-        video: 'assets/gallery/videos/v_latex.mp4'
-    },
-    {
-        type: 'video',
-        id: 'v_resingranite',
-        title: 'Super Resin Granite Aislante UV (3D)',
-        category: 'videos',
-        tag: 'Resinas',
-        tagBg: '#DC2626',
-        badge: '<i class="fa-solid fa-play"></i> 3D HD',
-        desc: 'Resina elástica resistente a la intemperie, rayos solares y agentes químicos.',
-        thumb: 'assets/gallery/thumbs/v_resingranite.jpg',
-        video: 'assets/gallery/videos/v_resingranite.mp4'
-    },
-    {
-        type: 'video',
-        id: 'v_swatch_blue',
-        title: 'Muestrario 3D: Tahoe Blue',
-        category: 'videos',
-        tag: 'Carta Cuarzo',
-        tagBg: '#0284C7',
-        badge: '<i class="fa-solid fa-play"></i> 3D HD',
-        desc: 'Render 3D de probeta con cuarzo azul turquesa reflectivo.',
-        thumb: 'assets/gallery/thumbs/v_swatch_blue.jpg',
-        video: 'assets/gallery/videos/v_swatch_blue.mp4'
-    },
-    {
-        type: 'video',
-        id: 'v_swatch_black',
-        title: 'Muestrario 3D: Onyx Black',
-        category: 'videos',
-        tag: 'Carta Cuarzo',
-        tagBg: '#1E293B',
-        badge: '<i class="fa-solid fa-play"></i> 3D HD',
-        desc: 'Render 3D con reflejo de cuarzo negro profundo para efecto espejo.',
-        thumb: 'assets/gallery/thumbs/v_swatch_black.jpg',
-        video: 'assets/gallery/videos/v_swatch_black.mp4'
-    },
-    {
-        type: 'video',
-        id: 'v_swatch_sand',
-        title: 'Muestrario 3D: Arena Dorada',
-        category: 'videos',
-        tag: 'Carta Cuarzo',
-        tagBg: '#D97706',
-        badge: '<i class="fa-solid fa-play"></i> 3D HD',
-        desc: 'Render 3D de probeta con textura real de cuarzo tono arena caribeño.',
-        thumb: 'assets/gallery/thumbs/v_swatch_sand.jpg',
-        video: 'assets/gallery/videos/v_swatch_sand.mp4'
-    },
-    {
-        type: 'video',
-        id: 'v_swatch_grey',
-        title: 'Muestrario 3D: Gris Nórdico',
-        category: 'videos',
-        tag: 'Carta Cuarzo',
-        tagBg: '#64748B',
-        badge: '<i class="fa-solid fa-play"></i> 3D HD',
-        desc: 'Render 3D de probeta de cuarzo gris arquitectónico contemporáneo.',
-        thumb: 'assets/gallery/thumbs/v_swatch_grey.jpg',
-        video: 'assets/gallery/videos/v_swatch_grey.mp4'
-    },
-    {
-        type: 'video',
-        id: 'v_swatch_white',
-        title: 'Muestrario 3D: White Quartz',
-        category: 'videos',
-        tag: 'Carta Cuarzo',
-        tagBg: '#0EA5E9',
-        badge: '<i class="fa-solid fa-play"></i> 3D HD',
-        desc: 'Render 3D de cristales de cuarzo blanco reflectivo con destellos celestes.',
-        thumb: 'assets/gallery/thumbs/v_swatch_white.jpg',
-        video: 'assets/gallery/videos/v_swatch_white.mp4'
-    },
-    {
-        type: 'video',
-        id: 'v_buckets_duo',
-        title: 'Baldes de Resina & Látex Ingeprex (3D)',
-        category: 'videos',
-        tag: 'Insumos',
-        tagBg: '#334155',
-        badge: '<i class="fa-solid fa-play"></i> 3D HD',
-        desc: 'Render 3D en alta resolución de envases complementarios de obra.',
-        thumb: 'assets/gallery/thumbs/v_buckets_duo.jpg',
-        video: 'assets/gallery/videos/v_buckets_duo.mp4'
-    },
-
-    // --- FOTOS REALES DE PISCINAS ---
-    {
-        type: 'photo',
-        id: 'p_tahoe_blue',
-        title: 'Piscina Súper Brite® — Tono Tahoe Blue',
-        category: 'piscinas',
-        tag: 'Súper Brite®',
-        tagBg: '#0284C7',
-        badge: '<i class="fa-solid fa-camera"></i> FOTO REAL',
-        desc: 'Piscina residencial con escalones sumergidos y agua turquesa brillante bajo sol directo.',
-        thumb: 'assets/gallery/photos/p_tahoe_blue.jpg',
-        src: 'assets/gallery/photos/p_tahoe_blue.jpg'
-    },
-    {
-        type: 'photo',
-        id: 'p_onyx_blue',
-        title: 'Piscina Súper Brite® — Tono Onyx Blue',
-        category: 'piscinas',
-        tag: 'Súper Brite®',
-        tagBg: '#1E293B',
-        badge: '<i class="fa-solid fa-camera"></i> FOTO REAL',
-        desc: 'Efecto espejo profundo de agua azul noche con iluminación subacuática.',
-        thumb: 'assets/gallery/photos/p_onyx_blue.jpg',
-        src: 'assets/gallery/photos/p_onyx_blue.jpg'
-    },
-    {
-        type: 'photo',
-        id: 'p_cool_blue',
-        title: 'Piscina Súper Brite® — Tono Cool Blue',
-        category: 'piscinas',
-        tag: 'Súper Brite®',
-        tagBg: '#0284C7',
-        badge: '<i class="fa-solid fa-camera"></i> FOTO REAL',
-        desc: 'Piscina angular con solárium atérmico, cascada de piedra natural y luces nocturnas.',
-        thumb: 'assets/gallery/photos/p_cool_blue.jpg',
-        src: 'assets/gallery/photos/p_cool_blue.jpg'
-    },
-    {
-        type: 'photo',
-        id: 'p_marlyn_blue',
-        title: 'Detalle de Escalones — Marlyn Blue',
-        category: 'piscinas',
-        tag: 'Súper Brite®',
-        tagBg: '#0EA5E9',
-        badge: '<i class="fa-solid fa-camera"></i> FOTO REAL',
-        desc: 'Acabado suave y antideslizante con guardas vítreas en escaleras de acceso.',
-        thumb: 'assets/gallery/photos/p_marlyn_blue.jpg',
-        src: 'assets/gallery/photos/p_marlyn_blue.jpg'
-    },
-
-    // --- MUESTRARIOS REALES DE CUARZO ---
-    {
-        type: 'photo',
-        id: 'p_cuarzo_tahoe_swatch',
-        title: 'Cristales de Cuarzo: Tahoe Blue',
-        category: 'muestras',
-        tag: 'Cuarzo Real',
-        tagBg: '#0284C7',
-        badge: '<i class="fa-solid fa-gem"></i> MUESTRARIO',
-        desc: 'Cristales de cuarzo puro seleccionados pigmentados con polímeros marinos.',
-        thumb: 'assets/gallery/photos/p_cuarzo_tahoe_swatch.jpg',
-        src: 'assets/gallery/photos/p_cuarzo_tahoe_swatch.jpg'
-    },
-    {
-        type: 'photo',
-        id: 'p_cuarzo_cool_swatch',
-        title: 'Cristales de Cuarzo: Cool Blue',
-        category: 'muestras',
-        tag: 'Cuarzo Real',
-        tagBg: '#38BDF8',
-        badge: '<i class="fa-solid fa-gem"></i> MUESTRARIO',
-        desc: 'Mezcla balanceada de cuarzo blanco reflectivo con micro-partículas celestes.',
-        thumb: 'assets/gallery/photos/p_cuarzo_cool_swatch.jpg',
-        src: 'assets/gallery/photos/p_cuarzo_cool_swatch.jpg'
-    },
-    {
-        type: 'photo',
-        id: 'p_cuarzo_marlyn_swatch',
-        title: 'Cristales de Cuarzo: Marlyn Blue',
-        category: 'muestras',
-        tag: 'Cuarzo Real',
-        tagBg: '#0EA5E9',
-        badge: '<i class="fa-solid fa-gem"></i> MUESTRARIO',
-        desc: 'Tono intermedio de gran luminosidad para aguas turquesas cristalinas.',
-        thumb: 'assets/gallery/photos/p_cuarzo_marlyn_swatch.jpg',
-        src: 'assets/gallery/photos/p_cuarzo_marlyn_swatch.jpg'
-    },
-    {
-        type: 'photo',
-        id: 'p_cuarzo_grey_swatch',
-        title: 'Cristales de Cuarzo: Gris Piedra',
-        category: 'muestras',
-        tag: 'Cuarzo Real',
-        tagBg: '#64748B',
-        badge: '<i class="fa-solid fa-gem"></i> MUESTRARIO',
-        desc: 'Granulometría seleccionada en tonos grises para arquitectura contemporánea.',
-        thumb: 'assets/gallery/photos/p_cuarzo_grey_swatch.jpg',
-        src: 'assets/gallery/photos/p_cuarzo_grey_swatch.jpg'
-    },
-    {
-        type: 'photo',
-        id: 'p_cuarzo_black_swatch',
-        title: 'Cristales de Cuarzo: Black Onyx',
-        category: 'muestras',
-        tag: 'Cuarzo Real',
-        tagBg: '#1E293B',
-        badge: '<i class="fa-solid fa-gem"></i> MUESTRARIO',
-        desc: 'Granos de cuarzo negro volcánico para generar efecto de reflejo espejo natural.',
-        thumb: 'assets/gallery/photos/p_cuarzo_black_swatch.jpg',
-        src: 'assets/gallery/photos/p_cuarzo_black_swatch.jpg'
-    },
-
-    // --- BORDES Y SOLÁRIUM ---
-    {
-        type: 'photo',
-        id: 'p_solarium_fullget',
-        title: 'Bordes & Solárium Atérmico — Súper Fullget®',
-        category: 'bordes',
-        tag: 'Súper Fullget®',
-        tagBg: '#D97706',
-        badge: '<i class="fa-solid fa-sun"></i> FOTO REAL',
-        desc: 'Textura de piedra natural calibrada atérmica que no absorbe temperatura solar.',
-        thumb: 'assets/gallery/photos/p_solarium_fullget.jpg',
-        src: 'assets/gallery/photos/p_solarium_fullget.jpg'
-    },
-
-    // --- NUEVOS VIDEOS DE OBRA Y CAPACITACIÓN ---
+    // --- 1. APLICACIÓN EN OBRA & TALLER TÉCNICO (VIDEOS Y FOTOS REALES) ---
     {
         type: 'video',
         id: 'v_obra_llaneado',
@@ -930,39 +694,13 @@ const GALLERY_ITEMS = [
         type: 'video',
         id: 'v_taller_hidro',
         title: 'Hidrolavado & Preparación Mecánica del Vaso',
-        category: 'certificacion',
-        tag: 'Taller Técnico',
+        category: 'obra',
+        tag: 'Preparación de Obra',
         tagBg: '#059669',
-        badge: '<i class="fa-solid fa-graduation-cap"></i> CAPACITACIÓN',
-        desc: 'Apertura de poro y limpieza profunda a presión en el curso oficial de aplicadores homologados.',
+        badge: '<i class="fa-solid fa-video"></i> PREPARACIÓN',
+        desc: 'Apertura de poro y limpieza profunda a presión para asegurar máxima adherencia estructural.',
         thumb: 'assets/videos/thumbs/vid_taller_hidrolavado.jpg',
         video: 'assets/videos/vid_taller_hidrolavado.mp4'
-    },
-
-    // --- FOTOS DE GRADUACIÓN Y TALLERES ---
-    {
-        type: 'photo',
-        id: 'p_cert_graduacion_1',
-        title: 'Graduación Oficial de Instaladores Certificados',
-        category: 'certificacion',
-        tag: 'Capacitación Oficial',
-        tagBg: '#0284C7',
-        badge: '<i class="fa-solid fa-award"></i> DIPLOMAS',
-        desc: 'Entrega de certificados y acreditación a la nueva camada de aplicadores homologados Ingeprex.',
-        thumb: 'assets/img/cert-graduacion-1.jpg',
-        src: 'assets/img/cert-graduacion-1.jpg'
-    },
-    {
-        type: 'photo',
-        id: 'p_cert_graduacion_2',
-        title: 'Entrega de Diplomas Técnicos Ingeprex',
-        category: 'certificacion',
-        tag: 'Capacitación Oficial',
-        tagBg: '#0284C7',
-        badge: '<i class="fa-solid fa-award"></i> DIPLOMAS',
-        desc: 'Jornada intensiva de formación en preparación de vasijas, puentes de adherencia y terminaciones.',
-        thumb: 'assets/img/cert-graduacion-2.jpg',
-        src: 'assets/img/cert-graduacion-2.jpg'
     },
     {
         type: 'photo',
@@ -990,6 +728,192 @@ const GALLERY_ITEMS = [
     },
     {
         type: 'photo',
+        id: 'p_solarium_fullget',
+        title: 'Bordes & Solárium Atérmico — Súper Fullget®',
+        category: 'obra',
+        tag: 'Súper Fullget®',
+        tagBg: '#D97706',
+        badge: '<i class="fa-solid fa-sun"></i> FOTO REAL',
+        desc: 'Piedra natural calibrada atérmica que no absorbe temperatura bajo sol pleno.',
+        thumb: 'assets/gallery/photos/p_solarium_fullget.jpg',
+        src: 'assets/gallery/photos/p_solarium_fullget.jpg'
+    },
+
+    // --- 2. CAPACITACIONES, GRADUACIONES Y DIPLOMAS OFICIALES ---
+    {
+        type: 'photo',
+        id: 'p_cert_graduacion_4',
+        title: 'Graduación y Entrega de Diplomas Oficiales Ingeprex',
+        category: 'certificacion',
+        tag: 'Capacitación Oficial',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-award"></i> DIPLOMAS',
+        desc: 'Entrega de certificados y acreditación técnica a la nueva camada de aplicadores homologados.',
+        thumb: 'assets/img/cert-graduacion-4.jpg',
+        src: 'assets/img/cert-graduacion-4.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_cert_graduacion_3',
+        title: 'Promoción Oficial de Aplicadores Certificados',
+        category: 'certificacion',
+        tag: 'Capacitación Oficial',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-users"></i> ALUMNOS',
+        desc: 'Jornada intensiva de formación en preparación de vasijas, puentes de adherencia y llaneado.',
+        thumb: 'assets/img/cert-graduacion-3.jpg',
+        src: 'assets/img/cert-graduacion-3.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_cert_graduacion_1',
+        title: 'Nueva Camada de Instaladores Certificados',
+        category: 'certificacion',
+        tag: 'Acreditación Técnica',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-award"></i> DIPLOMAS',
+        desc: 'Acreditación técnica en sistemas Ingeprex con validez profesional para obras de alta exigencia.',
+        thumb: 'assets/img/cert-graduacion-1.jpg',
+        src: 'assets/img/cert-graduacion-1.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_cert_graduacion_2',
+        title: 'Entrega de Certificaciones y Evaluaciones Prácticas',
+        category: 'certificacion',
+        tag: 'Acreditación Técnica',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-award"></i> DIPLOMAS',
+        desc: 'Formación presencial con evaluación de calidad en terminación de piscinas y soláriums.',
+        thumb: 'assets/img/cert-graduacion-2.jpg',
+        src: 'assets/img/cert-graduacion-2.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_cert_flyer_taller',
+        title: 'Programa del Taller Teórico-Práctico en Obra',
+        category: 'certificacion',
+        tag: 'Taller en Obra',
+        tagBg: '#059669',
+        badge: '<i class="fa-solid fa-graduation-cap"></i> PROGRAMA',
+        desc: 'Contenidos del curso: estimación de m², puente de adherencia estructural y solución en obra.',
+        thumb: 'assets/img/cert-flyer-taller.jpg',
+        src: 'assets/img/cert-flyer-taller.jpg'
+    },
+
+    // --- 3. PISCINAS TERMINADAS (FOTOS REALES DE CLIENTES) ---
+    {
+        type: 'photo',
+        id: 'p_tahoe_blue',
+        title: 'Piscina Súper Brite® — Tono Tahoe Blue',
+        category: 'piscinas',
+        tag: 'Súper Brite®',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-camera"></i> PISCINA REAL',
+        desc: 'Piscina residencial con escalones sumergidos y agua turquesa brillante bajo sol directo.',
+        thumb: 'assets/gallery/photos/p_tahoe_blue.jpg',
+        src: 'assets/gallery/photos/p_tahoe_blue.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_cool_blue',
+        title: 'Piscina Súper Brite® — Tono Cool Blue',
+        category: 'piscinas',
+        tag: 'Súper Brite®',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-camera"></i> PISCINA REAL',
+        desc: 'Piscina angular con solárium atérmico, cascada de piedra natural y luces nocturnas.',
+        thumb: 'assets/gallery/photos/p_cool_blue.jpg',
+        src: 'assets/gallery/photos/p_cool_blue.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_onyx_blue',
+        title: 'Piscina Súper Brite® — Tono Onyx Blue',
+        category: 'piscinas',
+        tag: 'Súper Brite®',
+        tagBg: '#1E293B',
+        badge: '<i class="fa-solid fa-camera"></i> PISCINA REAL',
+        desc: 'Efecto espejo profundo de agua azul noche con iluminación subacuática.',
+        thumb: 'assets/gallery/photos/p_onyx_blue.jpg',
+        src: 'assets/gallery/photos/p_onyx_blue.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_marlyn_blue',
+        title: 'Detalle de Escalones — Marlyn Blue',
+        category: 'piscinas',
+        tag: 'Súper Brite®',
+        tagBg: '#0EA5E9',
+        badge: '<i class="fa-solid fa-camera"></i> PISCINA REAL',
+        desc: 'Acabado suave y antideslizante con guardas vítreas en escaleras de acceso.',
+        thumb: 'assets/gallery/photos/p_marlyn_blue.jpg',
+        src: 'assets/gallery/photos/p_marlyn_blue.jpg'
+    },
+
+    // --- 4. MUESTRARIOS REALES DE CRISTALES DE CUARZO ---
+    {
+        type: 'photo',
+        id: 'p_cuarzo_tahoe_swatch',
+        title: 'Cristales de Cuarzo: Tahoe Blue',
+        category: 'muestras',
+        tag: 'Cuarzo Real',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-gem"></i> TEXTURA REAL',
+        desc: 'Cristales de cuarzo puro seleccionados pigmentados con polímeros marinos.',
+        thumb: 'assets/gallery/photos/p_cuarzo_tahoe_swatch.jpg',
+        src: 'assets/gallery/photos/p_cuarzo_tahoe_swatch.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_cuarzo_cool_swatch',
+        title: 'Cristales de Cuarzo: Cool Blue',
+        category: 'muestras',
+        tag: 'Cuarzo Real',
+        tagBg: '#38BDF8',
+        badge: '<i class="fa-solid fa-gem"></i> TEXTURA REAL',
+        desc: 'Mezcla balanceada de cuarzo blanco reflectivo con micro-partículas celestes.',
+        thumb: 'assets/gallery/photos/p_cuarzo_cool_swatch.jpg',
+        src: 'assets/gallery/photos/p_cuarzo_cool_swatch.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_cuarzo_marlyn_swatch',
+        title: 'Cristales de Cuarzo: Marlyn Blue',
+        category: 'muestras',
+        tag: 'Cuarzo Real',
+        tagBg: '#0EA5E9',
+        badge: '<i class="fa-solid fa-gem"></i> TEXTURA REAL',
+        desc: 'Tono intermedio de gran luminosidad para aguas turquesas cristalinas.',
+        thumb: 'assets/gallery/photos/p_cuarzo_marlyn_swatch.jpg',
+        src: 'assets/gallery/photos/p_cuarzo_marlyn_swatch.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_cuarzo_grey_swatch',
+        title: 'Cristales de Cuarzo: Gris Piedra',
+        category: 'muestras',
+        tag: 'Cuarzo Real',
+        tagBg: '#64748B',
+        badge: '<i class="fa-solid fa-gem"></i> TEXTURA REAL',
+        desc: 'Granulometría seleccionada en tonos grises para arquitectura contemporánea.',
+        thumb: 'assets/gallery/photos/p_cuarzo_grey_swatch.jpg',
+        src: 'assets/gallery/photos/p_cuarzo_grey_swatch.jpg'
+    },
+    {
+        type: 'photo',
+        id: 'p_cuarzo_black_swatch',
+        title: 'Cristales de Cuarzo: Black Onyx',
+        category: 'muestras',
+        tag: 'Cuarzo Real',
+        tagBg: '#1E293B',
+        badge: '<i class="fa-solid fa-gem"></i> TEXTURA REAL',
+        desc: 'Granos de cuarzo negro volcánico para generar efecto de reflejo espejo natural.',
+        thumb: 'assets/gallery/photos/p_cuarzo_black_swatch.jpg',
+        src: 'assets/gallery/photos/p_cuarzo_black_swatch.jpg'
+    },
+    {
+        type: 'photo',
         id: 'p_arena_cuarzo_flyer',
         title: 'Arena de Cuarzo Colorido & Resinas Ingeprex',
         category: 'muestras',
@@ -999,6 +923,116 @@ const GALLERY_ITEMS = [
         desc: 'Cuarzo de alta pureza disponible en granulometrías seleccionadas para revestimientos y decoración.',
         thumb: 'assets/img/flyer-arena-cuarzo.jpg',
         src: 'assets/img/flyer-arena-cuarzo.jpg'
+    },
+
+    // --- 5. RENDERS 3D DE PRODUCTOS Y PROBETAS (REFERENCIA COMPLEMENTARIA) ---
+    {
+        type: 'video',
+        id: 'v_lineup',
+        title: 'Línea Oficial 5 Productos Ingeprex (3D)',
+        category: 'renders',
+        tag: 'Gama Oficial 3D',
+        tagBg: '#0F172A',
+        badge: '<i class="fa-solid fa-cube"></i> RENDER 3D',
+        desc: 'Render completo con la línea de envases oficiales para piscinas y soláriums.',
+        thumb: 'assets/gallery/thumbs/v_lineup.jpg',
+        video: 'assets/gallery/videos/v_lineup.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_swatch_blue',
+        title: 'Muestrario 3D: Probeta Tahoe Blue',
+        category: 'renders',
+        tag: 'Carta Cuarzo 3D',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-cube"></i> RENDER 3D',
+        desc: 'Simulación 3D de probeta con cuarzo azul turquesa reflectivo.',
+        thumb: 'assets/gallery/thumbs/v_swatch_blue.jpg',
+        video: 'assets/gallery/videos/v_swatch_blue.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_swatch_black',
+        title: 'Muestrario 3D: Probeta Onyx Black',
+        category: 'renders',
+        tag: 'Carta Cuarzo 3D',
+        tagBg: '#1E293B',
+        badge: '<i class="fa-solid fa-cube"></i> RENDER 3D',
+        desc: 'Simulación 3D con reflejo de cuarzo negro profundo para efecto espejo.',
+        thumb: 'assets/gallery/thumbs/v_swatch_black.jpg',
+        video: 'assets/gallery/videos/v_swatch_black.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_swatch_sand',
+        title: 'Muestrario 3D: Probeta Arena Dorada',
+        category: 'renders',
+        tag: 'Carta Cuarzo 3D',
+        tagBg: '#D97706',
+        badge: '<i class="fa-solid fa-cube"></i> RENDER 3D',
+        desc: 'Simulación 3D de probeta con textura real de cuarzo tono arena caribeño.',
+        thumb: 'assets/gallery/thumbs/v_swatch_sand.jpg',
+        video: 'assets/gallery/videos/v_swatch_sand.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_swatch_grey',
+        title: 'Muestrario 3D: Probeta Gris Nórdico',
+        category: 'renders',
+        tag: 'Carta Cuarzo 3D',
+        tagBg: '#64748B',
+        badge: '<i class="fa-solid fa-cube"></i> RENDER 3D',
+        desc: 'Simulación 3D de probeta de cuarzo gris arquitectónico contemporáneo.',
+        thumb: 'assets/gallery/thumbs/v_swatch_grey.jpg',
+        video: 'assets/gallery/videos/v_swatch_grey.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_swatch_white',
+        title: 'Muestrario 3D: Probeta White Quartz',
+        category: 'renders',
+        tag: 'Carta Cuarzo 3D',
+        tagBg: '#0EA5E9',
+        badge: '<i class="fa-solid fa-cube"></i> RENDER 3D',
+        desc: 'Simulación 3D de cristales de cuarzo blanco reflectivo con destellos celestes.',
+        thumb: 'assets/gallery/thumbs/v_swatch_white.jpg',
+        video: 'assets/gallery/videos/v_swatch_white.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_latex',
+        title: 'Súper Látex Aditivo Líquido (3D)',
+        category: 'renders',
+        tag: 'Aditivos 3D',
+        tagBg: '#4F46E5',
+        badge: '<i class="fa-solid fa-cube"></i> RENDER 3D',
+        desc: 'Presentación del promotor líquido de adherencia y elasticidad para morteros.',
+        thumb: 'assets/gallery/thumbs/v_latex.jpg',
+        video: 'assets/gallery/videos/v_latex.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_resingranite',
+        title: 'Super Resin Granite Aislante UV (3D)',
+        category: 'renders',
+        tag: 'Resinas 3D',
+        tagBg: '#DC2626',
+        badge: '<i class="fa-solid fa-cube"></i> RENDER 3D',
+        desc: 'Resina elástica resistente a la intemperie, rayos solares y agentes químicos.',
+        thumb: 'assets/gallery/thumbs/v_resingranite.jpg',
+        video: 'assets/gallery/videos/v_resingranite.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_buckets_duo',
+        title: 'Baldes de Resina & Látex Ingeprex (3D)',
+        category: 'renders',
+        tag: 'Insumos 3D',
+        tagBg: '#334155',
+        badge: '<i class="fa-solid fa-cube"></i> RENDER 3D',
+        desc: 'Render 3D en alta resolución de envases complementarios de obra.',
+        thumb: 'assets/gallery/thumbs/v_buckets_duo.jpg',
+        video: 'assets/gallery/videos/v_buckets_duo.mp4'
     }
 ];
 
@@ -1017,16 +1051,16 @@ function renderGallery(filter = 'all') {
     if (!container) return;
 
     let filtered = GALLERY_ITEMS;
-    if (filter === 'piscinas') {
-        filtered = GALLERY_ITEMS.filter(item => item.category === 'piscinas');
-    } else if (filter === 'obra') {
+    if (filter === 'obra') {
         filtered = GALLERY_ITEMS.filter(item => item.category === 'obra');
     } else if (filter === 'certificacion') {
         filtered = GALLERY_ITEMS.filter(item => item.category === 'certificacion');
-    } else if (filter === 'videos') {
-        filtered = GALLERY_ITEMS.filter(item => item.type === 'video');
+    } else if (filter === 'piscinas') {
+        filtered = GALLERY_ITEMS.filter(item => item.category === 'piscinas');
     } else if (filter === 'muestras') {
         filtered = GALLERY_ITEMS.filter(item => item.category === 'muestras');
+    } else if (filter === 'renders') {
+        filtered = GALLERY_ITEMS.filter(item => item.category === 'renders');
     }
 
     container.innerHTML = filtered.map((item, index) => {
@@ -1059,18 +1093,18 @@ function renderGallery(filter = 'all') {
 
     // Update counts in buttons if they exist
     const countAll = document.getElementById('count-all');
-    const countPiscinas = document.getElementById('count-piscinas');
     const countObra = document.getElementById('count-obra');
     const countCertificacion = document.getElementById('count-certificacion');
-    const countVideos = document.getElementById('count-videos');
+    const countPiscinas = document.getElementById('count-piscinas');
     const countMuestras = document.getElementById('count-muestras');
+    const countRenders = document.getElementById('count-renders');
 
     if (countAll) countAll.textContent = GALLERY_ITEMS.length;
-    if (countPiscinas) countPiscinas.textContent = GALLERY_ITEMS.filter(i => i.category === 'piscinas').length;
     if (countObra) countObra.textContent = GALLERY_ITEMS.filter(i => i.category === 'obra').length;
     if (countCertificacion) countCertificacion.textContent = GALLERY_ITEMS.filter(i => i.category === 'certificacion').length;
-    if (countVideos) countVideos.textContent = GALLERY_ITEMS.filter(i => i.type === 'video').length;
+    if (countPiscinas) countPiscinas.textContent = GALLERY_ITEMS.filter(i => i.category === 'piscinas').length;
     if (countMuestras) countMuestras.textContent = GALLERY_ITEMS.filter(i => i.category === 'muestras').length;
+    if (countRenders) countRenders.textContent = GALLERY_ITEMS.filter(i => i.category === 'renders').length;
 }
 
 function filterGallery(filter) {
@@ -1297,8 +1331,8 @@ function initScrollReveal() {
                 }
             });
         }, {
-            threshold: 0.08,
-            rootMargin: '0px 0px -20px 0px'
+            threshold: 0.05,
+            rootMargin: '0px 0px 50px 0px'
         });
 
         revealElements.forEach(el => observer.observe(el));

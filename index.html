@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=10.0">
+    <link rel="stylesheet" href="styles.css?v=11.0">
 </head>
 <body>
 
@@ -679,34 +679,34 @@
         </div>
     </section>
 
-    <!-- OBRAS REALES Y MULTIMEDIA -->
+    <!-- OBRAS REALES Y CAPACITACIONES -->
     <section class="section-products" id="galeria" style="background: #FFFFFF;">
         <div class="container">
             <div class="section-head text-center reveal">
-                <span class="section-tag">Obras Ejecutadas &amp; Catálogo Multimedia</span>
-                <h2 class="head-title">Galería de Proyectos Reales y Muestrarios 3D</h2>
-                <p class="head-desc">Explorá videos 3D de probetas reflectivas de cuarzo bajo agua y obras reales de piscinas terminadas con insumos oficiales Súper Brite® e Ingeprex.</p>
+                <span class="section-tag">Aplicación en Obra &amp; Capacitación Oficial</span>
+                <h2 class="head-title">Galería de Obras, Aplicaciones y Talleres</h2>
+                <p class="head-desc">Conocé el trabajo de aplicadores homologados, obras terminadas en todo el país y las jornadas presenciales de certificación técnica Ingeprex.</p>
             </div>
 
-            <!-- Filtro dinámico de categorías -->
+            <!-- Filtro dinámico de categorías enfocado en obras y capacitaciones -->
             <div class="gal-filter-bar reveal">
                 <button class="gal-filter-btn active" data-filter="all" onclick="filterGallery('all')">
-                    <i class="fa-solid fa-layer-group"></i> Todos <span class="gal-filter-count" id="count-all">24</span>
+                    <i class="fa-solid fa-layer-group"></i> Todos los Trabajos <span class="gal-filter-count" id="count-all">25</span>
+                </button>
+                <button class="gal-filter-btn" data-filter="obra" onclick="filterGallery('obra')">
+                    <i class="fa-solid fa-trowel-bricks text-blue"></i> Aplicación en Obra <span class="gal-filter-count" id="count-obra">5</span>
+                </button>
+                <button class="gal-filter-btn" data-filter="certificacion" onclick="filterGallery('certificacion')">
+                    <i class="fa-solid fa-graduation-cap text-blue"></i> Capacitación & Diplomas <span class="gal-filter-count" id="count-certificacion">5</span>
                 </button>
                 <button class="gal-filter-btn" data-filter="piscinas" onclick="filterGallery('piscinas')">
                     <i class="fa-solid fa-water-ladder text-blue"></i> Piscinas Terminadas <span class="gal-filter-count" id="count-piscinas">4</span>
                 </button>
-                <button class="gal-filter-btn" data-filter="obra" onclick="filterGallery('obra')">
-                    <i class="fa-solid fa-trowel-bricks text-blue"></i> Aplicación en Obra <span class="gal-filter-count" id="count-obra">3</span>
-                </button>
-                <button class="gal-filter-btn" data-filter="certificacion" onclick="filterGallery('certificacion')">
-                    <i class="fa-solid fa-graduation-cap text-blue"></i> Capacitación & Taller <span class="gal-filter-count" id="count-certificacion">5</span>
-                </button>
-                <button class="gal-filter-btn" data-filter="videos" onclick="filterGallery('videos')">
-                    <i class="fa-solid fa-circle-play text-blue"></i> Videos & Renders <span class="gal-filter-count" id="count-videos">11</span>
-                </button>
                 <button class="gal-filter-btn" data-filter="muestras" onclick="filterGallery('muestras')">
-                    <i class="fa-solid fa-gem text-blue"></i> Muestras Cuarzo <span class="gal-filter-count" id="count-muestras">5</span>
+                    <i class="fa-solid fa-gem text-blue"></i> Texturas de Cuarzo <span class="gal-filter-count" id="count-muestras">6</span>
+                </button>
+                <button class="gal-filter-btn" data-filter="renders" onclick="filterGallery('renders')">
+                    <i class="fa-solid fa-cube text-blue"></i> Muestrarios 3D <span class="gal-filter-count" id="count-renders">9</span>
                 </button>
             </div>
 
@@ -879,6 +879,6 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script src="app.js?v=10.0"></script>
+    <script src="app.js?v=11.0"></script>
 </body>
 </html>
