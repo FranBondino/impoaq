@@ -681,6 +681,54 @@ const GALLERY_ITEMS = [
     // --- 1. APLICACIÓN EN OBRA & TALLER TÉCNICO (VIDEOS Y FOTOS REALES) ---
     {
         type: 'video',
+        id: 'v_obra_cuadrilla_escaleras',
+        title: 'Cuadrilla Oficial Ingeprex: Acabado en Piso y Escaleras',
+        category: 'obra',
+        tag: 'Aplicadores Oficiales',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-video"></i> CUADRILLA EN OBRA',
+        desc: 'Aplicadores con indumentaria oficial Ingeprex realizando fratasado manual y terminación en piscina.',
+        thumb: 'assets/videos/thumbs/thumb_new_launch_4.jpg',
+        video: 'assets/videos/video_new_launch_4.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_obra_llaneado_paso_a_paso',
+        title: 'Demostración de Llaneado Vertical en Pared de Piscina',
+        category: 'obra',
+        tag: 'Técnica de Aplicación',
+        tagBg: '#059669',
+        badge: '<i class="fa-solid fa-video"></i> PASO A PASO',
+        desc: 'Colocación manual y compactación de Súper Brite® sobre puente de adherencia en vaso de hormigón.',
+        thumb: 'assets/videos/thumbs/thumb_new_launch_3.jpg',
+        video: 'assets/videos/video_new_launch_3.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_piscina_monumental_resort',
+        title: 'Piscina Panorámica & Solárium Atérmico Finalizado',
+        category: 'piscinas',
+        tag: 'Piscina Terminada',
+        tagBg: '#0284C7',
+        badge: '<i class="fa-solid fa-camera"></i> PISCINA REAL',
+        desc: 'Gran espejo de agua con revestimiento continuo de cuarzo y bordes atérmicos antideslizantes.',
+        thumb: 'assets/videos/thumbs/thumb_new_launch_2.jpg',
+        video: 'assets/videos/video_new_launch_2.mp4'
+    },
+    {
+        type: 'video',
+        id: 'v_textura_superbrite_primer_plano',
+        title: 'Textura y Brillo Superficial — Súper Brite®',
+        category: 'muestras',
+        tag: 'Súper Brite®',
+        tagBg: '#0EA5E9',
+        badge: '<i class="fa-solid fa-gem"></i> TEXTURA REAL',
+        desc: 'Detalle en primer plano de la textura continua de cuarzo suave al tacto y no resbaladiza.',
+        thumb: 'assets/videos/thumbs/thumb_new_launch_1.jpg',
+        video: 'assets/videos/video_new_launch_1.mp4'
+    },
+    {
+        type: 'video',
         id: 'v_obra_llaneado',
         title: 'Aplicación & Llaneado Manual de Cuarzo en Pared',
         category: 'obra',
