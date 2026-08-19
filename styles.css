@@ -2773,16 +2773,16 @@ a {
     font-weight: 700;
 }
 
-/* Featured Single Photo Card & Thumbs Row */
+/* Featured Single Photo Card */
 .cert-featured-photo {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    height: 250px;
+    height: 270px;
     cursor: pointer;
     border: 1px solid #E2E8F0;
     background: #0F172A;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
 }
 
