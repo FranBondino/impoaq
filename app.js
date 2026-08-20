@@ -189,11 +189,12 @@ const OFFICIAL_PRODUCTS = {
         description: 'Súper Granite® Shiny es un revestimiento decorativo de interiores de la marca Ingeprex. Aporta un exclusivo acabado brillante y destellos minerales continuos, diseñado especialmente para renovar y jerarquizar muros, livings, halls de acceso, dormitorios y espacios comerciales con máxima sofisticación visual.',
         specs: {
             presentacion: 'Balde Oficial Ingeprex (Listo para aplicar)',
-            uso: 'Paredes y superficies interiores de alta exigencia estética',
-            superficies: 'Yeso, estucos, fibrocemento, pasta muro, OSB, yeso cartón (drywall) y pinturas previas firmes',
-            colores: 'Sky Violet, Rose Pink, Cristal Silver, Graphite y Onix',
-            rendimiento: 'Aprox. 1.8 a 2.2 kg/m² según textura y estado del muro',
-            terminacion: 'Textura mineral continua con efecto brillante reflectivo Shiny'
+            rendimiento: 'Aprox. 1.8 a 2.2 kg/m² según textura y absorción del muro',
+            espesor: '1.5 mm a 2.5 mm continuo',
+            durabilidad: 'Alta resistencia al roce, impacto y fácil limpieza en interiores',
+            resistencia: 'Acabado brillante Shiny. Apto sobre yeso, drywall, estuco, fibrocemento, OSB y pinturas firmes',
+            superficies: 'Yeso, estucos, fibrocemento, pasta muro, OSB, yeso cartón (drywall) y pinturas firmes',
+            colores: 'Sky Violet, Rose Pink, Cristal Silver, Graphite y Onix'
         },
         features: [
             'Diseñado exclusivamente para paredes y superficies interiores.',
@@ -549,8 +550,10 @@ function openProductModal(prodCode) {
                 </tr>
                 <tr>
                     <td class="key">Propiedades</td>
-                    <td class="val">${product.specs.resistencia}</td>
+                    <td class="val">${product.specs.resistencia || 'Excelente adherencia y durabilidad'}</td>
                 </tr>
+                ${product.specs.colores ? `<tr><td class="key">Colores Disponibles</td><td class="val">${product.specs.colores}</td></tr>` : ''}
+                ${product.specs.superficies ? `<tr><td class="key">Superficies Aptas</td><td class="val">${product.specs.superficies}</td></tr>` : ''}
             </table>
         </div>
 
