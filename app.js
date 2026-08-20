@@ -350,6 +350,7 @@ function calculateMaterials() {
     let bolsasSF = Math.ceil(totalM2 / 3.0);
     let kitsSD = Math.ceil(totalM2 / 4.0);
     let kitsSS = Math.ceil(totalM2 / 5.0);
+    let baldesGranite = Math.ceil(totalM2 / 10.0);
 
     // Actualizar elementos DOM en pantalla
     const resM2El = document.getElementById('res-m2');
@@ -363,44 +364,52 @@ function calculateMaterials() {
 
     if (prodSelect === 'sb') {
         if (labelPrincipalEl) labelPrincipalEl.textContent = "Súper Brite® (Cuarzo Piscinas):";
-        if (resBolsasEl) resBolsasEl.innerHTML = `${bolsasSB} Bolsas <small style="color: #94A3B8; font-weight: normal;">(22.7 kg c/u)</small>`;
+        if (resBolsasEl) resBolsasEl.innerHTML = `${bolsasSB} Bolsas <small>(22.7 kg c/u)</small>`;
         
         if (labelSecundarioEl) labelSecundarioEl.textContent = "Súper Kote® (Puente Adherencia):";
-        if (resKoteEl) resKoteEl.innerHTML = `${unidadesSK} Kits <small style="color: #94A3B8; font-weight: normal;">(Bicomponente)</small>`;
+        if (resKoteEl) resKoteEl.innerHTML = `${unidadesSK} Kits <small>(Bicomponente)</small>`;
         
         if (resRendimientoEl) resRendimientoEl.textContent = "1 bolsa (22.7 kg) rinde 2.5 m²";
     } else if (prodSelect === 'sk') {
         if (labelPrincipalEl) labelPrincipalEl.textContent = "Súper Kote® Bicomponente:";
-        if (resBolsasEl) resBolsasEl.innerHTML = `${unidadesSK} Kits <small style="color: #94A3B8; font-weight: normal;">(Polvo + Resina)</small>`;
+        if (resBolsasEl) resBolsasEl.innerHTML = `${unidadesSK} Kits <small>(Polvo + Resina)</small>`;
         
         if (labelSecundarioEl) labelSecundarioEl.textContent = "Puente Adherencia Estructural:";
-        if (resKoteEl) resKoteEl.innerHTML = `100% Adherencia <small style="color: #94A3B8; font-weight: normal;">(Sin picar pared)</small>`;
+        if (resKoteEl) resKoteEl.innerHTML = `100% Adherencia <small>(Sin picar pared)</small>`;
         
         if (resRendimientoEl) resRendimientoEl.textContent = "1 kit bicomponente rinde 15 m²";
     } else if (prodSelect === 'sf') {
         if (labelPrincipalEl) labelPrincipalEl.textContent = "Súper Fullget® (Bordes & Solárium):";
-        if (resBolsasEl) resBolsasEl.innerHTML = `${bolsasSF} Bolsas <small style="color: #94A3B8; font-weight: normal;">(25 kg c/u)</small>`;
+        if (resBolsasEl) resBolsasEl.innerHTML = `${bolsasSF} Bolsas <small>(25 kg c/u)</small>`;
         
         if (labelSecundarioEl) labelSecundarioEl.textContent = "Súper Kote® (Imprimación Previa):";
-        if (resKoteEl) resKoteEl.innerHTML = `${unidadesSK} Kits <small style="color: #94A3B8; font-weight: normal;">(Recomendado)</small>`;
+        if (resKoteEl) resKoteEl.innerHTML = `${unidadesSK} Kits <small>(Recomendado)</small>`;
         
         if (resRendimientoEl) resRendimientoEl.textContent = "1 bolsa (25 kg) rinde 3.0 m² (Atérmico)";
     } else if (prodSelect === 'sd') {
         if (labelPrincipalEl) labelPrincipalEl.textContent = "Spray Deck (Resina Texturada):";
-        if (resBolsasEl) resBolsasEl.innerHTML = `${kitsSD} Kits <small style="color: #94A3B8; font-weight: normal;">(Base + Resina)</small>`;
+        if (resBolsasEl) resBolsasEl.innerHTML = `${kitsSD} Kits <small>(Base + Resina)</small>`;
         
         if (labelSecundarioEl) labelSecundarioEl.textContent = "Sellador Acrílico de Protección:";
-        if (resKoteEl) resKoteEl.innerHTML = `${Math.ceil(totalM2 / 12)} Litros <small style="color: #94A3B8; font-weight: normal;">(Terminación)</small>`;
+        if (resKoteEl) resKoteEl.innerHTML = `${Math.ceil(totalM2 / 12)} Litros <small>(Terminación)</small>`;
         
         if (resRendimientoEl) resRendimientoEl.textContent = "1 kit rinde 4.0 m² proyectado";
     } else if (prodSelect === 'ss') {
         if (labelPrincipalEl) labelPrincipalEl.textContent = "Súper Seal® (Microcemento):";
-        if (resBolsasEl) resBolsasEl.innerHTML = `${kitsSS} Kits <small style="color: #94A3B8; font-weight: normal;">(Impermeable)</small>`;
+        if (resBolsasEl) resBolsasEl.innerHTML = `${kitsSS} Kits <small>(Impermeable)</small>`;
         
         if (labelSecundarioEl) labelSecundarioEl.textContent = "Sellador Poliuretánico / Topcoat:";
-        if (resKoteEl) resKoteEl.innerHTML = `${Math.ceil(totalM2 / 10)} Litros <small style="color: #94A3B8; font-weight: normal;">(2 Manos)</small>`;
+        if (resKoteEl) resKoteEl.innerHTML = `${Math.ceil(totalM2 / 10)} Litros <small>(2 Manos)</small>`;
         
         if (resRendimientoEl) resRendimientoEl.textContent = "1 kit bicomponente rinde 5.0 m²";
+    } else if (prodSelect === 'granite') {
+        if (labelPrincipalEl) labelPrincipalEl.textContent = "Súper Granite® Shiny (Muros):";
+        if (resBolsasEl) resBolsasEl.innerHTML = `${baldesGranite} Baldes <small>(20 kg c/u)</small>`;
+        
+        if (labelSecundarioEl) labelSecundarioEl.textContent = "Fijador / Imprimación Muros:";
+        if (resKoteEl) resKoteEl.innerHTML = `${Math.ceil(totalM2 / 20)} Litros <small>(Base)</small>`;
+        
+        if (resRendimientoEl) resRendimientoEl.textContent = "1 balde (20 kg) rinde aprox. 10 m² de muro";
     }
 
     return {
@@ -410,7 +419,8 @@ function calculateMaterials() {
         unidadesSK,
         bolsasSF,
         kitsSD,
-        kitsSS
+        kitsSS,
+        baldesGranite
     };
 }
 
@@ -455,7 +465,7 @@ function sendCalcToWhatsApp() {
         medidasTexto = `Largo: ${largo}m | Ancho: ${ancho}m | Prof. Media: ${prof}m`;
     } else {
         const m2 = document.getElementById('superficie-m2')?.value || "0";
-        modoTexto = "Superficie Plana (Borde / Terraza / Cochera)";
+        modoTexto = "Superficie Plana (Borde / Terraza / Muro)";
         medidasTexto = `Superficie Directa: ${m2} m²`;
     }
 
@@ -472,6 +482,8 @@ function sendCalcToWhatsApp() {
         desgloseMateriales = `• Spray Deck Resina Texturada: *${calcData.kitsSD} Kits*\n• Sellador Acrílico de Acabado: *${Math.ceil(calcData.totalM2 / 12)} Litros*`;
     } else if (calcData.prodSelect === 'ss') {
         desgloseMateriales = `• Súper Seal® Microcemento: *${calcData.kitsSS} Kits*\n• Sellador Poliuretánico: *${Math.ceil(calcData.totalM2 / 10)} Litros*`;
+    } else if (calcData.prodSelect === 'granite') {
+        desgloseMateriales = `• Súper Granite® Shiny (Muros): *${calcData.baldesGranite} Baldes (20 kg)*\n• Acabado: *Brillante Shiny con destellos minerales*`;
     }
 
     const message = 
