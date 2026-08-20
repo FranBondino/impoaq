@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=27.0">
+    <link rel="stylesheet" href="styles.css?v=28.0">
 </head>
 <body>
 
@@ -44,12 +44,14 @@
                 <div class="nav-item-dropdown">
                     <a href="#productos" class="nav-item">Catálogo <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
                     <div class="dropdown-panel">
-                        <a href="#productos" onclick="filterCategory('todos')"><i class="fa-solid fa-layer-group text-blue"></i> Catálogo Completo (6)</a>
+                        <a href="#productos" onclick="filterCategory('todos')"><i class="fa-solid fa-layer-group text-blue"></i> Catálogo Completo (8)</a>
                         <a href="#productos" onclick="filterCategory('piscinas')"><i class="fa-solid fa-gem text-blue"></i> Cuarzo para Piscinas (Súper Brite®)</a>
                         <a href="#carta-colores"><i class="fa-solid fa-palette text-blue"></i> Carta Oficial de Colores</a>
                         <a href="#productos" onclick="filterCategory('adherencia')"><i class="fa-solid fa-link text-blue"></i> Puentes de Unión (Súper Kote®)</a>
                         <a href="#productos" onclick="filterCategory('bordes')"><i class="fa-solid fa-sun text-blue"></i> Bordes Atérmicos (Súper Fullget®)</a>
-                        <a href="#productos" onclick="filterCategory('resina')"><i class="fa-solid fa-spray-can text-blue"></i> Resinas & Spray Deck</a>
+                        <a href="#productos" onclick="filterCategory('bordes')"><i class="fa-solid fa-gem text-blue"></i> Granito &amp; Resina UV (Súper Granite®)</a>
+                        <a href="#productos" onclick="filterCategory('muros')"><i class="fa-solid fa-wand-magic-sparkles text-blue"></i> Muros Shiny (Súper Granite® Shiny)</a>
+                        <a href="#productos" onclick="filterCategory('resina')"><i class="fa-solid fa-spray-can text-blue"></i> Resinas &amp; Spray Deck</a>
                     </div>
                 </div>
                 <a href="#remodelacion" class="nav-item">Antes y Después</a>
@@ -129,7 +131,7 @@
                 
                 <!-- FILTER PILLS -->
                 <div class="catalog-filters reveal delay-100">
-                    <button class="filter-pill active" onclick="filterCategory('todos', this)">Todos (7)</button>
+                    <button class="filter-pill active" onclick="filterCategory('todos', this)">Todos (8)</button>
                     <button class="filter-pill" onclick="filterCategory('piscinas', this)">Piscinas (Cuarzo)</button>
                     <button class="filter-pill" onclick="filterCategory('adherencia', this)">Puentes de Unión</button>
                     <button class="filter-pill" onclick="filterCategory('bordes', this)">Bordes &amp; Terrazas</button>
@@ -372,10 +374,50 @@
                     </div>
                 </div>
 
-                <!-- PRODUCTO 7: SÚPER GRANITE® SHINY -->
+                <!-- PRODUCTO 7: SÚPER GRANITE® -->
+                <div class="product-card-horizontal reveal delay-400" data-cat="bordes">
+                    <div class="prod-photo-col">
+                        <img src="assets/img/super-granite-bucket.jpg" alt="Envase Oficial Súper Granite® / Super Resin Granite 2.34L">
+                    </div>
+                    <div class="prod-info-col">
+                        <div>
+                            <div class="prod-brand-header">
+                                <img src="assets/img/logo-supergranite.jpg" alt="Súper Granite Logo" class="brand-img-contain">
+                                <span class="prod-type-tag">Granito Continuo &amp; Resina UV</span>
+                            </div>
+                            <p class="prod-headline">Revestimiento continuo bicomponente de granito natural y resina elástica con filtro UV. Ideal para terrazas, soláriums y bordes exteriores de alta gama resistentes a la intemperie.</p>
+                            
+                            <table class="specs-table">
+                                <tr>
+                                    <td class="spec-title">Presentación</td>
+                                    <td class="spec-val">Kit Bicomponente (Parte A Resina Base 2.34 L + Parte B Agregados)</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Rendimiento</td>
+                                    <td class="spec-val">3.5 m² a 4.0 m² por kit completo</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Protección UV</td>
+                                    <td class="spec-val">100% Resistente a radiación solar directa sin decoloración ni amarilleo</td>
+                                </tr>
+                                <tr>
+                                    <td class="spec-title">Terminación</td>
+                                    <td class="spec-val">Granito natural continuo, textura atérmica y antideslizante</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="prod-actions">
+                            <button class="btn-sm-primary" onclick="openProductModal('granite')">Ver Ficha Técnica (PDF)</button>
+                            <button class="btn-sm-secondary" onclick="scrollToCalculator('granite')">Calcular Insumos (m²)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 8: SÚPER GRANITE® SHINY -->
                 <div class="product-card-horizontal reveal delay-400" data-cat="muros">
                     <div class="prod-photo-col">
-                        <img src="assets/img/super-granite-bucket.jpg" alt="Envase Oficial Súper Granite® Shiny Ingeprex">
+                        <img src="assets/img/super-granite-shiny-bucket.jpg" alt="Envase Oficial Súper Granite® Shiny Ingeprex">
                     </div>
                     <div class="prod-info-col">
                         <div>
@@ -406,8 +448,8 @@
                         </div>
 
                         <div class="prod-actions">
-                            <button class="btn-sm-primary" onclick="openProductModal('granite')">Ver Ficha Técnica (PDF)</button>
-                            <button class="btn-sm-secondary" onclick="scrollToCalculator('sf')">Calcular Insumos (m²)</button>
+                            <button class="btn-sm-primary" onclick="openProductModal('granite_shiny')">Ver Ficha Técnica (PDF)</button>
+                            <button class="btn-sm-secondary" onclick="scrollToCalculator('granite_shiny')">Calcular Insumos (m²)</button>
                         </div>
                     </div>
                 </div>
@@ -831,7 +873,8 @@
                             <option value="sf">SÚPER FULLGET® (Bordes &amp; Terrazas - 3.0 m²/bolsa 25kg)</option>
                             <option value="sd">SPRAY DECK (Resina Texturada - 4.0 m²/kit 20kg)</option>
                             <option value="ss">SÚPER SEAL® (Microcemento Impermeable - 5.0 m²/kit)</option>
-                            <option value="granite">SÚPER GRANITE® SHINY (Muros Interiores - 10 m²/balde 20kg)</option>
+                            <option value="granite">SÚPER GRANITE® (Bordes &amp; Terrazas - Resina UV 3.5 a 4.0 m²/kit)</option>
+                            <option value="granite_shiny">SÚPER GRANITE® SHINY (Muros Interiores - 10 m²/balde 20kg)</option>
                         </select>
                     </div>
                 </div>
@@ -1247,6 +1290,6 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script src="app.js?v=27.0"></script>
+    <script src="app.js?v=28.0"></script>
 </body>
 </html>

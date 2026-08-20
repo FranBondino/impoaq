@@ -180,16 +180,43 @@ const OFFICIAL_PRODUCTS = {
     granite: {
         id: 'granite',
         code: 'granite',
+        name: 'SÚPER GRANITE®',
+        subName: 'Revestimiento Granítico Continuo & Resina UV',
+        category: 'bordes',
+        badge: 'LÍNEA EXTERIORES & BORDES',
+        badgeClass: 'badge-sf',
+        headline: 'Revestimiento continuo bicomponente de granito natural y resina elástica con máxima protección solar UV.',
+        description: 'Súper Granite® (Super Resin Granite) es la innovación de Ingeprex para exteriores de alta gama. Combina áridos de granito natural seleccionados con una resina polimérica elástica resistente a la radiación ultravioleta, evitando amarilleos y desprendimientos en terrazas, bordes y soláriums.',
+        specs: {
+            presentacion: 'Kit Bicomponente (Parte A Resina Base 2.34 L + Parte B Agregados & Catalizador)',
+            rendimiento: '3.5 a 4.0 m² por kit completo',
+            espesor: '2 mm a 4 mm continuo',
+            durabilidad: 'Mayor a 15 años (Garantía Ingeprex)',
+            colores: 'Granito Gris Urbano, Arena Dorada, Blanco Marfil, Piedra Grafito',
+            resistencia: '100% Resistente a radiación UV, atérmico, antideslizante y flexible'
+        },
+        features: [
+            'Fórmula elastomérica modificada con bloqueador de rayos UV.',
+            'Textura continua de granito natural suave para caminar descalzo.',
+            'Ideal para soláriums, terrazas, veredas perimetrales y accesos exteriores.',
+            'Excelente anclaje sobre hormigón nuevo o pisos existentes preparados.'
+        ],
+        application: 'Limpiar el sustrato. Mezclar la Parte A Resina Base (2.34 L) con los agregados y catalizador hasta lograr una pasta fluida y homogénea. Aplicar con llana de acero inoxidable compactando uniformemente y dejar secar 24h.',
+        datasheetPdf: 'Ficha_Tecnica_SuperGranite_Resina_UV.pdf'
+    },
+    granite_shiny: {
+        id: 'granite_shiny',
+        code: 'granite_shiny',
         name: 'SÚPER GRANITE® SHINY',
         subName: 'Revestimiento Decorativo de Interiores — Acabado Brillante',
         category: 'muros',
-        badge: 'LÍNEA INTERIORES & DECORACIÓN',
+        badge: '¡NUEVO LANZAMIENTO!',
         badgeClass: 'badge-sf',
-        headline: 'Revestimiento decorativo de interiores con acabado brillante para muros y paredes de alta estética arquitectónica.',
+        headline: 'Revestimiento decorativo de interiores con exclusivo acabado brillante y destellos minerales reflectivos.',
         description: 'Súper Granite® Shiny es un revestimiento decorativo de interiores de la marca Ingeprex. Aporta un exclusivo acabado brillante y destellos minerales continuos, diseñado especialmente para renovar y jerarquizar muros, livings, halls de acceso, dormitorios y espacios comerciales con máxima sofisticación visual.',
         specs: {
             presentacion: 'Balde Oficial Ingeprex (Listo para aplicar)',
-            rendimiento: 'Aprox. 1.8 a 2.2 kg/m² según textura y absorción del muro',
+            rendimiento: 'Aprox. 1.8 a 2.2 kg/m² según textura y absorción del muro (10 m²/balde 20kg)',
             espesor: '1.5 mm a 2.5 mm continuo',
             durabilidad: 'Alta resistencia al roce, impacto y fácil limpieza en interiores',
             resistencia: 'Acabado brillante Shiny. Apto sobre yeso, drywall, estuco, fibrocemento, OSB y pinturas firmes',
@@ -344,13 +371,16 @@ function calculateMaterials() {
     // Súper Fullget®: 1 bolsa (25 kg) rinde 3.0 m²
     // Spray Deck: 1 kit resina rinde 4.0 m²
     // Súper Seal®: 1 kit microcemento rinde 5.0 m²
+    // Súper Granite® (Común): 1 kit bicomponente (2.34L) rinde 3.5 a 4.0 m²
+    // Súper Granite® Shiny: 1 balde (20 kg) rinde 10.0 m²
 
     let bolsasSB = Math.ceil(totalM2 / 2.5);
     let unidadesSK = Math.ceil(totalM2 / 15);
     let bolsasSF = Math.ceil(totalM2 / 3.0);
     let kitsSD = Math.ceil(totalM2 / 4.0);
     let kitsSS = Math.ceil(totalM2 / 5.0);
-    let baldesGranite = Math.ceil(totalM2 / 10.0);
+    let kitsGranite = Math.ceil(totalM2 / 3.75);
+    let baldesGraniteShiny = Math.ceil(totalM2 / 10.0);
 
     // Actualizar elementos DOM en pantalla
     const resM2El = document.getElementById('res-m2');
@@ -403,8 +433,16 @@ function calculateMaterials() {
         
         if (resRendimientoEl) resRendimientoEl.textContent = "1 kit bicomponente rinde 5.0 m²";
     } else if (prodSelect === 'granite') {
+        if (labelPrincipalEl) labelPrincipalEl.textContent = "Súper Granite® Continuo (Bordes):";
+        if (resBolsasEl) resBolsasEl.innerHTML = `${kitsGranite} Kits <small>(2.34 L + Agregados)</small>`;
+        
+        if (labelSecundarioEl) labelSecundarioEl.textContent = "Súper Kote® (Imprimación Previa):";
+        if (resKoteEl) resKoteEl.innerHTML = `${unidadesSK} Kits <small>(Recomendado)</small>`;
+        
+        if (resRendimientoEl) resRendimientoEl.textContent = "1 kit bicomponente rinde aprox. 3.5 a 4.0 m²";
+    } else if (prodSelect === 'granite_shiny') {
         if (labelPrincipalEl) labelPrincipalEl.textContent = "Súper Granite® Shiny (Muros):";
-        if (resBolsasEl) resBolsasEl.innerHTML = `${baldesGranite} Baldes <small>(20 kg c/u)</small>`;
+        if (resBolsasEl) resBolsasEl.innerHTML = `${baldesGraniteShiny} Baldes <small>(20 kg c/u)</small>`;
         
         if (labelSecundarioEl) labelSecundarioEl.textContent = "Fijador / Imprimación Muros:";
         if (resKoteEl) resKoteEl.innerHTML = `${Math.ceil(totalM2 / 20)} Litros <small>(Base)</small>`;
@@ -420,7 +458,8 @@ function calculateMaterials() {
         bolsasSF,
         kitsSD,
         kitsSS,
-        baldesGranite
+        kitsGranite,
+        baldesGraniteShiny
     };
 }
 
@@ -483,7 +522,9 @@ function sendCalcToWhatsApp() {
     } else if (calcData.prodSelect === 'ss') {
         desgloseMateriales = `• Súper Seal® Microcemento: *${calcData.kitsSS} Kits*\n• Sellador Poliuretánico: *${Math.ceil(calcData.totalM2 / 10)} Litros*`;
     } else if (calcData.prodSelect === 'granite') {
-        desgloseMateriales = `• Súper Granite® Shiny (Muros): *${calcData.baldesGranite} Baldes (20 kg)*\n• Acabado: *Brillante Shiny con destellos minerales*`;
+        desgloseMateriales = `• Súper Granite® Continuo (Exteriores): *${calcData.kitsGranite} Kits Bicomponente (2.34 L)*\n• Rendimiento: *3.5 a 4.0 m² por kit con protección solar UV*`;
+    } else if (calcData.prodSelect === 'granite_shiny') {
+        desgloseMateriales = `• Súper Granite® Shiny (Muros): *${calcData.baldesGraniteShiny} Baldes (20 kg)*\n• Acabado: *Brillante Shiny con destellos minerales para interiores*`;
     }
 
     const message = 
@@ -517,7 +558,8 @@ const PRODUCT_PACKAGING_IMAGES = {
     sd: 'assets/img/sd-bucket.png',
     ss: 'assets/img/ss-bucket.png',
     latex: 'assets/img/latex-bucket.png',
-    granite: 'assets/img/super-granite-bucket.jpg'
+    granite: 'assets/img/super-granite-bucket.jpg',
+    granite_shiny: 'assets/img/super-granite-shiny-bucket.jpg'
 };
 
 function openProductModal(prodCode) {
@@ -1058,12 +1100,12 @@ const GALLERY_ITEMS = [
     {
         type: 'video',
         id: 'v_resingranite',
-        title: 'Súper Granite® Shiny (Super Resin Granite 3D)',
+        title: 'Súper Granite® (Super Resin Granite 3D)',
         category: 'renders',
-        tag: 'Granite Shiny',
-        tagBg: '#881337',
+        tag: 'Granite UV',
+        tagBg: '#DC2626',
         badge: '<i class="fa-solid fa-cube"></i> RENDER 3D',
-        desc: 'Nuevo revestimiento granítico continuo con destellos Shiny y resina elástica con bloqueador solar UV.',
+        desc: 'Revestimiento granítico continuo bicomponente y resina elástica con bloqueador solar UV para soláriums y bordes.',
         thumb: 'assets/gallery/thumbs/v_resingranite.jpg',
         video: 'assets/gallery/videos/v_resingranite.mp4'
     },
