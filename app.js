@@ -181,29 +181,29 @@ const OFFICIAL_PRODUCTS = {
         id: 'granite',
         code: 'granite',
         name: 'SÚPER GRANITE® SHINY',
-        subName: 'Revestimiento Granítico con Destellos Shiny & Resina UV',
-        category: 'bordes',
-        badge: 'LÍNEA EXTERIORES & BORDES',
+        subName: 'Revestimiento Decorativo de Interiores — Acabado Brillante',
+        category: 'muros',
+        badge: 'LÍNEA INTERIORES & DECORACIÓN',
         badgeClass: 'badge-sf',
-        headline: 'Revestimiento continuo bicomponente de granito natural con efecto Shiny (destellos minerales) y resina elástica con filtro UV.',
-        description: 'Súper Granite® Shiny (Super Resin Granite Shiny) es el nuevo lanzamiento exclusivo de Ingeprex para exteriores de alta gama. Combina áridos de granito seleccionados con partículas reflectivas minerales y una resina polimérica elástica 100% resistente a los rayos UV, logrando una terminación atérmica brillante, antideslizante y suave al tacto para terrazas y soláriums.',
+        headline: 'Revestimiento decorativo de interiores con acabado brillante para muros y paredes de alta estética arquitectónica.',
+        description: 'Súper Granite® Shiny es un revestimiento decorativo de interiores de la marca Ingeprex. Aporta un exclusivo acabado brillante y destellos minerales continuos, diseñado especialmente para renovar y jerarquizar muros, livings, halls de acceso, dormitorios y espacios comerciales con máxima sofisticación visual.',
         specs: {
-            presentacion: 'Kit Bicomponente (Parte A Resina Base 2.34 L + Parte B Agregados Shiny & Catalizador)',
-            rendimiento: '3.5 a 4.0 m² por kit completo',
-            espesor: '2 mm a 4 mm continuo',
-            durabilidad: 'Mayor a 15 años (Garantía Ingeprex)',
-            colores: 'Granito Shiny Gris Urbano, Arena Dorada, Blanco Marfil, Piedra Grafito',
-            resistencia: '100% Resistente a radiación UV, atérmico, antideslizante y flexible'
+            presentacion: 'Balde Oficial Ingeprex (Listo para aplicar)',
+            uso: 'Paredes y superficies interiores de alta exigencia estética',
+            superficies: 'Yeso, estucos, fibrocemento, pasta muro, OSB, yeso cartón (drywall) y pinturas previas firmes',
+            colores: 'Sky Violet, Rose Pink, Cristal Silver, Graphite y Onix',
+            rendimiento: 'Aprox. 1.8 a 2.2 kg/m² según textura y estado del muro',
+            terminacion: 'Textura mineral continua con efecto brillante reflectivo Shiny'
         },
         features: [
-            'Efecto Shiny: partículas reflectivas minerales que resaltan con la luz natural.',
-            'Fórmula elastomérica modificada con bloqueador de rayos UV.',
-            'Textura continua de granito natural suave para caminar descalzo.',
-            'Ideal para soláriums, terrazas, veredas perimetrales y accesos exteriores.',
-            'Excelente anclaje sobre hormigón nuevo o pisos existentes preparados.'
+            'Diseñado exclusivamente para paredes y superficies interiores.',
+            'Aporte lumínico y acabado brillante único que resalta con la iluminación ambiental.',
+            'Carta de colores de diseño: Sky Violet, Rose Pink, Cristal Silver, Graphite y Onix.',
+            'Máxima compatibilidad: se aplica sobre yeso, pasta muro, fibrocemento, OSB, yeso cartón y pintura firme.',
+            'Aplicación continua y uniforme sin uniones visibles.'
         ],
-        application: 'Limpiar el sustrato. Mezclar la Parte A Resina Base (2.34 L) con los agregados Shiny y catalizador hasta lograr una pasta fluida y homogénea. Aplicar con llana de acero inoxidable compactando uniformemente y dejar secar 24h.',
-        datasheetPdf: 'Ficha_Tecnica_SuperGranite_Shiny_Resina_UV.pdf'
+        application: 'Verificar que la superficie esté limpia, seca y libre de polvo o partes flojas. Sobre yeso, drywall o pintura previa, aplicar una mano de imprimación/fijador si fuera necesario. Extender Súper Granite® Shiny con llana de acero inoxidable compactando uniformemente hasta lograr el acabado texturado deseado y dejar secar 24h.',
+        datasheetPdf: 'Ficha_Tecnica_Super_Granite_Shiny_Ingeprex.pdf'
     }
 };
 
