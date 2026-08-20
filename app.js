@@ -1823,70 +1823,57 @@ function initHeroBubbles() {
 }
 
 // ==========================================================================
-// 13. COMPARADOR INTERACTIVO ANTES VS DESPUÉS (REMODELACIÓN SLIDER)
+// 13. EXPERIENCIA INTERACTIVA DE REMODELACIÓN & TRANSFORMACIÓN
 // ==========================================================================
+function switchRemodTab(tabId, btn) {
+    const panels = document.querySelectorAll('.remod-panel');
+    const btns = document.querySelectorAll('.remod-tab-btn');
+
+    btns.forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+
+    panels.forEach(panel => {
+        panel.style.display = 'none';
+        panel.classList.remove('active');
+    });
+
+    const targetPanel = document.getElementById(`remod-panel-${tabId}`);
+    if (targetPanel) {
+        targetPanel.style.display = 'block';
+        targetPanel.classList.add('active');
+    }
+}
+
+function updateRemodSimulator(yearsVal) {
+    const years = parseInt(yearsVal, 10) || 5;
+    const yearsLabel = document.getElementById('sim-years-val');
+    const repaintsEl = document.getElementById('sim-paint-repaints');
+    const waterEl = document.getElementById('sim-paint-water');
+    const summaryMsg = document.getElementById('sim-summary-msg');
+
+    if (yearsLabel) {
+        yearsLabel.textContent = `${years} ${years === 1 ? 'Año' : 'Años'}`;
+    }
+
+    // Fórmulas de mantenimiento tradicional
+    const repaints = Math.max(1, Math.floor(years / 1.6) + (years >= 1 ? 1 : 0));
+    const waterLitros = repaints * 50000;
+
+    if (repaintsEl) {
+        repaintsEl.textContent = `${repaints} ${repaints === 1 ? 'vez' : 'veces'}`;
+    }
+
+    if (waterEl) {
+        waterEl.textContent = `~${waterLitros.toLocaleString('es-AR')} Litros`;
+    }
+
+    if (summaryMsg) {
+        summaryMsg.innerHTML = `A los <strong>${years} ${years === 1 ? 'año' : 'años'}</strong>, el sistema Súper Brite® ya ahorró <strong>${repaints} ${repaints === 1 ? 'repintado completo' : 'repintados completos'}</strong> y miles de litros de agua desperdiciados en vaciados, manteniendo la piscina intacta.`;
+    }
+}
+
 function initBeforeAfterSlider() {
-    const slider = document.getElementById('ba-slider');
-    const beforeWrapper = document.getElementById('ba-before-wrapper');
-    const beforeImg = document.getElementById('ba-img-before');
-    const divider = document.getElementById('ba-divider');
-    if (!slider || !beforeWrapper || !beforeImg || !divider) return;
-
-    let isDragging = false;
-
-    function updateSliderWidth() {
-        const rect = slider.getBoundingClientRect();
-        beforeImg.style.width = rect.width + 'px';
-    }
-
-    function setPosition(percent) {
-        const clamped = Math.max(0, Math.min(100, percent));
-        beforeWrapper.style.width = clamped + '%';
-        divider.style.left = clamped + '%';
-    }
-
-    function handleMove(clientX) {
-        const rect = slider.getBoundingClientRect();
-        const offsetX = clientX - rect.left;
-        const percent = (offsetX / rect.width) * 100;
-        setPosition(percent);
-    }
-
-    slider.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        handleMove(e.clientX);
-    });
-
-    window.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        handleMove(e.clientX);
-    });
-
-    window.addEventListener('mouseup', () => {
-        isDragging = false;
-    });
-
-    slider.addEventListener('touchstart', (e) => {
-        isDragging = true;
-        if (e.touches && e.touches[0]) {
-            handleMove(e.touches[0].clientX);
-        }
-    }, { passive: true });
-
-    window.addEventListener('touchmove', (e) => {
-        if (!isDragging) return;
-        if (e.touches && e.touches[0]) {
-            handleMove(e.touches[0].clientX);
-        }
-    }, { passive: true });
-
-    window.addEventListener('touchend', () => {
-        isDragging = false;
-    });
-
-    window.addEventListener('resize', updateSliderWidth, { passive: true });
-    updateSliderWidth();
-    setPosition(50);
+    updateRemodSimulator(5);
 }
 
 function switchCertPhoto(imgSrc, btn) {
@@ -1908,6 +1895,8 @@ window.filterCategory = filterCategory;
 window.submitContactForm = submitContactForm;
 window.initHeroBubbles = initHeroBubbles;
 window.initBeforeAfterSlider = initBeforeAfterSlider;
+window.switchRemodTab = switchRemodTab;
+window.updateRemodSimulator = updateRemodSimulator;
 window.toggleFaq = toggleFaq;
 window.initFaqAccordion = initFaqAccordion;
 window.selectColorAndCalc = selectColorAndCalc;

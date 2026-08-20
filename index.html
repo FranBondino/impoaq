@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=28.0">
+    <link rel="stylesheet" href="styles.css?v=29.0">
 </head>
 <body>
 
@@ -458,43 +458,256 @@
         </div>
     </section>
 
-    <!-- SECCIÓN COMPARADOR INTERACTIVO ANTES VS DESPUÉS (REMODELACIÓN) -->
+    <!-- SECCIÓN COMPARADOR & TRANSFORMACIÓN ESTRUCTURAL (REMODELACIÓN) -->
     <section class="section-before-after" id="remodelacion">
         <div class="container">
             <div class="section-head text-center reveal">
-                <span class="section-tag">Transformación & Reconstrucción</span>
-                <h2 class="head-title">Antes vs. Después: De Pintura Tradicional a Súper Brite®</h2>
-                <p class="head-desc">Deslizá el control interactivo para ver la renovación estructural: eliminá para siempre el descascarado, las microfisuras y el repintado anual con nuestro revestimiento continuo de cuarzo.</p>
+                <span class="section-tag">Renovación &amp; Transformación Estructural</span>
+                <h2 class="head-title">De Pintura Tradicional a la Revolución del Cuarzo Súper Brite®</h2>
+                <p class="head-desc">Descubrí por qué las piscinas modernas reemplazan el gasto del repintado anual por un revestimiento continuo de cristal de cuarzo que dura más de 15 años sin mantenimiento.</p>
+                
+                <!-- TABS DE INTERACCIÓN -->
+                <div class="remod-tab-nav reveal delay-100">
+                    <button class="remod-tab-btn active" onclick="switchRemodTab('comparativa', this)">
+                        <i class="fa-solid fa-scale-balanced"></i> Comparativa Directa
+                    </button>
+                    <button class="remod-tab-btn" onclick="switchRemodTab('proceso', this)">
+                        <i class="fa-solid fa-stairs"></i> Proceso de Obra (3 Pasos)
+                    </button>
+                    <button class="remod-tab-btn" onclick="switchRemodTab('simulador', this)">
+                        <i class="fa-solid fa-chart-line"></i> Simulador a 10 Años
+                    </button>
+                </div>
             </div>
 
-            <!-- COMPARADOR SLIDER INTERACTIVO -->
-            <div class="ba-card reveal-scale">
-                <div class="ba-slider-container" id="ba-slider" aria-label="Comparador interactivo Antes y Después">
-                    <!-- Imagen DESPUÉS (Fondo completo) -->
-                    <img src="assets/img/remodelacion_despues.jpg" alt="Piscina renovada con revestimiento de cuarzo Súper Brite® Tahoe Blue" class="ba-img ba-img-after">
-                    <span class="ba-badge ba-badge-after"><i class="fa-solid fa-gem text-cyan"></i> DESPUÉS: Súper Brite® Tahoe Blue</span>
+            <!-- CONTENEDOR PRINCIPAL INTERACTIVO -->
+            <div class="remod-experience-card reveal-scale">
+                
+                <!-- PANEL 1: COMPARATIVA DIRECTA LADO A LADO -->
+                <div class="remod-panel active" id="remod-panel-comparativa">
+                    <div class="remod-versus-grid">
+                        <!-- TARJETA PINTURA TRADICIONAL -->
+                        <div class="remod-side-card remod-side-bad">
+                            <div class="remod-side-header">
+                                <span class="remod-side-badge badge-danger"><i class="fa-solid fa-triangle-exclamation"></i> Ciclo Tradicional</span>
+                                <h3 class="remod-side-title">Pintura al Cloro / Caucho</h3>
+                                <p class="remod-side-sub">Película plástica superficial de corta duración</p>
+                            </div>
+                            
+                            <ul class="remod-points-list">
+                                <li class="remod-point-item point-bad">
+                                    <i class="fa-solid fa-circle-xmark"></i>
+                                    <div>
+                                        <strong>Repintado anual obligatorio:</strong>
+                                        <p>Se ampolla, descascara y degrada con el cloro y la sal en menos de 12 a 24 meses.</p>
+                                    </div>
+                                </li>
+                                <li class="remod-point-item point-bad">
+                                    <i class="fa-solid fa-circle-xmark"></i>
+                                    <div>
+                                        <strong>Fisuras y microfiltraciones:</strong>
+                                        <p>No aporta espesor ni resistencia estructural; cualquier movimiento del hormigón genera grietas.</p>
+                                    </div>
+                                </li>
+                                <li class="remod-point-item point-bad">
+                                    <i class="fa-solid fa-circle-xmark"></i>
+                                    <div>
+                                        <strong>Superficie áspera y decolorada:</strong>
+                                        <p>Se torna porosa, junta verdín en el fondo y mancha la piel por desprendimiento de cal.</p>
+                                    </div>
+                                </li>
+                                <li class="remod-point-item point-bad">
+                                    <i class="fa-solid fa-circle-xmark"></i>
+                                    <div>
+                                        <strong>Costo acumulado recurrente:</strong>
+                                        <p>Vaciar la piscina, rasquetear, lijar y comprar pintura cada primavera genera un gasto constante.</p>
+                                    </div>
+                                </li>
+                            </ul>
 
-                    <!-- Capa ANTES (Recortada por el divisor) -->
-                    <div class="ba-before-wrapper" id="ba-before-wrapper">
-                        <img src="assets/img/remodelacion_antes.jpg" alt="Piscina deteriorada con pintura envejecida y fisuras" class="ba-img ba-img-before" id="ba-img-before">
-                        <span class="ba-badge ba-badge-before"><i class="fa-solid fa-triangle-exclamation" style="color: #F59E0B;"></i> ANTES: Pintura envejecida & fisuras</span>
-                    </div>
+                            <div class="remod-side-footer">
+                                <div class="remod-meter-wrap">
+                                    <div class="remod-meter-label">
+                                        <span>Durabilidad Promedio:</span>
+                                        <strong>1 a 2 Temporadas</strong>
+                                    </div>
+                                    <div class="remod-meter-bar"><div class="remod-meter-fill fill-bad" style="width: 20%;"></div></div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <!-- Divisor y manija de arrastre -->
-                    <div class="ba-divider" id="ba-divider">
-                        <div class="ba-handle" title="Arrastrá a izquierda o derecha para comparar">
-                            <i class="fa-solid fa-left-right"></i>
+                        <!-- VS BADGE -->
+                        <div class="remod-vs-circle" aria-hidden="true">
+                            <span>VS</span>
+                        </div>
+
+                        <!-- TARJETA SÚPER BRITE CUARZO -->
+                        <div class="remod-side-card remod-side-good">
+                            <div class="remod-shimmer-fx" aria-hidden="true"></div>
+                            <div class="remod-side-header">
+                                <span class="remod-side-badge badge-premium"><i class="fa-solid fa-gem"></i> Innovación Ingeprex</span>
+                                <h3 class="remod-side-title text-cyan">Súper Brite® Cuarzo</h3>
+                                <p class="remod-side-sub">Revestimiento continuo monolítico de cristal natural</p>
+                            </div>
+                            
+                            <ul class="remod-points-list">
+                                <li class="remod-point-item point-good">
+                                    <i class="fa-solid fa-circle-check text-cyan"></i>
+                                    <div>
+                                        <strong>Más de 10 a 15 años de vida útil:</strong>
+                                        <p>Cristales de cuarzo 99% puro inmunes al cloro, salinizadores y radiación solar extrema.</p>
+                                    </div>
+                                </li>
+                                <li class="remod-point-item point-good">
+                                    <i class="fa-solid fa-circle-check text-cyan"></i>
+                                    <div>
+                                        <strong>Sellado monolítico de 8 a 10 mm:</strong>
+                                        <p>Integra una capa pétrea impermeable que sella microfisuras y rigidiza el vaso de hormigón.</p>
+                                    </div>
+                                </li>
+                                <li class="remod-point-item point-good">
+                                    <i class="fa-solid fa-circle-check text-cyan"></i>
+                                    <div>
+                                        <strong>Suave para pies descalzos y antideslizante:</strong>
+                                        <p>Llaneado continuo sin aristas cortantes ni juntas; no junta hongos por su nula porosidad.</p>
+                                    </div>
+                                </li>
+                                <li class="remod-point-item point-good">
+                                    <i class="fa-solid fa-circle-check text-cyan"></i>
+                                    <div>
+                                        <strong>Inversión definitiva y valor inmobiliario:</strong>
+                                        <p>Se amortiza rápidamente eliminando los costos anuales de vaciado y mano de obra.</p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="remod-side-footer">
+                                <div class="remod-meter-wrap">
+                                    <div class="remod-meter-label">
+                                        <span>Durabilidad Garantizada:</span>
+                                        <strong class="text-cyan">15+ Años Continuos</strong>
+                                    </div>
+                                    <div class="remod-meter-bar"><div class="remod-meter-fill fill-good" style="width: 100%;"></div></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Barra de Instrucción / Hint -->
-                <div class="ba-hint">
-                    <i class="fa-solid fa-hand-pointer text-cyan"></i>
-                    <span><strong>Interactivo:</strong> Arrastrá la barra central o tocá la pantalla para comparar la transformación.</span>
+                <!-- PANEL 2: PROCESO DE REMODELACIÓN EN 3 PASOS -->
+                <div class="remod-panel" id="remod-panel-proceso" style="display: none;">
+                    <div class="remod-steps-grid">
+                        <div class="remod-step-card">
+                            <div class="remod-step-img-wrap">
+                                <img src="assets/img/obra-llaneado-2.jpg" alt="Puente de Adherencia Súper Kote en Obra" class="remod-step-img">
+                                <span class="remod-step-num">01</span>
+                            </div>
+                            <div class="remod-step-content">
+                                <span class="remod-step-badge"><i class="fa-solid fa-link"></i> Sin Picar Hormigón</span>
+                                <h4>Puente de Unión Súper Kote®</h4>
+                                <p>Se aplica directamente sobre la superficie existente (hormigón o pintura firme) con rodillo o brocha, creando una adherencia química indestructible.</p>
+                            </div>
+                        </div>
+
+                        <div class="remod-step-card">
+                            <div class="remod-step-img-wrap">
+                                <img src="assets/img/obra-llaneado-1.jpg" alt="Llaneado Profesional Súper Brite en Piscina" class="remod-step-img">
+                                <span class="remod-step-num">02</span>
+                            </div>
+                            <div class="remod-step-content">
+                                <span class="remod-step-badge"><i class="fa-solid fa-trowel"></i> Capa de 8 a 10 mm</span>
+                                <h4>Llaneado Continuo Súper Brite®</h4>
+                                <p>El aplicador extiende y compacta manualmente la pasta de cuarzo y cemento modificado, alisando la superficie para lograr una textura homogénea y suave.</p>
+                            </div>
+                        </div>
+
+                        <div class="remod-step-card">
+                            <div class="remod-step-img-wrap">
+                                <img src="assets/gallery/photos/p_tahoe_blue.jpg" alt="Piscina terminada con cuarzo Súper Brite Tahoe Blue" class="remod-step-img">
+                                <span class="remod-step-num">03</span>
+                            </div>
+                            <div class="remod-step-content">
+                                <span class="remod-step-badge badge-premium"><i class="fa-solid fa-water"></i> Llenado &amp; Disfrute</span>
+                                <h4>Lavado Suave &amp; Puesta en Marcha</h4>
+                                <p>Tras un breve fraguado se realiza el lavado químico/esponjeado para exponer el brillo del cuarzo, permitiendo el llenado inmediato de agua cristalina.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Métricas de Impacto de la Remodelación -->
+                <!-- PANEL 3: SIMULADOR DE AHORRO Y MANTENIMIENTO A 10 AÑOS -->
+                <div class="remod-panel" id="remod-panel-simulador" style="display: none;">
+                    <div class="remod-sim-box">
+                        <div class="remod-sim-header text-center">
+                            <span class="remod-side-badge badge-premium"><i class="fa-solid fa-calculator"></i> Calculá el Impacto en el Tiempo</span>
+                            <h3 class="remod-sim-title">Proyección de Mantenimiento: <span id="sim-years-val" class="text-cyan">5 Años</span></h3>
+                            <p class="remod-sim-sub">Deslizá la barra de tiempo para comparar el esfuerzo, agua y costo acumulado entre ambos sistemas.</p>
+                            
+                            <!-- SLIDER DE AÑOS -->
+                            <div class="remod-slider-container">
+                                <div class="remod-slider-labels">
+                                    <span>1 Año</span>
+                                    <span>3 Años</span>
+                                    <span>5 Años</span>
+                                    <span>7 Años</span>
+                                    <span>10 Años</span>
+                                </div>
+                                <input type="range" id="remod-time-slider" min="1" max="10" value="5" step="1" oninput="updateRemodSimulator(this.value)" class="remod-range-input">
+                            </div>
+                        </div>
+
+                        <div class="remod-sim-results-grid">
+                            <div class="remod-sim-col col-paint">
+                                <div class="remod-sim-col-header">
+                                    <i class="fa-solid fa-paint-roller text-danger"></i>
+                                    <h4>Pintura Tradicional</h4>
+                                </div>
+                                <div class="remod-sim-stat">
+                                    <span class="stat-label">Repintados requeridos:</span>
+                                    <strong id="sim-paint-repaints" class="stat-val text-danger">3 veces</strong>
+                                </div>
+                                <div class="remod-sim-stat">
+                                    <span class="stat-label">Agua vaciada y desechada:</span>
+                                    <strong id="sim-paint-water" class="stat-val text-danger">~150.000 Litros</strong>
+                                </div>
+                                <div class="remod-sim-stat">
+                                    <span class="stat-label">Estado de la superficie:</span>
+                                    <strong class="stat-val" style="color: #F59E0B;">Descascarado &amp; rugoso</strong>
+                                </div>
+                            </div>
+
+                            <div class="remod-sim-col col-brite">
+                                <div class="remod-sim-col-header">
+                                    <i class="fa-solid fa-gem text-cyan"></i>
+                                    <h4 class="text-cyan">Súper Brite® Cuarzo</h4>
+                                </div>
+                                <div class="remod-sim-stat">
+                                    <span class="stat-label">Repintados requeridos:</span>
+                                    <strong class="stat-val text-green">0 (Cero repintado)</strong>
+                                </div>
+                                <div class="remod-sim-stat">
+                                    <span class="stat-label">Agua vaciada por pintura:</span>
+                                    <strong class="stat-val text-green">0 Litros (Agua conservada)</strong>
+                                </div>
+                                <div class="remod-sim-stat">
+                                    <span class="stat-label">Estado de la superficie:</span>
+                                    <strong class="stat-val text-green">100% Intacta y brillante</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="remod-sim-cta text-center">
+                            <p class="remod-sim-summary-text" id="sim-summary-msg">
+                                A los <strong>5 años</strong>, el sistema Súper Brite® ya ahorró <strong>3 repintados completos</strong> y cientos de horas de obra, manteniendo la piscina como el primer día.
+                            </p>
+                            <button class="btn-sm-primary" onclick="scrollToCalculator('sb')">
+                                <i class="fa-solid fa-calculator"></i> Calcular Insumos de Remodelación para mi Piscina
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MÉTRICAS INFERIORES DE IMPACTO -->
                 <div class="ba-features-grid">
                     <div class="ba-feature-card">
                         <div class="ba-feat-icon"><i class="fa-solid fa-ban text-cyan"></i></div>
@@ -513,11 +726,12 @@
                     <div class="ba-feature-card">
                         <div class="ba-feat-icon"><i class="fa-solid fa-sun text-cyan"></i></div>
                         <div class="ba-feat-text">
-                            <h4>Textura Suave & Antideslizante</h4>
+                            <h4>Textura Suave &amp; Antideslizante</h4>
                             <p>Cristales de cuarzo pulidos al tacto para pies descalzos que no acumulan verdín ni hongos por su nula porosidad.</p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -1290,6 +1504,6 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script src="app.js?v=28.0"></script>
+    <script src="app.js?v=29.0"></script>
 </body>
 </html>
