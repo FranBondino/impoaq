@@ -1906,6 +1906,22 @@ function filterSwatchCategory(cat, btn) {
     });
 }
 
+function selectContactTopic(topic) {
+    const select = document.getElementById('c-tipo');
+    if (select) {
+        select.value = topic;
+    }
+    const contactSection = document.getElementById('contacto');
+    if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    setTimeout(() => {
+        const nameInput = document.getElementById('c-nombre');
+        if (nameInput) nameInput.focus();
+    }, 600);
+}
+
+window.selectContactTopic = selectContactTopic;
 window.filterSwatchCategory = filterSwatchCategory;
 window.switchCertPhoto = switchCertPhoto;
 window.filterCategory = filterCategory;
@@ -1913,6 +1929,7 @@ window.submitContactForm = submitContactForm;
 window.initHeroBubbles = initHeroBubbles;
 window.initBeforeAfterSlider = initBeforeAfterSlider;
 window.switchRemodTab = switchRemodTab;
+
 window.updateRemodSimulator = updateRemodSimulator;
 window.toggleFaq = toggleFaq;
 window.initFaqAccordion = initFaqAccordion;
