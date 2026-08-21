@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=37.0">
+    <link rel="stylesheet" href="styles.css?v=38.0">
 </head>
 <body>
 
@@ -470,272 +470,88 @@
     <section class="section-before-after" id="remodelacion">
         <div class="container">
             <div class="section-head text-center reveal">
-                <span class="section-tag">Renovación &amp; Transformación Estructural</span>
-                <h2 class="head-title">De Pintura Tradicional a la Revolución del Cuarzo Súper Brite®</h2>
-                <p class="head-desc">Descubrí por qué las piscinas modernas reemplazan el gasto del repintado anual por un revestimiento continuo de cristal de cuarzo que dura más de 15 años sin mantenimiento.</p>
-                
-                <!-- TABS DE INTERACCIÓN -->
-                <div class="remod-tab-nav reveal delay-100">
-                    <button class="remod-tab-btn active" onclick="switchRemodTab('comparativa', this)">
-                        <i class="fa-solid fa-scale-balanced"></i> Comparativa Directa
-                    </button>
-                    <button class="remod-tab-btn" onclick="switchRemodTab('proceso', this)">
-                        <i class="fa-solid fa-stairs"></i> Proceso de Obra (3 Pasos)
-                    </button>
-                    <button class="remod-tab-btn" onclick="switchRemodTab('simulador', this)">
-                        <i class="fa-solid fa-chart-line"></i> Simulador a 10 Años
-                    </button>
-                </div>
+                <span class="section-tag">Sistema Constructivo Homologado</span>
+                <h2 class="head-title">Proceso de Aplicación &amp; Obra en 3 Pasos</h2>
+                <p class="head-desc">Conocé cómo se renueva o reviste una piscina con el sistema continuo de cuarzo Súper Brite®: rápido, limpio y sin necesidad de picar el vaso de hormigón existente.</p>
             </div>
 
-            <!-- CONTENEDOR PRINCIPAL INTERACTIVO -->
-            <div class="remod-experience-card reveal-scale">
+            <!-- CONTENEDOR PRINCIPAL DEL PROCESO EN 3 PASOS -->
+            <div class="remod-experience-card reveal-scale" style="padding: 32px;">
                 
-                <!-- PANEL 1: COMPARATIVA DIRECTA LADO A LADO -->
-                <div class="remod-panel active" id="remod-panel-comparativa">
-                    <div class="remod-versus-grid">
-                        <!-- TARJETA PINTURA TRADICIONAL -->
-                        <div class="remod-side-card remod-side-bad">
-                            <div class="remod-side-header">
-                                <span class="remod-side-badge badge-danger"><i class="fa-solid fa-triangle-exclamation"></i> Ciclo Tradicional</span>
-                                <h3 class="remod-side-title">Pintura al Cloro / Caucho</h3>
-                                <p class="remod-side-sub">Película plástica superficial de corta duración</p>
-                            </div>
-                            
-                            <ul class="remod-points-list">
-                                <li class="remod-point-item point-bad">
-                                    <i class="fa-solid fa-circle-xmark"></i>
-                                    <div>
-                                        <strong>Repintado anual obligatorio:</strong>
-                                        <p>Se ampolla, descascara y degrada con el cloro y la sal en menos de 12 a 24 meses.</p>
-                                    </div>
-                                </li>
-                                <li class="remod-point-item point-bad">
-                                    <i class="fa-solid fa-circle-xmark"></i>
-                                    <div>
-                                        <strong>Fisuras y microfiltraciones:</strong>
-                                        <p>No aporta espesor ni resistencia estructural; cualquier movimiento del hormigón genera grietas.</p>
-                                    </div>
-                                </li>
-                                <li class="remod-point-item point-bad">
-                                    <i class="fa-solid fa-circle-xmark"></i>
-                                    <div>
-                                        <strong>Superficie áspera y decolorada:</strong>
-                                        <p>Se torna porosa, junta verdín en el fondo y mancha la piel por desprendimiento de cal.</p>
-                                    </div>
-                                </li>
-                                <li class="remod-point-item point-bad">
-                                    <i class="fa-solid fa-circle-xmark"></i>
-                                    <div>
-                                        <strong>Costo acumulado recurrente:</strong>
-                                        <p>Vaciar la piscina, rasquetear, lijar y comprar pintura cada primavera genera un gasto constante.</p>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <div class="remod-side-footer">
-                                <div class="remod-meter-wrap">
-                                    <div class="remod-meter-label">
-                                        <span>Durabilidad Promedio:</span>
-                                        <strong>1 a 2 Temporadas</strong>
-                                    </div>
-                                    <div class="remod-meter-bar"><div class="remod-meter-fill fill-bad" style="width: 20%;"></div></div>
-                                </div>
+                <div class="remod-steps-grid">
+                    <!-- PASO 01 -->
+                    <div class="remod-step-card">
+                        <div class="remod-step-img-wrap">
+                            <img src="assets/img/flyer-super-kote.jpg" alt="Puente de Unión Súper Kote oficial Ingeprex" class="remod-step-img" style="object-position: top center;">
+                            <span class="remod-step-num">01</span>
+                        </div>
+                        <div class="remod-step-content">
+                            <span class="remod-step-badge"><i class="fa-solid fa-link"></i> Sin Picar Hormigón</span>
+                            <h4>Puente de Unión Súper Kote®</h4>
+                            <p>Se aplica directamente sobre la superficie existente (hormigón o pintura firme) mediante rodillo o brocha, creando un anclaje químico bicomponente indestructible.</p>
+                            <div class="remod-step-bullets">
+                                <span><i class="fa-solid fa-check text-cyan"></i> Recubrible en 4 a 6 horas</span>
+                                <span><i class="fa-solid fa-check text-cyan"></i> Evita demoliciones y ruidos</span>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- VS BADGE -->
-                        <div class="remod-vs-circle" aria-hidden="true">
-                            <span>VS</span>
+                    <!-- PASO 02 -->
+                    <div class="remod-step-card">
+                        <div class="remod-step-img-wrap">
+                            <img src="assets/img/obra-llaneado-2.jpg" alt="Llaneado profesional de cuarzo en taller presencial homologado" class="remod-step-img" style="object-position: center;">
+                            <span class="remod-step-num">02</span>
                         </div>
-
-                        <!-- TARJETA SÚPER BRITE CUARZO -->
-                        <div class="remod-side-card remod-side-good">
-                            <div class="remod-shimmer-fx" aria-hidden="true"></div>
-                            <div class="remod-side-header">
-                                <span class="remod-side-badge badge-premium"><i class="fa-solid fa-gem"></i> Innovación Ingeprex</span>
-                                <h3 class="remod-side-title text-cyan">Súper Brite® Cuarzo</h3>
-                                <p class="remod-side-sub">Revestimiento continuo monolítico de cristal natural</p>
+                        <div class="remod-step-content">
+                            <span class="remod-step-badge"><i class="fa-solid fa-trowel"></i> Capa de 8 a 10 mm</span>
+                            <h4>Llaneado Continuo Súper Brite®</h4>
+                            <p>El aplicador extiende y compacta manualmente la pasta de cuarzo 99% puro y polímeros marinos, logrando una superficie monolítica sin aristas cortantes ni juntas.</p>
+                            <div class="remod-step-bullets">
+                                <span><i class="fa-solid fa-check text-cyan"></i> Textura suave y antideslizante</span>
+                                <span><i class="fa-solid fa-check text-cyan"></i> Sellado hidrófugo continuo</span>
                             </div>
-                            
-                            <ul class="remod-points-list">
-                                <li class="remod-point-item point-good">
-                                    <i class="fa-solid fa-circle-check text-cyan"></i>
-                                    <div>
-                                        <strong>Más de 10 a 15 años de vida útil:</strong>
-                                        <p>Cristales de cuarzo 99% puro inmunes al cloro, salinizadores y radiación solar extrema.</p>
-                                    </div>
-                                </li>
-                                <li class="remod-point-item point-good">
-                                    <i class="fa-solid fa-circle-check text-cyan"></i>
-                                    <div>
-                                        <strong>Sellado monolítico de 8 a 10 mm:</strong>
-                                        <p>Integra una capa pétrea impermeable que sella microfisuras y rigidiza el vaso de hormigón.</p>
-                                    </div>
-                                </li>
-                                <li class="remod-point-item point-good">
-                                    <i class="fa-solid fa-circle-check text-cyan"></i>
-                                    <div>
-                                        <strong>Suave para pies descalzos y antideslizante:</strong>
-                                        <p>Llaneado continuo sin aristas cortantes ni juntas; no junta hongos por su nula porosidad.</p>
-                                    </div>
-                                </li>
-                                <li class="remod-point-item point-good">
-                                    <i class="fa-solid fa-circle-check text-cyan"></i>
-                                    <div>
-                                        <strong>Inversión definitiva y valor inmobiliario:</strong>
-                                        <p>Se amortiza rápidamente eliminando los costos anuales de vaciado y mano de obra.</p>
-                                    </div>
-                                </li>
-                            </ul>
+                        </div>
+                    </div>
 
-                            <div class="remod-side-footer">
-                                <div class="remod-meter-wrap">
-                                    <div class="remod-meter-label">
-                                        <span>Durabilidad Garantizada:</span>
-                                        <strong class="text-cyan">15+ Años Continuos</strong>
-                                    </div>
-                                    <div class="remod-meter-bar"><div class="remod-meter-fill fill-good" style="width: 100%;"></div></div>
-                                </div>
+                    <!-- PASO 03 -->
+                    <div class="remod-step-card">
+                        <div class="remod-step-img-wrap">
+                            <img src="assets/gallery/photos/p_tahoe_blue.jpg" alt="Piscina terminada con cuarzo Súper Brite Tahoe Blue y agua cristalina" class="remod-step-img" style="object-position: center;">
+                            <span class="remod-step-num" style="background: #16A34A; box-shadow: 0 2px 8px rgba(22, 163, 74, 0.4);">03</span>
+                        </div>
+                        <div class="remod-step-content">
+                            <span class="remod-step-badge" style="color: #16A34A;"><i class="fa-solid fa-water"></i> Puesta en Marcha</span>
+                            <h4>Lavado &amp; Llenado Inmediato</h4>
+                            <p>Tras un breve esponjeado suave para exponer los cristales minerales refractivos, la piscina queda lista para el llenado inmediato de agua cristalina.</p>
+                            <div class="remod-step-bullets">
+                                <span><i class="fa-solid fa-check text-green"></i> 10 a 15+ años sin repintar</span>
+                                <span><i class="fa-solid fa-check text-green"></i> Inmune al cloro y sal</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- PANEL 2: PROCESO DE REMODELACIÓN EN 3 PASOS -->
-                <div class="remod-panel" id="remod-panel-proceso" style="display: none;">
-                    <div class="remod-steps-grid">
-                        <div class="remod-step-card">
-                            <div class="remod-step-img-wrap">
-                                <img src="assets/img/obra-llaneado-2.jpg" alt="Puente de Adherencia Súper Kote en Obra" class="remod-step-img">
-                                <span class="remod-step-num">01</span>
-                            </div>
-                            <div class="remod-step-content">
-                                <span class="remod-step-badge"><i class="fa-solid fa-link"></i> Sin Picar Hormigón</span>
-                                <h4>Puente de Unión Súper Kote®</h4>
-                                <p>Se aplica directamente sobre la superficie existente (hormigón o pintura firme) con rodillo o brocha, creando una adherencia química indestructible.</p>
-                            </div>
-                        </div>
-
-                        <div class="remod-step-card">
-                            <div class="remod-step-img-wrap">
-                                <img src="assets/img/obra-llaneado-1.jpg" alt="Llaneado Profesional Súper Brite en Piscina" class="remod-step-img">
-                                <span class="remod-step-num">02</span>
-                            </div>
-                            <div class="remod-step-content">
-                                <span class="remod-step-badge"><i class="fa-solid fa-trowel"></i> Capa de 8 a 10 mm</span>
-                                <h4>Llaneado Continuo Súper Brite®</h4>
-                                <p>El aplicador extiende y compacta manualmente la pasta de cuarzo y cemento modificado, alisando la superficie para lograr una textura homogénea y suave.</p>
-                            </div>
-                        </div>
-
-                        <div class="remod-step-card">
-                            <div class="remod-step-img-wrap">
-                                <img src="assets/gallery/photos/p_tahoe_blue.jpg" alt="Piscina terminada con cuarzo Súper Brite Tahoe Blue" class="remod-step-img">
-                                <span class="remod-step-num">03</span>
-                            </div>
-                            <div class="remod-step-content">
-                                <span class="remod-step-badge badge-premium"><i class="fa-solid fa-water"></i> Llenado &amp; Disfrute</span>
-                                <h4>Lavado Suave &amp; Puesta en Marcha</h4>
-                                <p>Tras un breve fraguado se realiza el lavado químico/esponjeado para exponer el brillo del cuarzo, permitiendo el llenado inmediato de agua cristalina.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PANEL 3: SIMULADOR DE AHORRO Y MANTENIMIENTO A 10 AÑOS -->
-                <div class="remod-panel" id="remod-panel-simulador" style="display: none;">
-                    <div class="remod-sim-box">
-                        <div class="remod-sim-header text-center">
-                            <span class="remod-side-badge badge-premium"><i class="fa-solid fa-calculator"></i> Calculá el Impacto en el Tiempo</span>
-                            <h3 class="remod-sim-title">Proyección de Mantenimiento: <span id="sim-years-val" class="text-cyan">5 Años</span></h3>
-                            <p class="remod-sim-sub">Deslizá la barra de tiempo para comparar el esfuerzo, agua y costo acumulado entre ambos sistemas.</p>
-                            
-                            <!-- SLIDER DE AÑOS -->
-                            <div class="remod-slider-container">
-                                <div class="remod-slider-labels">
-                                    <span>1 Año</span>
-                                    <span>3 Años</span>
-                                    <span>5 Años</span>
-                                    <span>7 Años</span>
-                                    <span>10 Años</span>
-                                </div>
-                                <input type="range" id="remod-time-slider" min="1" max="10" value="5" step="1" oninput="updateRemodSimulator(this.value)" class="remod-range-input">
-                            </div>
-                        </div>
-
-                        <div class="remod-sim-results-grid">
-                            <div class="remod-sim-col col-paint">
-                                <div class="remod-sim-col-header">
-                                    <i class="fa-solid fa-paint-roller text-danger"></i>
-                                    <h4>Pintura Tradicional</h4>
-                                </div>
-                                <div class="remod-sim-stat">
-                                    <span class="stat-label">Repintados requeridos:</span>
-                                    <strong id="sim-paint-repaints" class="stat-val text-danger">3 veces</strong>
-                                </div>
-                                <div class="remod-sim-stat">
-                                    <span class="stat-label">Agua vaciada y desechada:</span>
-                                    <strong id="sim-paint-water" class="stat-val text-danger">~150.000 Litros</strong>
-                                </div>
-                                <div class="remod-sim-stat">
-                                    <span class="stat-label">Estado de la superficie:</span>
-                                    <strong class="stat-val" style="color: #F59E0B;">Descascarado &amp; rugoso</strong>
-                                </div>
-                            </div>
-
-                            <div class="remod-sim-col col-brite">
-                                <div class="remod-sim-col-header">
-                                    <i class="fa-solid fa-gem text-cyan"></i>
-                                    <h4 class="text-cyan">Súper Brite® Cuarzo</h4>
-                                </div>
-                                <div class="remod-sim-stat">
-                                    <span class="stat-label">Repintados requeridos:</span>
-                                    <strong class="stat-val text-green">0 (Cero repintado)</strong>
-                                </div>
-                                <div class="remod-sim-stat">
-                                    <span class="stat-label">Agua vaciada por pintura:</span>
-                                    <strong class="stat-val text-green">0 Litros (Agua conservada)</strong>
-                                </div>
-                                <div class="remod-sim-stat">
-                                    <span class="stat-label">Estado de la superficie:</span>
-                                    <strong class="stat-val text-green">100% Intacta y brillante</strong>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="remod-sim-cta text-center">
-                            <p class="remod-sim-summary-text" id="sim-summary-msg">
-                                A los <strong>5 años</strong>, el sistema Súper Brite® ya ahorró <strong>3 repintados completos</strong> y cientos de horas de obra, manteniendo la piscina como el primer día.
-                            </p>
-                            <button class="btn-sm-primary" onclick="scrollToCalculator('sb')">
-                                <i class="fa-solid fa-calculator"></i> Calcular Insumos de Remodelación para mi Piscina
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MÉTRICAS INFERIORES DE IMPACTO -->
-                <div class="ba-features-grid">
+                <!-- MÉTRICAS INFERIORES DE IMPACTO ARQUITECTÓNICO -->
+                <div class="ba-features-grid" style="margin-top: 32px;">
                     <div class="ba-feature-card">
                         <div class="ba-feat-icon"><i class="fa-solid fa-ban text-cyan"></i></div>
                         <div class="ba-feat-text">
                             <h4>0% Repintado Anual</h4>
-                            <p>Elimina el gasto y trabajo de vaciar y repintar la piscina cada primavera. Durabilidad superior a 10-15 años.</p>
+                            <p>Elimina para siempre la rutina de rasquetear, lijar y repintar la piscina cada primavera.</p>
                         </div>
                     </div>
                     <div class="ba-feature-card">
                         <div class="ba-feat-icon"><i class="fa-solid fa-shield-halved text-cyan"></i></div>
                         <div class="ba-feat-text">
-                            <h4>Sellado Hidrófugo Total</h4>
-                            <p>Forma una capa monolítica de 8 a 10 mm que sella microfisuras del hormigón previniendo filtraciones de agua.</p>
+                            <h4>Sellado Hidrófugo Monolítico</h4>
+                            <p>Capa pétrea continua de 8 a 10 mm que absorbe tensiones y sella microfisuras estructurales.</p>
                         </div>
                     </div>
                     <div class="ba-feature-card">
-                        <div class="ba-feat-icon"><i class="fa-solid fa-sun text-cyan"></i></div>
+                        <div class="ba-feat-icon"><i class="fa-solid fa-certificate text-cyan"></i></div>
                         <div class="ba-feat-text">
-                            <h4>Textura Suave &amp; Antideslizante</h4>
-                            <p>Cristales de cuarzo pulidos al tacto para pies descalzos que no acumulan verdín ni hongos por su nula porosidad.</p>
+                            <h4>Capacitación &amp; Respaldo</h4>
+                            <p>Asesoramiento técnico directo y cursos de homologación para aplicadores y constructoras.</p>
                         </div>
                     </div>
                 </div>
