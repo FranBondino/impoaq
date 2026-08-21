@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=31.0">
+    <link rel="stylesheet" href="styles.css?v=32.0">
 </head>
 <body>
 
@@ -737,18 +737,35 @@
     </section>
 
     <!-- MOSTRARIO OFICIAL DE COLORES SÚPER BRITE -->
-    <section class="section-products" id="carta-colores" style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 70px 0;">
+    <section class="section-products" id="carta-colores" style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 75px 0;">
         <div class="container">
             <div class="section-head text-center reveal">
-                <span class="section-tag">Gama Cromática Exclusiva</span>
-                <h2 class="head-title">Catálogo de Tonos y Cristales de Cuarzo</h2>
-                <p class="head-desc">Súper Brite® ofrece mezclas de cristales de cuarzo natural 99% puro seleccionados que reaccionan con la radiación solar generando el reflejo de agua cristalina deseado.</p>
+                <span class="section-tag">Gama Cromática Oficial</span>
+                <h2 class="head-title">Catálogo Oficial de Cristales de Cuarzo Súper Brite®</h2>
+                <p class="head-desc">Súper Brite® ofrece 8 mezclas exclusivas de cristales de cuarzo natural 99% puro seleccionados que refractan la radiación solar logrando tonalidades de agua desde el turquesa caribeño hasta el azul zafiro profundo.</p>
+                
+                <!-- PÍLDORAS DE FILTRO POR GAMA CROMÁTICA -->
+                <div class="swatch-filters-nav reveal delay-100">
+                    <button type="button" class="swatch-filter-btn active" onclick="filterSwatchCategory('all', this)">
+                        <i class="fa-solid fa-gem"></i> Todos (8)
+                    </button>
+                    <button type="button" class="swatch-filter-btn" onclick="filterSwatchCategory('blue', this)">
+                        <i class="fa-solid fa-water"></i> Azules &amp; Turquesas (4)
+                    </button>
+                    <button type="button" class="swatch-filter-btn" onclick="filterSwatchCategory('sand', this)">
+                        <i class="fa-solid fa-sun"></i> Claros &amp; Arenas (2)
+                    </button>
+                    <button type="button" class="swatch-filter-btn" onclick="filterSwatchCategory('grey', this)">
+                        <i class="fa-solid fa-mountain"></i> Grises &amp; Espejos (2)
+                    </button>
+                </div>
             </div>
 
-            <!-- GRILLA DE 6 MUESTRAS DE CRISTALES DE CUARZO -->
-            <div class="color-swatches-grid reveal">
+            <!-- GRILLA COMPLETA DE 8 TONOS OFICIALES -->
+            <div class="color-swatches-grid reveal" id="swatches-grid">
+                
                 <!-- SWATCH 1: TAHOE BLUE -->
-                <div class="swatch-card">
+                <div class="swatch-card" data-swatch-cat="blue">
                     <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_tahoe_swatch.jpg', 'Cuarzo Súper Brite® Tahoe Blue', 'Muestra de cuarzo azul profundo con reflejos zafiro de alta luminosidad solar.', 'Gama Cromática', '#0284C7')">
                         <img src="assets/gallery/photos/p_cuarzo_tahoe_swatch.jpg" alt="Muestra de cuarzo Tahoe Blue Súper Brite" loading="lazy">
                         <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
@@ -776,7 +793,7 @@
                 </div>
 
                 <!-- SWATCH 2: COOL BLUE -->
-                <div class="swatch-card">
+                <div class="swatch-card" data-swatch-cat="blue">
                     <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_cool_swatch.jpg', 'Cuarzo Súper Brite® Cool Blue', 'Muestra de cuarzo celeste cristalino que reproduce el tono turquesa caribeño.', 'Gama Cromática', '#0284C7')">
                         <img src="assets/gallery/photos/p_cuarzo_cool_swatch.jpg" alt="Muestra de cuarzo Cool Blue Súper Brite" loading="lazy">
                         <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
@@ -804,7 +821,7 @@
                 </div>
 
                 <!-- SWATCH 3: MARLYN BLUE -->
-                <div class="swatch-card">
+                <div class="swatch-card" data-swatch-cat="blue">
                     <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_marlyn_swatch.jpg', 'Cuarzo Súper Brite® Marlyn Blue', 'Muestra de cuarzo azul índigo con gradación oceánica vibrante.', 'Gama Cromática', '#0284C7')">
                         <img src="assets/gallery/photos/p_cuarzo_marlyn_swatch.jpg" alt="Muestra de cuarzo Marlyn Blue Súper Brite" loading="lazy">
                         <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
@@ -831,8 +848,92 @@
                     </div>
                 </div>
 
-                <!-- SWATCH 4: GREY QUARTZ -->
-                <div class="swatch-card">
+                <!-- SWATCH 4: SUPER BLUE -->
+                <div class="swatch-card" data-swatch-cat="blue">
+                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_superblue_swatch.jpg', 'Cuarzo Súper Brite® Super Blue', 'Muestra de cuarzo azul clásico puro para reflejo mediterráneo.', 'Gama Cromática', '#0284C7')">
+                        <img src="assets/gallery/photos/p_cuarzo_superblue_swatch.jpg" alt="Muestra de cuarzo Super Blue Súper Brite" loading="lazy">
+                        <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="swatch-body">
+                        <div class="swatch-header">
+                            <span class="swatch-purity-badge"><i class="fa-solid fa-gem text-cyan"></i> 99% Cuarzo Natural</span>
+                            <h3 class="swatch-title">Super Blue (Azul Clásico)</h3>
+                            <p class="swatch-desc">Tonalidad azul vibrante tradicional que evoca aguas mediterráneas con alta reflexión solar.</p>
+                        </div>
+                        <div class="swatch-props">
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Reflejo del Agua:</span>
+                                <span class="swatch-prop-val">Azul Mediterráneo Real</span>
+                            </div>
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Terminación:</span>
+                                <span class="swatch-prop-val">Sedoso Antideslizante</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Super Blue')">
+                            <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SWATCH 5: OYSTER QUARTZ -->
+                <div class="swatch-card" data-swatch-cat="sand">
+                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_oyster_swatch.jpg', 'Cuarzo Súper Brite® Oyster Quartz', 'Muestra de cuarzo blanco cristalino que logra un agua celeste muy clara.', 'Gama Cromática', '#0284C7')">
+                        <img src="assets/gallery/photos/p_cuarzo_oyster_swatch.jpg" alt="Muestra de cuarzo Oyster Quartz Súper Brite" loading="lazy">
+                        <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="swatch-body">
+                        <div class="swatch-header">
+                            <span class="swatch-purity-badge"><i class="fa-solid fa-gem text-cyan"></i> 99% Cuarzo Natural</span>
+                            <h3 class="swatch-title">Oyster Quartz (Blanco Cristal)</h3>
+                            <p class="swatch-desc">Base de cuarzo blanco puro que genera un agua cristalina celeste muy clara, fresca y luminosa.</p>
+                        </div>
+                        <div class="swatch-props">
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Reflejo del Agua:</span>
+                                <span class="swatch-prop-val">Celeste Espejo Claro</span>
+                            </div>
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Terminación:</span>
+                                <span class="swatch-prop-val">Sedoso Antideslizante</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Oyster Quartz')">
+                            <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SWATCH 6: SAND QUARTZ -->
+                <div class="swatch-card" data-swatch-cat="sand">
+                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_sand_swatch.jpg', 'Cuarzo Súper Brite® Sand Quartz', 'Muestra de cuarzo arena dorada que emula playas naturales tropicales.', 'Gama Cromática', '#0284C7')">
+                        <img src="assets/gallery/photos/p_cuarzo_sand_swatch.jpg" alt="Muestra de cuarzo Sand Quartz Súper Brite" loading="lazy">
+                        <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="swatch-body">
+                        <div class="swatch-header">
+                            <span class="swatch-purity-badge"><i class="fa-solid fa-gem text-cyan"></i> 99% Cuarzo Natural</span>
+                            <h3 class="swatch-title">Sand Quartz (Arena Dorada)</h3>
+                            <p class="swatch-desc">Cristales tono arena cálida que emulan playas naturales caribeñas con reflejos verde esmeralda suave.</p>
+                        </div>
+                        <div class="swatch-props">
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Reflejo del Agua:</span>
+                                <span class="swatch-prop-val">Verde Caribe Cristalino</span>
+                            </div>
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Terminación:</span>
+                                <span class="swatch-prop-val">Sedoso Antideslizante</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Sand Quartz')">
+                            <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SWATCH 7: GREY QUARTZ -->
+                <div class="swatch-card" data-swatch-cat="grey">
                     <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_grey_swatch.jpg', 'Cuarzo Súper Brite® Grey Quartz', 'Muestra de cuarzo gris arquitectónico con matices verde esmeralda profundo.', 'Gama Cromática', '#0284C7')">
                         <img src="assets/gallery/photos/p_cuarzo_grey_swatch.jpg" alt="Muestra de cuarzo Grey Quartz Súper Brite" loading="lazy">
                         <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
@@ -841,7 +942,7 @@
                         <div class="swatch-header">
                             <span class="swatch-purity-badge"><i class="fa-solid fa-gem text-cyan"></i> 99% Cuarzo Natural</span>
                             <h3 class="swatch-title">Grey Quartz (Gris Esmeralda)</h3>
-                            <p class="swatch-desc">Fórmula arquitectónica contemporánea que genera matices verde esmeralda y máxima elegancia.</p>
+                            <p class="swatch-desc">Fórmula arquitectónica contemporánea que genera matices verde esmeralda y máxima sofisticación.</p>
                         </div>
                         <div class="swatch-props">
                             <div class="swatch-prop-row">
@@ -859,8 +960,8 @@
                     </div>
                 </div>
 
-                <!-- SWATCH 5: BLACK QUARTZ -->
-                <div class="swatch-card">
+                <!-- SWATCH 8: BLACK QUARTZ -->
+                <div class="swatch-card" data-swatch-cat="grey">
                     <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_black_swatch.jpg', 'Cuarzo Súper Brite® Black Quartz', 'Muestra de cuarzo negro noche para efecto espejo de agua profundo.', 'Gama Cromática', '#0284C7')">
                         <img src="assets/gallery/photos/p_cuarzo_black_swatch.jpg" alt="Muestra de cuarzo Black Quartz Súper Brite" loading="lazy">
                         <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
@@ -887,49 +988,24 @@
                     </div>
                 </div>
 
-                <!-- SWATCH 6: SAND QUARTZ -->
-                <div class="swatch-card">
-                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/thumbs/v_swatch_sand.jpg', 'Cuarzo Súper Brite® Sand Quartz', 'Muestra de cuarzo arena dorada que emula playas naturales tropicales.', 'Gama Cromática', '#0284C7')">
-                        <img src="assets/gallery/thumbs/v_swatch_sand.jpg" alt="Muestra de cuarzo Sand Quartz Súper Brite" loading="lazy">
-                        <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
-                    </div>
-                    <div class="swatch-body">
-                        <div class="swatch-header">
-                            <span class="swatch-purity-badge"><i class="fa-solid fa-gem text-cyan"></i> 99% Cuarzo Natural</span>
-                            <h3 class="swatch-title">Sand Quartz (Arena Dorada)</h3>
-                            <p class="swatch-desc">Cristales de cuarzo seleccionados tono arena que emulan playas naturales con reflejos verde caribe.</p>
-                        </div>
-                        <div class="swatch-props">
-                            <div class="swatch-prop-row">
-                                <span class="swatch-prop-label">Reflejo del Agua:</span>
-                                <span class="swatch-prop-val">Verde Caribe Cristalino</span>
-                            </div>
-                            <div class="swatch-prop-row">
-                                <span class="swatch-prop-label">Terminación:</span>
-                                <span class="swatch-prop-val">Sedoso Antideslizante</span>
-                            </div>
-                        </div>
-                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Sand Quartz')">
-                            <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
-                        </button>
-                    </div>
-                </div>
             </div>
 
-            <!-- CARTA CROMÁTICA OFICIAL BOX CON CTAS -->
-            <div class="reveal-scale color-chart-box">
-                <div class="color-chart-inner">
-                    <img src="assets/img/sb-colors.jpeg" alt="Catálogo de colores oficiales Súper Brite" class="color-chart-img" onclick="openLightbox('assets/img/sb-colors.jpeg', 'Catálogo Oficial de Tonos Súper Brite®', 'Muestrario de 11 mezclas de cuarzo natural y pigmentaciones para piscinas.', 'Gama Cromática', '#0284C7')" style="cursor: zoom-in;" title="Click para ampliar gama cromática en alta resolución">
+            <!-- BANNER INSTITUCIONAL: SOLICITUD DE MUESTRARIO FÍSICO -->
+            <div class="swatch-sample-banner reveal-scale">
+                <div class="swatch-sample-icon">
+                    <i class="fa-solid fa-briefcase"></i>
                 </div>
-                <div class="color-chart-footer">
-                    <div class="color-note">
-                        <i class="fa-solid fa-circle-info text-cyan"></i>
-                        <span><strong>Nota Técnica:</strong> El tono final del agua varía según la profundidad de la piscina, la hora del día y la incidencia de luz solar.</span>
-                    </div>
-                    <div class="color-actions">
-                        <a href="#calculadora" class="btn-sm-primary" onclick="scrollToCalculator('sb')"><i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)</a>
-                        <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20quisiera%20solicitar%20el%20muestrario%20f%C3%ADsico%20de%20colores%20S%C3%BAper%20Brite" target="_blank" class="btn-sm-secondary"><i class="fa-brands fa-whatsapp text-green"></i> Solicitar Muestrario Físico</a>
-                    </div>
+                <div class="swatch-sample-text">
+                    <h4>¿Sos Arquitecto, Constructor o Desarrollador?</h4>
+                    <p>Solicitá nuestro <strong>Muestrario Físico Oficial en Valija Técnica</strong> con muestras reales de cristales de cuarzo para evaluar los tonos directamente en tu estudio o en obra.</p>
+                </div>
+                <div class="swatch-sample-actions">
+                    <a href="https://wa.me/5493416825470?text=Hola%20ImpoAcuatiq,%20quisiera%20solicitar%20el%20muestrario%20f%C3%ADsico%20de%20colores%20S%C3%BAper%20Brite" target="_blank" class="btn-sm-primary">
+                        <i class="fa-brands fa-whatsapp text-green"></i> Solicitar Muestrario Físico
+                    </a>
+                    <a href="#calculadora" class="btn-sm-secondary" onclick="scrollToCalculator('sb')">
+                        <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
+                    </a>
                 </div>
             </div>
         </div>
@@ -1504,6 +1580,6 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script src="app.js?v=31.0"></script>
+    <script src="app.js?v=32.0"></script>
 </body>
 </html>

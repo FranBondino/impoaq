@@ -1890,6 +1890,23 @@ function switchCertPhoto(imgSrc, btn) {
     if (btn) btn.classList.add('active');
 }
 
+function filterSwatchCategory(cat, btn) {
+    const btns = document.querySelectorAll('.swatch-filter-btn');
+    btns.forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+
+    const cards = document.querySelectorAll('.swatch-card');
+    cards.forEach(card => {
+        const cardCat = card.getAttribute('data-swatch-cat');
+        if (cat === 'all' || cardCat === cat) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+window.filterSwatchCategory = filterSwatchCategory;
 window.switchCertPhoto = switchCertPhoto;
 window.filterCategory = filterCategory;
 window.submitContactForm = submitContactForm;
@@ -1900,3 +1917,4 @@ window.updateRemodSimulator = updateRemodSimulator;
 window.toggleFaq = toggleFaq;
 window.initFaqAccordion = initFaqAccordion;
 window.selectColorAndCalc = selectColorAndCalc;
+
