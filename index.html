@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=32.0">
+    <link rel="stylesheet" href="styles.css?v=33.0">
 </head>
 <body>
 
@@ -740,14 +740,14 @@
     <section class="section-products" id="carta-colores" style="background: #FFFFFF; border-top: 1px solid #E2E8F0; padding: 75px 0;">
         <div class="container">
             <div class="section-head text-center reveal">
-                <span class="section-tag">Gama Cromática Oficial</span>
-                <h2 class="head-title">Catálogo Oficial de Cristales de Cuarzo Súper Brite®</h2>
-                <p class="head-desc">Súper Brite® ofrece 8 mezclas exclusivas de cristales de cuarzo natural 99% puro seleccionados que refractan la radiación solar logrando tonalidades de agua desde el turquesa caribeño hasta el azul zafiro profundo.</p>
+                <span class="section-tag">Gama Cromática Oficial Ingeprex</span>
+                <h2 class="head-title">Catálogo Completo de Cristales de Cuarzo Súper Brite®</h2>
+                <p class="head-desc">Súper Brite® ofrece 11 mezclas exclusivas de cristales de cuarzo natural 99% puro seleccionados que refractan la radiación solar logrando tonalidades de agua desde el turquesa caribeño, azules profundos, hasta gamas especiales.</p>
                 
                 <!-- PÍLDORAS DE FILTRO POR GAMA CROMÁTICA -->
                 <div class="swatch-filters-nav reveal delay-100">
                     <button type="button" class="swatch-filter-btn active" onclick="filterSwatchCategory('all', this)">
-                        <i class="fa-solid fa-gem"></i> Todos (8)
+                        <i class="fa-solid fa-gem"></i> Todos (11)
                     </button>
                     <button type="button" class="swatch-filter-btn" onclick="filterSwatchCategory('blue', this)">
                         <i class="fa-solid fa-water"></i> Azules &amp; Turquesas (4)
@@ -756,12 +756,15 @@
                         <i class="fa-solid fa-sun"></i> Claros &amp; Arenas (2)
                     </button>
                     <button type="button" class="swatch-filter-btn" onclick="filterSwatchCategory('grey', this)">
-                        <i class="fa-solid fa-mountain"></i> Grises &amp; Espejos (2)
+                        <i class="fa-solid fa-mountain"></i> Grises &amp; Ónix (2)
+                    </button>
+                    <button type="button" class="swatch-filter-btn" onclick="filterSwatchCategory('special', this)">
+                        <i class="fa-solid fa-palette"></i> Especiales &amp; Rojos (3)
                     </button>
                 </div>
             </div>
 
-            <!-- GRILLA COMPLETA DE 8 TONOS OFICIALES -->
+            <!-- GRILLA COMPLETA DE 11 TONOS OFICIALES -->
             <div class="color-swatches-grid reveal" id="swatches-grid">
                 
                 <!-- SWATCH 1: TAHOE BLUE -->
@@ -904,17 +907,17 @@
                     </div>
                 </div>
 
-                <!-- SWATCH 6: SAND QUARTZ -->
+                <!-- SWATCH 6: PLAYA / SAND QUARTZ -->
                 <div class="swatch-card" data-swatch-cat="sand">
-                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_sand_swatch.jpg', 'Cuarzo Súper Brite® Sand Quartz', 'Muestra de cuarzo arena dorada que emula playas naturales tropicales.', 'Gama Cromática', '#0284C7')">
-                        <img src="assets/gallery/photos/p_cuarzo_sand_swatch.jpg" alt="Muestra de cuarzo Sand Quartz Súper Brite" loading="lazy">
+                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_sand_swatch.jpg', 'Cuarzo Súper Brite® Playa (Arena)', 'Muestra de cuarzo arena dorada que emula playas naturales tropicales.', 'Gama Cromática', '#0284C7')">
+                        <img src="assets/gallery/photos/p_cuarzo_sand_swatch.jpg" alt="Muestra de cuarzo Playa Sand Quartz Súper Brite" loading="lazy">
                         <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
                     </div>
                     <div class="swatch-body">
                         <div class="swatch-header">
                             <span class="swatch-purity-badge"><i class="fa-solid fa-gem text-cyan"></i> 99% Cuarzo Natural</span>
-                            <h3 class="swatch-title">Sand Quartz (Arena Dorada)</h3>
-                            <p class="swatch-desc">Cristales tono arena cálida que emulan playas naturales caribeñas con reflejos verde esmeralda suave.</p>
+                            <h3 class="swatch-title">Playa (Arena Dorada)</h3>
+                            <p class="swatch-desc">Cristales tono arena cálida que emulan playas caribeñas con reflejos verde esmeralda suave.</p>
                         </div>
                         <div class="swatch-props">
                             <div class="swatch-prop-row">
@@ -926,22 +929,22 @@
                                 <span class="swatch-prop-val">Sedoso Antideslizante</span>
                             </div>
                         </div>
-                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Sand Quartz')">
+                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Playa')">
                             <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
                         </button>
                     </div>
                 </div>
 
-                <!-- SWATCH 7: GREY QUARTZ -->
+                <!-- SWATCH 7: FRENCH GRAY -->
                 <div class="swatch-card" data-swatch-cat="grey">
-                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_grey_swatch.jpg', 'Cuarzo Súper Brite® Grey Quartz', 'Muestra de cuarzo gris arquitectónico con matices verde esmeralda profundo.', 'Gama Cromática', '#0284C7')">
-                        <img src="assets/gallery/photos/p_cuarzo_grey_swatch.jpg" alt="Muestra de cuarzo Grey Quartz Súper Brite" loading="lazy">
+                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_grey_swatch.jpg', 'Cuarzo Súper Brite® French Gray', 'Muestra de cuarzo gris arquitectónico con matices verde esmeralda profundo.', 'Gama Cromática', '#0284C7')">
+                        <img src="assets/gallery/photos/p_cuarzo_grey_swatch.jpg" alt="Muestra de cuarzo French Gray Súper Brite" loading="lazy">
                         <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
                     </div>
                     <div class="swatch-body">
                         <div class="swatch-header">
                             <span class="swatch-purity-badge"><i class="fa-solid fa-gem text-cyan"></i> 99% Cuarzo Natural</span>
-                            <h3 class="swatch-title">Grey Quartz (Gris Esmeralda)</h3>
+                            <h3 class="swatch-title">French Gray (Gris Francés)</h3>
                             <p class="swatch-desc">Fórmula arquitectónica contemporánea que genera matices verde esmeralda y máxima sofisticación.</p>
                         </div>
                         <div class="swatch-props">
@@ -954,22 +957,22 @@
                                 <span class="swatch-prop-val">Sedoso Antideslizante</span>
                             </div>
                         </div>
-                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Grey Quartz')">
+                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('French Gray')">
                             <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
                         </button>
                     </div>
                 </div>
 
-                <!-- SWATCH 8: BLACK QUARTZ -->
+                <!-- SWATCH 8: ONIX BLUE -->
                 <div class="swatch-card" data-swatch-cat="grey">
-                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_black_swatch.jpg', 'Cuarzo Súper Brite® Black Quartz', 'Muestra de cuarzo negro noche para efecto espejo de agua profundo.', 'Gama Cromática', '#0284C7')">
-                        <img src="assets/gallery/photos/p_cuarzo_black_swatch.jpg" alt="Muestra de cuarzo Black Quartz Súper Brite" loading="lazy">
+                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_black_swatch.jpg', 'Cuarzo Súper Brite® Onix Blue', 'Muestra de cuarzo ónix negro noche para efecto espejo de agua profundo.', 'Gama Cromática', '#0284C7')">
+                        <img src="assets/gallery/photos/p_cuarzo_black_swatch.jpg" alt="Muestra de cuarzo Onix Blue Súper Brite" loading="lazy">
                         <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
                     </div>
                     <div class="swatch-body">
                         <div class="swatch-header">
                             <span class="swatch-purity-badge"><i class="fa-solid fa-gem text-cyan"></i> 99% Cuarzo Natural</span>
-                            <h3 class="swatch-title">Black Quartz (Negro Océano)</h3>
+                            <h3 class="swatch-title">Onix Blue (Azul Ónix)</h3>
                             <p class="swatch-desc">Efecto espejo de agua profundo y sofisticado con absorción térmica natural para mayor confort.</p>
                         </div>
                         <div class="swatch-props">
@@ -982,7 +985,91 @@
                                 <span class="swatch-prop-val">Sedoso Antideslizante</span>
                             </div>
                         </div>
-                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Black Quartz')">
+                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Onix Blue')">
+                            <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SWATCH 9: SUPER RED -->
+                <div class="swatch-card" data-swatch-cat="special">
+                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_super_red_swatch.jpg', 'Cuarzo Súper Brite® Super Red', 'Muestra de cuarzo rojo rubí intenso para piscinas de diseño vanguardista.', 'Gama Cromática', '#0284C7')">
+                        <img src="assets/gallery/photos/p_cuarzo_super_red_swatch.jpg" alt="Muestra de cuarzo Super Red Súper Brite" loading="lazy">
+                        <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="swatch-body">
+                        <div class="swatch-header">
+                            <span class="swatch-purity-badge" style="background: #FEE2E2; color: #DC2626; border-color: #FECACA;"><i class="fa-solid fa-fire text-red"></i> Gama Especial Rubí</span>
+                            <h3 class="swatch-title">Super Red (Rojo Rubí)</h3>
+                            <p class="swatch-desc">Pigmentación mineral roja intensa que confiere un reflejo cálido coralino único en piscinas de diseño.</p>
+                        </div>
+                        <div class="swatch-props">
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Reflejo del Agua:</span>
+                                <span class="swatch-prop-val">Coralino Cálido Único</span>
+                            </div>
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Terminación:</span>
+                                <span class="swatch-prop-val">Sedoso Antideslizante</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Super Red')">
+                            <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SWATCH 10: SOFT RED -->
+                <div class="swatch-card" data-swatch-cat="special">
+                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_soft_red_swatch.jpg', 'Cuarzo Súper Brite® Soft Red', 'Muestra de cuarzo rojo suave con destellos cobrizos y atardecer.', 'Gama Cromática', '#0284C7')">
+                        <img src="assets/gallery/photos/p_cuarzo_soft_red_swatch.jpg" alt="Muestra de cuarzo Soft Red Súper Brite" loading="lazy">
+                        <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="swatch-body">
+                        <div class="swatch-header">
+                            <span class="swatch-purity-badge" style="background: #FEE2E2; color: #DC2626; border-color: #FECACA;"><i class="fa-solid fa-palette text-red"></i> Tonalidad Cobriza</span>
+                            <h3 class="swatch-title">Soft Red (Rojo Suave)</h3>
+                            <p class="swatch-desc">Mezcla armónica de cuarzo blanco con finos cristales rojizos logrando un reflejo cobrizo crepuscular.</p>
+                        </div>
+                        <div class="swatch-props">
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Reflejo del Agua:</span>
+                                <span class="swatch-prop-val">Destellos Cobrizos</span>
+                            </div>
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Terminación:</span>
+                                <span class="swatch-prop-val">Sedoso Antideslizante</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Soft Red')">
+                            <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SWATCH 11: SOFT GREEN -->
+                <div class="swatch-card" data-swatch-cat="special">
+                    <div class="swatch-img-box" onclick="openLightbox('assets/gallery/photos/p_cuarzo_soft_green_swatch.jpg', 'Cuarzo Súper Brite® Soft Green', 'Muestra de cuarzo verde suave para efecto laguna natural y cenote.', 'Gama Cromática', '#0284C7')">
+                        <img src="assets/gallery/photos/p_cuarzo_soft_green_swatch.jpg" alt="Muestra de cuarzo Soft Green Súper Brite" loading="lazy">
+                        <div class="swatch-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="swatch-body">
+                        <div class="swatch-header">
+                            <span class="swatch-purity-badge" style="background: #ECFDF5; color: #059669; border-color: #A7F3D0;"><i class="fa-solid fa-leaf text-green"></i> Gama Botánica</span>
+                            <h3 class="swatch-title">Soft Green (Verde Suave)</h3>
+                            <p class="swatch-desc">Cristales verdes esmeralda seleccionados sobre matriz clara que emulan lagunas naturales y cenotes.</p>
+                        </div>
+                        <div class="swatch-props">
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Reflejo del Agua:</span>
+                                <span class="swatch-prop-val">Verde Laguna Natural</span>
+                            </div>
+                            <div class="swatch-prop-row">
+                                <span class="swatch-prop-label">Terminación:</span>
+                                <span class="swatch-prop-val">Sedoso Antideslizante</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-swatch-calc" onclick="selectColorAndCalc('Soft Green')">
                             <i class="fa-solid fa-calculator"></i> Calcular Insumos (m²)
                         </button>
                     </div>
@@ -1580,6 +1667,6 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script src="app.js?v=32.0"></script>
+    <script src="app.js?v=33.0"></script>
 </body>
 </html>
